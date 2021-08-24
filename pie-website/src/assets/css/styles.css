@@ -1,0 +1,176 @@
+.staggered-list-content {
+  align-self: center;
+  justify-self: center;
+}
+.list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  width: 100%;
+  gap: 2.5rem;
+  height: auto;
+  padding: 0;
+}
+.list li {
+  width: 100%;
+}
+.list li + li {
+  margin-top: 1rem;
+}
+.listItem {
+  width: 100%;
+  cursor: pointer;
+  background-color: #d0d0d0;
+  overflow: hidden;
+}
+.listItemContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  text-align: center;
+
+  align-items: center;
+  padding: 1rem;
+}
+.namesmall {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  padding: 0 1rem;
+  line-height: 2rem;
+  margin: 0;
+}
+
+.namelarge {
+  width: 100%;
+  text-align: center;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  margin: 0;
+}
+
+.holder {
+  width: 100%;
+  margin: 0.5rem;
+}
+
+.otherlarge {
+  font-size: 1rem;
+  width: 8rem;
+  text-align: center;
+}
+
+.othersmall {
+  font-size: 1rem;
+  width: 8rem;
+  text-align: left;
+}
+
+.avatar {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100px;
+  background-color: grey;
+  margin-right: 2rem;
+}
+.avatarExpanded {
+  width: 8rem;
+  height: 8rem;
+  margin-right: 0;
+  margin-bottom: 1rem;
+}
+
+.description {
+  width: 100%;
+  margin: 0.5rem;
+}
+
+.description > p {
+  margin: 0;
+  font-size: 2rem;
+}
+/* .description > div {
+  background-color: grey;
+  width: 14rem;
+  border-radius: 6px;
+  height: 0.5rem;
+}
+.description > div:nth-of-type(2) {
+  width: 11rem;
+}
+.description > div:nth-of-type(3) {
+  width: 8rem;
+}
+.description > div + div {
+  margin-top: 1rem;
+} */
+.expandedListItem .description {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.expandedListItem {
+  cursor: pointer;
+  background-color: #d0d0d0;
+}
+.expandedListItemContent {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.additional-content {
+  width: 100%;
+}
+.additional-content > div {
+  opacity: 0;
+}
+
+/* .additional-content > div {
+  opacity: 0;
+  border-radius: 3px;
+  background-color: gray;
+  height: 5rem;
+} */
+
+/* content fade in animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.additional-content > div > a > svg {
+  font-size: 2rem;
+  margin: 0.5rem;
+  color: black;
+}
+
+.animated-in .additional-content > div {
+  animation: fadeIn 0.4s forwards;
+}
+
+.additional-content > div:nth-of-type(2) {
+  animation-delay: 0.15s;
+}
+.additional-content > div:nth-of-type(3) {
+  animation-delay: 0.3s;
+}
+
+.thing {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}

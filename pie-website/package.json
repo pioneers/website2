@@ -1,0 +1,53 @@
+{
+  "name": "gatsby-starter-hello-world",
+  "private": true,
+  "description": "A simplified bare-bones starter for Gatsby",
+  "version": "0.1.0",
+  "license": "0BSD",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.12.2",
+    "@material-ui/lab": "^4.0.0-alpha.60",
+    "@material-ui/styles": "^4.11.4",
+    "@react-icons/all-files": "^4.1.0",
+    "babel-plugin-styled-components": "^1.13.2",
+    "bootstrap": "^5.0.2",
+    "gatsby": "^3.9.1",
+    "gatsby-plugin-anchor-links": "^1.2.1",
+    "gatsby-plugin-image": "^1.10.1",
+    "gatsby-plugin-react-helmet": "^4.10.0",
+    "gatsby-plugin-sharp": "^3.10.2",
+    "gatsby-plugin-styled-components": "^4.10.0",
+    "gatsby-source-contentful": "^5.10.0",
+    "gatsby-source-filesystem": "^3.10.0",
+    "gatsby-transformer-sharp": "^3.10.0",
+    "normalize.css": "^8.0.1",
+    "react": "^17.0.1",
+    "react-bootstrap": "^2.0.0-beta.4",
+    "react-copy-to-clipboard": "^5.0.3",
+    "react-dom": "^17.0.1",
+    "react-flip-toolkit": "^7.0.13",
+    "react-helmet": "^6.1.0",
+    "react-multi-carousel": "^2.6.3",
+    "react-syntax-highlighter": "^15.4.4",
+    "styled-components": "^5.3.0"
+  },
+  "devDependencies": {
+    "prettier": "2.3.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
+}
