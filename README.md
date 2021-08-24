@@ -90,7 +90,7 @@ import Header from "../components/Header";
 import Layout from "../components/Layout";
 import CustomizedContainer from "../components/CustomizedContainer";
 import AlternativeButton from "../components/AlternativeButton";
-import SEO from "../components/SEO";
+import SEO from "../components/Seo";
 
 // needed to use Styled Components
 import styled from "styled-components";
@@ -217,7 +217,7 @@ Inside the new js file post the following template:
 import React from "react";
 import CustomizedContainer from "../../../components/CustomizedContainer";
 import Layout from "../../../components/Layout";
-import SEO from "../../../components/SEO";
+import SEO from "../../../components/Seo";
 import styled from "styled-components";
 
 import theme from "../../../assets/themes/theme";

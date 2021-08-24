@@ -11,7 +11,7 @@ import { BiGroup } from "@react-icons/all-files/bi/BiGroup"
 import Layout from "../components/Layout"
 
 import styled from "styled-components"
-import SEO from "../components/SEO"
+import SEO from "../components/Seo"
 
 import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"

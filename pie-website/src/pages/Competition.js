@@ -11,7 +11,7 @@ import { BsBuilding } from "@react-icons/all-files/bs/BsBuilding"
 import styled from "styled-components"
 import CustomizedContainer from "../components/CustomizedContainer"
 import AlternativeButton from "../components/AlternativeButton"
-import SEO from "../components/SEO"
+import SEO from "../components/Seo"
 import { BoxesWrapper } from "../assets/themes/boxes"
 
 import { useStaticQuery, graphql } from "gatsby"

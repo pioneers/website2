@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import Container from "react-bootstrap/Container"
 import Layout from "../../components/Layout"
-import SEO from "../../components/SEO"
+import SEO from "../../components/Seo"
 import Header from "../../components/Header"
 import styled from "styled-components"
 

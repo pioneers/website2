@@ -14,7 +14,7 @@ import Layout from "../components/Layout"
 
 import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import SEO from "../components/SEO"
+import SEO from "../components/Seo"
 
 const years = [2019, 2016, 2015, 2014, 2013]
 

@@ -11,7 +11,7 @@ import CustomizedContainer from "../components/CustomizedContainer"
 import KitCost from "../assets/images/sponsors/kit-cost.png"
 import Poster from "../assets/images/companyposter.jpg"
 
-import SEO from "../components/SEO"
+import SEO from "../components/Seo"
 import { BoxesWrapper } from "../assets/themes/boxes"
 
 import { useStaticQuery, graphql } from "gatsby"

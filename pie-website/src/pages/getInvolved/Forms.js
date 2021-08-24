@@ -9,7 +9,7 @@ import Layout from "../../components/Layout"
 import CustomizedContainer from "../../components/CustomizedContainer"
 import styled from "styled-components"
 
-import SEO from "../../components/SEO"
+import SEO from "../../components/Seo"
 
 import Table from "react-bootstrap/Table"
 import Container from "react-bootstrap/esm/Container"

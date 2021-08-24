@@ -3,7 +3,7 @@ import Container from "react-bootstrap/esm/Container"
 
 import styled from "styled-components"
 import AlternativeButton from "../components/AlternativeButton"
-import SEO from "../components/SEO"
+import SEO from "../components/Seo"
 import GlobalStyles from "../assets/themes/globalStyles"
 import WellDone from "../assets/svg/undraw_well_done_i2wr.svg"
 
