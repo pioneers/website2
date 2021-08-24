@@ -1,7 +1,7 @@
 name: Contentful Publish
 on:
   repository_dispatch:
-    types: [publish-event]
+    types: ["publish-event"]
 jobs:
   deploy:
     runs-on: ubuntu-latest
