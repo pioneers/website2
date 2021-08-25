@@ -19,6 +19,8 @@ import Row from "react-bootstrap/esm/Row"
 import Col from "react-bootstrap/esm/Col"
 import Container from "react-bootstrap/esm/Container"
 
+import pic from "../../assets/images/stock-images/mentor.jpg"
+
 const query = graphql`
   {
     allContentfulTestimonials {
@@ -228,8 +230,8 @@ const Decal = () => {
 
 const HeroWrapper = styled.div`
   .hero-image {
-    /* background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
-      url("../assets/images/stock-images/blog.jpg") center/cover fixed no-repeat; */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+      url(${pic}) center/cover fixed no-repeat;
     background-color: coral;
     height: 100vh;
     width: 100%;

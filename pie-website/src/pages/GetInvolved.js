@@ -20,6 +20,8 @@ import Row from "react-bootstrap/esm/Row"
 import Col from "react-bootstrap/esm/Col"
 import Container from "react-bootstrap/esm/Container"
 
+import pic from "../assets/images/stock-images/pie-staff.jpg"
+
 const query = graphql`
   {
     allContentfulRecruitingTimeline(
@@ -99,7 +101,8 @@ const GetInvolved = () => {
             THE TIMELINE
           </h4>
           <Header type={"gold-header"}>Our Events</Header>
-          <TimelineOne timelineFor={events} />
+          {/* <TimelineOne timelineFor={events} /> */}
+          <h1>Under Construction</h1>
         </Container>
       </CustomizedContainer>
 
@@ -122,12 +125,12 @@ const GetInvolved = () => {
                     PiE RC DeCal, offered every spring, offers just that!
                   </p>
                   <div>
-                    <AlternativeButton color="gold" link="/getInvolved/forms">
+                    <AlternativeButton color="gold" link="/getInvolved/Forms">
                       Join Us
                     </AlternativeButton>
                     <AlternativeButton
                       color="gold"
-                      link="/getInvolved/projects"
+                      link="/getInvolved/Projects"
                     >
                       Projects
                     </AlternativeButton>
@@ -148,7 +151,7 @@ const GetInvolved = () => {
                     Join our team and be part of providing STEM education to the
                     Bay Area
                   </p>
-                  <AlternativeButton link="/getInvolved/decal">
+                  <AlternativeButton link="/getInvolved/Decal">
                     Learn More
                   </AlternativeButton>
                 </div>
@@ -162,6 +165,7 @@ const GetInvolved = () => {
         <VolunteerWrapper fluid>
           <Row>
             <Col sm={12} md={12} lg={12}>
+              <div id="volunteer"></div>
               <h3>Volunteer</h3>
               <p>
                 We are looking for professors and industry professionals to
@@ -209,8 +213,8 @@ const GetInvolved = () => {
 
 const HeroWrapper = styled.div`
   .hero-image {
-    /* background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
-      url("../assets/images/stock-images/blog.jpg") center/cover fixed no-repeat; */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+      url(${pic}) center/cover fixed no-repeat;
     background-color: coral;
     height: 100vh;
     width: 100%;

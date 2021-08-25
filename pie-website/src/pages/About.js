@@ -8,10 +8,13 @@ import { FaHandsHelping } from "@react-icons/all-files/fa/FaHandsHelping"
 import { RiMoneyDollarCircleLine } from "@react-icons/all-files/ri/RiMoneyDollarCircleLine"
 import { BiGroup } from "@react-icons/all-files/bi/BiGroup"
 
+import Tab from "react-bootstrap/Tab"
+import Tabs from "react-bootstrap/Tabs"
+
 import Layout from "../components/Layout"
 
 import styled from "styled-components"
-import SEO from "../components/Seo"
+import SEO from "../components/SEO"
 
 import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
@@ -23,6 +26,8 @@ import Row from "react-bootstrap/esm/Row"
 
 import theme from "../assets/themes/theme"
 import CustomizedContainer from "../components/CustomizedContainer"
+
+import pic from "../assets/images/stock-images/retreat-sp18-team.jpg"
 
 const query = graphql`
   {
@@ -49,6 +54,33 @@ const query = graphql`
       nodes {
         name
         position
+      }
+    }
+    allContentfulStaffMember {
+      nodes {
+        bio {
+          bio
+        }
+        githubLink
+        linkedinLink
+        major
+        name
+        personalWebsite
+        picture {
+          gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+        }
+        role
+        year
+      }
+    }
+    allContentfulDefaultStaffMember {
+      nodes {
+        bio {
+          bio
+        }
+        picture {
+          gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+        }
       }
     }
   }
@@ -170,7 +202,16 @@ const About = () => {
   const data = useStaticQuery(query)
   const advisors = data.allContentfulAdvisor.nodes
   const alumni = data.allContentfulAlumni.nodes
-  // console.log(advisors)
+  const defaultStaffMember = data.allContentfulDefaultStaffMember.nodes
+
+  const staff = data.allContentfulStaffMember.nodes
+  // console.log(staff)
+  const leadership = staff.filter(person => person.role.includes("Director"))
+  const pm = staff.filter(person => person.role.includes("PM"))
+  const other = staff.filter(
+    person => !person.role.includes("Director") && !person.role.includes("PM")
+  )
+  console.log(other)
 
   return (
     <Layout>
@@ -185,36 +226,9 @@ const About = () => {
           </div>
         </div>
       </HeroWrapper>
-      <CustomizedContainer>
-        {advisors.map(person => {
-          return (
-            <div>
-              <GatsbyImage image={person.image.gatsbyImageData}></GatsbyImage>
-              {person.name}
-              {person.position}
-            </div>
-          )
-        })}
-      </CustomizedContainer>
-      <CustomizedContainer>
-        {alumni.map(person => {
-          return (
-            <div>
-              <GatsbyImage image={person.image.gatsbyImageData}></GatsbyImage>
-              {person.name}
-              {person.positionInClub !== "N/A"
-                ? person.whereAreTheyWorking !== null
-                  ? person.positionInClub + " | " + person.whereAreTheyWorking
-                  : person.positionInClub
-                : person.whereAreTheyWorking}
-            </div>
-          )
-        })}
-      </CustomizedContainer>
-
-      <CustomizedContainer>
-        <div id="mission" />
+      <CustomizedContainer color={theme.colors.grey100}>
         <Container fluid>
+          <div id="mission" />
           <h4 style={{ marginBottom: "1.5em", color: theme.colors.grey400 }}>
             ABOUT US
           </h4>
@@ -276,15 +290,139 @@ const About = () => {
           </AboutBoxesWrapper>
         </Container>
       </CustomizedContainer>
-      <div id="staff" />
       <CustomizedContainer>
         <Container fluid>
-          <Header type={"blue-header"}>Overlords</Header>
-          <Header type={"gold-header"}>Project Managers</Header>
-          <Header type={"blue-header"}>All Staff and Bios</Header>
+          <Tabs defaultActiveKey="staff" id="uncontrolled-tab-example">
+            <Tab eventKey="staff" title="Staff">
+              <h3 style={{ margin: "1rem 0" }}>Click on us to learn more!</h3>
+              <div id="overlords"></div>
+              <Header type={"blue-header"}>Overlords</Header>
+              <Row>
+                {leadership.map((person, idx) => {
+                  return (
+                    <SpecialCol xs={12} sm={6} md={4} lg={3}>
+                      <div className="card">
+                        {person.picture ? (
+                          <GatsbyImage
+                            image={person.picture.gatsbyImageData}
+                            className="img"
+                          ></GatsbyImage>
+                        ) : (
+                          <GatsbyImage
+                            image={
+                              defaultStaffMember[0].picture.gatsbyImageData
+                            }
+                            className="img"
+                          ></GatsbyImage>
+                        )}
+                        <div>
+                          <h3>{person.name}</h3>
+                          <h4>{person.role}</h4>
+                        </div>
+                      </div>
+                    </SpecialCol>
+                  )
+                })}
+              </Row>
+              <div id="projectManagers"></div>
+              <Header type={"gold-header"}>Project Managers</Header>
+              <Row>
+                {pm.map((person, idx) => {
+                  return (
+                    <SpecialCol xs={12} sm={6} md={4} lg={3}>
+                      <div className="card">
+                        {person.picture ? (
+                          <GatsbyImage
+                            image={person.picture.gatsbyImageData}
+                            className="img"
+                          ></GatsbyImage>
+                        ) : (
+                          <GatsbyImage
+                            image={
+                              defaultStaffMember[0].picture.gatsbyImageData
+                            }
+                            className="img"
+                          ></GatsbyImage>
+                        )}
+                        <div>
+                          <h3>{person.name}</h3>
+                          <h4>{person.role}</h4>
+                        </div>
+                      </div>
+                    </SpecialCol>
+                  )
+                })}
+              </Row>
+              <div id="others"></div>
+              <Header type={"blue-header"}>All Other Staff</Header>
+              <Row>
+                {other.map((person, idx) => {
+                  return (
+                    <SpecialCol xs={12} sm={6} md={4} lg={3}>
+                      <div className="card">
+                        <div>
+                          <h3>{person.name}</h3>
+                          <h4>{person.role}</h4>
+                        </div>
+                      </div>
+                    </SpecialCol>
+                  )
+                })}
+              </Row>
+            </Tab>
+            <Tab eventKey="alumni-advisors" title="Alumni/Advisors">
+              <Row>
+                {alumni.map(person => {
+                  return (
+                    <SpecialCol xs={12} sm={6} md={4} lg={3}>
+                      <div>
+                        <GatsbyImage
+                          image={person.image.gatsbyImageData}
+                          className="img"
+                        ></GatsbyImage>
+                        <div>
+                          <h3>{person.name}</h3>
+                          <h4>
+                            {person.positionInClub !== "N/A"
+                              ? person.whereAreTheyWorking !== null
+                                ? person.positionInClub +
+                                  " | " +
+                                  person.whereAreTheyWorking
+                                : person.positionInClub
+                              : person.whereAreTheyWorking}
+                          </h4>
+                        </div>
+                      </div>
+                    </SpecialCol>
+                  )
+                })}
+              </Row>
+            </Tab>
+            <Tab eventKey="faculty-advisors" title="Faculty Advisors">
+              <Row>
+                {advisors.map(person => {
+                  return (
+                    <SpecialCol xs={12} sm={6} md={4} lg={3}>
+                      <div>
+                        <GatsbyImage
+                          image={person.image.gatsbyImageData}
+                          class="img"
+                        ></GatsbyImage>
+                        <div>
+                          <h3>{person.name}</h3>
+                          <h4>{person.position}</h4>
+                        </div>
+                      </div>
+                    </SpecialCol>
+                  )
+                })}
+              </Row>
+            </Tab>
+          </Tabs>
         </Container>
       </CustomizedContainer>
-      <CustomizedContainer>
+
+      <CustomizedContainer color={theme.colors.grey100}>
         <div id="foundation" />
         <Container fluid>
           <Header type={"gold-header"}>PiE Foundation</Header>
@@ -295,10 +433,51 @@ const About = () => {
   )
 }
 
+const SpecialCol = styled(Col)`
+  padding: 1rem;
+  & > div {
+    background-color: ${theme.colors.blue700};
+    border-radius: ${theme.borderRadius};
+    box-shadow: ${theme.shadows.darkShadow};
+    color: ${theme.colors.grey50};
+  }
+
+  & > div > div {
+    padding: 1rem;
+  }
+
+  .img {
+    border-radius: ${theme.borderRadius} ${theme.borderRadius} 0 0;
+    max-height: 15rem;
+  }
+
+  .img img {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+  h3,
+  h4 {
+    margin: 0 0 0.5rem 0;
+  }
+
+  @media screen and (max-width: 767px) {
+    .img {
+      max-height: 18rem;
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+    .img {
+      max-height: 20rem;
+    }
+  }
+`
+
 const HeroWrapper = styled.div`
   .hero-image {
-    /* background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
-      url("../assets/images/stock-images/blog.jpg") center/cover fixed no-repeat; */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+      url(${pic}) center/cover fixed no-repeat;
     background-color: coral;
     height: 100vh;
     width: 100%;

@@ -111,21 +111,21 @@ const sublinks = [
         subpage: "Communication",
         url: "",
         subsections: [
-          {
-            label: "Discord",
-            icon: <FaDiscord />,
-            url: "https://styled-components.com/",
-          },
+          // {
+          //   label: "Discord",
+          //   icon: <FaDiscord />,
+          //   url: "https://styled-components.com/",
+          // },
           {
             label: "Piazza",
             icon: <BiCommentDots />,
             url: "https://piazza.com/class/kjxv8nixe2v69p",
           },
-          {
-            label: "Mailing List",
-            icon: <AiOutlineMail />,
-            url: "https://styled-components.com/",
-          },
+          // {
+          //   label: "Mailing List",
+          //   icon: <AiOutlineMail />,
+          //   url: "https://styled-components.com/",
+          // },
         ],
       },
     ],

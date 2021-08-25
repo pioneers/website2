@@ -38,7 +38,7 @@ const GetInvolvedDropdown = () => {
               </h4>
               <LinkList>
                 <li>
-                  <Link to="/getInvolved/Decal#Info">Info</Link>
+                  <Link to="/getInvolved/Decal#info">Info</Link>
                 </li>
                 <li>
                   <Link to="https://decal.berkeley.edu/courses/5141">
@@ -56,7 +56,7 @@ const GetInvolvedDropdown = () => {
                   <Link to="/getInvolved/Schools">Info</Link>
                 </li>
                 <li>
-                  <Link to="/getInvolved/Schools#SignUp">Sign Up</Link>
+                  <Link to="/getInvolved/Schools#signUp">Sign Up</Link>
                 </li>
               </LinkList>
             </div>

@@ -21,6 +21,8 @@ import theme from "../assets/themes/theme"
 import Container from "react-bootstrap/esm/Container"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
+
+import pic from "../assets/images/stock-images/robotics_competition_sp17.jpg"
 const query = graphql`
   {
     allContentfulCompetitionTimeline(
@@ -50,8 +52,12 @@ const StudentResources = () => {
               Download Dawn and Runtime software, view documents and guides, and
               check for updates.
             </p>
-            <AlternativeButton link="/404">Software Hub</AlternativeButton>
-            <AlternativeButton link="/404">Kit Hub</AlternativeButton>
+            <AlternativeButton link="/competition/SoftwareHub">
+              Software Hub
+            </AlternativeButton>
+            <AlternativeButton link="/competition/MechanicalHub">
+              Kit Hub
+            </AlternativeButton>
           </div>
         </Col>
         <Col sm={12} md={6} lg={6}>
@@ -118,6 +124,7 @@ const Competition = () => {
           <h4 style={{ marginBottom: "1.5em", color: theme.colors.grey400 }}>
             INFORMATION
           </h4>
+          <div id="howItWorks"></div>
           <Header type={"blue"}>How It Works</Header>
           <WorksBoxesWrapper
             fluid
@@ -184,8 +191,8 @@ const Competition = () => {
 
 const HeroWrapper = styled.div`
   .hero-image {
-    /* background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
-      url("../assets/images/stock-images/blog.jpg") center/cover fixed no-repeat; */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+      url(${pic}) center/cover fixed no-repeat;
     background-color: coral;
     height: 100vh;
     width: 100%;

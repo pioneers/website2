@@ -69,7 +69,7 @@ const AboutDropdown = () => {
             </div>
             <div>
               <Heading color="blue">
-                <Link to="/About#Overlords">Overlords</Link>
+                <Link to="/About#overlords">Overlords</Link>
               </Heading>
               <p>Leadership for this year</p>
             </div>
@@ -80,7 +80,7 @@ const AboutDropdown = () => {
             </div>
             <div>
               <Heading color="green">
-                <Link to="/About#ProjectManagers">Project Managers</Link>
+                <Link to="/About#projectManagers">Project Managers</Link>
               </Heading>
               <p>The leaders of each project</p>
             </div>
@@ -91,7 +91,7 @@ const AboutDropdown = () => {
             </div>
             <div>
               <Heading color="teal">
-                <Link to="/About/AllOtherMembers">All Other Members</Link>
+                <Link to="/About#others">All Other Members</Link>
               </Heading>
               <p style={{ marginBottom: 0 }}>
                 Underlings, advisors, and alumni
@@ -104,13 +104,13 @@ const AboutDropdown = () => {
         <SubProductsList>
           <ul>
             <HeadingLink>
-              <Link to="/About#Mission">
+              <Link to="/About#mission">
                 <Icon /> Mission Statement
               </Link>
             </HeadingLink>
 
             <HeadingLink noMarginBottom>
-              <Link to="/About#Foundation">
+              <Link to="/About#foundation">
                 <Icon /> Foundation
               </Link>
             </HeadingLink>

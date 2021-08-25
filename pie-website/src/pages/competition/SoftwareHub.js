@@ -14,6 +14,8 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
 
+import pic from "../../assets/images/about-us/work-in-progress.jpg"
+
 const query = graphql`
   {
     allContentfulSoftwareHubLinks {
@@ -306,8 +308,8 @@ const SoftwareHub = () => {
 
 const HeroWrapper = styled.div`
   .hero-image {
-    /* background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
-      url("../assets/images/stock-images/blog.jpg") center/cover fixed no-repeat; */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+      url(${pic}) center/cover fixed no-repeat;
     background-color: coral;
     height: 100vh;
     width: 100%;

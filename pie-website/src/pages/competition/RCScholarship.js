@@ -25,6 +25,8 @@ import Row from "react-bootstrap/esm/Row"
 import Col from "react-bootstrap/esm/Col"
 import Container from "react-bootstrap/esm/Container"
 
+import pic from "../../assets/images/stock-images/prep.jpg"
+
 const query = graphql`
   {
     allContentfulPastScholars {
@@ -167,12 +169,12 @@ const RCScholarship = () => {
                     <BiVideoRecording />
                     <h3>2021 Scholarship Workshop</h3>
                     <div />
-                    <AlternativeButton
+                    {/* <AlternativeButton
                       color="gold"
                       link="https://drive.google.com/file/d/1WK6IHjJFmyEaO8QcdZC1ZEn1EVLeVSgT/view"
                     >
                       Recording
-                    </AlternativeButton>
+                    </AlternativeButton> */}
                   </div>
                 </div>
               </Col>
@@ -267,8 +269,8 @@ const RCScholarship = () => {
 
 const HeroWrapper = styled.div`
   .hero-image {
-    /* background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
-      url("../assets/images/stock-images/blog.jpg") center/cover fixed no-repeat; */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+      url(${pic}) center/cover fixed no-repeat;
     background-color: coral;
     height: 100vh;
     width: 100%;

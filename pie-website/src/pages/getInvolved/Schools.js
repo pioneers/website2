@@ -8,7 +8,7 @@ const Schools = () => {
     <Layout>
       <SEO title="Schools" description="Under Construction" />
       <CustomizedContainer>
-        <h1>Under Constructionn</h1>
+        <h1>Under Construction</h1>
       </CustomizedContainer>
     </Layout>
   )

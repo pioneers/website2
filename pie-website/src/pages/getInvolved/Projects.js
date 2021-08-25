@@ -4,10 +4,13 @@ import Layout from "../../components/Layout"
 import SEO from "../../components/Seo"
 import Header from "../../components/Header"
 import styled from "styled-components"
+import CustomizedContainer from "../../components/CustomizedContainer"
 
 import { projects } from "../../assets/data/projects"
 
 import "../../assets/css/projects.css"
+
+import pic from "../../assets/images/stock-images/pie-staff.jpg"
 
 const ReadMore = ({ children, maxCharacterCount = 100 }) => {
   const [isTruncated, setIsTruncated] = useState(true)
@@ -41,7 +44,10 @@ const Projects = () => {
           </div>
         </div>
       </HeroWrapper>
-      <Container>
+      <CustomizedContainer>
+        <h1>Under Construction</h1>
+      </CustomizedContainer>
+      {/* <Container>
         <ProjectsContainer>
           <Header type="blue">PiE Projects</Header>
           {projects.forEach(project => {
@@ -98,15 +104,15 @@ const Projects = () => {
             )
           })}
         </ProjectsContainer>
-      </Container>
+      </Container> */}
     </Layout>
   )
 }
 
 const HeroWrapper = styled.div`
   .hero-image {
-    /* background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
-      url("../assets/images/stock-images/blog.jpg") center/cover fixed no-repeat; */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+      url(${pic}) center/cover fixed no-repeat;
     background-color: coral;
     height: 100vh;
     width: 100%;

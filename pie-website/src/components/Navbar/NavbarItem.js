@@ -27,7 +27,7 @@ const NavbarItemTitle = styled.button`
   } */
 
   a {
-    color: black;
+    color: white;
   }
   a:hover,
   a:focus {

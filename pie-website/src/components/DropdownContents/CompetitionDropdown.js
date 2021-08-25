@@ -48,17 +48,17 @@ const CompetitionDropdown = () => {
             <div>
               <h4>Communication</h4>
               <LinkList>
-                <li>
+                {/* <li>
                   <Link to="https://styled-components.com/">Discord</Link>
-                </li>
+                </li> */}
                 <li>
                   <Link to="https://piazza.com/class/kjxv8nixe2v69p">
                     Piazza
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link to="https://styled-components.com/">Mailing List</Link>
-                </li>
+                </li> */}
               </LinkList>
             </div>
           </Flex>

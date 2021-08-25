@@ -16,6 +16,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import SEO from "../components/Seo"
 
+import pic from "../assets/images/about-us/gallery_hero.jpg"
+
 const years = [2019, 2016, 2015, 2014, 2013]
 
 const query = graphql`
@@ -161,8 +163,8 @@ const Gallery = () => {
 
 const HeroWrapper = styled.div`
   .hero-image {
-    /* background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
-      url("../assets/images/stock-images/blog.jpg") center/cover fixed no-repeat; */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+      url(${pic}) center/cover fixed no-repeat;
     background-color: coral;
     height: 100vh;
     width: 100%;

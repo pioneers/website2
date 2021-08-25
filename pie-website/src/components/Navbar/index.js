@@ -1,9 +1,12 @@
 import React, { Component } from "react"
 import styled from "styled-components"
 
+import theme from "../../assets/themes/theme"
+
 const NavbarEl = styled.nav`
   margin: auto;
   padding: 0.5rem 0rem;
+  background-color: ${theme.colors.grey600};
 `
 
 const NavbarList = styled.ul`

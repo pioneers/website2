@@ -29,6 +29,8 @@ import Row from "react-bootstrap/esm/Row"
 import Col from "react-bootstrap/esm/Col"
 import Container from "react-bootstrap/esm/Container"
 
+import pic from "../assets/images/homepage-banners/explaining.jpg"
+
 const query = graphql`
   {
     allContentfulIndexCarousel {
@@ -73,10 +75,10 @@ export default function Home(props) {
           <div>
             <h1>Pioneers in Engineering</h1>
             <h3>Bringing STEM education to the Bay Area</h3>
-            <AlternativeButton type="hipster" link="/getInvolved#timeline">
+            <AlternativeButton type="hipster" link="/GetInvolved#timeline">
               Events
             </AlternativeButton>
-            <AlternativeButton color="gold" link="/getInvolved/forms">
+            <AlternativeButton color="gold" link="/getInvolved/Forms">
               Join Pie
             </AlternativeButton>
           </div>
@@ -165,7 +167,7 @@ export default function Home(props) {
               })}
             </Carousel>
           </CarouselWrapper> */}
-          <AlternativeButton link="/competition">
+          <AlternativeButton link="/Competition">
             2021 PIE Robotics Competition
           </AlternativeButton>
         </Container>
@@ -203,7 +205,7 @@ export default function Home(props) {
                     mentor and role model for a team of high school students?
                     PiE RC DeCal, offered every spring, offers just that!
                   </p>
-                  <AlternativeButton link="/getInvolved/decal">
+                  <AlternativeButton link="/getInvolved/Decal">
                     Learn More
                   </AlternativeButton>
                 </div>
@@ -221,7 +223,7 @@ export default function Home(props) {
                     Join our team and be part of providing STEM education to the
                     Bay Area
                   </p>
-                  <AlternativeButton color="gold" link="/getInvolved">
+                  <AlternativeButton color="gold" link="/GetInvolved">
                     Learn More
                   </AlternativeButton>
                 </div>
@@ -240,7 +242,7 @@ export default function Home(props) {
                     volunteer at our events. You can help us by being a judge at
                     our Design Reviews and/or Final Competition.
                   </p>
-                  <AlternativeButton link="/getInvolved">
+                  <AlternativeButton link="/GetInvolved#volunteer">
                     Learn More
                   </AlternativeButton>
                 </div>
@@ -283,13 +285,14 @@ const TeamsBoxesWrapper = styled(BoxesWrapper)`
 const HeroWrapper = styled.div`
   .hero-image {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
-      url("../assets/images/stock-images/blog.jpg") center/cover fixed no-repeat;
+      url(${pic}) center/cover fixed no-repeat;
     height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
+    top: 0;
   }
 `
 

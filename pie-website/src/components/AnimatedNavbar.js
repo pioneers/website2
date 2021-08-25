@@ -203,7 +203,7 @@ const ResponsiveTitle = styled.button`
   position: relative;
   z-index: 2;
   a {
-    color: black;
+    color: white;
   }
   a:hover,
   a:focus {
@@ -213,9 +213,11 @@ const ResponsiveTitle = styled.button`
 
   .short {
     display: none;
+    color: white;
   }
   .long {
     display: block;
+    color: white;
   }
 
   @media screen and (max-width: 1166px) {

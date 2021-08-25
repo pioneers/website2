@@ -11,6 +11,8 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
 
+import pic from "../../assets/images/stock-images/robotics-competition.jpg"
+
 const query = graphql`
   {
     allContentfulMechanicalHubPosts {
@@ -43,16 +45,24 @@ const MechanicalHub = () => {
         <FlexContainer fluid>
           <h3>Click on the boxes for more info!</h3>
           <Row>
-            {nodes.map(node => {
-              const { name, link } = node
-              return (
-                <Col xs={12} sm={6} md={4} lg={3} style={{ padding: ".5rem" }}>
-                  <MechLink className="card" to={link}>
-                    {name}
-                  </MechLink>
-                </Col>
-              )
-            })}
+            {nodes
+              .filter(post => post.name !== "Demo")
+              .map(node => {
+                const { name, link } = node
+                return (
+                  <Col
+                    xs={12}
+                    sm={6}
+                    md={4}
+                    lg={3}
+                    style={{ padding: ".5rem" }}
+                  >
+                    <MechLink className="card" to={link}>
+                      {name}
+                    </MechLink>
+                  </Col>
+                )
+              })}
             <Col xs={12} sm={6} md={4} lg={3} style={{ padding: ".5rem" }}>
               <ALink
                 className="card"
@@ -115,8 +125,8 @@ const MechLink = styled(Link)`
 
 const HeroWrapper = styled.div`
   .hero-image {
-    /* background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
-      url("../assets/images/stock-images/blog.jpg") center/cover fixed no-repeat; */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+      url(${pic}) center/cover fixed no-repeat;
     background-color: coral;
     height: 100vh;
     width: 100%;

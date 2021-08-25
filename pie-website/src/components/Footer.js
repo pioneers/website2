@@ -46,18 +46,18 @@ function Footer() {
               ]
             </div>
             <div className="socials">
-              <Link>
+              <Link to="https://github.com/pioneers">
                 <AiFillGithub />
               </Link>
-              <Link>
+              <Link to="https://www.facebook.com/pierobotics">
                 <AiFillFacebook />
               </Link>
-              <Link>
+              <Link to="https://www.youtube.com/user/pierobotics">
                 <AiFillYoutube />
               </Link>
             </div>
           </div>
-          <div>
+          {/* <div>
             <h3>Mailing List</h3>
             <form
               noValidate
@@ -76,7 +76,7 @@ function Footer() {
 
               <CustomButton color="blue">Submit</CustomButton>
             </form>
-          </div>
+          </div> */}
         </div>
         <div className="links-container">
           {sublinks.map(item => {
