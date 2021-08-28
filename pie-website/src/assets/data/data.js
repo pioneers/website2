@@ -121,11 +121,6 @@ const sublinks = [
             icon: <BiCommentDots />,
             url: "https://piazza.com/class/kjxv8nixe2v69p",
           },
-          // {
-          //   label: "Mailing List",
-          //   icon: <AiOutlineMail />,
-          //   url: "https://styled-components.com/",
-          // },
         ],
       },
     ],
@@ -212,6 +207,11 @@ const sublinks = [
             label: "Sponsors",
             icon: <FaCreditCard />,
             url: "/SupportUs#sponsors",
+          },
+          {
+            label: "Mailing List",
+            icon: <AiOutlineMail />,
+            url: "/#mailinglist",
           },
         ],
       },

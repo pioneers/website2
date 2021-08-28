@@ -35,6 +35,8 @@ import pic from "../assets/images/homepage-banners/explaining.jpg"
 
 import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
 
+import MailchimpFormContainer from "../components/Mailchimp"
+
 const query = graphql`
   {
     allContentfulIndexCarousel {
@@ -185,31 +187,10 @@ export default function Home(props) {
           </Row>
         </JoinUs>
       </CustomizedContainer>
-      {/* <CustomizedContainer color={theme.colors.grey100}>
-        <FormContainer fluid>
-          <Row>
-            <Col sm={12} md={6} lg={6}>
-              <div>
-                <h3>Get the latest from PiE</h3>
-                <p style={{ fontWeight: "400", fontSize: "18px" }}>
-                  Share your email to get the latest updates on our organization
-                  and competition.
-                </p>
-              </div>
-            </Col>
-
-            <Col sm={12} md={6} lg={6}>
-              <div className="centered">
-                <form action="">
-                  <Form.Control type="text" placeholder="johndoe@gmail.com" />
-                  <button>Subscribe</button>
-                </form>
-                <p>You can unsubscribe at any time.</p>
-              </div>
-            </Col>
-          </Row>
-        </FormContainer>
-      </CustomizedContainer> */}
+      <CustomizedContainer color={theme.colors.grey100}>
+        <div id="mailinglist"></div>
+        <MailchimpFormContainer />
+      </CustomizedContainer>
     </Layout>
   )
 }
@@ -325,75 +306,6 @@ const WhoWeServe = styled(Container)`
 
     p {
       font-size: 1.5rem;
-    }
-  }
-`
-
-const FormContainer = styled(Container)`
-  .centered {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .centered p {
-    margin-top: 0.5rem;
-    color: ${theme.colors.grey400};
-    font-weight: 300;
-    font-size: 0.8rem;
-  }
-  input:focus {
-    outline: none;
-    box-shadow: none;
-    border: transparent;
-  }
-
-  form:focus-within {
-    box-shadow: ${theme.shadows.darkShadow};
-  }
-
-  form {
-    border-radius: ${theme.borderRadius} 0 0 ${theme.borderRadius};
-    box-shadow: ${theme.shadows.lightShadow};
-    transition: ${theme.transition};
-    max-width: 30rem;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
-  input {
-    display: inline-block;
-    width: 100%;
-    outline: none;
-    border: transparent;
-    height: 3rem;
-    /* border-radius: ${theme.borderRadius} 0 0 ${theme.borderRadius}; */
-  }
-
-  ::placeholder {
-    color: ${theme.colors.grey400};
-  }
-
-  button {
-    display: inline-block;
-    text-transform: uppercase;
-    border: transparent;
-    border-radius: 0 ${theme.borderRadius} ${theme.borderRadius} 0;
-    background-color: ${theme.colors.white};
-    height: 3rem;
-    font-weight: 600;
-    letter-spacing: 2px;
-  }
-
-  @media screen and (max-width: 765px) {
-    .centered {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: flex-start;
-      margin-top: 0.5rem;
     }
   }
 `

@@ -238,6 +238,7 @@ const FullScreenSquare = ({ toggleFullScreen, text, name, pMs, program }) => {
       >
         <div>
           <div>
+            <h5>Click anywhere to minimize</h5>
             <h1>{name}</h1>
             <h3>{prog}</h3>
           </div>
@@ -482,6 +483,9 @@ const FullScreenSquareStyles = styled.div`
   h3 {
     animation: ${fadeIn} 0.8s forwards;
     animation-delay: 0.1s;
+  }
+  h5 {
+    font-size: 0.75rem;
   }
   & > div > div {
     animation: ${fadeIn} 0.8s forwards;

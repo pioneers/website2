@@ -56,9 +56,9 @@ const CompetitionDropdown = () => {
                     Piazza
                   </Link>
                 </li>
-                {/* <li>
-                  <Link to="https://styled-components.com/">Mailing List</Link>
-                </li> */}
+                <li>
+                  <Link to="/#mailinglist">Mailing List</Link>
+                </li>
               </LinkList>
             </div>
           </Flex>
