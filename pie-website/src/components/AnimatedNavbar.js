@@ -167,7 +167,7 @@ const ButtonSide = styled.button`
   height: 100%;
   border-color: transparent;
   color: white;
-  background: ${theme.colors.black};
+  background: ${theme.colors.blue600};
   transition: ${theme.transition};
 
   &:hover {

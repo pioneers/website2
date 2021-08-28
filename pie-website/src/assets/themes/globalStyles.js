@@ -50,8 +50,11 @@ font-family: 'Source Sans Pro', sans-serif; */
   
 
   p {
-    margin-bottom: 1.5rem;
     max-width: ${theme.fixedWidth};
+    margin-bottom: 1.25rem;
+    color: ${theme.colors.grey700};
+    font-size: 18px;
+    font-weight: 400;
   }
 
   h1,
@@ -83,10 +86,7 @@ h4 {
 h5 {
   font-size: 0.825rem;
 }
-p {
-  margin-bottom: 1.25rem;
-  color: ${theme.colors.grey700};
-}
+
 
 @media ${theme.mediaQueries.tabletL} {
   h1,

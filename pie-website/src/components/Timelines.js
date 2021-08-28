@@ -65,9 +65,11 @@ export const TimelineOne = props => {
               <TimelineOppositeContent>
                 <SecondaryText>{week}</SecondaryText>
                 <SecondaryText>Time: {time}</SecondaryText>
-                <SecondaryText>
-                  Link: <Link to={link}>{link}</Link>
-                </SecondaryText>
+                {link && (
+                  <SecondaryText>
+                    Link: <Link to={link}>{link}</Link>
+                  </SecondaryText>
+                )}
               </TimelineOppositeContent>
               <TimelineSeparator>
                 {datePassed(internalTime) ? (
@@ -108,7 +110,7 @@ export const TimelineOne = props => {
               <TimelineContent>
                 <Event className="card">
                   <h3>{event}</h3>
-                  <div style={{ marginBottom: ".5rem" }}>
+                  <div style={{ marginBottom: ".5rem", overflowX: "atuo" }}>
                     <SecondaryText>{week}</SecondaryText>
                     <SecondaryText>Time: {time}</SecondaryText>
                     <SecondaryText>
@@ -191,7 +193,7 @@ export const TimelineTwo = props => {
               <TimelineContent>
                 <Event className="card">
                   <h3>{event}</h3>
-                  <div style={{ marginBottom: ".5rem" }}>
+                  <div style={{ marginBottom: ".5rem", overflowX: "atuo" }}>
                     {week === null && (
                       <SecondaryText>Week: {week}</SecondaryText>
                     )}

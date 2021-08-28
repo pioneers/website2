@@ -68,6 +68,7 @@ const Decal = () => {
         description="Become a mentor for a high school robotics team. Be a role model for local students as you guide them in building a robot for PiE’s Robotics Competition. Through our class, you’ll learn what you need to know to be a mentor and help build the robot."
       />
       <HeroWrapper>
+        <div className="placeholder"></div>
         <div className="hero-image">
           <div>
             <h1>Decal</h1>
@@ -94,100 +95,88 @@ const Decal = () => {
             THE TIMELINE
           </h4>
           <Header type="yellow">List of Events</Header>
-          <TimelineOne timelineFor={events} />
+          <h1>Events to Come</h1>
+          {/* <TimelineOne timelineFor={events} /> */}
         </Container>
       </CustomizedContainer>
       <CustomizedContainer>
         <Container fluid>
           <div>
+            <div id="details"></div>
             <h4 style={{ marginBottom: "1.5em", color: theme.colors.grey400 }}>
               DETAILS
             </h4>
             <Header type="blue">What You Will Learn</Header>
           </div>
-          <SkillsWrapper fluid padding="2rem 1.25rem">
-            <Row className="inner-container">
-              <Col sm={12} md={6} lg={3}>
-                <div
-                  className="card"
-                  style={{ backgroundColor: theme.colors.darkblue400 }}
-                >
-                  <div>
-                    <h3>Guide</h3>
-                    <p>
-                      How to guide high school students in the robotics
-                      competition
-                    </p>
-                  </div>
+          <SkillsUsed fluid>
+            <Row>
+              <Col xs={12} sm={6} md={3} lg={3}>
+                <div>
+                  <h3>Guide</h3>
+                  <p>
+                    How to guide high school students in the robotics
+                    competition
+                  </p>
                 </div>
               </Col>
-              <Col sm={12} md={6} lg={3}>
-                <div className="card">
-                  <div>
-                    <h3>Robotics</h3>
-                    <p>How to work with the robotics kit</p>
-                  </div>
+              <Col xs={12} sm={6} md={3} lg={3}>
+                <div>
+                  <h3>Robotics</h3>
+                  <p>How to work with the robotics kit</p>
                 </div>
               </Col>
-              <Col sm={12} md={6} lg={3}>
-                <div
-                  className="card"
-                  style={{ backgroundColor: theme.colors.orange500 }}
-                >
-                  <div>
-                    <h3>Analyze</h3>
-                    <p>How to analyze and breakdown the competition</p>
-                  </div>
+              <Col xs={12} sm={6} md={3} lg={3}>
+                <div>
+                  <h3>Analyze</h3>
+                  <p>How to analyze and breakdown the competition</p>
                 </div>
               </Col>
-              <Col sm={12} md={6} lg={3}>
-                <div
-                  className="card"
-                  style={{ backgroundColor: theme.colors.green500 }}
-                >
-                  <div>
-                    <h3>Inspire</h3>
-                    <p>How to inspire high school students through STEM</p>
-                  </div>
+              <Col xs={12} sm={6} md={3} lg={3}>
+                <div>
+                  <h3>Inspire</h3>
+                  <p>How to inspire high school students through STEM</p>
                 </div>
               </Col>
             </Row>
-          </SkillsWrapper>
+          </SkillsUsed>
+
           <DetailsWrapper fluid>
             <Row>
-              <Col sm={12} md={12} lg={4}>
+              <Col sm={12} md={12} lg={5}>
                 <br />
                 <div>
-                  <ul>
-                    <li>Enroll in our DeCal class for 2 units, P/NP.</li>
-                    <li>
-                      Choose to attend section on either (not both):{" "}
-                      <ul>
-                        <li>Monday 6 PM - 8, 210 Jacobs Hall</li>
-                        <li>Thursday 6 PM - 8, 145 McCone Hall</li>
-                      </ul>
-                    </li>
-                    <li>
-                      Meet with your team for two hours each week during our
-                      9-week competition.
-                    </li>
-                    <li>
-                      Come to PiE Robotics Competition events at UC Berkeley on
-                      select weekend season events.
-                    </li>
-                    <li>
-                      Help students at worksessions at O'Brien Hall Breezeway
-                      (2nd floor).
-                    </li>
-                    <li>Check out our syllabus.</li>
-                    <li>
-                      Grab the CCN by coming to an infosession or attending the
-                      first day of class.
-                    </li>
-                  </ul>
+                  <p>
+                    <ul>
+                      <li>Enroll in our DeCal class for 2 units, P/NP.</li>
+                      <li>
+                        Choose to attend section on either (not both):{" "}
+                        <ul>
+                          <li>Monday 6 PM - 8, 210 Jacobs Hall</li>
+                          <li>Thursday 6 PM - 8, 145 McCone Hall</li>
+                        </ul>
+                      </li>
+                      <li>
+                        Meet with your team for two hours each week during our
+                        9-week competition.
+                      </li>
+                      <li>
+                        Come to PiE Robotics Competition events at UC Berkeley
+                        on select weekend season events.
+                      </li>
+                      <li>
+                        Help students at worksessions at O'Brien Hall Breezeway
+                        (2nd floor).
+                      </li>
+                      <li>Check out our syllabus.</li>
+                      <li>
+                        Grab the CCN by coming to an infosession or attending
+                        the first day of class.
+                      </li>
+                    </ul>
+                  </p>
                 </div>
               </Col>
-              <Col sm={12} md={12} lg={8}>
+              <Col sm={12} md={12} lg={7}>
                 <br />
                 <div>
                   <iframe
@@ -230,21 +219,23 @@ const Decal = () => {
 
 const HeroWrapper = styled.div`
   .hero-image {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
       url(${pic}) center/cover fixed no-repeat;
-    background-color: coral;
     height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    text-align: center;
+    color: ${theme.colors.white};
+    top: 0;
+    position: absolute;
+    z-index: -1;
+    padding: 1rem;
   }
-`
-
-const SkillsWrapper = styled(BoxesWrapper)`
-  h3 {
-    color: ${theme.colors.grey300} !important;
+  .placeholder {
+    height: 90vh;
+    width: 100%;
   }
 `
 
@@ -280,6 +271,41 @@ const DetailsWrapper = styled(Container)`
     width: 100%;
     aspect-ratio: 16 / 9;
     border-radius: ${theme.borderRadius};
+  }
+
+  li {
+    list-style-type: disc;
+  }
+  ul {
+    margin-left: 1rem;
+  }
+`
+
+const SkillsUsed = styled(Container)`
+  h3 {
+    border-left: 1px ${theme.colors.blue600} solid;
+    line-height: 1.2rem;
+    padding-left: 0.75rem;
+    color: ${theme.colors.gold600};
+  }
+
+  p {
+    padding-left: 0.75rem;
+  }
+
+  .row > div {
+    margin: 1 0 0 0;
+  }
+
+  @media screen and (max-width: 575px) {
+    h3 {
+      font-size: 2rem;
+      line-height: 2rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
   }
 `
 

@@ -22,6 +22,8 @@ import Container from "react-bootstrap/esm/Container"
 
 import pic from "../assets/images/stock-images/pie-staff.jpg"
 
+import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
+
 const query = graphql`
   {
     allContentfulRecruitingTimeline(
@@ -51,6 +53,7 @@ const GetInvolved = () => {
         description="Want to help out? Here at PiE, we don't have an application process. Rather, we firmly believe that any UC Berkeley student who is interested in our club has something to offer, whether community-wise, project-wise, or anything else that we can't think of ourselves! Simply fill out the forms or come check out worksession and we'll get you started!"
       />
       <HeroWrapper>
+        <div className="placeholder"></div>
         <div className="hero-image">
           <div>
             <h1>Get Involved</h1>
@@ -60,7 +63,7 @@ const GetInvolved = () => {
 
       <CustomizedContainer color={theme.colors.white}>
         <div id="recruiting" />
-        <Container fluid>
+        <HeaderContainer fluid>
           <h4 style={{ marginBottom: "1.5em", color: theme.colors.grey400 }}>
             JOIN US
           </h4>
@@ -68,10 +71,11 @@ const GetInvolved = () => {
           <p>
             We've got a great lineup of events ready to welcome you (back) to
             Berkeley. Come to an infosession to find out what we're all about,
-            then decide which project team you want to help out with at Project
-            Expo. We believe that everyone can find a place to contribute in
-            PiE, regardless of year or major, so don't hesitate to come out!
-            You'll also be able to find us tabling at{" "}
+            then decide which{" "}
+            <Link to="/getInvolved/Projects">project team</Link> you want to
+            help out with at Project Expo. We believe that everyone can find a
+            place to contribute in PiE, regardless of year or major, so don't
+            hesitate to come out! You'll also be able to find us tabling at{" "}
             <a
               href="https://lead.berkeley.edu/calapalooza/"
               target="_blank"
@@ -91,7 +95,7 @@ const GetInvolved = () => {
             </a>{" "}
             (plus sign on the bottom right)
           </p>
-        </Container>
+        </HeaderContainer>
       </CustomizedContainer>
 
       <CustomizedContainer>
@@ -101,17 +105,19 @@ const GetInvolved = () => {
             THE TIMELINE
           </h4>
           <Header type={"gold-header"}>Our Events</Header>
-          {/* <TimelineOne timelineFor={events} /> */}
-          <h1>Under Construction</h1>
         </Container>
+        <TimelineOne timelineFor={events} />
       </CustomizedContainer>
 
       <CustomizedContainer color={theme.colors.white}>
         <OptionsBoxesWrapper
           fluid
-          align="center"
-          headerColor={theme.colors.grey300}
-          padding="2rem 1.25rem"
+          padding="3rem"
+          backgroundColor={theme.colors.grey200}
+          headerColor={theme.colors.grey900}
+          textColor={theme.colors.grey700}
+          iconColor={theme.colors.grey900}
+          display="block"
         >
           <Row className="inner-container">
             <Col sm={12} md={6} lg={6}>
@@ -120,39 +126,37 @@ const GetInvolved = () => {
                   <BiGroup />
                   <h3>Team</h3>
                   <p>
-                    Interested in participating in PiE's mission by becoming a
-                    mentor and role model for a team of high school students?
-                    PiE RC DeCal, offered every spring, offers just that!
+                    Join our team and be part of providing STEM education to the
+                    Bay Area
                   </p>
                   <div>
                     <AlternativeButton color="gold" link="/getInvolved/Forms">
-                      Join Us
+                      Join Us &rsaquo;
                     </AlternativeButton>
                     <AlternativeButton
                       color="gold"
                       link="/getInvolved/Projects"
                     >
-                      Projects
+                      Projects &rsaquo;
                     </AlternativeButton>
                   </div>
                 </div>
               </div>
             </Col>
             <Col sm={12} md={6} lg={6}>
-              <div
-                className="card"
-                style={{ backgroundColor: theme.colors.darkblue400 }}
-              >
+              <div className="card">
                 <div>
                   <FaHandsHelping />
                   <div id="decal" />
                   <h3>Decal</h3>
                   <p>
-                    Join our team and be part of providing STEM education to the
-                    Bay Area
+                    Interested in participating in PiE's mission by becoming a
+                    mentor and role model for a team of high school students?
+                    PiE RC DeCal, offered every spring, offers just that!
                   </p>
+
                   <AlternativeButton link="/getInvolved/Decal">
-                    Learn More
+                    Learn More &rsaquo;
                   </AlternativeButton>
                 </div>
               </div>
@@ -213,20 +217,48 @@ const GetInvolved = () => {
 
 const HeroWrapper = styled.div`
   .hero-image {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
       url(${pic}) center/cover fixed no-repeat;
-    background-color: coral;
     height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    text-align: center;
+    color: ${theme.colors.white};
+    top: 0;
+    position: absolute;
+    z-index: -1;
+    padding: 1rem;
+  }
+  .placeholder {
+    height: 90vh;
+    width: 100%;
   }
 `
 
 const VolunteerWrapper = styled(Container)`
   padding: 1rem;
+
+  p > a {
+    font-weight: 600;
+    color: ${theme.colors.blue500};
+  }
+
+  p > a:hover {
+    color: ${theme.colors.black};
+  }
+`
+
+const HeaderContainer = styled(Container)`
+  p > a {
+    font-weight: 600;
+    color: ${theme.colors.blue500};
+  }
+
+  p > a:hover {
+    color: ${theme.colors.black};
+  }
 `
 
 const OptionsBoxesWrapper = styled(BoxesWrapper)``

@@ -23,6 +23,9 @@ import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 
 import pic from "../assets/images/stock-images/robotics_competition_sp17.jpg"
+
+import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
+
 const query = graphql`
   {
     allContentfulCompetitionTimeline(
@@ -49,14 +52,15 @@ const StudentResources = () => {
           <div>
             <h3>Kit Guides and Software</h3>
             <p>
-              Download Dawn and Runtime software, view documents and guides, and
-              check for updates.
+              Download <Link to="/getInvolved/Projects">Dawn</Link> and{" "}
+              <Link to="/getInvolved/Projects">Runtime</Link> software, view
+              documents and guides, and check for updates.
             </p>
             <AlternativeButton link="/competition/SoftwareHub">
-              Software Hub
+              Software Hub &rsaquo;
             </AlternativeButton>
             <AlternativeButton link="/competition/MechanicalHub">
-              Kit Hub
+              Kit Hub &rsaquo;
             </AlternativeButton>
           </div>
         </Col>
@@ -68,7 +72,7 @@ const StudentResources = () => {
               or just come chat. Access code: pie
             </p>
             <AlternativeButton link="https://piazza.com/class/kjxv8nixe2v69p">
-              Forums
+              Forums &rsaquo;
             </AlternativeButton>
           </div>
         </Col>
@@ -80,7 +84,7 @@ const StudentResources = () => {
               Need some more build time or tools? Come on out!
             </p>
             <AlternativeButton link="https://www.wejoinin.com/sheets/ssuba">
-              Worksession Sign Up
+              Worksession Sign Up &rsaquo;
             </AlternativeButton>
           </div>
         </Col>
@@ -88,11 +92,14 @@ const StudentResources = () => {
           <div>
             <h3>Robot Simulator</h3>
             <p>
-              Get up to speed with the Robot API quickly, or test your robot
-              code.
+              Get up to speed with the{" "}
+              <a href="https://github.com/pioneers/runtime/wiki/Student-API">
+                Robot API
+              </a>{" "}
+              quickly, or test your robot code.
             </p>
             <AlternativeButton link="https://pimulator.pierobotics.org/">
-              Simulator
+              Simulator &rsaquo;
             </AlternativeButton>
           </div>
         </Col>
@@ -112,6 +119,7 @@ const Competition = () => {
         description="Linked here will be the various resources pertaining to our competition."
       />
       <HeroWrapper>
+        <div className="placeholder"></div>
         <div className="hero-image">
           <div>
             <h1>Competition</h1>
@@ -191,15 +199,23 @@ const Competition = () => {
 
 const HeroWrapper = styled.div`
   .hero-image {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
       url(${pic}) center/cover fixed no-repeat;
-    background-color: coral;
     height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    text-align: center;
+    color: ${theme.colors.white};
+    top: 0;
+    position: absolute;
+    z-index: -1;
+    padding: 1rem;
+  }
+  .placeholder {
+    height: 90vh;
+    width: 100%;
   }
 `
 
@@ -225,6 +241,16 @@ const ResourcesWrapper = styled(Container)`
 
   h3 {
     color: ${theme.colors.grey900};
+  }
+
+  p > a {
+    font-weight: 600;
+
+    color: ${theme.colors.gold600};
+  }
+
+  p > a:hover {
+    color: ${theme.colors.black};
   }
 `
 

@@ -8,6 +8,8 @@ import CustomizedContainer from "../../components/CustomizedContainer"
 
 import { projects } from "../../assets/data/projects"
 
+import theme from "../../assets/themes/theme"
+
 import "../../assets/css/projects.css"
 
 import pic from "../../assets/images/stock-images/pie-staff.jpg"
@@ -38,6 +40,7 @@ const Projects = () => {
     <Layout>
       <SEO title="Projects" description="Project teams you can join!" />
       <HeroWrapper>
+        <div className="placeholder"></div>
         <div className="hero-image">
           <div>
             <h1>Projects</h1>
@@ -111,15 +114,23 @@ const Projects = () => {
 
 const HeroWrapper = styled.div`
   .hero-image {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
-      url(${pic}) center/cover fixed no-repeat;
-    background-color: coral;
+    /* background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+      url(${pic}) center/cover fixed no-repeat; */
+    background-color: ${theme.colors.grey900};
+
     height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
+    top: 0;
+    position: absolute;
+    z-index: -1;
+  }
+  .placeholder {
+    height: 90vh;
+    width: 100%;
   }
 `
 const ProjectsContainer = styled.div`

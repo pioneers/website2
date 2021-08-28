@@ -163,7 +163,7 @@ const sublinks = [
           {
             label: "Decal Info",
             icon: <BsInfoCircle />,
-            url: "/getInvolved/Decal",
+            url: "/getInvolved/Decal#details",
           },
           {
             label: "Decal Sign Up",
@@ -201,7 +201,7 @@ const sublinks = [
           {
             label: "Info",
             icon: <BsInfoCircle />,
-            url: "/SupportUs",
+            url: "/SupportUs#howused",
           },
           {
             label: "Donate Now",

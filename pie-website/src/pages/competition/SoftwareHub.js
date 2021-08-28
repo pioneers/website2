@@ -58,6 +58,7 @@ const SoftwareHub = () => {
         description="This is technically Software Hub but we will host things here for now."
       />
       <HeroWrapper>
+        <div className="placeholder"></div>
         <div className="hero-image">
           <div>
             <h1>Software Hub</h1>
@@ -308,15 +309,23 @@ const SoftwareHub = () => {
 
 const HeroWrapper = styled.div`
   .hero-image {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
       url(${pic}) center/cover fixed no-repeat;
-    background-color: coral;
     height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    text-align: center;
+    color: ${theme.colors.white};
+    top: 0;
+    position: absolute;
+    z-index: -1;
+    padding: 1rem;
+  }
+  .placeholder {
+    height: 90vh;
+    width: 100%;
   }
 `
 
@@ -332,6 +341,15 @@ const MoreWrapper = styled(Container)`
 
   h2 {
     color: ${theme.colors.grey900};
+  }
+
+  li > a {
+    font-weight: 600;
+    color: ${theme.colors.blue500};
+  }
+
+  li > a:hover {
+    color: ${theme.colors.black};
   }
 `
 

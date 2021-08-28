@@ -26,7 +26,7 @@ const Error = () => {
           <div>
             <h1>404</h1>
             <h3>Page Not Found</h3>
-            <AlternativeButton link="/">Home</AlternativeButton>
+            <AlternativeButton link="/">Home &rsaquo;</AlternativeButton>
           </div>
         </Container>
       </Wrapper>

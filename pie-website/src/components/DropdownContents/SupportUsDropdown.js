@@ -69,7 +69,7 @@ const SupportUsDropdown = () => {
             </div>
             <div>
               <Heading color="blue">
-                <Link to="/SupportUs/info">Donation Info</Link>
+                <Link to="/SupportUs#howused">Donation Info</Link>
               </Heading>
               <p>
                 Learn more about how your donations are used and why they are

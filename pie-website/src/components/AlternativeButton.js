@@ -36,9 +36,9 @@ const CustomButton = styled.button.attrs(props => ({
   background: ${props =>
     props.color === "blue" ? theme.colors.blue500 : theme.colors.gold500};
   border: transparent;
-  border-radius: ${theme.borderRadius};
+  border-radius: 100px;
   letter-spacing: ${theme.letterSpacing};
-  padding: 0.375rem 0.75rem;
+  padding: 0.375rem 1rem;
   box-shadow: ${theme.shadows.shadow1};
   transition: ${theme.transition};
   text-transform: capitalize;
