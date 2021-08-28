@@ -11,7 +11,7 @@ import CustomizedContainer from "../components/CustomizedContainer"
 import KitCost from "../assets/images/sponsors/kit-cost.png"
 import Poster from "../assets/images/companyposter.jpg"
 
-import SEO from "../components/Seo"
+import HelmetWrapper from "../components/HelmetWrapper"
 import { BoxesWrapper } from "../assets/themes/boxes"
 
 import { useStaticQuery, graphql } from "gatsby"
@@ -57,7 +57,7 @@ const SupportUs = () => {
   return (
     <React.Fragment>
       <Layout>
-        <SEO
+        <HelmetWrapper
           title="Support Us"
           description="Because of our low entry fee to our competition over $900 of our kit is subsidized by Pioneers in Engineering. For that reason, we rely on donations and grants to continue our operation to provide STEM education to the Bay Area"
         />

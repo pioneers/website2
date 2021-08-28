@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../../components/Layout"
-import SEO from "../../components/Seo"
+import HelmetWrapper from "../../components/HelmetWrapper"
 
 import styled from "styled-components"
 import CustomizedContainer from "../../components/CustomizedContainer"
@@ -63,7 +63,7 @@ const Decal = () => {
 
   return (
     <Layout>
-      <SEO
+      <HelmetWrapper
         title="Decal"
         description="Become a mentor for a high school robotics team. Be a role model for local students as you guide them in building a robot for PiE’s Robotics Competition. Through our class, you’ll learn what you need to know to be a mentor and help build the robot."
       />

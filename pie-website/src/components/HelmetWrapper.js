@@ -19,7 +19,7 @@ input:
   - title (title of page)
   - description (description associated with the page)
 */
-const SEO = ({ title, description }) => {
+const HelmetWrapper = ({ title, description }) => {
   const { site } = useStaticQuery(query)
   const metaDescription = description || site.siteMetadata.description
   return (
@@ -31,4 +31,4 @@ const SEO = ({ title, description }) => {
   )
 }
 
-export default SEO
+export default HelmetWrapper

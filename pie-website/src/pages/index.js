@@ -19,7 +19,7 @@ import { BiGroup } from "@react-icons/all-files/bi/BiGroup"
 import { VscOpenPreview } from "@react-icons/all-files/vsc/VscOpenPreview"
 
 import CustomizedContainer from "../components/CustomizedContainer"
-import SEO from "../components/Seo"
+import HelmetWrapper from "../components/HelmetWrapper"
 import { BoxesWrapper } from "../assets/themes/boxes"
 
 import { useStaticQuery, graphql } from "gatsby"
@@ -56,7 +56,7 @@ export default function Home(props) {
 
   return (
     <Layout>
-      <SEO title="Home" />
+      <HelmetWrapper title="Home" />
       <HeroWrapper>
         {/* need to use the query stuff for images */}
         <div className="placeholder"></div>

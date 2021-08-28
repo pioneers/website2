@@ -3,7 +3,7 @@ import React from "react"
 import styled from "styled-components"
 import Header from "../../components/Header"
 import Layout from "../../components/Layout"
-import SEO from "../../components/Seo"
+import HelmetWrapper from "../../components/HelmetWrapper"
 import CustomizedContainer from "../../components/CustomizedContainer"
 import AlternativeButton from "../../components/AlternativeButton"
 
@@ -49,7 +49,7 @@ const RCScholarship = () => {
 
   return (
     <Layout>
-      <SEO
+      <HelmetWrapper
         title="Pioneers in Engineering Alumni Scholarship"
         description="Linked here will be the alumni scholarship that PiE provides."
       />

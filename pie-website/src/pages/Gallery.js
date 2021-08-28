@@ -15,7 +15,7 @@ import Layout from "../components/Layout"
 
 import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import SEO from "../components/Seo"
+import HelmetWrapper from "../components/HelmetWrapper"
 
 import pic from "../assets/images/about-us/gallery_hero.jpg"
 
@@ -93,7 +93,7 @@ const Gallery = () => {
 
   return (
     <Layout>
-      <SEO
+      <HelmetWrapper
         title="Gallery"
         description="On this page we have a gallery of photos from our events over the years."
       />

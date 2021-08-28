@@ -10,7 +10,7 @@ import Layout from "../components/Layout"
 import styled from "styled-components"
 import CustomizedContainer from "../components/CustomizedContainer"
 import AlternativeButton from "../components/AlternativeButton"
-import SEO from "../components/Seo"
+import HelmetWrapper from "../components/HelmetWrapper"
 import { BoxesWrapper } from "../assets/themes/boxes"
 
 import { useStaticQuery, graphql } from "gatsby"
@@ -48,7 +48,7 @@ const GetInvolved = () => {
   const events = data.allContentfulRecruitingTimeline.nodes
   return (
     <Layout>
-      <SEO
+      <HelmetWrapper
         title="Get Involved"
         description="Want to help out? Here at PiE, we don't have an application process. Rather, we firmly believe that any UC Berkeley student who is interested in our club has something to offer, whether community-wise, project-wise, or anything else that we can't think of ourselves! Simply fill out the forms or come check out worksession and we'll get you started!"
       />

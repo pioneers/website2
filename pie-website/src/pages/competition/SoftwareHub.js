@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../../components/Layout"
-import SEO from "../../components/Seo"
+import HelmetWrapper from "../../components/HelmetWrapper"
 import CustomizedContainer from "../../components/CustomizedContainer"
 import styled from "styled-components"
 import { BoxesWrapper } from "../../assets/themes/boxes"
@@ -53,7 +53,7 @@ const SoftwareHub = () => {
   } = data.allContentfulSoftwareHubLinks.nodes[0]
   return (
     <Layout>
-      <SEO
+      <HelmetWrapper
         title="Mechanical Hub"
         description="This is technically Software Hub but we will host things here for now."
       />

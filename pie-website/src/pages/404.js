@@ -3,14 +3,14 @@ import Container from "react-bootstrap/esm/Container"
 
 import styled from "styled-components"
 import AlternativeButton from "../components/AlternativeButton"
-import SEO from "../components/Seo"
+import HelmetWrapper from "../components/HelmetWrapper"
 import GlobalStyles from "../assets/themes/globalStyles"
 import WellDone from "../assets/svg/undraw_well_done_i2wr.svg"
 
 const Error = () => {
   return (
     <React.Fragment>
-      <SEO
+      <HelmetWrapper
         title="Error"
         description="Oops, it looks like the page you are looking for does not exist."
       />

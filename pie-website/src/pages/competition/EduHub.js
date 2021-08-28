@@ -2,7 +2,7 @@ import React from "react"
 import CustomizedContainer from "../../components/CustomizedContainer"
 
 import Layout from "../../components/Layout"
-import SEO from "../../components/Seo"
+import HelmetWrapper from "../../components/HelmetWrapper"
 
 import theme from "../../assets/themes/theme"
 import styled from "styled-components"
@@ -10,7 +10,7 @@ import styled from "styled-components"
 const EduHub = () => {
   return (
     <Layout>
-      <SEO title="Edu Hub" description="Under Construction" />
+      <HelmetWrapper title="Edu Hub" description="Under Construction" />
       <HeroWrapper>
         <div className="placeholder"></div>
         <div className="hero-image">

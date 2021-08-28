@@ -2,13 +2,13 @@ import React from "react"
 
 import CustomizedContainer from "../../components/CustomizedContainer"
 import Layout from "../../components/Layout"
-import SEO from "../../components/SEO"
+import HelmetWrapper from "../../components/HelmetWrapper"
 import theme from "../../assets/themes/theme"
 import styled from "styled-components"
 const Schools = () => {
   return (
     <Layout>
-      <SEO title="Schools" description="Under Construction" />
+      <HelmetWrapper title="Schools" description="Under Construction" />
       <HeroWrapper>
         <div className="placeholder"></div>
         <div className="hero-image">

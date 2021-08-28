@@ -9,7 +9,7 @@ import Layout from "../../components/Layout"
 import CustomizedContainer from "../../components/CustomizedContainer"
 import styled from "styled-components"
 
-import SEO from "../../components/Seo"
+import HelmetWrapper from "../../components/HelmetWrapper"
 
 import Table from "react-bootstrap/Table"
 import Container from "react-bootstrap/esm/Container"
@@ -21,7 +21,10 @@ import pic from "../../assets/images/botwork.jpg"
 const Forms = () => {
   return (
     <Layout>
-      <SEO title="Forms" description="Use the forms here to join our team!" />
+      <HelmetWrapper
+        title="Forms"
+        description="Use the forms here to join our team!"
+      />
       <HeroWrapper>
         <div className="placeholder"></div>
         <div className="hero-image">

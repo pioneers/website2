@@ -1,7 +1,7 @@
 import React from "react"
 import CustomizedContainer from "../../../components/CustomizedContainer"
 import Layout from "../../../components/Layout"
-import SEO from "../../../components/Seo"
+import HelmetWrapper from "../../../components/HelmetWrapper"
 import styled from "styled-components"
 
 import theme from "../../../assets/themes/theme"
@@ -11,7 +11,7 @@ import HubPage from "../../../components/HubPage"
 const Demo = () => {
   return (
     <Layout>
-      <SEO title="Demo" description="Here is the info for Demo" />
+      <HelmetWrapper title="Demo" description="Here is the info for Demo" />
 
       <CustomizedContainer>
         <HubPage name="Demo" mechanicalOrSoftware="Mechanical" />

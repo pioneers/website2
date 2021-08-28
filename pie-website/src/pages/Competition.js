@@ -11,7 +11,7 @@ import { BsBuilding } from "@react-icons/all-files/bs/BsBuilding"
 import styled from "styled-components"
 import CustomizedContainer from "../components/CustomizedContainer"
 import AlternativeButton from "../components/AlternativeButton"
-import SEO from "../components/Seo"
+import HelmetWrapper from "../components/HelmetWrapper"
 import { BoxesWrapper } from "../assets/themes/boxes"
 
 import { useStaticQuery, graphql } from "gatsby"
@@ -114,7 +114,7 @@ const Competition = () => {
 
   return (
     <Layout>
-      <SEO
+      <HelmetWrapper
         title="Competition"
         description="Linked here will be the various resources pertaining to our competition."
       />

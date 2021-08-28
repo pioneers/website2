@@ -6,7 +6,7 @@ import theme from "../../assets/themes/theme"
 import styled, { css, keyframes } from "styled-components"
 
 import Layout from "../../components/Layout"
-import SEO from "../../components/Seo"
+import HelmetWrapper from "../../components/HelmetWrapper"
 import CustomizedContainer from "../../components/CustomizedContainer"
 import pic from "../../assets/images/stock-images/pie-staff.jpg"
 
@@ -20,7 +20,7 @@ import Container from "react-bootstrap/esm/Container"
 // import React, { useState } from "react"
 // import Container from "react-bootstrap/Container"
 // import Layout from "../../components/Layout"
-// import SEO from "../../components/Seo"
+// import HelmetWrapper from "../../components/HelmetWrapper"
 // import Header from "../../components/Header"
 // import styled from "styled-components"
 // import CustomizedContainer from "../../components/CustomizedContainer"
@@ -57,7 +57,7 @@ import Container from "react-bootstrap/esm/Container"
 //   let departments
 //   return (
 //     <Layout>
-//       <SEO title="Projects" description="Project teams you can join!" />
+//       <HelmetWrapper title="Projects" description="Project teams you can join!" />
 //       <HeroWrapper>
 //         <div className="placeholder"></div>
 //         <div className="hero-image">
@@ -297,7 +297,7 @@ const Projects = () => {
   const projects = data.allContentfulProjects.nodes
   return (
     <Layout>
-      <SEO
+      <HelmetWrapper
         title="Projects"
         description="Here is a list of the various projects in Pioneers in Engineering"
       />

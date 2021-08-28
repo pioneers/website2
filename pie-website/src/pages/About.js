@@ -14,7 +14,7 @@ import Tabs from "react-bootstrap/Tabs"
 import Layout from "../components/Layout"
 
 import styled from "styled-components"
-import SEO from "../components/SEO"
+import HelmetWrapper from "../components/HelmetWrapper"
 
 import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
@@ -217,7 +217,7 @@ const About = () => {
 
   return (
     <Layout>
-      <SEO
+      <HelmetWrapper
         title="About"
         description="Pioneers in Engineering (PiE) promotes science, technology, engineering, and mathematics (STEM) education through an exciting, mentorship-based process. PiE is a student outreach organization based in UC Berkeley and was founded in 2008 by members of Tau Beta Pi led by Xiao-Yu Fu. We strongly believe that no student should be denied a quality STEM education experience."
       />
