@@ -1,8 +1,8 @@
 import React from "react"
 
 import CustomizedContainer from "../../components/CustomizedContainer"
-import SEO from "../../components/Seo"
 import Layout from "../../components/Layout"
+import SEO from "../../components/SEO"
 import theme from "../../assets/themes/theme"
 import styled from "styled-components"
 const Schools = () => {
