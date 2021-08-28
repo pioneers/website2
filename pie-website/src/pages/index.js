@@ -3,7 +3,7 @@ import React from "react"
 import Layout from "../components/Layout"
 
 import Carousel from "react-multi-carousel"
-import "react-multi-carousel/lib/styles.css"
+// import "react-multi-carousel/lib/styles.css"
 
 import Header from "../components/Header"
 import AlternativeButton from "../components/AlternativeButton"
