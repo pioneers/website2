@@ -180,7 +180,7 @@ const HeroWrapper = styled.div`
     padding: 1rem;
   }
   .placeholder {
-    height: 90vh;
+    height: 100vh;
     width: 100%;
   }
 `
