@@ -2,10 +2,10 @@ name: Contentful Publish
 on:
   repository_dispatch:
     types: ["publish-event"]
+  workflow_dispatch:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
         with:
@@ -14,5 +14,6 @@ jobs:
         uses: dokku/github-action@master
         with:
           git_remote_url: 'ssh://dokku@apple.pierobotics.org:22/staging-website'
+          # Temporarily set --force. Should not be needed in the future.
           git_push_flags: '--force'
           ssh_private_key: ${{ secrets.DOKKU_WEBSITE_KEY }}
