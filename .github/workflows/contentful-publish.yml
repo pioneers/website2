@@ -8,5 +8,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Run a one-line script
-        run: echo Hello, world!
+        with:
+          fetch-depth: 0
+      - name: Push to dokku
+        uses: dokku/github-action@master
+        with:
+          git_remote_url: 'ssh://dokku@apple.pierobotics.org:22/staging-website'
+          git_push_flags: '--force'
+          ssh_private_key: ${{ secrets.DOKKU_WEBSITE_KEY }}
