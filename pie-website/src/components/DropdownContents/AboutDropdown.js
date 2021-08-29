@@ -69,7 +69,7 @@ const AboutDropdown = () => {
             </div>
             <div>
               <Heading color="blue">
-                <Link to="/About#overlords">Overlords</Link>
+                <Link to="/About#leadership">Leadership</Link>
               </Heading>
               <p>Leadership for this year</p>
             </div>

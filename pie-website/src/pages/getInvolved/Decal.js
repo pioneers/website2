@@ -151,8 +151,8 @@ const Decal = () => {
                       <li>
                         Choose to attend section on either (not both):{" "}
                         <ul>
-                          <li>Monday 6 PM - 8, 210 Jacobs Hall</li>
-                          <li>Thursday 6 PM - 8, 145 McCone Hall</li>
+                          <li>Wednesday 7 PM - 9</li>
+                          <li>Saturday 1 PM - 3</li>
                         </ul>
                       </li>
                       <li>

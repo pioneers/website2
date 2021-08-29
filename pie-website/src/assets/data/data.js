@@ -33,9 +33,9 @@ const sublinks = [
         subsections: [
           { label: "Mission", icon: <BiGroup />, url: "/About#mission" },
           {
-            label: "Overlords",
+            label: "Leadership",
             icon: <GiFishMonster />,
-            url: "/About#overlords",
+            url: "/About#leaderhip",
           },
           {
             label: "Project Managers",
@@ -163,7 +163,7 @@ const sublinks = [
           {
             label: "Decal Sign Up",
             icon: <BsPencil />,
-            url: "https://decal.berkeley.edu/courses/5141", // needs to be updated info
+            url: "https://decal.berkeley.edu/courses/6048", // needs to be updated info
           },
         ],
       },

@@ -289,9 +289,9 @@ const About = () => {
           <Tabs defaultActiveKey="staff" id="uncontrolled-tab-example">
             <Tab eventKey="staff" title="Staff">
               {/* <h3 style={{ margin: "1rem 0" }}>Click on us to learn more!</h3> */}
-              <div id="overlords"></div>
+              <div id="leadership"></div>
               <br />
-              <Header type={"blue-header"}>Overlords</Header>
+              <Header type={"blue-header"}>Leadership</Header>
               <Row>
                 {leadership.map((person, idx) => {
                   return (
