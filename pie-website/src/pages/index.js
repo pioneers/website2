@@ -2,17 +2,10 @@
 import React from "react"
 import Layout from "../components/Layout"
 
-import Carousel from "react-multi-carousel"
-// import "react-multi-carousel/lib/styles.css"
-
 import Header from "../components/Header"
 import AlternativeButton from "../components/AlternativeButton"
 
 import styled from "styled-components"
-
-import { IoMdSchool } from "@react-icons/all-files/io/IoMdSchool"
-import { BsFillPersonFill } from "@react-icons/all-files/bs/BsFillPersonFill"
-import { BiCheckDouble } from "@react-icons/all-files/bi/BiCheckDouble"
 
 import { FaHandsHelping } from "@react-icons/all-files/fa/FaHandsHelping"
 import { BiGroup } from "@react-icons/all-files/bi/BiGroup"
@@ -20,16 +13,13 @@ import { VscOpenPreview } from "@react-icons/all-files/vsc/VscOpenPreview"
 
 import CustomizedContainer from "../components/CustomizedContainer"
 import HelmetWrapper from "../components/HelmetWrapper"
-import { BoxesWrapper } from "../assets/themes/boxes"
 
-import { useStaticQuery, graphql } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
+// import { useStaticQuery, graphql } from "gatsby"
+// import { GatsbyImage } from "gatsby-plugin-image"
 import theme from "../assets/themes/theme"
 import Row from "react-bootstrap/esm/Row"
 import Col from "react-bootstrap/esm/Col"
 import Container from "react-bootstrap/esm/Container"
-
-import Form from "react-bootstrap/Form"
 
 import pic from "../assets/images/homepage-banners/explaining.jpg"
 
@@ -37,22 +27,22 @@ import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
 
 import MailchimpFormContainer from "../components/Mailchimp"
 
-const query = graphql`
-  {
-    allContentfulIndexCarousel {
-      nodes {
-        name
-        image {
-          gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
-        }
-      }
-    }
-  }
-`
+// const query = graphql`
+//   {
+//     allContentfulIndexCarousel {
+//       nodes {
+//         name
+//         image {
+//           gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+//         }
+//       }
+//     }
+//   }
+// `
 
 export default function Home(props) {
-  const data = useStaticQuery(query)
-  const carouselNodes = data.allContentfulIndexCarousel.nodes
+  // const data = useStaticQuery(query)
+  // const carouselNodes = data.allContentfulIndexCarousel.nodes
 
   return (
     <Layout>

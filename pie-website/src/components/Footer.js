@@ -12,7 +12,7 @@ import CustomizedContainer from "./CustomizedContainer"
 import { AiFillGithub } from "@react-icons/all-files/ai/AiFillGithub"
 import { AiFillFacebook } from "@react-icons/all-files/ai/AiFillFacebook"
 import { AiFillYoutube } from "@react-icons/all-files/ai/AiFillYoutube"
-import TextField from "@material-ui/core/TextField"
+// import TextField from "@material-ui/core/TextField"
 
 /*
 Creates a footer component
@@ -40,7 +40,7 @@ function Footer() {
             </div>
             <div className="sp">
               101 O'Brien Hall, Berkeley, CA 94704 [
-              <a href="https://www.google.com/maps/d/u/0/viewer?mid=1Sd6QurpSJK3xXEvOiISkWlKXj98&ll=37.874551694807685%2C-122.2592228994057&z=18">
+              <a href="https://www.google.com/maps/d/u/0/edit?mid=1zVieVgGgfPfW8yv6wN9TDJZPzDOW3XL9&ll=37.87498246754354%2C-122.25991490933154&z=19">
                 map
               </a>
               ]
@@ -89,9 +89,13 @@ function Footer() {
                   const { subsections } = subsect
                   return (
                     <React.Fragment>
-                      {subsections.map(thing => {
+                      {subsections.map((thing, idx) => {
                         const { label, url } = thing
-                        return <CustomLink to={url}>{label}</CustomLink>
+                        return (
+                          <CustomLink to={url} index={idx}>
+                            {label}
+                          </CustomLink>
+                        )
                       })}
                     </React.Fragment>
                   )
@@ -113,37 +117,37 @@ const CenteredContainer = styled(CustomizedContainer)`
     text-align: center !important;
   }
 `
-const CustomButton = styled.button.attrs(props => ({
-  type: "submit",
-}))`
-  cursor: pointer;
-  background: ${props =>
-    props.color === "blue" ? theme.colors.blue500 : theme.colors.gold500};
-  border: transparent;
-  border-radius: ${theme.borderRadius};
-  letter-spacing: ${theme.letterSpacing};
-  padding: 0.375rem 0.75rem;
-  box-shadow: ${theme.shadows.shadow1};
-  transition: ${theme.transition};
-  text-transform: capitalize;
-  display: inline-block;
-  color: ${theme.colors.white};
-  width: 100%;
-  margin: 1rem 0;
+// const CustomButton = styled.button.attrs(props => ({
+//   type: "submit",
+// }))`
+//   cursor: pointer;
+//   background: ${props =>
+//     props.color === "blue" ? theme.colors.blue500 : theme.colors.gold500};
+//   border: transparent;
+//   border-radius: ${theme.borderRadius};
+//   letter-spacing: ${theme.letterSpacing};
+//   padding: 0.375rem 0.75rem;
+//   box-shadow: ${theme.shadows.shadow1};
+//   transition: ${theme.transition};
+//   text-transform: capitalize;
+//   display: inline-block;
+//   color: ${theme.colors.white};
+//   width: 100%;
+//   margin: 1rem 0;
 
-  &:hover {
-    background: ${props =>
-      props.color === "blue" ? theme.colors.blue700 : theme.colors.gold700};
-    box-shadow: ${theme.shadows.shadow3};
-  }
+//   &:hover {
+//     background: ${props =>
+//       props.color === "blue" ? theme.colors.blue700 : theme.colors.gold700};
+//     box-shadow: ${theme.shadows.shadow3};
+//   }
 
-  a {
-    color: ${theme.colors.white};
-  }
-`
-const CustomField = styled(TextField)`
-  width: 100%;
-`
+//   a {
+//     color: ${theme.colors.white};
+//   }
+// `
+// const CustomField = styled(TextField)`
+//   width: 100%;
+// `
 
 const FooterWrapper = styled.div`
   position: relative;

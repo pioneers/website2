@@ -275,6 +275,7 @@ const SupportUs = () => {
                   </SponsorWrapper>
                 )
               }
+              return <div></div>
             })}
           </Sponsors>
         </CustomizedContainer>

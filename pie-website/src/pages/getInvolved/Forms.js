@@ -38,6 +38,7 @@ const Forms = () => {
           <Row style={{ color: theme.colors.grey900 }}>
             <Col sm={12} md={6}>
               <div
+                aria-hidden="true"
                 className="card"
                 onClick={function () {
                   window.open(
@@ -52,6 +53,7 @@ const Forms = () => {
             </Col>
             <Col sm={12} md={6}>
               <div
+                aria-hidden="true"
                 className="card"
                 onClick={function () {
                   window.open(
@@ -106,7 +108,7 @@ const Forms = () => {
         <Container fluid style={{ padding: "1rem 2rem" }}>
           <iframe
             title="berkeley map"
-            src="https://www.google.com/maps/d/embed?mid=1oVx7EYV75dEXgJSlpPmbfQ2R_dWQ26iI"
+            src="https://www.google.com/maps/d/u/0/embed?mid=1zVieVgGgfPfW8yv6wN9TDJZPzDOW3XL9&ll=37.87498246754354%2C-122.25991490933154&z=19"
             width="100%"
             height="480"
             style={{

@@ -71,7 +71,7 @@ class Helper extends Component {
   }
 
   render() {
-    const { duration } = this.props
+    const { duration, nav } = this.props
 
     const myHookValue = this.props.myHookValue
 
@@ -106,7 +106,7 @@ class Helper extends Component {
               alt=""
             />
           </Link>
-          <ResponsiveTitle>
+          <ResponsiveTitle nav={nav}>
             <div className="long">
               <Link to="/">Pioneers in Engineering</Link>
             </div>
@@ -122,6 +122,7 @@ class Helper extends Component {
                 index={index}
                 onMouseEnter={this.onMouseEnter}
                 link={n.link}
+                nav={nav}
               >
                 {currentIndex === index && (
                   <DropdownContainer
@@ -203,7 +204,8 @@ const ResponsiveTitle = styled.button`
   position: relative;
   z-index: 2;
   a {
-    color: white;
+    color: ${props =>
+      props.nav === "black" ? theme.colors.grey900 : theme.colors.white};
   }
   a:hover,
   a:focus {
@@ -213,11 +215,13 @@ const ResponsiveTitle = styled.button`
 
   .short {
     display: none;
-    color: white;
+    color: ${props =>
+      props.nav === "black" ? theme.colors.grey900 : theme.colors.white};
   }
   .long {
     display: block;
-    color: white;
+    color: ${props =>
+      props.nav === "black" ? theme.colors.grey900 : theme.colors.white};
   }
 
   @media screen and (max-width: 1166px) {

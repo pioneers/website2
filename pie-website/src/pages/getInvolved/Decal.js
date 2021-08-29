@@ -9,12 +9,11 @@ import Carousel from "react-bootstrap/Carousel"
 
 import theme from "../../assets/themes/theme"
 
-import { BoxesWrapper } from "../../assets/themes/boxes"
 import { useStaticQuery, graphql } from "gatsby"
 
 import { BLOCKS } from "@contentful/rich-text-types"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
-import { TimelineOne } from "../../components/Timelines"
+// import { TimelineOne } from "../../components/Timelines"
 import Row from "react-bootstrap/esm/Row"
 import Col from "react-bootstrap/esm/Col"
 import Container from "react-bootstrap/esm/Container"
@@ -50,7 +49,7 @@ const query = graphql`
 const Decal = () => {
   const data = useStaticQuery(query)
   const testimonials = data.allContentfulTestimonials.nodes
-  const events = data.allContentfulDecalTimeline.nodes
+  // const events = data.allContentfulDecalTimeline.nodes
 
   const options = {
     renderNode: {

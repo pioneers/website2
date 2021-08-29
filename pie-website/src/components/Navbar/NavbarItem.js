@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
+import theme from "../../assets/themes/theme"
 
 import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
 
@@ -27,7 +28,8 @@ const NavbarItemTitle = styled.button`
   } */
 
   a {
-    color: white;
+    color: ${props =>
+      props.nav === "black" ? theme.colors.grey900 : theme.colors.white};
   }
   a:hover,
   a:focus {
@@ -62,20 +64,21 @@ export default class NavbarItem extends Component {
     index: PropTypes.number.isRequired,
     link: PropTypes.string,
     children: PropTypes.node,
+    nav: PropTypes.string,
   }
   onMouseEnter = () => {
     this.props.onMouseEnter(this.props.index)
   }
 
   render() {
-    const { title, children, link } = this.props
+    const { title, children, link, nav } = this.props
     return (
       <NavbarItemEl
         onMouseEnter={this.onMouseEnter}
         onFocus={this.onMouseEnter}
         style={{ zIndex: "3" }}
       >
-        <NavbarItemTitle>
+        <NavbarItemTitle nav={nav}>
           <Link to={link}>{title}</Link>
         </NavbarItemTitle>
         <DropdownSlot>{children}</DropdownSlot>

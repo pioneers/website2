@@ -1,9 +1,6 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import CustomizedContainer from "./CustomizedContainer"
 import theme from "../assets/themes/theme"
-
-import Container from "react-bootstrap/esm/Container"
 
 import SyntaxHighlighter from "react-syntax-highlighter"
 

@@ -22,6 +22,7 @@ const Error = () => {
             data={WellDone}
             type="image/svg+xml"
             alt="Some Balloons"
+            aria-label="Some Balloons"
           ></object>
           <div>
             <h1>404</h1>

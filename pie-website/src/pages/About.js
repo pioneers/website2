@@ -19,8 +19,6 @@ import HelmetWrapper from "../components/HelmetWrapper"
 import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 
-import { BoxesWrapper } from "../assets/themes/boxes"
-
 import Col from "react-bootstrap/esm/Col"
 import Row from "react-bootstrap/esm/Row"
 

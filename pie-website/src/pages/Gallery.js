@@ -50,7 +50,7 @@ const GalleryModal = ({ picture, index, data }) => {
 
   return (
     <GalleryPicture>
-      <div onClick={handleShow} className="non-phone">
+      <div onClick={handleShow} className="non-phone" aria-hidden="true">
         <GatsbyImage
           image={picture.childImageSharp.gatsbyImageData}
           className="img-gallery"

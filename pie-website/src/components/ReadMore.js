@@ -13,7 +13,11 @@ export const ReadMore = ({ children, maxCharacterCount = 100 }) => {
   return (
     <p>
       {resultString + " "}
-      <span onClick={toggleIsTruncated} className="read-more-button">
+      <span
+        onClick={toggleIsTruncated}
+        className="read-more-button"
+        aria-hidden="true"
+      >
         {text.length <= maxCharacterCount
           ? ""
           : isTruncated

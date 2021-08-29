@@ -5,7 +5,6 @@ import Header from "../../components/Header"
 import Layout from "../../components/Layout"
 import HelmetWrapper from "../../components/HelmetWrapper"
 import CustomizedContainer from "../../components/CustomizedContainer"
-import AlternativeButton from "../../components/AlternativeButton"
 
 import Table from "react-bootstrap/esm/Table"
 
