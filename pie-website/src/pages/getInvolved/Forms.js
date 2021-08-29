@@ -90,7 +90,7 @@ const Forms = () => {
               <tr>
                 <td>Wednesday 7 - 9 PM </td>
                 <td>
-                  145 McCone (Announcements), then 101 O'Brien or O'Brien
+                  575 McCone (Announcements), then 101 O'Brien or O'Brien
                   Breezeway 2nd Floor (depending on team)
                 </td>
               </tr>

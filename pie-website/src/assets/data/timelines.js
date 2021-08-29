@@ -123,7 +123,7 @@ export const decalTimeline = [
     time: "Tuesday 9/8, 7 - 8:30 PM",
     link: "https://www.facebook.com/events/1250820188435552/",
     content:
-      "Meet us at 145 McCone Hall to learn about what our decal is about!",
+      "Meet us at 575 McCone Hall to learn about what our decal is about!",
     icon: Info,
   },
 ]
