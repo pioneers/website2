@@ -6,7 +6,8 @@ import theme from "../../assets/themes/theme"
 const NavbarEl = styled.nav`
   margin: auto;
   padding: 0.5rem 0rem;
-  background-color: ${theme.colors.grey600};
+  background-color: transparent;
+  backdrop-filter: blur(5px);
 `
 
 const NavbarList = styled.ul`

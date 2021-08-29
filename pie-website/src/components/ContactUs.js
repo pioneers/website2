@@ -95,15 +95,15 @@ const Btn = styled.button`
   font-weight: 600;
   padding: 0.25rem 0.75rem;
   /* margin: 1.8rem 1.5rem 1.2rem 1.8rem; */
-  border-radius: ${theme.borderRadius};
+  border-radius: 100px;
   border-color: transparent;
   color: white;
-  background-color: ${theme.colors.grey900};
+  background-color: ${theme.colors.blue600};
   transition: ${theme.transition};
   align-self: center;
 
   &:hover {
-    background-color: ${theme.colors.grey700};
+    background-color: ${theme.colors.blue700};
   }
 
   @media screen and (max-width: 900px) {

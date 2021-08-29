@@ -9,53 +9,63 @@ import Layout from "../../components/Layout"
 import CustomizedContainer from "../../components/CustomizedContainer"
 import styled from "styled-components"
 
-import SEO from "../../components/Seo"
+import HelmetWrapper from "../../components/HelmetWrapper"
 
 import Table from "react-bootstrap/Table"
 import Container from "react-bootstrap/esm/Container"
 import Row from "react-bootstrap/esm/Row"
 import Col from "react-bootstrap/esm/Col"
 import theme from "../../assets/themes/theme"
-const forms = () => {
+
+import pic from "../../assets/images/botwork.jpg"
+const Forms = () => {
   return (
     <Layout>
-      <SEO title="Forms" description="Use the forms here to join our team!" />
-      <CustomizedContainer>
-        <Container fluid>
-          <Header type={"blue"}>Steps To Join</Header>
-          <Wrapper fluid>
-            <Row style={{ color: theme.colors.grey900 }}>
-              <Col sm={12} md={6}>
-                <div
-                  className="card"
-                  onClick={function () {
-                    window.open(
-                      "https://www.cognitoforms.com/PioneersInEngineering/NewStaffRegistration",
-                      "mywindow"
-                    )
-                  }}
-                >
-                  <BsPencil />
-                  <h3>1. Fill out forms</h3>
-                </div>
-              </Col>
-              <Col sm={12} md={6}>
-                <div
-                  className="card"
-                  onClick={function () {
-                    window.open(
-                      "mailto:recruiting@pioneers.berkeley.edu?subject=Filled out forms&body=Hey, just completed my forms. They are ready to be processed!",
-                      "mywindow"
-                    )
-                  }}
-                >
-                  <AiOutlineMail />
-                  <h3>2. Email us that you've completed the forms</h3>
-                </div>
-              </Col>
-            </Row>
-          </Wrapper>
-        </Container>
+      <HelmetWrapper
+        title="Forms"
+        description="Use the forms here to join our team!"
+      />
+      <HeroWrapper>
+        <div className="placeholder"></div>
+        <div className="hero-image">
+          <div>
+            <h1>Forms</h1>
+          </div>
+        </div>
+      </HeroWrapper>
+      <CustomizedContainer fluid>
+        <Wrapper fluid>
+          <Row style={{ color: theme.colors.grey900 }}>
+            <Col sm={12} md={6}>
+              <div
+                className="card"
+                onClick={function () {
+                  window.open(
+                    "https://www.cognitoforms.com/PioneersInEngineering/NewStaffRegistration",
+                    "mywindow"
+                  )
+                }}
+              >
+                <BsPencil />
+                <h3>1. Fill out forms</h3>
+              </div>
+            </Col>
+            <Col sm={12} md={6}>
+              <div
+                className="card"
+                onClick={function () {
+                  window.open(
+                    "mailto:recruiting@pioneers.berkeley.edu?subject=Filled out forms&body=Hey, just completed my forms. They are ready to be processed!",
+                    "mywindow"
+                  )
+                }}
+              >
+                <AiOutlineMail />
+                <h3>2. Email us that you've completed the forms</h3>
+              </div>
+            </Col>
+          </Row>
+        </Wrapper>
       </CustomizedContainer>
 
       <CustomizedContainer color={theme.colors.white}>
@@ -110,6 +120,28 @@ const forms = () => {
   )
 }
 
+const HeroWrapper = styled.div`
+  .hero-image {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+      url(${pic}) center/cover fixed no-repeat;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: ${theme.colors.white};
+    top: 0;
+    position: absolute;
+    z-index: -1;
+    padding: 1rem;
+  }
+  .placeholder {
+    height: 90vh;
+    width: 100%;
+  }
+`
+
 const Wrapper = styled(Container)`
   & > div > div {
     padding: 1rem;
@@ -133,4 +165,4 @@ const Wrapper = styled(Container)`
   }
 `
 
-export default forms
+export default Forms

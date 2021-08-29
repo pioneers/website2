@@ -33,9 +33,9 @@ const sublinks = [
         subsections: [
           { label: "Mission", icon: <BiGroup />, url: "/About#mission" },
           {
-            label: "Overlords",
+            label: "Leadership",
             icon: <GiFishMonster />,
-            url: "/About#overlords",
+            url: "/About#leaderhip",
           },
           {
             label: "Project Managers",
@@ -121,11 +121,6 @@ const sublinks = [
             icon: <BiCommentDots />,
             url: "https://piazza.com/class/kjxv8nixe2v69p",
           },
-          // {
-          //   label: "Mailing List",
-          //   icon: <AiOutlineMail />,
-          //   url: "https://styled-components.com/",
-          // },
         ],
       },
     ],
@@ -163,12 +158,12 @@ const sublinks = [
           {
             label: "Decal Info",
             icon: <BsInfoCircle />,
-            url: "/getInvolved/Decal",
+            url: "/getInvolved/Decal#details",
           },
           {
             label: "Decal Sign Up",
             icon: <BsPencil />,
-            url: "https://decal.berkeley.edu/courses/5141", // needs to be updated info
+            url: "https://decal.berkeley.edu/courses/6048", // needs to be updated info
           },
         ],
       },
@@ -201,7 +196,7 @@ const sublinks = [
           {
             label: "Info",
             icon: <BsInfoCircle />,
-            url: "/SupportUs",
+            url: "/SupportUs#howused",
           },
           {
             label: "Donate Now",
@@ -212,6 +207,11 @@ const sublinks = [
             label: "Sponsors",
             icon: <FaCreditCard />,
             url: "/SupportUs#sponsors",
+          },
+          {
+            label: "Mailing List",
+            icon: <AiOutlineMail />,
+            url: "/#mailinglist",
           },
         ],
       },

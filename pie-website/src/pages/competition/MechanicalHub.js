@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../../components/Layout"
-import SEO from "../../components/Seo"
+import HelmetWrapper from "../../components/HelmetWrapper"
 import CustomizedContainer from "../../components/CustomizedContainer"
 import styled from "styled-components"
 import theme from "../../assets/themes/theme"
@@ -29,11 +29,12 @@ const MechanicalHub = () => {
   // console.log(nodes)
   return (
     <Layout>
-      <SEO
+      <HelmetWrapper
         title="Mechanical Hub"
         description="This is technically Software Hub but we will host things here for now."
       />
       <HeroWrapper>
+        <div className="placeholder"></div>
         <div className="hero-image">
           <div>
             <h1>Mechanical Hub</h1>
@@ -125,15 +126,23 @@ const MechLink = styled(Link)`
 
 const HeroWrapper = styled.div`
   .hero-image {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
       url(${pic}) center/cover fixed no-repeat;
-    background-color: coral;
     height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    text-align: center;
+    color: ${theme.colors.white};
+    top: 0;
+    position: absolute;
+    z-index: -1;
+    padding: 1rem;
+  }
+  .placeholder {
+    height: 90vh;
+    width: 100%;
   }
 `
 

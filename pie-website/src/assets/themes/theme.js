@@ -68,6 +68,16 @@ export default {
     darkblue800: "#000038",
     darkblue900: "#00001c",
 
+    red100: "#ffcccc",
+    red200: "#ff9999",
+    red300: "#ff6666",
+    red400: "#ff3333",
+    red500: "#ff0000",
+    red600: "#cc0000",
+    red700: "#990000",
+    red800: "#660000",
+    red900: "#330000",
+
     grey50: "#fafafa",
     grey100: "#f4f4f5",
     grey200: "#e4e4e7",

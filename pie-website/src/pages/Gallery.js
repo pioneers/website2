@@ -6,6 +6,7 @@ import Tabs from "react-bootstrap/Tabs"
 import Tab from "react-bootstrap/Tab"
 
 import styled from "styled-components"
+import theme from "../assets/themes/theme"
 
 import Modal from "react-bootstrap/Modal"
 import Carousel from "react-bootstrap/Carousel"
@@ -14,7 +15,7 @@ import Layout from "../components/Layout"
 
 import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import SEO from "../components/Seo"
+import HelmetWrapper from "../components/HelmetWrapper"
 
 import pic from "../assets/images/about-us/gallery_hero.jpg"
 
@@ -92,11 +93,12 @@ const Gallery = () => {
 
   return (
     <Layout>
-      <SEO
+      <HelmetWrapper
         title="Gallery"
         description="On this page we have a gallery of photos from our events over the years."
       />
       <HeroWrapper>
+        <div className="placeholder"></div>
         <div className="hero-image">
           <div>
             <h1>Gallery</h1>
@@ -163,15 +165,23 @@ const Gallery = () => {
 
 const HeroWrapper = styled.div`
   .hero-image {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
       url(${pic}) center/cover fixed no-repeat;
-    background-color: coral;
     height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    text-align: center;
+    color: ${theme.colors.white};
+    top: 0;
+    position: absolute;
+    z-index: -1;
+    padding: 1rem;
+  }
+  .placeholder {
+    height: 100vh;
+    width: 100%;
   }
 `
 
