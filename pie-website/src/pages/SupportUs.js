@@ -119,9 +119,9 @@ const SupportUs = () => {
                     <AlternativeButton link="https://donorbox.org/pioneers-in-engineering">
                       Donorbox Link &rsaquo;
                     </AlternativeButton>
-                    <AlternativeButton link="https://donorbox.org/pioneers-in-engineering">
+                    {/* <AlternativeButton link="https://donorbox.org/pioneers-in-engineering">
                       Big Give Link &rsaquo;
-                    </AlternativeButton>
+                    </AlternativeButton> */}
                   </div>
                 </div>
               </Col>
