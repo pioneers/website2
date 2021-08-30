@@ -26,10 +26,6 @@ const CompetitionDropdown = () => {
     <DevelopersDropdownEl>
       <DropdownSection data-first-dropdown-section>
         <div>
-          <Heading>
-            <Link to="https://pimulator.pierobotics.org/">Pimulator</Link>
-          </Heading>
-          <p>Test out your code here</p>
           <Flex>
             <div>
               <h4>Hubs</h4>
@@ -66,6 +62,11 @@ const CompetitionDropdown = () => {
       </DropdownSection>
       <DropdownSection>
         <ul>
+          <HeadingLink>
+            <Link to="https://pimulator.pierobotics.org/">
+              <Icon /> Pimulator
+            </Link>
+          </HeadingLink>
           <HeadingLink>
             <Link to="https://github.com/pioneers/runtime/wiki/Student-API">
               <Icon /> Full Robot API Reference

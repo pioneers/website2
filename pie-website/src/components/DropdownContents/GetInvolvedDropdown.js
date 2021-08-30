@@ -5,7 +5,7 @@ import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
 import { Heading, LinkList, DropdownSection, Icon } from "./Components"
 
 const CompanyDropdownEl = styled.div`
-  width: 22rem;
+  width: 17rem;
 `
 
 const Flex = styled.div`
@@ -13,7 +13,6 @@ const Flex = styled.div`
   > div:first-of-type {
     margin-right: 48px;
   }
-
   h4 a {
     color: black;
   }
@@ -29,8 +28,6 @@ const GetInvolvedDropdown = () => {
     <CompanyDropdownEl>
       <DropdownSection data-first-dropdown-section>
         <div>
-          <Heading>Why Pie?</Heading>
-          <p>There is something for everyone here!</p>
           <Flex>
             <div>
               <h4>
@@ -41,7 +38,7 @@ const GetInvolvedDropdown = () => {
                   <Link to="/getInvolved/Decal#details">Info</Link>
                 </li>
                 <li>
-                  <Link to="https://decal.berkeley.edu/courses/5141">
+                  <Link to="https://decal.berkeley.edu/courses/6048">
                     Sign Up
                   </Link>
                 </li>

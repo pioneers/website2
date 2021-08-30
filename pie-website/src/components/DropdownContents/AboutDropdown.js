@@ -5,7 +5,7 @@ import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
 import theme from "../../assets/themes/theme"
 
 const ProductsDropdownEl = styled.div`
-  width: 23rem;
+  width: 19rem;
 `
 
 const Logo = styled.div`
@@ -65,37 +65,23 @@ const AboutDropdown = () => {
         <ProductsSection>
           <li>
             <div>
-              <Logo color="blue" />
-            </div>
-            <div>
               <Heading color="blue">
                 <Link to="/About#leadership">Leadership</Link>
               </Heading>
-              <p>Leadership for this year</p>
             </div>
           </li>
           <li>
-            <div>
-              <Logo color="green" />
-            </div>
             <div>
               <Heading color="green">
                 <Link to="/About#projectManagers">Project Managers</Link>
               </Heading>
-              <p>The leaders of each project</p>
             </div>
           </li>
           <li>
             <div>
-              <Logo color="teal" />
-            </div>
-            <div>
-              <Heading color="teal">
+              <Heading color="teal" style={{ marginBottom: 0 }}>
                 <Link to="/About#others">All Other Members</Link>
               </Heading>
-              <p style={{ marginBottom: 0 }}>
-                Underlings, advisors, and alumni
-              </p>
             </div>
           </li>
         </ProductsSection>

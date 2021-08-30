@@ -7,7 +7,7 @@ import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
 import { Heading, DropdownSection, Icon } from "./Components"
 
 const CompanyDropdownEl = styled.div`
-  width: 30rem;
+  width: 15rem;
 `
 const Logo = styled.div`
   width: 38px;
@@ -15,7 +15,6 @@ const Logo = styled.div`
   margin-right: 16px;
   border-radius: 100%;
   opacity: 0.6;
-
   ${({ color }) =>
     color === "green" &&
     css`
@@ -65,38 +64,23 @@ const SupportUsDropdown = () => {
         <ProductsSection>
           <li>
             <div>
-              <Logo color="blue" />
-            </div>
-            <div>
               <Heading color="blue">
                 <Link to="/SupportUs#howused">Donation Info</Link>
               </Heading>
-              <p>
-                Learn more about how your donations are used and why they are
-                needed
-              </p>
             </div>
           </li>
           <li>
-            <div>
-              <Logo color="green" />
-            </div>
             <div>
               <Heading color="green">
                 <Link to="/SupportUs#sponsors">Sponsors</Link>
               </Heading>
-              <p>The list of of generous sponsors for this year</p>
             </div>
           </li>
           <li>
             <div>
-              <Logo color="teal" />
-            </div>
-            <div>
               <Heading color="teal">
                 <Link to="/#mailinglist">Mailing List</Link>
               </Heading>
-              <p>Keep up to date on what is happeining in PiE</p>
             </div>
           </li>
         </ProductsSection>
