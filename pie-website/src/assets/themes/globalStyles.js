@@ -71,7 +71,7 @@ font-family: 'Source Sans Pro', sans-serif; */
   }
 
   h1 {
-  font-size: 3rem;
+  font-size: 4.5rem;
 }
 h2 {
   font-size: 2rem;
@@ -94,6 +94,13 @@ h5 {
   h4,
   h5 {
     line-height: 1;
+  }
+}
+
+@media ${theme.mediaQueries.tabletM} {
+  h1
+   {
+    font-size: 3rem;
   }
 }
 
