@@ -17,6 +17,7 @@ import { renderRichText } from "gatsby-source-contentful/rich-text"
 import Row from "react-bootstrap/esm/Row"
 import Col from "react-bootstrap/esm/Col"
 import Container from "react-bootstrap/esm/Container"
+import AlternativeButton from "../../components/AlternativeButton"
 
 import pic from "../../assets/images/stock-images/mentor.jpg"
 
@@ -86,6 +87,9 @@ const Decal = () => {
             Robotics Competition. Through our class, you’ll learn what you need
             to know to be a mentor and help build the robot.
           </p>
+          <AlternativeButton link="https://decal.berkeley.edu/courses/6048">
+            Sign Up &rsaquo;
+          </AlternativeButton>
         </Container>
       </CustomizedContainer>
       <CustomizedContainer color={theme.colors.white}>
