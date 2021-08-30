@@ -86,7 +86,7 @@ const CustomForm = ({ onValidated }) => {
 }
 
 const MailchimpFormContainer = props => {
-  const postUrl = `https://berkeley.us6.list-manage.com/subscribe/post?u=${process.env.GATSBY_MAILCHIMP_API_U}&id=${process.env.GATSBY_MAILCHIMP_API_ID}`
+  const postUrl = `https://berkeley.us3.list-manage.com/subscribe/post?u=${process.env.GATSBY_MAILCHIMP_API_U}&id=${process.env.GATSBY_MAILCHIMP_API_ID}`
   console.log(postUrl)
   return (
     <div>
