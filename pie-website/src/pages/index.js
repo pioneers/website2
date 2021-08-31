@@ -133,7 +133,7 @@ export default function Home(props) {
           <p style={{ marginTop: "1.5rem" }}>
             Excited to help? You could be the next to design the back-end of our
             robots, <Link to="/getInvolved/Decal">mentor</Link> our students,{" "}
-            <Link to="/getInvolved#volunteer">judge our competitions</Link>, and
+            <Link to="/GetInvolved#volunteer">judge our competitions</Link>, and
             lots more!
           </p>
         </JoinUsHeader>

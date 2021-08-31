@@ -261,7 +261,7 @@ const About = () => {
                 <p>
                   Because PiE creates everything in the competition and has a
                   group of wonderful{" "}
-                  <Link to="/supportUs#sponsors">sponsors</Link>, we can keep
+                  <Link to="/SupportUs#sponsors">sponsors</Link>, we can keep
                   costs low which lowers the barrier to entry for Bay Area
                   schools
                 </p>
