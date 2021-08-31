@@ -13,7 +13,7 @@ jobs:
       - name: Push to dokku
         uses: dokku/github-action@master
         with:
-          git_remote_url: 'ssh://dokku@apple.pierobotics.org:22/staging-website'
+          git_remote_url: 'ssh://dokku@apple.pierobotics.org:22/website'
           # Temporarily set --force. Should not be needed in the future.
           git_push_flags: '--force'
           ssh_private_key: ${{ secrets.DOKKU_WEBSITE_KEY }}
