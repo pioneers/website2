@@ -51,7 +51,7 @@ const LibraryDropdown = () => {
       <DropdownSection data-first-dropdown-section>
         <ProductsSection>
           <li>
-            <HeadingLink style={{ marginBottom: 0 }}>
+            <HeadingLink>
               <Link to="https://pierobotics.medium.com/">
                 <Icon /> Blog
               </Link>

@@ -34,7 +34,7 @@ const sublinks = [
           { label: "Mission", icon: <BiGroup />, url: "/About#mission" },
           {
             label: "Leadership",
-            icon: <GiFishMonster />,
+            icon: <BsPeopleCircle />,
             url: "/About#leaderhip",
           },
           {
@@ -131,7 +131,7 @@ const sublinks = [
     url: "/GetInvolved",
     links: [
       {
-        subpage: "For Berk Boiz",
+        subpage: "Join the Team",
         url: "/GetInvolved",
         subsections: [
           {
