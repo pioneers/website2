@@ -15,6 +15,6 @@ jobs:
         with:
           command: |
             dokku ps:rebuild website
-          host: 'ssh://dokku@apple.pierobotics.org:22/website'
+          host: apple.pierobotics.org
           user: dokku
           key: ${{ secrets.DOKKU_WEBSITE_KEY }}
