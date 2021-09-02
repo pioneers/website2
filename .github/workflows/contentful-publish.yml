@@ -14,7 +14,7 @@ jobs:
         uses: fifsky/ssh-action@master
         with:
           command: |
-            dokku ps:rebuild website
+            ps:rebuild website
           host: apple.pierobotics.org
           user: dokku
           key: ${{ secrets.DOKKU_WEBSITE_KEY }}
