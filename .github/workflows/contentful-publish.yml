@@ -10,10 +10,11 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - name: Push to dokku
-        uses: dokku/github-action@master
+      - name: dokku-rebuild
+        uses: fifsky/ssh-action@master
         with:
-          git_remote_url: 'ssh://dokku@apple.pierobotics.org:22/website'
-          # Temporarily set --force. Should not be needed in the future.
-          git_push_flags: '--force'
-          ssh_private_key: ${{ secrets.DOKKU_WEBSITE_KEY }}
+          command: |
+            dokku ps:rebuild website
+          host: 'ssh://dokku@apple.pierobotics.org:22/website'
+          user: dokku
+          key: ${{ secrets.DOKKU_WEBSITE_KEY }}
