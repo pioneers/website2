@@ -42,9 +42,7 @@ Longer:
 
 With graphQL and the gatsby-source-filesystem plugin we can run queries on our file system (ie instead of a bunch of image imports for `gallery.js` I can query the gallery directory and get the images out that way. Additionally, with graphQL we can also use it with a headless cms potentially. The good thing about a headless cms is that the data can be decoupled from the project and hosted on some other platform like [Contentful](https://app.contentful.com/). On [Contentful](https://app.contentful.com/) content models can be created, think of them as templates for your data. Then when adding data to the platform, I can select which template to use. With graphQL, that particular template can then be queried. This is cool because [Contentful](https://app.contentful.com/) has a nice gui so more people can be responsible for the website data management without having to understand the codebase or even have any coding knowledge. Additionally, because the data is linked to the website by a webhook, there would be no need to pull the repo, then after changes, make a pr.
 
-## Important Platforms
-
-### Yeah security is a thing I guess
+## Important Platforms For Content
 
 Replace PIEPASSWORD with the password that pie uses for everything then append 12 to it
 
@@ -63,7 +61,3 @@ For the contentful account: [https://app.contentful.com/](https://app.contentful
 email: jonathan.atkins@berkeley.edu
 
 password: PIEPASSWORD12
-
-### netlify
-
-Where the website is hosted right now: [https://pioneers-demo.netlify.app/](https://pioneers-demo.netlify.app/)
