@@ -34,13 +34,6 @@ When working on the repo keep the following in mind
 - from the tutorial I watched for this, when you are doing graphQL queries and the query is correct but things do not seem to be working, try running `gatsby clean` then try again
 - if you need an icon svg, browse the selection from [React Icons](https://react-icons.github.io/react-icons/) and import the icon like how it is done in `links.js`
 
-## Why the switch from create react app to gatsby?
-
-TLDR: graphQL and the gatsby-source-filesystem plugin
-
-Longer:
-
-With graphQL and the gatsby-source-filesystem plugin we can run queries on our file system (ie instead of a bunch of image imports for `gallery.js` I can query the gallery directory and get the images out that way. Additionally, with graphQL we can also use it with a headless cms potentially. The good thing about a headless cms is that the data can be decoupled from the project and hosted on some other platform like [Contentful](https://app.contentful.com/). On [Contentful](https://app.contentful.com/) content models can be created, think of them as templates for your data. Then when adding data to the platform, I can select which template to use. With graphQL, that particular template can then be queried. This is cool because [Contentful](https://app.contentful.com/) has a nice gui so more people can be responsible for the website data management without having to understand the codebase or even have any coding knowledge. Additionally, because the data is linked to the website by a webhook, there would be no need to pull the repo, then after changes, make a pr.
 
 ## Important Platforms For Content
 
