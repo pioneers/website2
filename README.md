@@ -4,7 +4,7 @@ gatsby rework of the pie website
 
 Even if you installed dependancies before for stuff on a different branch its probably a good idea to do it again
 
-## Steps to get it to work
+## Setup
 
 After pulling the repo install gatsby. `cd` into the folder and run the following:
 
