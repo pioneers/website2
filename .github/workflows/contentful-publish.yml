@@ -13,8 +13,9 @@ jobs:
       - name: dokku-rebuild
         uses: fifsky/ssh-action@master
         with:
-          command: ps:rebuild website
+          command: |
+            dokku ps:rebuild website
           host: apple.pierobotics.org
           user: dokku
           key: ${{ secrets.DOKKU_WEBSITE_KEY }}
-          args: "-tt"
+          args: "-tt -vvv"
