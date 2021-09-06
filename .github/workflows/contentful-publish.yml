@@ -17,3 +17,4 @@ jobs:
           host: apple.pierobotics.org
           user: dokku
           key: ${{ secrets.DOKKU_WEBSITE_KEY }}
+          args: "-tt"
