@@ -7,15 +7,22 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - name: dokku-rebuild
-        uses: fifsky/ssh-action@master
-        with:
-          command: |
-            dokku ps:rebuild website
-          host: apple.pierobotics.org
-          user: dokku
-          key: ${{ secrets.DOKKU_WEBSITE_KEY }}
-          args: "-tt -vvv"
+      # Set up the ssh connection on the box to provide a cleaner interface for running ssh commands remotely
+      - name: Configure SSH
+        run: |
+          mkdir -p ~/.ssh/
+          echo "$SSH_KEY" > ~/.ssh/prod.key
+          chmod 600 ~/.ssh/prod.key
+          cat >>~/.ssh/config <<END
+          Host prod
+            HostName $SSH_HOST
+            User $SSH_USER
+            IdentityFile ~/.ssh/prod.key
+            StrictHostKeyChecking no
+          END
+        env:
+          SSH_HOST: ${{ secrets.DOKKU_SERVER }}
+          SSH_KEY: ${{ secrets.DOKKU_WEBSITE_KEY }}
+          SSH_USER: ${{ secrets.DOKKU_USER }}
+      - name: Dokku Rebuild
+        run: ssh prod ps:rebuild website
