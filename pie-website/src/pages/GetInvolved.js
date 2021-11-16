@@ -179,11 +179,11 @@ const GetInvolved = () => {
               <p>
                 Please contact us at{" "}
                 <a
-                  href="mailto:presentationerships@pioneers.berkeley.edu"
+                  href="mailto:partnerships@pioneers.berkeley.edu"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  presentationerships@pioneers.berkeley.edu
+                  partnerships@pioneers.berkeley.edu
                 </a>
               </p>
             </Col>
