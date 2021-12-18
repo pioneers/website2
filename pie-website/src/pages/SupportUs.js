@@ -221,7 +221,11 @@ const SupportUs = () => {
                     <Link to="/Competition#timeline">competition day</Link>. If
                     you would like more information about the benefits, please
                     refer to{" "}
-                    <a href="https://pioneers.berkeley.edu/assets/sponsors/sponsorship-packet_2018-2019.pdf">
+                    <a
+                      href="/assets/sponsors/sponsorship-packet_2018-2019.pdf"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       Sponsorship Levels 2018-2019.pdf
                     </a>
                   </p>
@@ -243,7 +247,11 @@ const SupportUs = () => {
               like to extend its thanks for the support granted by the following
               organizations. If you interested in becoming one of our sponsors
               and the benefits of being one, please refer to{" "}
-              <a href="https://pioneers.berkeley.edu/assets/sponsors/sponsorship-packet_2018-2019.pdf">
+              <a
+                href="/assets/sponsors/sponsorship-packet_2018-2019.pdf"
+                target="_blank"
+                rel="noreferrer"
+              >
                 Sponsorship Levels 2018-2019.pdf
               </a>
             </p>

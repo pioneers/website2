@@ -169,7 +169,7 @@ const PieFoundation = ({ data }) => {
             <p>EIN 47-4554504</p>
             <p>
               <a
-                href="https://pioneers.berkeley.edu/assets/sponsors/pief_determination_letter.pdf"
+                href="/assets/sponsors/pief_determination_letter.pdf"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -208,6 +208,7 @@ const About = () => {
   // console.log(staff)
   const leadership = staff.filter(person => person.role.includes("Director"))
   const pm = staff.filter(person => person.role.includes("PM"))
+  console.log(pm)
   const other = staff.filter(
     person => !person.role.includes("Director") && !person.role.includes("PM")
   )
