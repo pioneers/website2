@@ -13,7 +13,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import { BLOCKS } from "@contentful/rich-text-types"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
-// import { TimelineOne } from "../../components/Timelines"
+import { TimelineOne } from "../../components/Timelines"
 import Row from "react-bootstrap/esm/Row"
 import Col from "react-bootstrap/esm/Col"
 import Container from "react-bootstrap/esm/Container"
@@ -50,7 +50,7 @@ const query = graphql`
 const Decal = () => {
   const data = useStaticQuery(query)
   const testimonials = data.allContentfulTestimonials.nodes
-  // const events = data.allContentfulDecalTimeline.nodes
+  const events = data.allContentfulDecalTimeline.nodes
 
   const options = {
     renderNode: {
@@ -87,7 +87,7 @@ const Decal = () => {
             Robotics Competition. Through our class, you’ll learn what you need
             to know to be a mentor and help build the robot.
           </p>
-          <AlternativeButton link="https://decal.berkeley.edu/courses/6048">
+          <AlternativeButton link="https://decal.berkeley.edu/courses/6083">
             Sign Up &rsaquo;
           </AlternativeButton>
         </Container>
@@ -98,8 +98,8 @@ const Decal = () => {
             THE TIMELINE
           </h4>
           <Header type="yellow">List of Events</Header>
-          <h1>Events to Come</h1>
-          {/* <TimelineOne timelineFor={events} /> */}
+          {/* <h1>Events to Come</h1> */}
+          <TimelineOne timelineFor={events} />
         </Container>
       </CustomizedContainer>
       <CustomizedContainer>
