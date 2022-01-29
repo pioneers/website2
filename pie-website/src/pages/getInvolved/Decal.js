@@ -86,8 +86,14 @@ const Decal = () => {
             local students as you guide them in building a robot for PiE’s
             Robotics Competition. Through our class, you’ll learn what you need
             to know to be a mentor and help build the robot.
+            
+            <br />
+            Join us by enrolling in the decal using the CCN 21910 for the Monday
+            section, and 21911 for the Thursday one. Additionally, fill out our
+            accompying forms linked by the sign up button. Class starts the week
+            of 1/31!
           </p>
-          <AlternativeButton link="https://decal.berkeley.edu/courses/6083">
+          <AlternativeButton link="/getInvolved/Forms">
             Sign Up &rsaquo;
           </AlternativeButton>
         </Container>
@@ -154,13 +160,15 @@ const Decal = () => {
                       <li>
                         Choose to attend section on either (not both):{" "}
                         <ul>
-                          <li>Wednesday 7 PM - 9</li>
-                          <li>Saturday 1 PM - 3</li>
+                          <li>Monday 6:30 PM - 8</li>
+                          <li>Thursday 6:30 PM - 8</li>
                         </ul>
                       </li>
+                      <li>Monday section meets online</li>
+                      <li>Thursday section meets in Jacobs Hall Room 10C</li>
                       <li>
-                        Meet with your team for two hours each week during our
-                        9-week competition.
+                        Meet with your team for one hour each week during our
+                        8-week competition.
                       </li>
                       <li>
                         Come to PiE Robotics Competition events at UC Berkeley
@@ -169,11 +177,6 @@ const Decal = () => {
                       <li>
                         Help students at worksessions at O'Brien Hall Breezeway
                         (2nd floor).
-                      </li>
-                      <li>Check out our syllabus.</li>
-                      <li>
-                        Grab the CCN by coming to an infosession or attending
-                        the first day of class.
                       </li>
                     </ul>
                   </p>
