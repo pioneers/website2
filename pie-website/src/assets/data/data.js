@@ -163,7 +163,7 @@ const sublinks = [
           {
             label: "Decal Sign Up",
             icon: <BsPencil />,
-            url: "https://decal.berkeley.edu/courses/6048", // needs to be updated info
+            url: "/getInvolved/Forms", // needs to be updated info
           },
         ],
       },
