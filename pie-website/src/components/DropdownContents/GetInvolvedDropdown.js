@@ -38,7 +38,7 @@ const GetInvolvedDropdown = () => {
                   <Link to="/getInvolved/Decal#details">Info</Link>
                 </li>
                 <li>
-                  <Link to="https://decal.berkeley.edu/courses/6048">
+                  <Link to="/getInvolved/Forms">
                     Sign Up
                   </Link>
                 </li>
