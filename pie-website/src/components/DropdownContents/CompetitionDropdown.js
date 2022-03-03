@@ -74,7 +74,7 @@ const CompetitionDropdown = () => {
           </HeadingLink>
           <HeadingLink>
             <Link to="https://docs.google.com/document/d/1rbkZkQUVMMmOxakEbZS_mdq2EaLcBOOBjztCv7yEkCY/edit">
-              <Icon /> Game Manual
+              <Icon /> Game Manual (old)
             </Link>
           </HeadingLink>
           <HeadingLink>
