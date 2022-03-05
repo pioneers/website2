@@ -69,7 +69,7 @@ const RCScholarship = () => {
             Pioneers in Engineering strives to provide a quality STEM
             educational experience for Bay Area high school students. In keeping
             with our mission to promote science and engineering, we are happy to
-            announce our eighth annual PiE alumni-funded scholarship for PiE
+            announce our ninth annual PiE alumni-funded scholarship for PiE
             students. The scholarship is for a single $2000 award, with $500 for
             finalists.
           </p>
@@ -87,7 +87,7 @@ const RCScholarship = () => {
           <h4 style={{ marginBottom: "1.5em", color: theme.colors.grey400 }}>
             THE TIMELINE
           </h4>
-          <Header type="gold">2021 Scholarship Schedule</Header>
+          <Header type="gold">2022 Scholarship Schedule</Header>
           <ScheduleWrapper fluid align="center" padding="3rem 1.25rem">
             <Row className="inner-container">
               <Col sm={12} md={6} lg={3}>
@@ -152,10 +152,6 @@ const RCScholarship = () => {
               <h3 style={{ color: theme.colors.grey900, marginTop: "1rem" }}>
                 Resources
               </h3>
-              <p>
-                The following documents from the 2021 season are provided for
-                your convenience.
-              </p>
             </Col>
             <Resources sm={12} md={5} lg={5}>
               <Row>
