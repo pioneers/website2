@@ -222,11 +222,11 @@ const SupportUs = () => {
                     you would like more information about the benefits, please
                     refer to{" "}
                     <a
-                      href="/assets/sponsors/sponsorship-packet_2018-2019.pdf"
+                      href="/assets/sponsors/PiE_Sponsorship_Packet_2022_23.pdf"
                       target="_blank"
                       rel="noreferrer"
                     >
-                      Sponsorship Levels 2018-2019.pdf
+                      Sponsorship Packet 2022-2023.pdf
                     </a>
                   </p>
                 </Col>
@@ -248,11 +248,11 @@ const SupportUs = () => {
               organizations. If you interested in becoming one of our sponsors
               and the benefits of being one, please refer to{" "}
               <a
-                href="/assets/sponsors/sponsorship-packet_2018-2019.pdf"
+                href="/assets/sponsors/PiE_Sponsorship_Packet_2022_23.pdf"
                 target="_blank"
                 rel="noreferrer"
               >
-                Sponsorship Levels 2018-2019.pdf
+                Sponsorship Packet 2022-2023.pdf
               </a>
             </p>
 
