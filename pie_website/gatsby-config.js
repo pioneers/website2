@@ -1,10 +1,16 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
+
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
-    title: `pie_website`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `Pioneers in Engineering`,
+    description:
+      "Pioneers in Engineering (PiE) promotes STEM education through an exciting, mentorship-based process. We strongly believe that no student should be denied a quality educational experience.",
   },
   plugins: [
     {
@@ -18,7 +24,6 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-plugin-styled-components",
-    "gatsby-transformer-remark",
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -34,6 +39,12 @@ module.exports = {
         path: "./src/pages/",
       },
       __key: "pages",
+    },
+    {
+      resolve: "gatsby-plugin-anchor-links",
+      options: {
+        offset: -100,
+      },
     },
   ],
 };
