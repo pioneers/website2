@@ -223,10 +223,10 @@ const Decal = () => {
 }
 
 const HeroWrapper = styled.div`
-  z-index: 0;
   .filler {
     position: relative;
     height: 92vh;
+    z-index: -1;
   }
   .hero-image {
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),

@@ -25,10 +25,10 @@ const Schools = () => {
 }
 
 const HeroWrapper = styled.div`
-  z-index: 0;
   .filler {
     position: relative;
     height: 92vh;
+    z-index: -1;
   }
   .hero-image {
     background-color: ${theme.colors.grey900};

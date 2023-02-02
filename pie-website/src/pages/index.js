@@ -185,12 +185,13 @@ export default function Home(props) {
 }
 
 const HeroWrapper = styled.div`
-  z-index: 0;
   .filler {
     position: relative;
     height: 92vh;
+    z-index: -1;
   }
   .hero-image {
+    z-index: -1;
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
       url(${pic}) center/cover fixed no-repeat;
     height: 100vh;
@@ -201,7 +202,6 @@ const HeroWrapper = styled.div`
     text-align: center;
     color: ${theme.colors.white};
     top: 0;
-    z-index: -1;
     position: absolute;
     padding: 1rem;
     h1 {
