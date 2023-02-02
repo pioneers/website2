@@ -1,4 +1,4 @@
-FROM node:12-buster AS build
+FROM node:18-buster AS build
 ARG CONTENTFUL_API_KEY
 
 RUN yarn global add gatsby-cli@3.14.2
