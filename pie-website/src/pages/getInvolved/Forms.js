@@ -26,7 +26,7 @@ const Forms = () => {
         description="Use the forms here to join our team!"
       />
       <HeroWrapper>
-        <div className="placeholder"></div>
+        <div className="filler"></div>
         <div className="hero-image">
           <div>
             <h1>Forms</h1>
@@ -105,24 +105,17 @@ const Forms = () => {
           </Table>
         </Container>
         <br />
-        <Container fluid style={{ padding: "1rem 2rem" }}>
-          <iframe
-            title="berkeley map"
-            src="https://www.google.com/maps/d/u/0/embed?mid=1zVieVgGgfPfW8yv6wN9TDJZPzDOW3XL9&ll=37.87498246754354%2C-122.25991490933154&z=19"
-            width="100%"
-            height="480"
-            style={{
-              borderRadius: theme.borderRadius,
-              boxShadow: theme.shadows.otherShadow,
-            }}
-          ></iframe>
-        </Container>
       </CustomizedContainer>
     </Layout>
   )
 }
 
 const HeroWrapper = styled.div`
+  z-index: 0;
+  .filler {
+    position: relative;
+    height: 92vh;
+  }
   .hero-image {
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
       url(${pic}) center/cover fixed no-repeat;
@@ -134,13 +127,12 @@ const HeroWrapper = styled.div`
     text-align: center;
     color: ${theme.colors.white};
     top: 0;
-    position: absolute;
     z-index: -1;
+    position: absolute;
     padding: 1rem;
-  }
-  .placeholder {
-    height: 90vh;
-    width: 100%;
+    h1 {
+      font-size: 5rem;
+    }
   }
 `
 

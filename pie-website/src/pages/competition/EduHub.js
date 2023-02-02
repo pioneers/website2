@@ -12,7 +12,7 @@ const EduHub = () => {
     <Layout>
       <HelmetWrapper title="Edu Hub" description="Under Construction" />
       <HeroWrapper>
-        <div className="placeholder"></div>
+        <div className="filler"></div>
         <div className="hero-image">
           <div>
             <h1>Edu Hub</h1>
@@ -27,22 +27,27 @@ const EduHub = () => {
 }
 
 const HeroWrapper = styled.div`
+  z-index: 0;
+  .filler {
+    position: relative;
+    height: 92vh;
+  }
   .hero-image {
     background-color: ${theme.colors.grey900};
-
     height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    text-align: center;
+    color: ${theme.colors.white};
     top: 0;
-    position: absolute;
     z-index: -1;
-  }
-  .placeholder {
-    height: 90vh;
-    width: 100%;
+    position: absolute;
+    padding: 1rem;
+    h1 {
+      font-size: 5rem;
+    }
   }
 `
 

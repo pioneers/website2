@@ -148,7 +148,7 @@ const Projects = () => {
         description="Here is a list of the various projects in Pioneers in Engineering"
       />
       <HeroWrapper>
-        <div className="placeholder"></div>
+        <div className="filler"></div>
         <div className="hero-image">
           <div>
             <h1>Projects</h1>
@@ -182,6 +182,11 @@ const Projects = () => {
 }
 
 const HeroWrapper = styled.div`
+  z-index: 0;
+  .filler {
+    position: relative;
+    height: 92vh;
+  }
   .hero-image {
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
       url(${pic}) center/cover fixed no-repeat;
@@ -193,13 +198,12 @@ const HeroWrapper = styled.div`
     text-align: center;
     color: ${theme.colors.white};
     top: 0;
-    position: absolute;
     z-index: -1;
+    position: absolute;
     padding: 1rem;
-  }
-  .placeholder {
-    height: 90vh;
-    width: 100%;
+    h1 {
+      font-size: 5rem;
+    }
   }
 `
 
