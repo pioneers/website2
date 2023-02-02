@@ -64,11 +64,7 @@ const sublinks = [
             icon: <AiFillCode />,
             url: "/competition/SoftwareHub",
           },
-          {
-            label: "Mechanical Hub",
-            icon: <BsGearWideConnected />,
-            url: "/competition/MechanicalHub",
-          },
+
           {
             label: "Edu Hub",
             icon: <GiTeacher />,

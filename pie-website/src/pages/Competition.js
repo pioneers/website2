@@ -59,9 +59,6 @@ const StudentResources = () => {
             <AlternativeButton link="/competition/SoftwareHub">
               Software Hub &rsaquo;
             </AlternativeButton>
-            <AlternativeButton link="/competition/MechanicalHub">
-              Kit Hub &rsaquo;
-            </AlternativeButton>
           </div>
         </Col>
         <Col sm={12} md={6} lg={6}>

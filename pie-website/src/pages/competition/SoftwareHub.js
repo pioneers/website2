@@ -54,7 +54,7 @@ const SoftwareHub = () => {
   return (
     <Layout>
       <HelmetWrapper
-        title="Mechanical Hub"
+        title="Software Hub"
         description="This is technically Software Hub but we will host things here for now."
       />
       <HeroWrapper>

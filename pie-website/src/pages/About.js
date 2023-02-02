@@ -276,7 +276,6 @@ const About = () => {
                   A group of talented students who make everything happen from
                   the game design to the{" "}
                   <Link to="/competition/SoftwareHub">software</Link> to the{" "}
-                  <Link to="/competition/MechanicalHub">robot kits</Link>
                 </p>
               </div>
             </Col>

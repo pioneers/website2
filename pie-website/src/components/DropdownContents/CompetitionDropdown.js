@@ -34,9 +34,6 @@ const CompetitionDropdown = () => {
                   <Link to="/competition/SoftwareHub">Software Hub</Link>
                 </li>
                 <li>
-                  <Link to="/competition/MechanicalHub">Mechanical Hub</Link>
-                </li>
-                <li>
                   <Link to="/competition/EduHub">Edu Hub</Link>
                 </li>
               </LinkList>
@@ -44,9 +41,11 @@ const CompetitionDropdown = () => {
             <div>
               <h4>Communication</h4>
               <LinkList>
-                {<li>
-                  <Link to="https://discord.gg/HWK2bjSJ">Discord</Link>
-                </li>}
+                {
+                  <li>
+                    <Link to="https://discord.gg/HWK2bjSJ">Discord</Link>
+                  </li>
+                }
                 <li>
                   <Link to="https://piazza.com/class/kjxv8nixe2v69p">
                     Piazza

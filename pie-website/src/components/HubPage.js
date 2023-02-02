@@ -42,23 +42,6 @@ const query = graphql`
         alerts
       }
     }
-    allContentfulMechanicalHubPosts {
-      nodes {
-        postContent {
-          raw
-          references {
-            ... on ContentfulAsset {
-              __typename
-              contentful_id
-              gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
-              title
-            }
-          }
-        }
-        name
-        alerts
-      }
-    }
   }
 `
 
