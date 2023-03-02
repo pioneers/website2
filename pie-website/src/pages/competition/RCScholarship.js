@@ -88,7 +88,7 @@ const RCScholarship = () => {
           <h4 style={{ marginBottom: "1.5em", color: theme.colors.grey400 }}>
             THE TIMELINE
           </h4>
-          <Header type="gold">2022 Scholarship Schedule</Header>
+          <Header type="gold">2023 Scholarship Schedule</Header>
           <ScheduleWrapper fluid align="center" padding="3rem 1.25rem">
             <Row className="inner-container">
               <Col sm={12} md={6} lg={3}>
