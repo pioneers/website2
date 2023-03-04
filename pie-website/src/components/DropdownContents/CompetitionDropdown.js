@@ -43,7 +43,7 @@ const CompetitionDropdown = () => {
               <LinkList>
                 {
                   <li>
-                    <Link to="https://discord.gg/HWK2bjSJ">Discord</Link>
+                    <Link to="https://discord.gg/9gDpKcjf">Discord</Link>
                   </li>
                 }
                 <li>
