@@ -159,7 +159,7 @@ const RCScholarship = () => {
                 <Col sm={12} md={12} lg={12}>
                   <div>
                     <BiVideoRecording />
-                    <h4>2022 Workshop</h4>
+                    <h4>2023 Workshop</h4>
                     <p>
                       <Link to="https://pioneers.berkeley.edu/assets/scholarship/2023_pie_scholarship_workshop_presentation.pdf">
                         {" "}
@@ -171,7 +171,7 @@ const RCScholarship = () => {
                 <Col sm={12} md={12} lg={12}>
                   <div>
                     <AiOutlineUnorderedList />
-                    <h4>2022 Scholarship Application Summary</h4>
+                    <h4>2023 Scholarship Application Summary</h4>
                     <p>
                       <Link to="https://pioneers.berkeley.edu/assets/scholarship/2023_pie_scholarship_application.pdf">
                         {" "}
