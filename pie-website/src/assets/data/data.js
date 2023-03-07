@@ -94,7 +94,7 @@ const sublinks = [
           {
             label: "Game Manual",
             icon: <AiOutlineRead />,
-            url: "https://docs.google.com/document/d/1rbkZkQUVMMmOxakEbZS_mdq2EaLcBOOBjztCv7yEkCY/edit",
+            url: "https://docs.google.com/document/d/12jrLFEn5cAYj6wnPu_VHnc1_8AZ5uxsiKPn6MkaX4eQ/edit",
           },
           {
             label: "RC Scholarship",
@@ -112,11 +112,11 @@ const sublinks = [
           //   icon: <FaDiscord />,
           //   url: "https://styled-components.com/",
           // },
-          {
-            label: "Piazza",
-            icon: <BiCommentDots />,
-            url: "https://piazza.com/class/kjxv8nixe2v69p",
-          },
+          // {
+          //   label: "Piazza",
+          //   icon: <BiCommentDots />,
+          //   url: "https://piazza.com/class/kjxv8nixe2v69p",
+          // },
         ],
       },
     ],

@@ -62,7 +62,7 @@ const StudentResources = () => {
           </div>
         </Col>
         <Col sm={12} md={6} lg={6}>
-          <div>
+          {/* <div>
             <h3>Piazza</h3>
             <p>
               Ask questions and get answers! Discuss various competition aspects
@@ -71,7 +71,7 @@ const StudentResources = () => {
             <AlternativeButton link="https://piazza.com/class/kjxv8nixe2v69p">
               Forums &rsaquo;
             </AlternativeButton>
-          </div>
+          </div> */}
         </Col>
         <Col sm={12} md={6} lg={6}>
           <div>
@@ -142,7 +142,7 @@ const Competition = () => {
                 <div className="card">
                   <div>
                     <FaRegHandPaper />
-                    <h4>We provide mentorship and a responsive Piazza forum</h4>
+                    <h4>We provide mentorship and a responsive Discord</h4>
                   </div>
                 </div>
               </Col>

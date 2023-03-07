@@ -272,10 +272,10 @@ const SoftwareHub = () => {
                     Latest Python Documentation
                   </Link>
                 </li>
-                <li>
-                  <Link to={piazza}>Piazza</Link> - Still have questions? Ask on
+                {/* <li>
+                  <Link to={piazza}>Discord</Link> - Still have questions? Ask on
                   the Forums!
-                </li>
+                </li> */}
               </ul>
             </Col>
           </Row>
@@ -289,7 +289,7 @@ const SoftwareHub = () => {
           headerColor={theme.colors.grey900}
           padding="1rem"
         >
-          <Row className="inner-container">
+          {/* <Row className="inner-container">
             <Col>
               <div>
                 <div>
@@ -300,7 +300,7 @@ const SoftwareHub = () => {
                 </div>
               </div>
             </Col>
-          </Row>
+          </Row> */}
         </UpdatesWrapper>
       </CustomizedContainer>
     </Layout>
