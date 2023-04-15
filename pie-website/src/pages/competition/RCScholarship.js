@@ -103,7 +103,7 @@ const RCScholarship = () => {
                 <div className="card">
                   <div>
                     <AiOutlineFileDone />
-                    <h3>Application due Saturday 4/15/2023</h3>
+                    <h3>EXTENDED!! Application due Friday 4/21/2023</h3>
                   </div>
                 </div>
               </Col>
