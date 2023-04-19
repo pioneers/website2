@@ -42,11 +42,6 @@ function Footer() {
                 101 O'Brien Hall, Berkeley, CA 94704
               </a>
             </div>
-            <div className="sp">
-              <p>
-                We are a student group acting independently of the University of California. We take full responsibility for our organization and this website.
-              </p>
-            </div>
             <div className="socials">
               <Link to="https://github.com/pioneers">
                 <AiFillGithub />
@@ -108,7 +103,22 @@ function Footer() {
           })}
         </div>
       </FooterWrapper>
-      <footer>© Pioneers in Engineering {year}</footer>
+      <footer style={{ color: "white" }}>
+        © Pioneers in Engineering {year}
+      </footer>
+      <hr />
+      <footer
+        style={{
+          color: "white",
+          textAlign: "center",
+          fontStyle: "italic",
+          padding: "0 3rem",
+        }}
+      >
+        We are a student group acting independently of the University of
+        California. We take full responsibility for our organization and this
+        website.
+      </footer>
     </CenteredContainer>
   )
 }
