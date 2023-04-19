@@ -106,7 +106,7 @@ function Footer() {
       <footer style={{ color: "white" }}>
         © Pioneers in Engineering {year}
       </footer>
-      <hr />
+      <hr style={{ color: "white" }} />
       <footer
         style={{
           color: "white",
