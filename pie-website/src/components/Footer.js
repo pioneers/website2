@@ -28,7 +28,6 @@ function Footer() {
             <Link to="/">Pioneers in Engineering</Link>
           </h2>
           <div>
-            <h3>Get in Touch</h3>
             <div className="sp">
               <a
                 href="mailto:leadership@pioneers.berkeley.edu"
@@ -39,11 +38,9 @@ function Footer() {
               </a>
             </div>
             <div className="sp">
-              101 O'Brien Hall, Berkeley, CA 94704 [
-              <a href="https://www.google.com/maps/d/u/0/edit?mid=1zVieVgGgfPfW8yv6wN9TDJZPzDOW3XL9&ll=37.87498246754354%2C-122.25991490933154&z=19">
-                map
+              <a href="https://www.google.com/maps/d/u/0/viewer?mid=1Sd6QurpSJK3xXEvOiISkWlKXj98&ll=37.87452100000002%2C-122.2592068&z=18">
+                101 O'Brien Hall, Berkeley, CA 94704
               </a>
-              ]
             </div>
             <div className="socials">
               <Link to="https://github.com/pioneers">
@@ -106,7 +103,22 @@ function Footer() {
           })}
         </div>
       </FooterWrapper>
-      <footer>© Pioneers in Engineering {year}</footer>
+      <footer style={{ color: "white" }}>
+        © Pioneers in Engineering {year}
+      </footer>
+      <hr />
+      <footer
+        style={{
+          color: "white",
+          textAlign: "center",
+          fontStyle: "italic",
+          padding: "0 3rem",
+        }}
+      >
+        We are a student group acting independently of the University of
+        California. We take full responsibility for our organization and this
+        website.
+      </footer>
     </CenteredContainer>
   )
 }
