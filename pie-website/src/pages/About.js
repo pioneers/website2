@@ -180,8 +180,8 @@ const PieFoundation = ({ data }) => {
           <div>
             <h3>Contact Us</h3>
             <p>Pioneers in Engineering Foundation</p>
-            <p>707 N Henry Ave</p>
-            <p>San Jose, CA 95117</p>
+            <p>2720 W Grand Ave Apt D</p>
+            <p>Alhambra, CA 91801</p>
             <p>
               <a
                 href="mailto:foundation@pioneers.berkeley.edu"
