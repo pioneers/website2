@@ -65,11 +65,11 @@ const sublinks = [
             url: "/competition/SoftwareHub",
           },
 
-          {
+          /*{
             label: "Edu Hub",
             icon: <GiTeacher />,
             url: "/competition/EduHub",
-          },
+          },*/
           {
             label: "Pimulator",
             icon: <GiPieSlice />,

@@ -223,10 +223,15 @@ h5 {
     transition: transform 0.3s ease-in-out;
     border: transparent !important;
   }
-  .card:hover {
+  .card-hover:hover {
     transform: scale(1.025);
     border: transparent !important;
   }
+  /*
+  .card:hover {
+    transform: scale(1.025);
+    border: transparent !important;
+  }*/
   /* .card:hover svg {
   animation-duration: 2s;
   animation-iteration-count: infinite;

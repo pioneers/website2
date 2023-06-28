@@ -39,7 +39,7 @@ const Forms = () => {
             <Col sm={12} md={6}>
               <div
                 aria-hidden="true"
-                className="card"
+                className="card card-hover"
                 onClick={function () {
                   window.open(
                     "https://www.cognitoforms.com/PioneersInEngineering/NewStaffRegistration",
@@ -54,7 +54,7 @@ const Forms = () => {
             <Col sm={12} md={6}>
               <div
                 aria-hidden="true"
-                className="card"
+                className="card card-hover"
                 onClick={function () {
                   window.open(
                     "mailto:recruiting@pioneers.berkeley.edu?subject=Filled out forms&body=Hey, just completed my forms. They are ready to be processed!",

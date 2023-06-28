@@ -33,28 +33,28 @@ const CompetitionDropdown = () => {
                 <li>
                   <Link to="/competition/SoftwareHub">Software Hub</Link>
                 </li>
-                <li>
+                {/*<li>
                   <Link to="/competition/EduHub">Edu Hub</Link>
-                </li>
+                </li>*/}
               </LinkList>
             </div>
             <div>
-              <h4>Communication</h4>
+              {/*<h4>Communication</h4>
               <LinkList>
                 {
                   <li>
                     <Link to="https://discord.gg/9gDpKcjf">Discord</Link>
                   </li>
                 }
-                {/* <li>
+                {<li>
                   <Link to="https://piazza.com/class/kjxv8nixe2v69p">
                     Piazza
                   </Link>
-                </li> */}
+                </li>}
                 <li>
                   <Link to="/#mailinglist">Mailing List</Link>
                 </li>
-              </LinkList>
+              </LinkList>*/}
             </div>
           </Flex>
         </div>
