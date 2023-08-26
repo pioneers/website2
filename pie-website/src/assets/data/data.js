@@ -9,7 +9,7 @@ import { GiPieSlice } from "@react-icons/all-files/gi/GiPieSlice"
 import { RiTeamFill } from "@react-icons/all-files/ri/RiTeamFill"
 import { ImCalendar } from "@react-icons/all-files/im/ImCalendar"
 import { AiOutlineRead } from "@react-icons/all-files/ai/AiOutlineRead"
-// import { FaDiscord } from "@react-icons/all-files/fa/FaDiscord"
+import { FaDiscord } from "@react-icons/all-files/fa/FaDiscord"
 import { BiCommentDots } from "@react-icons/all-files/bi/BiCommentDots"
 import { AiOutlineMail } from "@react-icons/all-files/ai/AiOutlineMail"
 import { AiOutlineProject } from "@react-icons/all-files/ai/AiOutlineProject"
@@ -107,11 +107,11 @@ const sublinks = [
         subpage: "Communication",
         url: "",
         subsections: [
-          // {
-          //   label: "Discord",
-          //   icon: <FaDiscord />,
-          //   url: "https://styled-components.com/",
-          // },
+          {
+          label: "Discord",
+          icon: <FaDiscord />,
+          url: "https://styled-components.com/",
+          },
           // {
           //   label: "Piazza",
           //   icon: <BiCommentDots />,

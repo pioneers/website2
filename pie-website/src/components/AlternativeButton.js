@@ -41,7 +41,7 @@ const CustomButton = styled.button.attrs(props => ({
   padding: 0.375rem 1rem;
   box-shadow: ${theme.shadows.shadow1};
   transition: ${theme.transition};
-  text-transform: capitalize;
+  // text-transform: capitalize;
   display: inline-block;
   margin: 0.25rem 0.25rem;
 

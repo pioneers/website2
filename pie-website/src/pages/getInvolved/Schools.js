@@ -5,6 +5,11 @@ import Layout from "../../components/Layout"
 import HelmetWrapper from "../../components/HelmetWrapper"
 import theme from "../../assets/themes/theme"
 import styled from "styled-components"
+import Container from "react-bootstrap/esm/Container"
+import Header from "../../components/Header"
+import AlternativeButton from "../../components/AlternativeButton"
+
+
 const Schools = () => {
   return (
     <Layout>
@@ -18,7 +23,26 @@ const Schools = () => {
         </div>
       </HeroWrapper>
       <CustomizedContainer>
-        <h1>Under Construction</h1>
+        <Container fluid>
+          <Header type="blue">Learn Robotics an at Affordable Price!</Header>
+          <p>
+            Pioneers in Engineering is committed to making robotics more accessible
+            to underresourced schools. We provide all of the necessary materials,
+            resources, and support required for schools to start a robotics team and
+            participate in our biannual robotics competition at the low cost of just
+            $100 per team.
+            <br /><br />
+            If you are from a school without robotics education and are interested in 
+            starting a team, please email us at{" "}
+            <a
+              href="mailto:leadership@pioneers.berkeley.edu"
+              target="_blank"
+              rel="noreferrer"
+            >
+              foundation@pioneers.berkeley.edu
+            </a>{" "} for more info and to get contacted when our application opens.
+          </p>
+        </Container>
       </CustomizedContainer>
     </Layout>
   )

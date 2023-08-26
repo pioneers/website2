@@ -123,7 +123,7 @@ const CustomButton = styled.button.attrs(props => ({
   padding: 0.375rem 0.75rem;
   box-shadow: ${theme.shadows.shadow1};
   transition: ${theme.transition};
-  text-transform: capitalize;
+  // text-transform: capitalize;
   display: inline-block;
   margin: 1rem 0.25rem 0rem 0.25rem;
   color: ${theme.colors.white};

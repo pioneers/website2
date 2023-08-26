@@ -134,7 +134,7 @@ const SubmenuWrapper = styled.aside`
   .submenu-center a {
     width: 11rem;
     display: block;
-    text-transform: capitalize;
+    // text-transform: capitalize;
     display: flex;
     align-items: center;
     margin: 0.5rem 0rem;

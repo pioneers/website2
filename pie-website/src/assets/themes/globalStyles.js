@@ -66,7 +66,7 @@ font-family: 'Source Sans Pro', sans-serif; */
     font-family: ${theme.fonts.headingFont};
     font-weight: 600;
     line-height: 1.25;
-    text-transform: capitalize;
+    // text-transform: capitalize;
     letter-spacing: ${theme.letterSpacing};
   }
 
@@ -158,7 +158,7 @@ h5 {
     display: block;
     font-size: ${theme.fonts.smallText};
     margin-bottom: 0.5rem;
-    text-transform: capitalize;
+    // text-transform: capitalize;
     letter-spacing: ${theme.letterSpacing};
   }
   .form-input,
@@ -184,7 +184,7 @@ h5 {
   .form-alert {
     color: ${theme.colors.redDark};
     letter-spacing: ${theme.let};
-    text-transform: capitalize;
+    // text-transform: capitalize;
   }
 
   .loading {

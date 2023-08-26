@@ -206,6 +206,12 @@ const HeroWrapper = styled.div`
     padding: 1rem;
     h1 {
       font-size: 5rem;
+      container-name: "hero-title";
+    }
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 3em;
+      }
     }
   }
 `

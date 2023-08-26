@@ -107,7 +107,7 @@ const CustomNav = styled.nav`
     border-color: transparent;
     font-size: 1.1rem;
     color: ${theme.colors.grey900};
-    text-transform: capitalize;
+    // text-transform: capitalize;
     letter-spacing: 1px;
     width: 15rem;
     cursor: default;

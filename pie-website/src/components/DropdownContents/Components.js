@@ -3,8 +3,8 @@ import styled, { css } from "styled-components"
 import theme from "../../assets/themes/theme"
 
 export const Heading = styled.h3`
-  text-transform: uppercase;
-  font-weight: bold;
+  // text-transform: uppercase;
+  // font-weight: bold;
   font-size: 1.1rem;
   margin-top: 0;
   margin-bottom: ${props => (props.noMarginBottom ? 0 : "1rem")};

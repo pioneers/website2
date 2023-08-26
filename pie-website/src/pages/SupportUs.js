@@ -80,7 +80,7 @@ const SupportUs = () => {
             textColor={theme.colors.grey700}
           >
             <Row className="inner-container">
-              <Col sm={12} md={12} lg={6}>
+              {/* <Col sm={12} md={12} lg={6}>
                 <div className="card">
                   <div>
                     <div id="how-to-help" />
@@ -96,7 +96,7 @@ const SupportUs = () => {
                     </AlternativeButton>
                   </div>
                 </div>
-              </Col>
+              </Col> */}
               <Col sm={12} md={12} lg={6}>
                 <div className="card">
                   <div>

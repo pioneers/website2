@@ -264,7 +264,7 @@ const SidebarWrapper = styled.div`
   .sidebar-sublinks a {
     display: block;
     color: ${theme.colors.grey900};
-    text-transform: capitalize;
+    // text-transform: capitalize;
     display: flex;
     align-items: center;
   }

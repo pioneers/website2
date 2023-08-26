@@ -25,7 +25,7 @@ import Row from "react-bootstrap/esm/Row"
 import theme from "../assets/themes/theme"
 import CustomizedContainer from "../components/CustomizedContainer"
 
-import pic from "../assets/images/stock-images/retreat-sp18-team.jpg"
+import pic from "../assets/images/stock-images/sp23_final_comp.jpg"
 
 import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
 
