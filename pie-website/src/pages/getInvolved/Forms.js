@@ -90,15 +90,14 @@ const Forms = () => {
               <tr>
                 <td>Wednesday 7 - 9 PM </td>
                 <td>
-                  575 McCone (Announcements), then 101 O'Brien or O'Brien
-                  Breezeway 2nd Floor (depending on team)
+                  Evans 3 (Announcements), then 101 O'Brien
                 </td>
               </tr>
               <tr>
                 <td>Saturday 1 - 3 PM </td>
                 <td>
                   {" "}
-                  101 O'Brien or O'Brien Breezeway 2nd Floor (depending on team)
+                  101 O'Brien
                 </td>
               </tr>
             </tbody>

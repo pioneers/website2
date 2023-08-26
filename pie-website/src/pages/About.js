@@ -58,14 +58,8 @@ const query = graphql`
     }
     allContentfulStaffMember {
       nodes {
-        bio {
-          bio
-        }
-        githubLink
-        linkedinLink
         major
         name
-        personalWebsite
         picture {
           gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
         }
@@ -180,8 +174,8 @@ const PieFoundation = ({ data }) => {
           <div>
             <h3>Contact Us</h3>
             <p>Pioneers in Engineering Foundation</p>
-            <p>2720 W Grand Ave Apt D</p>
-            <p>Alhambra, CA 91801</p>
+            <p>707 N Henry Ave</p>
+            <p>San Jose, CA 95117</p>
             <p>
               <a
                 href="mailto:foundation@pioneers.berkeley.edu"
@@ -205,12 +199,12 @@ const About = () => {
   const defaultStaffMember = data.allContentfulDefaultStaffMember.nodes
 
   const staff = data.allContentfulStaffMember.nodes
-  // console.log(staff)
-  const leadership = staff.filter(person => person.role.includes("Director"))
-  const pm = staff.filter(person => person.role.includes("PM"))
+  console.log(staff)
+  const leadership = staff.filter(person => person.role && person.role.includes("Director"))
+  const pm = staff.filter(person => person.role && person.role.includes("PM"))
   console.log(pm)
   const other = staff.filter(
-    person => !person.role.includes("Director") && !person.role.includes("PM")
+    person =>  person.role && !person.role.includes("Director") && !person.role.includes("PM")
   )
   console.log(other)
 
@@ -274,8 +268,9 @@ const About = () => {
                 <h4>Dedicated club members</h4>
                 <p>
                   A group of talented students who make everything happen from
-                  the game design to the{" "}
-                  <Link to="/competition/SoftwareHub">software</Link> to the{" "}
+                  the game design to the {" "}
+                  <Link to="/competition/SoftwareHub">software</Link> to the {" "}
+                  the logistical planning and community outreach
                 </p>
               </div>
             </Col>
@@ -353,6 +348,19 @@ const About = () => {
                   return (
                     <SpecialCol xs={12} sm={6} md={4} lg={3}>
                       <div className="card">
+                      {person.picture ? (
+                          <GatsbyImage
+                            image={person.picture.gatsbyImageData}
+                            className="img"
+                          ></GatsbyImage>
+                        ) : (
+                          <GatsbyImage
+                            image={
+                              defaultStaffMember[0].picture.gatsbyImageData
+                            }
+                            className="img"
+                          ></GatsbyImage>
+                        )}
                         <div>
                           <h3>{person.name}</h3>
                           <h4>{person.role}</h4>
