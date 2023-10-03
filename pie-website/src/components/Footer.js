@@ -12,7 +12,6 @@ import CustomizedContainer from "./CustomizedContainer"
 import { AiFillGithub } from "@react-icons/all-files/ai/AiFillGithub"
 import { AiFillFacebook } from "@react-icons/all-files/ai/AiFillFacebook"
 import { AiFillYoutube } from "@react-icons/all-files/ai/AiFillYoutube"
-// import TextField from "@material-ui/core/TextField"
 
 /*
 Creates a footer component
@@ -54,26 +53,6 @@ function Footer() {
               </Link>
             </div>
           </div>
-          {/* <div>
-            <h3>Mailing List</h3>
-            <form
-              noValidate
-              autoComplete="off"
-              action="https://getform.io/f/86bd726f-60c2-48ec-847c-ab1d7d056101"
-              method="POST"
-            >
-              <CustomField
-                id="filled-basic"
-                variant="filled"
-                label="Email Address"
-                name="Email Address"
-                required
-                className="email"
-              />
-
-              <CustomButton color="blue">Submit</CustomButton>
-            </form>
-          </div> */}
         </div>
         <div className="links-container">
           {sublinks.map(item => {
@@ -129,37 +108,6 @@ const CenteredContainer = styled(CustomizedContainer)`
     text-align: center !important;
   }
 `
-// const CustomButton = styled.button.attrs(props => ({
-//   type: "submit",
-// }))`
-//   cursor: pointer;
-//   background: ${props =>
-//     props.color === "blue" ? theme.colors.blue500 : theme.colors.gold500};
-//   border: transparent;
-//   border-radius: ${theme.borderRadius};
-//   letter-spacing: ${theme.letterSpacing};
-//   padding: 0.375rem 0.75rem;
-//   box-shadow: ${theme.shadows.shadow1};
-//   transition: ${theme.transition};
-//   text-transform: capitalize;
-//   display: inline-block;
-//   color: ${theme.colors.white};
-//   width: 100%;
-//   margin: 1rem 0;
-
-//   &:hover {
-//     background: ${props =>
-//       props.color === "blue" ? theme.colors.blue700 : theme.colors.gold700};
-//     box-shadow: ${theme.shadows.shadow3};
-//   }
-
-//   a {
-//     color: ${theme.colors.white};
-//   }
-// `
-// const CustomField = styled(TextField)`
-//   width: 100%;
-// `
 
 const FooterWrapper = styled.div`
   position: relative;
