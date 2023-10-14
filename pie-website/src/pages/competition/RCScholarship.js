@@ -161,7 +161,7 @@ const RCScholarship = () => {
                     <BiVideoRecording />
                     <h4>2024 Workshop</h4>
                     <p>
-                      <Link to="https://pioneers.berkeley.edu/assets/scholarship/2023_pie_scholarship_workshop_presentation.pdf">
+                      <Link to="https://pioneers.berkeley.edu/assets/scholarship/2024_pie_scholarship_workshop_presentation.pdf">
                         {" "}
                         Scholarship workshop slides &rsaquo;{" "}
                       </Link>
@@ -173,7 +173,7 @@ const RCScholarship = () => {
                     <AiOutlineUnorderedList />
                     <h4>2024 Scholarship Application Summary</h4>
                     <p>
-                      <Link to="https://pioneers.berkeley.edu/assets/scholarship/2023_pie_scholarship_application.pdf">
+                      <Link to="https://pioneers.berkeley.edu/assets/scholarship/2024_pie_scholarship_application.pdf">
                         {" "}
                         Pdf of the application &rsaquo;{" "}
                       </Link>
@@ -183,7 +183,7 @@ const RCScholarship = () => {
                 <Col sm={12} md={12} lg={12}>
                   <div>
                     <BsInfoCircle />
-                    <h4>2021 Scholarship Interview Tips</h4>
+                    <h4>Scholarship Interview Tips</h4>
                     <p>
                       <Link to="https://pioneers.berkeley.edu/assets/scholarship/2021_pie_scholarship_interview_tips.pdf">
                         {" "}
