@@ -170,6 +170,18 @@ const RCScholarship = () => {
                 </Col>
                 <Col sm={12} md={12} lg={12}>
                   <div>
+                    <BiVideoRecording />
+                    <h4>2024 Workshop Recording</h4>
+                    <p>
+                      <Link to="https://www.youtube.com/watch?v=HXHkz9iH1Q8">
+                        {" "}
+                        Scholarship workshop recording &rsaquo;{" "}
+                      </Link>
+                    </p>
+                  </div>
+                </Col>
+                <Col sm={12} md={12} lg={12}>
+                  <div>
                     <AiOutlineUnorderedList />
                     <h4>2024 Scholarship Application Summary</h4>
                     <p>
