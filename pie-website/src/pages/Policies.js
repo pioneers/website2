@@ -29,10 +29,10 @@ const Policies = () => {
           <div className="section">
             <h2>Non-Discrimination Resolution</h2>
             <p>
-              This document establishes that PiE-Foundation will not discriminate based on a variety of characteristics when considering membership into PiE
+              This document establishes that PiE-Foundation will not discriminate based on a variety of characteristics when considering membership into PiE Foundation.
             </p>
             <GrDocumentPdf />
-            <Link to="/assets/policies/PiE Foundation Non-Discrimination Resolution.pdf">
+            <Link to="/assets/policies/pie_foundation_non_discrimination_resolution.pdf">
             PiE Foundation Non-Discrimination Resolution &rsaquo;
             </Link>
           </div>
@@ -41,11 +41,11 @@ const Policies = () => {
           <div className="section">
             <h2>Sexual Violence and Sexual Harassment Policy</h2>
             <p>
-            This document specifies the guidelines PiE and PiE-Foundation will follow to create a safe environment for all PiE-affiliated individuals.
+            This document specifies the guidelines PiE will follow to create a safe environment for all PiE-affiliated individuals.
             </p>
             <GrDocumentPdf />
-            <Link to="/assets/policies/Policy Framework for Sexual Violence and Sexual Harasment.pdf">
-              Policy Framework for Sexual Violence and Sexual Harasment &rsaquo;
+            <Link to="/assets/policies/pie_policy_framework_for_sexual_violence_and_sexual_harassment.pdf">
+              Policy Framework for Sexual Violence and Sexual Harassment &rsaquo;
             </Link>
           </div>
         </Resources>
@@ -56,7 +56,7 @@ const Policies = () => {
             This document specifies the guidelines all PiE affiliates should follow when working with high school students
             </p>
             <GrDocumentPdf />
-            <Link to="/assets/policies/Policy on Interactions Between PiE Staff_Mentors and High School Students.pdf">
+            <Link to="/assets/policies/pie_policy_on_interactions_between_pie_staff_mentors_and_high_school_students.pdf">
             Policy on Interactions Between PiE Staff/Mentors and High School Students &rsaquo;
             </Link>
           </div>
