@@ -1,16 +1,12 @@
 import { FaCreditCard } from "@react-icons/all-files/fa/FaCreditCard"
 import { BiGroup } from "@react-icons/all-files/bi/BiGroup"
-import { GiFishMonster } from "@react-icons/all-files/gi/GiFishMonster"
 import { BsPeopleCircle } from "@react-icons/all-files/bs/BsPeopleCircle"
 import { AiFillCode } from "@react-icons/all-files/ai/AiFillCode"
-import { BsGearWideConnected } from "@react-icons/all-files/bs/BsGearWideConnected"
-import { GiTeacher } from "@react-icons/all-files/gi/GiTeacher"
 import { GiPieSlice } from "@react-icons/all-files/gi/GiPieSlice"
 import { RiTeamFill } from "@react-icons/all-files/ri/RiTeamFill"
 import { ImCalendar } from "@react-icons/all-files/im/ImCalendar"
 import { AiOutlineRead } from "@react-icons/all-files/ai/AiOutlineRead"
 import { FaDiscord } from "@react-icons/all-files/fa/FaDiscord"
-import { BiCommentDots } from "@react-icons/all-files/bi/BiCommentDots"
 import { AiOutlineMail } from "@react-icons/all-files/ai/AiOutlineMail"
 import { AiOutlineProject } from "@react-icons/all-files/ai/AiOutlineProject"
 import { AiOutlineForm } from "@react-icons/all-files/ai/AiOutlineForm"
@@ -47,6 +43,11 @@ const sublinks = [
             icon: <BsPeopleCircle />,
             url: "/About#foundation",
           },
+          {
+            label: "Policies",
+            icon: <BsPeopleCircle />,
+            url: "/Policies",
+          }
         ],
       },
     ],
