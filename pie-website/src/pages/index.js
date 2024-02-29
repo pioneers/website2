@@ -118,7 +118,7 @@ export default function Home(props) {
           </p>
 
           <AlternativeButton link="/Competition">
-            2023 Spring Competition &rsaquo;
+            2024 Spring Competition &rsaquo;
           </AlternativeButton>
         </Students>
       </CustomizedContainer>
