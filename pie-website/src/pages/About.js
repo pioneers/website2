@@ -106,11 +106,11 @@ const PieFoundation = ({ data }) => {
             </a>{" "}
             or email{" "}
             <a
-              href="mailto:foundation@pioneers.berkeley.edu"
+              href="mailto:foundation@pierobotics.org"
               target="_blank"
               rel="noreferrer"
             >
-              foundation@pioneers.berkeley.edu
+              foundation@pierobotics.org
             </a>{" "}
             to arrange your gift.
           </p>
@@ -178,11 +178,11 @@ const PieFoundation = ({ data }) => {
             <p>San Jose, CA 95117</p>
             <p>
               <a
-                href="mailto:foundation@pioneers.berkeley.edu"
+                href="mailto:foundation@pierobotics.org"
                 target="_blank"
                 rel="noreferrer"
               >
-                foundation@pioneers.berkeley.edu
+                foundation@pierobotics.org
               </a>
             </p>
           </div>

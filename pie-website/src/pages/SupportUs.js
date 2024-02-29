@@ -112,8 +112,8 @@ const SupportUs = () => {
                       <br></br>
                       If you would like more information about PiE and how to
                       partner with us, please email{" "}
-                      <a href="mailto:partnerships@pioneers.berkeley.edu">
-                        partnerships@pioneers.berkeley.edu
+                      <a href="mailto:partnerships@pierobotics.org">
+                        partnerships@pierobotics.org
                       </a>
                     </p>
                     <AlternativeButton link="https://donorbox.org/pioneers-in-engineering">

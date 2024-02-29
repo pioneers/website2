@@ -57,7 +57,7 @@ const Forms = () => {
                 className="card card-hover"
                 onClick={function () {
                   window.open(
-                    "mailto:recruiting@pioneers.berkeley.edu?subject=Filled out forms&body=Hey, just completed my forms. They are ready to be processed!",
+                    "mailto:recruiting@pierobotics.org?subject=Filled out forms&body=Hey, just completed my forms. They are ready to be processed!",
                     "mywindow"
                   )
                 }}

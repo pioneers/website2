@@ -35,11 +35,11 @@ const Schools = () => {
             If you are from a school without robotics education and are interested in 
             starting a team, please email us at{" "}
             <a
-              href="mailto:leadership@pioneers.berkeley.edu"
+              href="mailto:leadership@pierobotics.org"
               target="_blank"
               rel="noreferrer"
             >
-              foundation@pioneers.berkeley.edu
+              foundation@pierobotics.org
             </a>{" "} for more info and to get contacted when our application opens.
           </p>
         </Container>

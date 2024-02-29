@@ -247,11 +247,11 @@ const RCScholarship = () => {
             For any questions about the scholarship or application, contact us
             at{" "}
             <a
-              href="mailto:scholarship@pioneers.berkeley.edu"
+              href="mailto:scholarship@pierobotics.org"
               target="_blank"
               rel="noreferrer"
             >
-              scholarship@pioneers.berkeley.edu
+              scholarship@pierobotics.org
             </a>
           </p>
         </AnythingContainer>

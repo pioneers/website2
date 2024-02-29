@@ -29,11 +29,11 @@ function Footer() {
           <div>
             <div className="sp">
               <a
-                href="mailto:leadership@pioneers.berkeley.edu"
+                href="mailto:leadership@pierobotics.org"
                 target="_blank"
                 rel="noreferrer"
               >
-                leadership@pioneers.berkeley.edu
+                leadership@pierobotics.org
               </a>
             </div>
             <div className="sp">
