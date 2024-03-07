@@ -95,7 +95,7 @@ const sublinks = [
           {
             label: "Game Manual",
             icon: <AiOutlineRead />,
-            url: "https://docs.google.com/document/d/12jrLFEn5cAYj6wnPu_VHnc1_8AZ5uxsiKPn6MkaX4eQ/edit",
+            url: "https://docs.google.com/document/d/193eKA8520k7EMORqC0WkdeisCfz2OOUw0mMGtfk0tXU/edit",
           },
           {
             label: "RC Scholarship",
@@ -111,7 +111,7 @@ const sublinks = [
           {
           label: "Discord",
           icon: <FaDiscord />,
-          url: "https://styled-components.com/",
+          url: "https://discord.gg/hYREQD2N5r/",
           },
           // {
           //   label: "Piazza",

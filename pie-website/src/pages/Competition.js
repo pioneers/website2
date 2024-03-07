@@ -80,7 +80,7 @@ const StudentResources = () => {
               Sign up for worksessions 24 hours in advance! Having debug issues?
               Need some more build time or tools? Come on out!
             </p>
-            <AlternativeButton link="https://www.signupgenius.com/go/10C0E4CA8A723A3F8CF8-student">
+            <AlternativeButton link="https://www.signupgenius.com/go/10C0D4CA4AF2AA2F4CF8-48428512-spring#/">
               Worksession Sign Up &rsaquo;
             </AlternativeButton>
           </div>

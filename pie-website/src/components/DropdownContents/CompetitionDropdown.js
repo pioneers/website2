@@ -42,7 +42,7 @@ const CompetitionDropdown = () => {
               <h4>Communication</h4>
               <LinkList>
               <li>
-                <Link to="https://discord.gg/5nc3tPJK">Discord</Link>
+                <Link to="https://discord.gg/hYREQD2N5r">Discord</Link>
               </li>
                 
               {/* <li>
@@ -69,7 +69,7 @@ const CompetitionDropdown = () => {
             </Link>
           </HeadingLink>
           <HeadingLink>
-            <Link to="https://docs.google.com/document/d/12jrLFEn5cAYj6wnPu_VHnc1_8AZ5uxsiKPn6MkaX4eQ/edit">
+            <Link to="https://docs.google.com/document/d/193eKA8520k7EMORqC0WkdeisCfz2OOUw0mMGtfk0tXU/edit">
               <Icon /> Game Manual
             </Link>
           </HeadingLink>
