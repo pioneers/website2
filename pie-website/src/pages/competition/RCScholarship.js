@@ -44,7 +44,7 @@ const query = graphql`
 const RCScholarship = () => {
   const data = useStaticQuery(query)
   const scholarsUnordered = data.allContentfulPastScholars.nodes
-  const scholars = scholarsUnordered.sort((a, b) => (a.year > b.year ? 1 : -1))
+  const scholars = scholarsUnordered.sort((a, b) => (a.year > b.year ? -1 : 1)) // sorts in descending order
 
   return (
     <Layout>
