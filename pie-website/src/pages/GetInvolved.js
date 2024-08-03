@@ -69,7 +69,7 @@ const GetInvolved = () => {
           </h4>
           <Header type={"blue-header"}>Fall Recruiting</Header>
           <p>
-            We've got a great lineup of events ready to welcome you (back) to
+            We've got a great lineup of events ready to welcome you to
             Berkeley. Come to an infosession to find out what we're all about,
             then decide which{" "}
             <Link to="/getInvolved/Projects">project team</Link> you want to
@@ -86,14 +86,15 @@ const GetInvolved = () => {
             online.
           </p>
           <p>
+            If you're interested in joining, fill out our interest form{" "}
             <a
               href="https://calendar.google.com/calendar/u/0/embed?src=pioneers.berkeley.edu_4vdtnqvtt5hlcnc54n7i52en88@group.calendar.google.com&ctz=America/Los_Angeles"
               target="_blank"
               rel="noreferrer"
             >
-              Add our Google calendar
-            </a>{" "}
-            (plus sign on the bottom right)
+              here
+            </a>
+            ! We'll send information at a later time about welcome events in the fall and how to join.
           </p>
         </HeaderContainer>
       </CustomizedContainer>
