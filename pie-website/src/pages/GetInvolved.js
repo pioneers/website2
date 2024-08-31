@@ -82,13 +82,12 @@ const GetInvolved = () => {
               rel="noreferrer"
             >
               Calapalooza
-            </a>{" "}
-            online.
+            </a>.
           </p>
           <p>
             If you're interested in joining, fill out our interest form{" "}
             <a
-              href="https://calendar.google.com/calendar/u/0/embed?src=pioneers.berkeley.edu_4vdtnqvtt5hlcnc54n7i52en88@group.calendar.google.com&ctz=America/Los_Angeles"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSd1tHle9P-RwM608u0iMOOXlPt26cCSCqKKQaa5ND8WjL0aWQ/viewform"
               target="_blank"
               rel="noreferrer"
             >
