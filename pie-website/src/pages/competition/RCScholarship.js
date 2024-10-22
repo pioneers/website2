@@ -88,14 +88,14 @@ const RCScholarship = () => {
           <h4 style={{ marginBottom: "1.5em", color: theme.colors.grey400 }}>
             THE TIMELINE
           </h4>
-          <Header type="gold">2024 Scholarship Schedule</Header>
+          <Header type="gold">2025 Scholarship Schedule</Header>
           <ScheduleWrapper fluid align="center" padding="3rem 1.25rem">
             <Row className="inner-container">
               <Col sm={12} md={6} lg={3}>
                 <div className="card">
                   <div>
                     <VscDebugStart />
-                    <h3>Application opens Saturday 10/14/2023</h3>
+                    <h3>Application opens Saturday 10/19/2024</h3>
                   </div>
                 </div>
               </Col>
@@ -103,7 +103,7 @@ const RCScholarship = () => {
                 <div className="card">
                   <div>
                     <AiOutlineFileDone />
-                    <h3>Application due Tuesday 3/12/2024</h3>
+                    <h3>Application due Tuesday 3/12/2025</h3>
                   </div>
                 </div>
               </Col>
@@ -111,7 +111,7 @@ const RCScholarship = () => {
                 <div className="card">
                   <div>
                     <FaUserTie />
-                    <h3>Interviews with finalists - Week of 4/1/2024 thru 4/5/2024</h3>
+                    <h3>Interviews (remote) with finalists - Week of 4/1/2025 thru 4/5/2025</h3>
                   </div>
                 </div>
               </Col>
@@ -119,7 +119,7 @@ const RCScholarship = () => {
                 <div className="card">
                   <div>
                     <GiPodiumWinner />
-                    <h3>Recipient announced - Sunday 4/28/2024</h3>
+                    <h3>TBD</h3>
                   </div>
                 </div>
               </Col>
@@ -159,9 +159,9 @@ const RCScholarship = () => {
                 <Col sm={12} md={12} lg={12}>
                   <div>
                     <BiVideoRecording />
-                    <h4>2024 Workshop</h4>
+                    <h4>2025 Workshop</h4>
                     <p>
-                      <Link to="https://pioneers.berkeley.edu/assets/scholarship/2024_pie_scholarship_workshop_presentation.pdf">
+                      <Link to="https://pioneers.berkeley.edu/assets/scholarship/2025_pie_scholarship_workshop_presentation.pdf">
                         {" "}
                         Scholarship workshop slides &rsaquo;{" "}
                       </Link>
@@ -183,11 +183,11 @@ const RCScholarship = () => {
                 <Col sm={12} md={12} lg={12}>
                   <div>
                     <AiOutlineUnorderedList />
-                    <h4>2024 Scholarship Application Summary</h4>
+                    <h4>2025 Scholarship Application Summary</h4>
                     <p>
-                      <Link to="https://pioneers.berkeley.edu/assets/scholarship/2024_pie_scholarship_application.pdf">
+                      <Link to="https://pioneers.berkeley.edu/assets/scholarship/2025_pie_scholarship_application.pdf">
                         {" "}
-                        Pdf of the application &rsaquo;{" "}
+                        PDF of the application &rsaquo;{" "}
                       </Link>
                     </p>
                   </div>
