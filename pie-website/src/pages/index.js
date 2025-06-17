@@ -23,9 +23,8 @@ import Container from "react-bootstrap/esm/Container"
 
 import pic from "../assets/images/homepage-banners/explaining.jpg"
 
-import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
-
 import MailchimpFormContainer from "../components/Mailchimp"
+import { Link } from "gatsby"
 
 // const query = graphql`
 //   {
@@ -109,9 +108,9 @@ export default function Home(props) {
           <Header type={"gold-header"}>Students</Header>
           <p>
             Are you in high school?{" "}
-            <Link to="/getInvolved/Schools">
+            <a href="/getInvolved/Schools">
               Compete in our 8-week Spring robotics competition!
-            </Link>{" "}
+            </a>{" "}
             For only $100, your team will receive a robotics kit and 2-3 mentors
             for support. We also host a Fall reboot of our past Spring
             competition, as well as workshops such as PiE On The Road.

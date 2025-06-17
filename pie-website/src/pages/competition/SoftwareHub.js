@@ -12,8 +12,6 @@ import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import { useStaticQuery, graphql } from "gatsby"
 
-import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
-
 import pic from "../../assets/images/about-us/work-in-progress.jpg"
 
 const query = graphql`
@@ -230,35 +228,35 @@ const SoftwareHub = () => {
               <h2>Documentation</h2>
               <ul>
                 <li>
-                  <Link to="/competition/SoftwareHub/QuickstartGuide/">
+                  <a href="/competition/SoftwareHub/QuickstartGuide/">
                     Quickstart Guide
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link to={robotApi}>Robot API</Link>
+                  <a href={robotApi}>Robot API</a>
                 </li>
                 <li>
-                  <Link to="/competition/SoftwareHub/StudentSkeletonCode/">
+                  <a href="/competition/SoftwareHub/StudentSkeletonCode/">
                     Student Skeleton Code
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link to="/competition/SoftwareHub/DawnGuide/">
+                  <a href="/competition/SoftwareHub/DawnGuide/">
                     Guide: Dawn
-                  </Link>
+                  </a>
                 </li>
                 <li>
                   Programming Guides
                   <ul>
                     <li>
-                      <Link to="/competition/SoftwareHub/Teleop/">
+                      <a href="/competition/SoftwareHub/Teleop/">
                         Guide #1: Tele-Operated Code
-                      </Link>
+                      </a>
                     </li>
                     <li>
-                      <Link to="/competition/SoftwareHub/Autonomous/">
+                      <a href="/competition/SoftwareHub/Autonomous/">
                         Guide #2: Autonomous Code
-                      </Link>
+                      </a>
                     </li>
                   </ul>
                 </li>
@@ -268,9 +266,9 @@ const SoftwareHub = () => {
               <h2>More Resources</h2>
               <ul>
                 <li>
-                  <Link to={latestPythonDocumentation}>
+                  <a href={latestPythonDocumentation}>
                     Latest Python Documentation
-                  </Link>
+                  </a>
                 </li>
                 {/* <li>
                   <Link to={piazza}>Discord</Link> - Still have questions? Ask on

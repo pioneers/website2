@@ -9,8 +9,6 @@ import TimelineOppositeContent from "@material-ui/lab/TimelineOppositeContent"
 import TimelineDot from "@material-ui/lab/TimelineDot"
 import theme from "../assets/themes/theme"
 
-import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
-
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 
 import { ReadMore } from "./ReadMore"
@@ -67,7 +65,7 @@ export const TimelineOne = props => {
                 <SecondaryText>Time: {time}</SecondaryText>
                 {link && (
                   <SecondaryText>
-                    Link: <Link to={link}>{link}</Link>
+                    Link: <a href={link}>{link}</a>
                   </SecondaryText>
                 )}
               </TimelineOppositeContent>
@@ -114,7 +112,7 @@ export const TimelineOne = props => {
                     <SecondaryText>{week}</SecondaryText>
                     <SecondaryText>Time: {time}</SecondaryText>
                     <SecondaryText>
-                      Link: <Link to={link}>{link}</Link>
+                      Link: <a href={link}>{link}</a>
                     </SecondaryText>
                   </div>
 

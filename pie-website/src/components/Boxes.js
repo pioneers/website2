@@ -1,7 +1,5 @@
 import React from "react"
 
-import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
-
 import theme from "../assets/themes/theme"
 
 import Container from "react-bootstrap/esm/Container"

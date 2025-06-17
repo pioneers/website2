@@ -24,8 +24,6 @@ import Col from "react-bootstrap/Col"
 
 import pic from "../assets/images/stock-images/robotics_competition_sp17.jpg"
 
-import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
-
 const query = graphql`
   {
     allContentfulCompetitionTimeline(
@@ -52,8 +50,8 @@ const StudentResources = () => {
           <div>
             <h3>Kit Guides and Software</h3>
             <p>
-              Download <Link to="/getInvolved/Projects">Dawn</Link> and{" "}
-              <Link to="/getInvolved/Projects">Runtime</Link> software, view
+              Download <a href="/getInvolved/Projects">Dawn</a> and{" "}
+              <a href="/getInvolved/Projects">Runtime</a> software, view
               documents and guides, and check for updates.
             </p>
             <AlternativeButton link="/competition/SoftwareHub">

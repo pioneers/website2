@@ -1,7 +1,6 @@
 import React from "react"
 import styled, { css } from "styled-components"
 import { Icon, DropdownSection, Heading, HeadingLink } from "./Components"
-import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
 import theme from "../../assets/themes/theme"
 
 const ProductsDropdownEl = styled.div`
@@ -66,21 +65,21 @@ const AboutDropdown = () => {
           <li>
             <div>
               <Heading color="blue">
-                <Link to="/About#leadership">Leadership</Link>
+                <a href="/About#leadership">Leadership</a>
               </Heading>
             </div>
           </li>
           <li>
             <div>
               <Heading color="green">
-                <Link to="/About#projectManagers">Project Managers</Link>
+                <a href="/About#projectManagers">Project Managers</a>
               </Heading>
             </div>
           </li>
           <li>
             <div>
               <Heading color="teal" style={{ marginBottom: 0 }}>
-                <Link to="/About#others">All Other Members</Link>
+                <a href="/About#others">All Other Members</a>
               </Heading>
             </div>
           </li>
@@ -90,15 +89,15 @@ const AboutDropdown = () => {
         <SubProductsList>
           <ul>
             <HeadingLink>
-              <Link to="/About#mission">
+              <a href="/About#mission">
                 <Icon /> Mission Statement
-              </Link>
+              </a>
             </HeadingLink>
 
             <HeadingLink noMarginBottom>
-              <Link to="/About#foundation">
+              <a href="/About#foundation">
                 <Icon /> Foundation
-              </Link>
+              </a>
             </HeadingLink>
           </ul>
         </SubProductsList>

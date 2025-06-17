@@ -1,7 +1,5 @@
 import React from "react"
 
-import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
-
 import theme from "../assets/themes/theme"
 
 import styled from "styled-components"
@@ -24,7 +22,7 @@ function Footer() {
       <FooterWrapper>
         <div className="left">
           <h2>
-            <Link to="/">Pioneers in Engineering</Link>
+            <a href="/">Pioneers in Engineering</a>
           </h2>
           <div>
             <div className="sp">
@@ -42,15 +40,15 @@ function Footer() {
               </a>
             </div>
             <div className="socials">
-              <Link to="https://github.com/pioneers">
+              <a href="https://github.com/pioneers">
                 <AiFillGithub />
-              </Link>
-              <Link to="https://www.facebook.com/pierobotics">
+              </a>
+              <a href="https://www.facebook.com/pierobotics">
                 <AiFillFacebook />
-              </Link>
-              <Link to="https://www.youtube.com/user/pierobotics">
+              </a>
+              <a href="https://www.youtube.com/user/pierobotics">
                 <AiFillYoutube />
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -217,7 +215,7 @@ const FooterWrapper = styled.div`
   }
 `
 
-const CustomLink = styled(Link)`
+const CustomLink = styled.a`
   display: block;
   color: ${theme.colors.grey700};
 

@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
 
 import { Heading, LinkList, DropdownSection, Icon } from "./Components"
 
@@ -31,29 +30,29 @@ const GetInvolvedDropdown = () => {
           <Flex>
             <div>
               <h4>
-                <Link to="/getInvolved/Decal">Decal</Link>
+                <a href="/getInvolved/Decal">Decal</a>
               </h4>
               <LinkList>
                 <li>
-                  <Link to="/getInvolved/Decal#details">Info</Link>
+                  <a href="/getInvolved/Decal#details">Info</a>
                 </li>
                 <li>
-                  <Link to="/getInvolved/Forms">
+                  <a href="/getInvolved/Forms">
                     Sign Up
-                  </Link>
+                  </a>
                 </li>
               </LinkList>
             </div>
             <div>
               <h4>
-                <Link to="/getInvolved/Schools">Schools</Link>
+                <a href="/getInvolved/Schools">Schools</a>
               </h4>
               <LinkList>
                 <li>
-                  <Link to="/getInvolved/Schools">Info</Link>
+                  <a href="/getInvolved/Schools">Info</a>
                 </li>
                 <li>
-                  <Link to="/getInvolved/Schools#signUp">Sign Up</Link>
+                  <a href="/getInvolved/Schools#signUp">Sign Up</a>
                 </li>
               </LinkList>
             </div>
@@ -64,17 +63,17 @@ const GetInvolvedDropdown = () => {
         <div>
           <Heading>
             <Icon />
-            <Link to="/GetInvolved">Join Our Team</Link>
+            <a href="/GetInvolved">Join Our Team</a>
           </Heading>
           <LinkList marginLeft="25px">
             <li>
-              <Link to="/GetInvolved#timeline">Timeline &rsaquo;</Link>
+              <a href="/GetInvolved#timeline">Timeline &rsaquo;</a>
             </li>
             <li>
-              <Link to="/getInvolved/Projects">Projects &rsaquo;</Link>
+              <a href="/getInvolved/Projects">Projects &rsaquo;</a>
             </li>
             <li>
-              <Link to="/getInvolved/Forms">Forms to Join &rsaquo;</Link>
+              <a href="/getInvolved/Forms">Forms to Join &rsaquo;</a>
             </li>
           </LinkList>
         </div>

@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
 
 import {
   Icon,
@@ -31,10 +30,10 @@ const CompetitionDropdown = () => {
               <h4>Hubs</h4>
               <LinkList>
                 <li>
-                  <Link to="/competition/SoftwareHub">Software Hub</Link>
+                  <a href="/competition/SoftwareHub">Software Hub</a>
                 </li>
                 {/*<li>
-                  <Link to="/competition/EduHub">Edu Hub</Link>
+                  <a href="/competition/EduHub">Edu Hub</a>
                 </li>*/}
               </LinkList>
             </div>
@@ -42,14 +41,14 @@ const CompetitionDropdown = () => {
               <h4>Communication</h4>
               <LinkList>
               <li>
-                <Link to="https://discord.gg/hYREQD2N5r">Discord</Link>
+                <a href="https://discord.gg/hYREQD2N5r">Discord</a>
               </li>
                 
               {/* <li>
-                <Link to="https://piazza.com/class/kjxv8nixe2v69p">Piazza</Link>
+                <a href="https://piazza.com/class/kjxv8nixe2v69p">Piazza</a>
               </li> */}
               <li>
-                <Link to="/#mailinglist">Mailing List</Link>
+                <a href="/#mailinglist">Mailing List</a>
               </li>
               </LinkList>
             </div>
@@ -59,29 +58,29 @@ const CompetitionDropdown = () => {
       <DropdownSection>
         <ul>
           <HeadingLink>
-            <Link to="https://pimulator.pierobotics.org/">
+            <a href="https://pimulator.pierobotics.org/">
               <Icon /> Pimulator
-            </Link>
+            </a>
           </HeadingLink>
           <HeadingLink>
-            <Link to="https://github.com/pioneers/runtime/wiki/Student-API">
+            <a href="https://github.com/pioneers/runtime/wiki/Student-API">
               <Icon /> Full Robot API Reference
-            </Link>
+            </a>
           </HeadingLink>
           <HeadingLink>
-            <Link to="https://docs.google.com/document/d/193eKA8520k7EMORqC0WkdeisCfz2OOUw0mMGtfk0tXU/edit">
+            <a href="https://docs.google.com/document/d/193eKA8520k7EMORqC0WkdeisCfz2OOUw0mMGtfk0tXU/edit">
               <Icon /> Game Manual
-            </Link>
+            </a>
           </HeadingLink>
           <HeadingLink>
-            <Link to="/Competition#timeline">
+            <a href="/Competition#timeline">
               <Icon /> Timeline
-            </Link>
+            </a>
           </HeadingLink>
           <HeadingLink noMarginBottom>
-            <Link to="/competition/RCScholarship">
+            <a href="/competition/RCScholarship">
               <Icon /> RC Scholarship
-            </Link>
+            </a>
           </HeadingLink>
         </ul>
       </DropdownSection>

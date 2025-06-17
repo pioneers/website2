@@ -1,7 +1,5 @@
 import React from "react"
 
-import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
-
 import theme from "../assets/themes/theme"
 
 import styled from "styled-components"
@@ -23,7 +21,7 @@ const AlternativeButton = ({ children, link, color = "blue" }) => {
           {children}
         </a>
       ) : (
-        <Link to={link}>{children}</Link>
+        <a href={link}>{children}</a>
       )}
     </CustomButton>
   )

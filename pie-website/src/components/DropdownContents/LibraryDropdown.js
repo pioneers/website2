@@ -1,8 +1,6 @@
 import React from "react"
 import styled, { css } from "styled-components"
 
-import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
-
 import theme from "../../assets/themes/theme"
 
 import { Heading, DropdownSection, HeadingLink, Icon } from "./Components"
@@ -54,14 +52,14 @@ const LibraryDropdown = () => {
             <HeadingLink>
               <Link to="https://us3.campaign-archive.com/home/?u=75571c98bd2b83e6c6dddcd90&id=4cf8d72b19">
                 <Icon /> Blog
-              </Link>
+              </a>
             </HeadingLink>
           </li>
           <li>
             <HeadingLink style={{ marginBottom: 0 }}>
-              <Link to="/Gallery">
+              <a href="/Gallery">
                 <Icon /> Gallery
-              </Link>
+              </a>
             </HeadingLink>
           </li>
         </ProductsSection>
