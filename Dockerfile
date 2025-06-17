@@ -14,7 +14,7 @@ ADD pie-website ./
 RUN npm run build
 
 #Copy the built website over
-FROM nginx:1.21.1
+FROM nginx:1.27.5
 EXPOSE 80
 
 # Configure Nginx for http basic auth
