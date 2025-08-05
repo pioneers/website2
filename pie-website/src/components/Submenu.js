@@ -19,7 +19,6 @@ const Submenu = () => {
     const { center } = location
     submenu.style.left = `${center}px`
     submenu.style.top = "67px" // previously was `${bottom}px`
-    // console.log(links)
     if (links.length === 2) {
       setColumns("col-2")
     }
@@ -51,7 +50,7 @@ const Submenu = () => {
                       {subsections.map((someLink, index) => {
                         const { label, icon, url } = someLink
                         return (
-                          <a key={index} href={url}>
+                          <a key={"submenu" + index} href={url}>
                             {icon}
                             {label}
                           </a>

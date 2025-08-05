@@ -12,7 +12,7 @@ import AnimatedNavbar from "./AnimatedNavbar"
 Creates a wrapper for all pages which includes a navbar at the top and a footer at the bottom
 */
 const Layout = ({ children, nav }) => {
-  const [duration, setDuration] = useState(300)
+  const [duration] = useState(300)
 
   return (
     <React.Fragment>

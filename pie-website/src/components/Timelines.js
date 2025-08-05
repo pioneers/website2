@@ -91,7 +91,6 @@ export const TimelineOne = props => {
         {props.timelineFor.map(item => {
           const { event, content, week, time, link, internalTime } = item
           const output = renderRichText(content)
-          // console.log(output)
           return (
             <TimelineItem>
               <TimelineOppositeContent
@@ -174,7 +173,6 @@ export const TimelineTwo = props => {
         {props.timelineFor.map(item => {
           const { event, content, date, time, week, internalTime } = item
           const output = renderRichText(content)
-          // console.log(output)
           return (
             <TimelineItem>
               <TimelineOppositeContent

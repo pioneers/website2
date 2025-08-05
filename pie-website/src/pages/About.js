@@ -197,14 +197,11 @@ const About = () => {
   const defaultStaffMember = data.allContentfulDefaultStaffMember.nodes
 
   const staff = data.allContentfulStaffMember.nodes
-  console.log(staff)
   const leadership = staff.filter(person => person.role && person.role.includes("Director"))
   const pm = staff.filter(person => person.role && person.role.includes("PM"))
-  console.log(pm)
   const other = staff.filter(
     person =>  person.role && !person.role.includes("Director") && !person.role.includes("PM")
   )
-  console.log(other)
 
   return (
     <Layout>

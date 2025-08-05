@@ -55,7 +55,6 @@ function Footer() {
         <div className="links-container">
           {sublinks.map(item => {
             const { page, url, links } = item
-            // console.log(links)
             return (
               <div>
                 <HeaderLink to={url}>{page}</HeaderLink>

@@ -51,7 +51,7 @@ const Sidebar = () => {
                                   const { label, icon, url } = someLink
                                   return (
                                     <div className="one-link">
-                                      <a key={index} href={url}>
+                                      <a key={page + "_" + index} href={url}>
                                         {icon}
                                         {label}
                                       </a>
@@ -96,7 +96,7 @@ const Sidebar = () => {
                                   const { label, icon, url } = someLink
                                   return (
                                     <div className="one-link">
-                                      <a key={index} href={url}>
+                                      <a key={page + index} href={url}>
                                         {icon}
                                         {label}
                                       </a>

@@ -114,7 +114,6 @@ const GetInvolved = () => {
           backgroundColor={theme.colors.grey200}
           headerColor={theme.colors.grey900}
           textColor={theme.colors.grey700}
-          iconColor={theme.colors.grey900}
           display="block"
         >
           <Row className="inner-container">

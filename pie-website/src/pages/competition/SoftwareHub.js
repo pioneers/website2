@@ -43,7 +43,7 @@ const SoftwareHub = () => {
     dawnVersion,
     dawnWindows,
     latestPythonDocumentation,
-    piazza,
+    // ...existing code...
     robotApi,
     runtimeAllRobots,
     runtimeDate,
@@ -281,10 +281,10 @@ const SoftwareHub = () => {
         <br />
         <UpdatesWrapper
           fluid
-          backgroundColor={theme.colors.grey200}
+          backgroundcolor={theme.colors.grey200}
           align="center"
-          textColor={theme.colors.grey900}
-          headerColor={theme.colors.grey900}
+          textcolor={theme.colors.grey900}
+          headercolor={theme.colors.grey900}
           padding="1rem"
         >
           {/* <Row className="inner-container">

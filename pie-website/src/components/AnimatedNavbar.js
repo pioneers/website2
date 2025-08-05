@@ -115,7 +115,7 @@ class Helper extends Component {
           {navbarConfig.map((n, index) => {
             return (
               <NavbarItem
-                key={n.title}
+                key={n.title + index}
                 title={n.title}
                 index={index}
                 onMouseEnter={this.onMouseEnter}
