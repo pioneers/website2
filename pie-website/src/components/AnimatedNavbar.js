@@ -136,7 +136,10 @@ class Helper extends Component {
             )
           })}
           <ContactUs />
-          <ButtonSide onClick={myHookValue}>
+          <ButtonSide onClick={myHookValue} aria-label="Open navigation menu">
+            <span style={{position: 'absolute', width: '1px', height: '1px', padding: 0, margin: '-1px', overflow: 'hidden', clip: 'rect(0,0,0,0)', border: 0}}>
+              Open navigation menu
+            </span>
             <GiHamburgerMenu />
           </ButtonSide>
         </Navbar>

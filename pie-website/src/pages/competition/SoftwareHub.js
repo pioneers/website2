@@ -68,8 +68,8 @@ const SoftwareHub = () => {
         <BoxesWrapper
           fluid
           align="center"
-          headerColor={theme.colors.blue500}
-          backgroundColor={theme.colors.grey200}
+          headercolor={theme.colors.blue500}
+          backgroundcolor={theme.colors.grey200}
           padding="3rem 1.5rem"
         >
           <Row className="inner-container">

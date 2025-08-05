@@ -73,9 +73,9 @@ const SupportUs = () => {
             fluid
             padding="3rem 2rem"
             display="block"
-            backgroundColor={theme.colors.grey200}
-            headerColor={theme.colors.grey900}
-            textColor={theme.colors.grey700}
+            backgroundcolor={theme.colors.grey200}
+            headercolor={theme.colors.grey900}
+            textcolor={theme.colors.grey700}
           >
             <Row className="inner-container">
               {/* <Col sm={12} md={12} lg={6}>

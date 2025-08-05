@@ -4,7 +4,6 @@ import styled from "styled-components"
 import {
   Icon,
   DropdownSection,
-  Heading,
   HeadingLink,
   LinkList,
 } from "./Components"

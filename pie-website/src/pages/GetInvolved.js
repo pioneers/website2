@@ -111,9 +111,9 @@ const GetInvolved = () => {
         <OptionsBoxesWrapper
           fluid
           padding="3rem"
-          backgroundColor={theme.colors.grey200}
-          headerColor={theme.colors.grey900}
-          textColor={theme.colors.grey700}
+          backgroundcolor={theme.colors.grey200}
+          headercolor={theme.colors.grey900}
+          textcolor={theme.colors.grey700}
           display="block"
         >
           <Row className="inner-container">
