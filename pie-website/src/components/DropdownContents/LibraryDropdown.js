@@ -52,7 +52,7 @@ const LibraryDropdown = () => {
         <ProductsSection>
           <li>
             <HeadingLink>
-              <Link to="https://pierobotics.medium.com/">
+              <Link to="https://us3.campaign-archive.com/home/?u=75571c98bd2b83e6c6dddcd90&id=4cf8d72b19">
                 <Icon /> Blog
               </Link>
             </HeadingLink>
