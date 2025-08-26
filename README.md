@@ -1,6 +1,10 @@
-# gatsby-pie
+# PiE's Website
 
-Gatsby rework of the pie website.
+Gatsby rework of the pie website. Uses [Contentful](https://app.contentful.com) as a serverless content management system (CMS) as well as some hard-coded content in the repository itself.
+
+## Deploy/Promote to "prod" aka pioneers.berkeley.edu
+
+More information on how changes are promoted can be found [here](https://github.com/pioneers/website2/wiki/Workflow)
 
 ## Setup
 
