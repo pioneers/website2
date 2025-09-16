@@ -57,7 +57,7 @@ function Footer() {
             const { page, url, links } = item
             return (
               <div>
-                <HeaderLink to={url}>{page}</HeaderLink>
+                <HeaderLink href={url}>{page}</HeaderLink>
                 {links.map(subsect => {
                   const { subsections } = subsect
                   return (
@@ -65,7 +65,7 @@ function Footer() {
                       {subsections.map((thing, idx) => {
                         const { label, url } = thing
                         return (
-                          <CustomLink to={url} index={idx}>
+                          <CustomLink href={url}>
                             {label}
                           </CustomLink>
                         )

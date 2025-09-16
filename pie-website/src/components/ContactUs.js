@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import Modal from "react-bootstrap/Modal"
-import TextField from "@material-ui/core/TextField"
+import TextField from "@mui/material/TextField"
 import theme from "../assets/themes/theme"
 
 import styled from "styled-components"

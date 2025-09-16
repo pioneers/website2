@@ -33,7 +33,7 @@ const query = graphql`
         year
       }
     }
-    allContentfulDecalTimeline(sort: { fields: internalTime, order: ASC }) {
+    allContentfulDecalTimeline(sort: { internalTime: ASC }) {
       nodes {
         content {
           raw

@@ -25,7 +25,7 @@ import pic from "../assets/images/stock-images/pie-staff.jpg"
 const query = graphql`
   {
     allContentfulRecruitingTimeline(
-      sort: { fields: internalTime, order: ASC }
+      sort: { internalTime: ASC }
     ) {
       nodes {
         content {

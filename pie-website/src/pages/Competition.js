@@ -27,7 +27,7 @@ import pic from "../assets/images/stock-images/robotics_competition_sp17.jpg"
 const query = graphql`
   {
     allContentfulCompetitionTimeline(
-      sort: { order: ASC, fields: internalTime }
+      sort: { internalTime: ASC }
     ) {
       nodes {
         content {
