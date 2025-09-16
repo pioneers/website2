@@ -7,7 +7,6 @@ import theme from "../../assets/themes/theme"
 import styled from "styled-components"
 import Container from "react-bootstrap/esm/Container"
 import Header from "../../components/Header"
-// ...existing code...
 
 
 const Schools = () => {

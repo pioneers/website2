@@ -43,7 +43,6 @@ const SoftwareHub = () => {
     dawnVersion,
     dawnWindows,
     latestPythonDocumentation,
-    // ...existing code...
     robotApi,
     runtimeAllRobots,
     runtimeDate,
