@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import styled from "styled-components"
 
 import { DropdownSection, HeadingLink, Icon } from "./Components"
@@ -22,7 +23,7 @@ const LibraryDropdown = () => {
             <HeadingLink>
               <Link to="https://us3.campaign-archive.com/home/?u=75571c98bd2b83e6c6dddcd90&id=4cf8d72b19">
                 <Icon /> Blog
-              </a>
+              </Link>
             </HeadingLink>
           </li>
           <li>
