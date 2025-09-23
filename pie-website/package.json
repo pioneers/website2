@@ -46,7 +46,7 @@
     "prettier": "2.3.2"
   },
   "engines": {
-    "node": ">=14.15.0"
+    "node": ">=24.0.0"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
