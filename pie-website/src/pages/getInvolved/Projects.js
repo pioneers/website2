@@ -33,7 +33,6 @@ const query = graphql`
 `
 
 const Square = ({ toggleFullScreen, name, program }) => {
-  console.log(name, program)
   let prog = ""
   if (program.includes("Electrical")) {
     prog = "Electrical"
@@ -163,7 +162,6 @@ const Projects = () => {
           {projects.map(project => {
             const { description, name, pMs, program } = project
             const text = renderRichText(description)
-            // console.log(text)
             return (
               <Col xs={12} sm={6} md={3}>
                 <AnimatedSquare

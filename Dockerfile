@@ -1,7 +1,7 @@
-FROM node:18-buster AS build
+FROM node:24-bookworm AS build
 ARG CONTENTFUL_API_KEY
 
-RUN yarn global add gatsby-cli@3.14.2
+RUN yarn global add gatsby-cli@5.15.0
 WORKDIR /app
 
 ADD pie-website/package-lock.json package-lock.json

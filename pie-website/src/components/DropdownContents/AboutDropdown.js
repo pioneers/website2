@@ -1,41 +1,11 @@
 import React from "react"
-import styled, { css } from "styled-components"
+import styled from "styled-components"
 import { Icon, DropdownSection, Heading, HeadingLink } from "./Components"
-import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
 import theme from "../../assets/themes/theme"
 
 const ProductsDropdownEl = styled.div`
   width: 19rem;
 `
-
-const Logo = styled.div`
-  width: 38px;
-  height: 38px;
-  margin-right: 16px;
-  border-radius: 100%;
-  opacity: 0.6;
-  ${({ color }) =>
-    color === "green" &&
-    css`
-      background-color: ${theme.colors.navbargreen};
-    `}
-  ${({ color }) =>
-    color === "teal" &&
-    css`
-      background-color: ${theme.colors.navbarteal};
-    `}
-  ${({ color }) =>
-    color === "blue" &&
-    css`
-      background-color: ${theme.colors.navbarblue};
-    `}
-  ${({ color }) =>
-    color === "darkblue" &&
-    css`
-      background-color: ${theme.colors.navbardarkblue};
-    `}
-`
-/* background-color: ${({ color }) => `var(--${color})`}; */
 
 const SubProductsList = styled.ul`
   li {
@@ -66,21 +36,21 @@ const AboutDropdown = () => {
           <li>
             <div>
               <Heading color="blue">
-                <Link to="/About#leadership">Leadership</Link>
+                <a href="/About#leadership">Leadership</a>
               </Heading>
             </div>
           </li>
           <li>
             <div>
               <Heading color="green">
-                <Link to="/About#projectManagers">Project Managers</Link>
+                <a href="/About#projectManagers">Project Managers</a>
               </Heading>
             </div>
           </li>
           <li>
             <div>
               <Heading color="teal" style={{ marginBottom: 0 }}>
-                <Link to="/About#others">All Other Members</Link>
+                <a href="/About#others">All Other Members</a>
               </Heading>
             </div>
           </li>
@@ -90,15 +60,15 @@ const AboutDropdown = () => {
         <SubProductsList>
           <ul>
             <HeadingLink>
-              <Link to="/About#mission">
+              <a href="/About#mission">
                 <Icon /> Mission Statement
-              </Link>
+              </a>
             </HeadingLink>
 
             <HeadingLink noMarginBottom>
-              <Link to="/About#foundation">
+              <a href="/About#foundation">
                 <Icon /> Foundation
-              </Link>
+              </a>
             </HeadingLink>
           </ul>
         </SubProductsList>

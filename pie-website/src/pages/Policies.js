@@ -6,7 +6,6 @@ import Col from "react-bootstrap/esm/Col"
 import CustomizedContainer from "../components/CustomizedContainer"
 import HelmetWrapper from "../components/HelmetWrapper"
 import Layout from "../components/Layout"
-import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
 import { GrDocumentPdf } from "@react-icons/all-files/gr/GrDocumentPdf"
 
 const Policies = () => {
@@ -32,9 +31,9 @@ const Policies = () => {
               This document establishes that PiE-Foundation will not discriminate based on a variety of characteristics when considering membership into PiE Foundation.
             </p>
             <GrDocumentPdf />
-            <Link to="/assets/policies/pie_foundation_non_discrimination_resolution.pdf">
+            <a href="/assets/policies/pie_foundation_non_discrimination_resolution.pdf">
             PiE Foundation Non-Discrimination Resolution &rsaquo;
-            </Link>
+            </a>
           </div>
         </Resources>
         <Resources>
@@ -44,9 +43,9 @@ const Policies = () => {
             This document specifies the guidelines PiE will follow to create a safe environment for all PiE-affiliated individuals.
             </p>
             <GrDocumentPdf />
-            <Link to="/assets/policies/pie_policy_framework_for_sexual_violence_and_sexual_harassment.pdf">
+            <a href="/assets/policies/pie_policy_framework_for_sexual_violence_and_sexual_harassment.pdf">
               Policy Framework for Sexual Violence and Sexual Harassment &rsaquo;
-            </Link>
+            </a>
           </div>
         </Resources>
         <Resources>
@@ -56,9 +55,9 @@ const Policies = () => {
             This document specifies the guidelines all PiE affiliates should follow when working with high school students
             </p>
             <GrDocumentPdf />
-            <Link to="/assets/policies/pie_policy_on_interactions_between_pie_staff_mentors_and_high_school_students.pdf">
+            <a href="/assets/policies/pie_policy_on_interactions_between_pie_staff_mentors_and_high_school_students.pdf">
             Policy on Interactions Between PiE Staff/Mentors and High School Students &rsaquo;
-            </Link>
+            </a>
           </div>
         </Resources>
       </CustomizedContainer>

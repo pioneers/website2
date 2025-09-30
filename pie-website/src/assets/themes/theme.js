@@ -1,4 +1,4 @@
-export default {
+const theme = {
   mediaQueries: {
     mobileS: "(max-width: 320px)",
     mobileM: "(max-width: 375px)",
@@ -126,3 +126,5 @@ export default {
     otherShadow: "4px 4px 20px rgb(0 0 0 / 25%)",
   },
 }
+
+export default theme;

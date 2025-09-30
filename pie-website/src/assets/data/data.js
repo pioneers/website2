@@ -31,7 +31,7 @@ const sublinks = [
           {
             label: "Leadership",
             icon: <BsPeopleCircle />,
-            url: "/About#leaderhip",
+            url: "/About#leadership",
           },
           {
             label: "Project Managers",

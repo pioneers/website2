@@ -22,12 +22,10 @@ import Container from "react-bootstrap/esm/Container"
 
 import pic from "../assets/images/stock-images/pie-staff.jpg"
 
-import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
-
 const query = graphql`
   {
     allContentfulRecruitingTimeline(
-      sort: { fields: internalTime, order: ASC }
+      sort: { internalTime: ASC }
     ) {
       nodes {
         content {
@@ -72,7 +70,7 @@ const GetInvolved = () => {
             We've got a great lineup of events ready to welcome you to
             Berkeley. Come to an infosession to find out what we're all about,
             then decide which{" "}
-            <Link to="/getInvolved/Projects">project team</Link> you want to
+            <a href="/getInvolved/Projects">project team</a> you want to
             help out with at Project Expo. We believe that everyone can find a
             place to contribute in PiE, regardless of year or major, so don't
             hesitate to come out! You'll also be able to find us tabling at{" "}
@@ -113,10 +111,9 @@ const GetInvolved = () => {
         <OptionsBoxesWrapper
           fluid
           padding="3rem"
-          backgroundColor={theme.colors.grey200}
-          headerColor={theme.colors.grey900}
-          textColor={theme.colors.grey700}
-          iconColor={theme.colors.grey900}
+          backgroundcolor={theme.colors.grey200}
+          headercolor={theme.colors.grey900}
+          textcolor={theme.colors.grey700}
           display="block"
         >
           <Row className="inner-container">

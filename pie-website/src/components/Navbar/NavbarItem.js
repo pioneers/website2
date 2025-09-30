@@ -3,8 +3,6 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 import theme from "../../assets/themes/theme"
 
-import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
-
 const NavbarItemTitle = styled.button`
   background: transparent;
   border: 0;
@@ -79,7 +77,7 @@ export default class NavbarItem extends Component {
         style={{ zIndex: "3" }}
       >
         <NavbarItemTitle nav={nav}>
-          <Link to={link}>{title}</Link>
+          <a href={link}>{title}</a>
         </NavbarItemTitle>
         <DropdownSlot>{children}</DropdownSlot>
       </NavbarItemEl>

@@ -12,8 +12,6 @@ import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import { useStaticQuery, graphql } from "gatsby"
 
-import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
-
 import pic from "../../assets/images/about-us/work-in-progress.jpg"
 
 const query = graphql`
@@ -45,7 +43,6 @@ const SoftwareHub = () => {
     dawnVersion,
     dawnWindows,
     latestPythonDocumentation,
-    piazza,
     robotApi,
     runtimeAllRobots,
     runtimeDate,
@@ -70,8 +67,8 @@ const SoftwareHub = () => {
         <BoxesWrapper
           fluid
           align="center"
-          headerColor={theme.colors.blue500}
-          backgroundColor={theme.colors.grey200}
+          headercolor={theme.colors.blue500}
+          backgroundcolor={theme.colors.grey200}
           padding="3rem 1.5rem"
         >
           <Row className="inner-container">
@@ -230,35 +227,35 @@ const SoftwareHub = () => {
               <h2>Documentation</h2>
               <ul>
                 <li>
-                  <Link to="/competition/SoftwareHub/QuickstartGuide/">
+                  <a href="/competition/SoftwareHub/QuickstartGuide/">
                     Quickstart Guide
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link to={robotApi}>Robot API</Link>
+                  <a href={robotApi}>Robot API</a>
                 </li>
                 <li>
-                  <Link to="/competition/SoftwareHub/StudentSkeletonCode/">
+                  <a href="/competition/SoftwareHub/StudentSkeletonCode/">
                     Student Skeleton Code
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link to="/competition/SoftwareHub/DawnGuide/">
+                  <a href="/competition/SoftwareHub/DawnGuide/">
                     Guide: Dawn
-                  </Link>
+                  </a>
                 </li>
                 <li>
                   Programming Guides
                   <ul>
                     <li>
-                      <Link to="/competition/SoftwareHub/Teleop/">
+                      <a href="/competition/SoftwareHub/Teleop/">
                         Guide #1: Tele-Operated Code
-                      </Link>
+                      </a>
                     </li>
                     <li>
-                      <Link to="/competition/SoftwareHub/Autonomous/">
+                      <a href="/competition/SoftwareHub/Autonomous/">
                         Guide #2: Autonomous Code
-                      </Link>
+                      </a>
                     </li>
                   </ul>
                 </li>
@@ -268,9 +265,9 @@ const SoftwareHub = () => {
               <h2>More Resources</h2>
               <ul>
                 <li>
-                  <Link to={latestPythonDocumentation}>
+                  <a href={latestPythonDocumentation}>
                     Latest Python Documentation
-                  </Link>
+                  </a>
                 </li>
                 {/* <li>
                   <Link to={piazza}>Discord</Link> - Still have questions? Ask on
@@ -283,10 +280,10 @@ const SoftwareHub = () => {
         <br />
         <UpdatesWrapper
           fluid
-          backgroundColor={theme.colors.grey200}
+          backgroundcolor={theme.colors.grey200}
           align="center"
-          textColor={theme.colors.grey900}
-          headerColor={theme.colors.grey900}
+          textcolor={theme.colors.grey900}
+          headercolor={theme.colors.grey900}
           padding="1rem"
         >
           {/* <Row className="inner-container">

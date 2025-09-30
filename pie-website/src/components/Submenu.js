@@ -3,7 +3,6 @@ import { useGlobalContext } from "../assets/data/context"
 
 import styled, { keyframes } from "styled-components"
 import theme from "../assets/themes/theme"
-import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
 
 // dropdown menu for the stripe inspired navbar
 const Submenu = () => {
@@ -20,7 +19,6 @@ const Submenu = () => {
     const { center } = location
     submenu.style.left = `${center}px`
     submenu.style.top = "67px" // previously was `${bottom}px`
-    // console.log(links)
     if (links.length === 2) {
       setColumns("col-2")
     }
@@ -45,17 +43,17 @@ const Submenu = () => {
               return (
                 <React.Fragment>
                   <div>
-                    <Link to={url}>
+                    <a href={url}>
                       <h6>{subpage}</h6>
-                    </Link>
+                    </a>
                     <div>
                       {subsections.map((someLink, index) => {
                         const { label, icon, url } = someLink
                         return (
-                          <Link key={index} to={url}>
+                          <a key={"submenu" + index} href={url}>
                             {icon}
                             {label}
-                          </Link>
+                          </a>
                         )
                       })}
                     </div>

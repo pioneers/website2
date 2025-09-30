@@ -26,8 +26,6 @@ import Container from "react-bootstrap/esm/Container"
 
 import pic from "../../assets/images/stock-images/prep.jpg"
 
-import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
-
 const query = graphql`
   {
     allContentfulPastScholars {
@@ -147,9 +145,9 @@ const RCScholarship = () => {
                 Please use the online web application to submit your scholarship
                 application.
               </p>
-              <Link to="https://scholarship.pierobotics.org/accounts/google/login">
+              <a href="https://scholarship.pierobotics.org/accounts/google/login">
                 Submit Here &rsaquo;
-              </Link>
+              </a>
               <h3 style={{ color: theme.colors.grey900, marginTop: "1rem" }}>
                 Resources
               </h3>
@@ -161,10 +159,10 @@ const RCScholarship = () => {
                     <BiVideoRecording />
                     <h4>2025 Workshop</h4>
                     <p>
-                      <Link to="https://pioneers.berkeley.edu/assets/scholarship/2025_pie_scholarship_workshop_presentation.pdf">
+                      <a href="https://pioneers.berkeley.edu/assets/scholarship/2025_pie_scholarship_workshop_presentation.pdf">
                         {" "}
                         Scholarship workshop slides &rsaquo;{" "}
-                      </Link>
+                      </a>
                     </p>
                   </div>
                 </Col>
@@ -173,10 +171,10 @@ const RCScholarship = () => {
                     <BiVideoRecording />
                     <h4>2024 Workshop Recording</h4>
                     <p>
-                      <Link to="https://www.youtube.com/watch?v=HXHkz9iH1Q8">
+                      <a href="https://www.youtube.com/watch?v=HXHkz9iH1Q8">
                         {" "}
                         Scholarship workshop recording &rsaquo;{" "}
-                      </Link>
+                      </a>
                     </p>
                   </div>
                 </Col>
@@ -185,10 +183,10 @@ const RCScholarship = () => {
                     <AiOutlineUnorderedList />
                     <h4>2025 Scholarship Application Summary</h4>
                     <p>
-                      <Link to="https://pioneers.berkeley.edu/assets/scholarship/2025_pie_scholarship_application.pdf">
+                      <a href="https://pioneers.berkeley.edu/assets/scholarship/2025_pie_scholarship_application.pdf">
                         {" "}
                         PDF of the application &rsaquo;{" "}
-                      </Link>
+                      </a>
                     </p>
                   </div>
                 </Col>
@@ -197,10 +195,10 @@ const RCScholarship = () => {
                     <BsInfoCircle />
                     <h4>Scholarship Interview Tips</h4>
                     <p>
-                      <Link to="https://pioneers.berkeley.edu/assets/scholarship/2021_pie_scholarship_interview_tips.pdf">
+                      <a href="https://pioneers.berkeley.edu/assets/scholarship/2021_pie_scholarship_interview_tips.pdf">
                         {" "}
                         Interview Tips &rsaquo;{" "}
-                      </Link>
+                      </a>
                     </p>
                   </div>
                 </Col>

@@ -27,8 +27,6 @@ import CustomizedContainer from "../components/CustomizedContainer"
 
 import pic from "../assets/images/stock-images/sp23_final_comp.jpg"
 
-import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
-
 const query = graphql`
   {
     allContentfulAdvisor {
@@ -199,14 +197,11 @@ const About = () => {
   const defaultStaffMember = data.allContentfulDefaultStaffMember.nodes
 
   const staff = data.allContentfulStaffMember.nodes
-  console.log(staff)
   const leadership = staff.filter(person => person.role && person.role.includes("Director"))
   const pm = staff.filter(person => person.role && person.role.includes("PM"))
-  console.log(pm)
   const other = staff.filter(
     person =>  person.role && !person.role.includes("Director") && !person.role.includes("PM")
   )
-  console.log(other)
 
   return (
     <Layout>
@@ -242,7 +237,7 @@ const About = () => {
                 <FaHandsHelping />
                 <h4>Helpful college mentors</h4>
                 <p>
-                  PiE runs a <Link to="/getInvolved/Decal">decal</Link> which
+                  PiE runs a <a href="/getInvolved/Decal">decal</a> which
                   trains a group of dedicated mentors consisting of current and
                   past Berkeley students who are ready and willing to help the
                   students
@@ -256,7 +251,7 @@ const About = () => {
                 <p>
                   Because PiE creates everything in the competition and has a
                   group of wonderful{" "}
-                  <Link to="/SupportUs#sponsors">sponsors</Link>, we can keep
+                  <a href="/SupportUs#sponsors">sponsors</a>, we can keep
                   costs low which lowers the barrier to entry for Bay Area
                   schools
                 </p>
@@ -269,7 +264,7 @@ const About = () => {
                 <p>
                   A group of talented students who make everything happen from
                   the game design to the {" "}
-                  <Link to="/competition/SoftwareHub">software</Link> to the {" "}
+                  <a href="/competition/SoftwareHub">software</a> to the {" "}
                   the logistical planning and community outreach
                 </p>
               </div>

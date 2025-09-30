@@ -3,7 +3,6 @@ import logo from "../assets/images/logo-border-20px-v3.png"
 import { GiHamburgerMenu } from "@react-icons/all-files/gi/GiHamburgerMenu"
 import { useGlobalContext } from "../assets/data/context"
 import sublinks from "../assets/data/data"
-import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
 
 import ContactUs from "./ContactUs"
 import theme from "../assets/themes/theme"
@@ -39,12 +38,12 @@ const StripeNavbar = () => {
       <nav className="nav" onMouSEOver={handleSubmenu}>
         <div className="nav-center">
           <div className="nav-header">
-            <Link to="/">
+            <a href="/">
               <img src={logo} className="nav-logo" alt="" />
-            </Link>
-            <Link to="/" className="link-btn">
+            </a>
+            <a href="/" className="link-btn">
               Pioneers in Engineering
-            </Link>
+            </a>
             <button className="btn toggle-btn" onClick={openSidebar}>
               <GiHamburgerMenu />
             </button>

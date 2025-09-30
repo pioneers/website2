@@ -2,7 +2,6 @@ import React from "react"
 import { RiCloseFill } from "@react-icons/all-files/ri/RiCloseFill"
 import { useGlobalContext } from "../assets/data/context"
 import sublinks from "../assets/data/data"
-import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
 import styled from "styled-components"
 import theme from "../assets/themes/theme"
 
@@ -33,9 +32,9 @@ const Sidebar = () => {
                   const { links, page, url } = item
                   return (
                     <div key={index}>
-                      <Link to={url}>
+                      <a href={url}>
                         <h3>{page}</h3>
-                      </Link>
+                      </a>
                       <div>
                         {links.map(link => {
                           const { subpage, url, subsections } = link
@@ -43,19 +42,19 @@ const Sidebar = () => {
                             <React.Fragment>
                               <div>
                                 {page !== subpage && (
-                                  <Link to={url}>
+                                  <a href={url}>
                                     <h4>{subpage}</h4>
-                                  </Link>
+                                  </a>
                                 )}
 
                                 {subsections.map((someLink, index) => {
                                   const { label, icon, url } = someLink
                                   return (
                                     <div className="one-link">
-                                      <Link key={index} to={url}>
+                                      <a key={page + "_" + index} href={url}>
                                         {icon}
                                         {label}
-                                      </Link>
+                                      </a>
                                     </div>
                                   )
                                 })}
@@ -79,9 +78,9 @@ const Sidebar = () => {
                 return (
                   <React.Fragment>
                     <article key={index}>
-                      <Link to={url}>
+                      <a href={url}>
                         <h3>{page}</h3>
-                      </Link>
+                      </a>
                       <div className="sidebar-sublinks">
                         {links.map(link => {
                           const { subpage, url, subsections } = link
@@ -89,18 +88,18 @@ const Sidebar = () => {
                             <React.Fragment>
                               <div>
                                 {page !== subpage && (
-                                  <Link to={url}>
+                                  <a href={url}>
                                     <h4>{subpage}</h4>
-                                  </Link>
+                                  </a>
                                 )}
                                 {subsections.map((someLink, index) => {
                                   const { label, icon, url } = someLink
                                   return (
                                     <div className="one-link">
-                                      <Link key={index} to={url}>
+                                      <a key={page + index} href={url}>
                                         {icon}
                                         {label}
-                                      </Link>
+                                      </a>
                                     </div>
                                   )
                                 })}

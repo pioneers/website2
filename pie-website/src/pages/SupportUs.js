@@ -24,8 +24,6 @@ import Container from "react-bootstrap/esm/Container"
 
 import pic from "../assets/images/robot2.jpg"
 
-import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
-
 const query = graphql`
   {
     allContentfulSponsors {
@@ -75,9 +73,9 @@ const SupportUs = () => {
             fluid
             padding="3rem 2rem"
             display="block"
-            backgroundColor={theme.colors.grey200}
-            headerColor={theme.colors.grey900}
-            textColor={theme.colors.grey700}
+            backgroundcolor={theme.colors.grey200}
+            headercolor={theme.colors.grey900}
+            textcolor={theme.colors.grey700}
           >
             <Row className="inner-container">
               {/* <Col sm={12} md={12} lg={6}>
@@ -213,12 +211,12 @@ const SupportUs = () => {
                   </p>
                   <p>
                     We appreciate and recognize our{" "}
-                    <Link to="/SupportUs#sponsors">sponsors</Link> in the form
+                    <a href="/SupportUs#sponsors">sponsors</a> in the form
                     of posters, banners and logos, and t-shirts seen by
                     thousands of members of the UC Berkeley community. In
                     addition, sponsors are warmly welcomed and encouraged to
                     attend the{" "}
-                    <Link to="/Competition#timeline">competition day</Link>. If
+                    <a href="/Competition#timeline">competition day</a>. If
                     you would like more information about the benefits, please
                     refer to{" "}
                     <a

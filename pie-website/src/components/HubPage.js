@@ -61,7 +61,6 @@ const AlertDismissible = ({ children }) => {
 
 const HubPage = ({ name, mechanicalOrSoftware }) => {
   const data = useStaticQuery(query)
-  console.log(data)
   let post
   let alert
   if (mechanicalOrSoftware === "Mechanical") {
@@ -80,11 +79,8 @@ const HubPage = ({ name, mechanicalOrSoftware }) => {
     )[0].alerts
   }
 
-  console.log(post)
-  console.log(alert)
-
   const [isToggled, setIsToggled] = useState(false)
-  const [isCopied, setIsCopied] = useState(false)
+  const [setIsCopied] = useState(false)
 
   const toggleIcon = () => {
     setIsToggled(true)
@@ -290,7 +286,6 @@ const HubPage = ({ name, mechanicalOrSoftware }) => {
     },
     renderMark: {
       [MARKS.CODE]: codeInline => {
-        console.log(typeof codeInline)
         if (codeInline.length === 0) {
           return
         }

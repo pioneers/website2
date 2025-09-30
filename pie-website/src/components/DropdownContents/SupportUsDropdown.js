@@ -1,40 +1,11 @@
 import React from "react"
-import styled, { css } from "styled-components"
+import styled from "styled-components"
 import theme from "../../assets/themes/theme"
-
-import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
 
 import { Heading, DropdownSection, Icon } from "./Components"
 
 const CompanyDropdownEl = styled.div`
   width: 15rem;
-`
-const Logo = styled.div`
-  width: 38px;
-  height: 38px;
-  margin-right: 16px;
-  border-radius: 100%;
-  opacity: 0.6;
-  ${({ color }) =>
-    color === "green" &&
-    css`
-      background-color: ${theme.colors.navbargreen};
-    `}
-  ${({ color }) =>
-    color === "teal" &&
-    css`
-      background-color: ${theme.colors.navbarteal};
-    `}
-  ${({ color }) =>
-    color === "blue" &&
-    css`
-      background-color: ${theme.colors.navbarblue};
-    `}
-  ${({ color }) =>
-    color === "darkblue" &&
-    css`
-      background-color: ${theme.colors.navbardarkblue};
-    `}
 `
 
 const Donate = styled.div`
@@ -65,30 +36,30 @@ const SupportUsDropdown = () => {
           <li>
             <div>
               <Heading color="blue">
-                <Link to="/SupportUs#howused">Donation Info</Link>
+                <a href="/SupportUs#howused">Donation Info</a>
               </Heading>
             </div>
           </li>
           <li>
             <div>
               <Heading color="green">
-                <Link to="/SupportUs#sponsors">Sponsors</Link>
+                <a href="/SupportUs#sponsors">Sponsors</a>
               </Heading>
             </div>
           </li>
           <li>
             <div>
               <Heading color="teal">
-                <Link to="/#mailinglist">Mailing List</Link>
+                <a href="/#mailinglist">Mailing List</a>
               </Heading>
             </div>
           </li>
         </ProductsSection>
         <Donate>
           <Heading noMarginBottom>
-            <Link to="https://donorbox.org/pioneers-in-engineering">
+            <a href="https://donorbox.org/pioneers-in-engineering">
               <Icon /> Donate Now
-            </Link>
+            </a>
           </Heading>
         </Donate>
       </DropdownSection>

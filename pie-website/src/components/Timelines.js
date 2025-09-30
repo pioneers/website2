@@ -1,15 +1,13 @@
 import React from "react"
 
-import Timeline from "@material-ui/lab/Timeline"
-import TimelineItem from "@material-ui/lab/TimelineItem"
-import TimelineSeparator from "@material-ui/lab/TimelineSeparator"
-import TimelineConnector from "@material-ui/lab/TimelineConnector"
-import TimelineContent from "@material-ui/lab/TimelineContent"
-import TimelineOppositeContent from "@material-ui/lab/TimelineOppositeContent"
-import TimelineDot from "@material-ui/lab/TimelineDot"
+import Timeline from "@mui/lab/Timeline"
+import TimelineItem from "@mui/lab/TimelineItem"
+import TimelineSeparator from "@mui/lab/TimelineSeparator"
+import TimelineConnector from "@mui/lab/TimelineConnector"
+import TimelineContent from "@mui/lab/TimelineContent"
+import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent"
+import TimelineDot from "@mui/lab/TimelineDot"
 import theme from "../assets/themes/theme"
-
-import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
 
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 
@@ -67,7 +65,7 @@ export const TimelineOne = props => {
                 <SecondaryText>Time: {time}</SecondaryText>
                 {link && (
                   <SecondaryText>
-                    Link: <Link to={link}>{link}</Link>
+                    Link: <a href={link}>{link}</a>
                   </SecondaryText>
                 )}
               </TimelineOppositeContent>
@@ -93,7 +91,6 @@ export const TimelineOne = props => {
         {props.timelineFor.map(item => {
           const { event, content, week, time, link, internalTime } = item
           const output = renderRichText(content)
-          // console.log(output)
           return (
             <TimelineItem>
               <TimelineOppositeContent
@@ -114,7 +111,7 @@ export const TimelineOne = props => {
                     <SecondaryText>{week}</SecondaryText>
                     <SecondaryText>Time: {time}</SecondaryText>
                     <SecondaryText>
-                      Link: <Link to={link}>{link}</Link>
+                      Link: <a href={link}>{link}</a>
                     </SecondaryText>
                   </div>
 
@@ -176,7 +173,6 @@ export const TimelineTwo = props => {
         {props.timelineFor.map(item => {
           const { event, content, date, time, week, internalTime } = item
           const output = renderRichText(content)
-          // console.log(output)
           return (
             <TimelineItem>
               <TimelineOppositeContent

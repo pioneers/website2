@@ -9,8 +9,6 @@ import GetInvolvedDropdown from "./DropdownContents/GetInvolvedDropdown"
 import SupportUsDropdown from "./DropdownContents/SupportUsDropdown"
 import LibraryDropdown from "./DropdownContents/LibraryDropdown"
 import ContactUs from "./ContactUs"
-import { AnchorLink as Link } from "gatsby-plugin-anchor-links"
-
 import { GiHamburgerMenu } from "@react-icons/all-files/gi/GiHamburgerMenu"
 import { useGlobalContext } from "../assets/data/context"
 
@@ -98,26 +96,26 @@ class Helper extends Component {
         spring={duration === 300 ? "noWobble" : { stiffness: 10, damping: 10 }}
       >
         <Navbar onMouseLeave={this.onMouseLeave}>
-          <Link to="/">
+          <a href="/">
             <img
               src={logo}
               className="nav-logo"
               style={{ width: "4rem" }}
               alt=""
             />
-          </Link>
+          </a>
           <ResponsiveTitle nav={nav}>
             <div className="long">
-              <Link to="/">Pioneers in Engineering</Link>
+              <a href="/">Pioneers in Engineering</a>
             </div>
             <div className="short">
-              <Link to="/">PiE</Link>
+              <a href="/">PiE</a>
             </div>
           </ResponsiveTitle>
           {navbarConfig.map((n, index) => {
             return (
               <NavbarItem
-                key={n.title}
+                key={n.title + index}
                 title={n.title}
                 index={index}
                 onMouseEnter={this.onMouseEnter}
@@ -138,7 +136,10 @@ class Helper extends Component {
             )
           })}
           <ContactUs />
-          <ButtonSide onClick={myHookValue}>
+          <ButtonSide onClick={myHookValue} aria-label="Open navigation menu">
+            <span style={{position: 'absolute', width: '1px', height: '1px', padding: 0, margin: '-1px', overflow: 'hidden', clip: 'rect(0,0,0,0)', border: 0}}>
+              Open navigation menu
+            </span>
             <GiHamburgerMenu />
           </ButtonSide>
         </Navbar>
