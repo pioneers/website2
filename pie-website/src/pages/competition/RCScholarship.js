@@ -93,7 +93,7 @@ const RCScholarship = () => {
                 <div className="card">
                   <div>
                     <VscDebugStart />
-                    <h3>Application opens Saturday 10/19/2024</h3>
+                    <h3>Application opens Saturday 11/8/2025</h3>
                   </div>
                 </div>
               </Col>
@@ -101,7 +101,7 @@ const RCScholarship = () => {
                 <div className="card">
                   <div>
                     <AiOutlineFileDone />
-                    <h3>EXTENDED!!! Application due Sunday 3/16/2025</h3>
+                    <h3>Application due Saturday 3/14/2026</h3>
                   </div>
                 </div>
               </Col>
@@ -109,7 +109,7 @@ const RCScholarship = () => {
                 <div className="card">
                   <div>
                     <FaUserTie />
-                    <h3>Interviews (remote) with finalists - Week of 4/1/2025 thru 4/5/2025</h3>
+                    <h3>Interviews (remote) with finalists - Week of 4/5/2026 thru 4/11/2026</h3>
                   </div>
                 </div>
               </Col>
@@ -157,9 +157,9 @@ const RCScholarship = () => {
                 <Col sm={12} md={12} lg={12}>
                   <div>
                     <BiVideoRecording />
-                    <h4>2025 Workshop</h4>
+                    <h4>2026 Workshop</h4>
                     <p>
-                      <a href="https://pioneers.berkeley.edu/assets/scholarship/2025_pie_scholarship_workshop_presentation.pdf">
+                      <a href="https://pioneers.berkeley.edu/assets/scholarship/2026_pie_scholarship_workshop_presentation.pdf">
                         {" "}
                         Scholarship workshop slides &rsaquo;{" "}
                       </a>
@@ -181,9 +181,9 @@ const RCScholarship = () => {
                 <Col sm={12} md={12} lg={12}>
                   <div>
                     <AiOutlineUnorderedList />
-                    <h4>2025 Scholarship Application Summary</h4>
+                    <h4>2026 Scholarship Application Summary</h4>
                     <p>
-                      <a href="https://pioneers.berkeley.edu/assets/scholarship/2025_pie_scholarship_application.pdf">
+                      <a href="https://pioneers.berkeley.edu/assets/scholarship/2026_pie_scholarship_application.pdf">
                         {" "}
                         PDF of the application &rsaquo;{" "}
                       </a>
@@ -195,7 +195,7 @@ const RCScholarship = () => {
                     <BsInfoCircle />
                     <h4>Scholarship Interview Tips</h4>
                     <p>
-                      <a href="https://pioneers.berkeley.edu/assets/scholarship/2021_pie_scholarship_interview_tips.pdf">
+                      <a href="https://pioneers.berkeley.edu/assets/scholarship/2026_pie_scholarship_interview_tips.pdf">
                         {" "}
                         Interview Tips &rsaquo;{" "}
                       </a>
