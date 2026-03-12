@@ -64,7 +64,7 @@ const StudentResources = () => {
             <h3>Parent-Teacher Meeting Slides</h3>
             <p>
               The slides from the Parent-Teacher Meeting held during
-              Kickoff 2026
+              Kickoff 2026.
             </p>
             <AlternativeButton link="https://docs.google.com/presentation/d/17fX-7aDVWG-cUtvcWZHVJ4zSp4ISoH6wv0ZiofRRFLc/edit?usp=sharing">
               Slides &rsaquo;
