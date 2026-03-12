@@ -60,16 +60,16 @@ const StudentResources = () => {
           </div>
         </Col>
         <Col sm={12} md={6} lg={6}>
-          {/* <div>
-            <h3>Piazza</h3>
+          <div>
+            <h3>Parent-Teacher Meeting Slides</h3>
             <p>
-              Ask questions and get answers! Discuss various competition aspects
-              or just come chat. Access code: pie
+              The slides from the Parent-Teacher Meeting held during
+              Kickoff 2026
             </p>
-            <AlternativeButton link="https://piazza.com/class/kjxv8nixe2v69p">
-              Forums &rsaquo;
+            <AlternativeButton link="https://docs.google.com/presentation/d/17fX-7aDVWG-cUtvcWZHVJ4zSp4ISoH6wv0ZiofRRFLc/edit?usp=sharing">
+              Slides &rsaquo;
             </AlternativeButton>
-          </div> */}
+          </div>
         </Col>
         <Col sm={12} md={6} lg={6}>
           <div>
@@ -78,7 +78,7 @@ const StudentResources = () => {
               Sign up for worksessions 24 hours in advance! Having debug issues?
               Need some more build time or tools? Come on out!
             </p>
-            <AlternativeButton link="https://www.signupgenius.com/go/10C0D4CA4AF2AA2F4CF8-48428512-spring#/">
+            <AlternativeButton link="https://www.signupgenius.com/go/10C0448AAAA2AA2FDC16-62918937-student">
               Worksession Sign Up &rsaquo;
             </AlternativeButton>
           </div>
