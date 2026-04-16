@@ -253,8 +253,25 @@ const SupportUs = () => {
                 Sponsorship Packet 2022-2023.pdf
               </a>
             </p>
-
-            {levels.map(level => {
+            <div style={{display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center"}}>
+                <Header type={"gold-header"}>Special thanks to our 2026 Crowdfunders!</Header>
+                <p style={{fontSize: "1.5rem"}}>
+                  <strong>Jacob Pruess</strong>
+                </p>
+                <p style={{fontSize: "1.5rem"}}>
+                  <strong>Ethan Seither</strong>
+                </p>
+                <p style={{fontSize: "1.5rem"}}>
+                  <strong>Lisa Branum</strong>
+                </p>
+            </div>
+            <div style={{display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center"}}>
+              <Header type={"gold-header"}>Gold Sponsors:</Header>
+              <a href="https://www.tsmc.com/english">
+                <img src="/assets/sponsors/tsmc.png" alt="TSMC logo" style={{width:"12rem", height:"auto"}} />
+              </a>
+            </div>
+            {/* {levels.map(level => {
               const items = sponsors.filter(
                 sponsor => sponsor.sponsorshipLevel === level
               )
@@ -282,7 +299,7 @@ const SupportUs = () => {
                 )
               }
               return <div></div>
-            })}
+            })} */}
           </Sponsors>
         </CustomizedContainer>
       </Layout>
