@@ -266,7 +266,7 @@ const SupportUs = () => {
                 </p>
             </div>
             <div style={{display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center"}}>
-              <Header type={"gold-header"}>Gold Sponsors:</Header>
+              <Header style={{color: theme.colors.grey400}}>Silver Sponsors:</Header>
               <a href="https://www.tsmc.com/english">
                 <img src="/assets/sponsors/tsmc.png" alt="TSMC logo" style={{width:"12rem", height:"auto"}} />
               </a>
