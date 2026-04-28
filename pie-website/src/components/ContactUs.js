@@ -35,7 +35,7 @@ const ContactUs = () => {
           <CustomForm
             noValidate
             autoComplete="off"
-            action="https://getform.io/f/86bd726f-60c2-48ec-847c-ab1d7d056101"
+            action="https://forminit.com/f/xkasevusuvk"
             method="POST"
           >
             <input
