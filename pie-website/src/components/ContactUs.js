@@ -39,7 +39,7 @@ const ContactUs = () => {
             method="POST"
           >
             <input
-              name="Time"
+              name="fi-text-time"
               value={Date().toLocaleString()}
               style={{ display: "none" }}
             ></input>
@@ -48,33 +48,33 @@ const ContactUs = () => {
               label="First Name"
               required
               className="first"
-              name="First Name"
+              name="fi-sender-firstName"
             />
             <TextField
               id="standard-basic"
               label="Last Name"
-              name="Last Name"
+              name="fi-sender-lastName"
               required
               className="last"
             />
             <TextField
               id="standard-basic"
               label="Organization"
-              name="Organization"
+              name="fi-sender-company"
               required
               className="org"
             />
             <TextField
               id="standard-basic"
               label="Email Address"
-              name="Email Address"
+              name="fi-sender-email"
               required
               className="email"
             />
             <TextField
               id="standard-multiline-flexible"
               label="Description"
-              name="Description"
+              name="fi-text-description"
               multiline={true}
               value={value}
               onChange={handleChange}
