@@ -4,7 +4,7 @@ import { Icon, DropdownSection, Heading, HeadingLink } from "./Components"
 import theme from "../../assets/themes/theme"
 
 const ProductsDropdownEl = styled.div`
-  width: 19rem;
+  width: 13rem;
 `
 
 const SubProductsList = styled.ul`
@@ -35,43 +35,26 @@ const AboutDropdown = () => {
         <ProductsSection>
           <li>
             <div>
-              <Heading color="blue">
-                <a href="/About#leadership">Leadership</a>
+              <Heading>
+                <a href="/About#leadership">Organization</a>
               </Heading>
             </div>
           </li>
           <li>
             <div>
-              <Heading color="green">
-                <a href="/About#projectManagers">Project Managers</a>
+              <Heading>
+                <a href="/About#projectManagers">Competition</a>
               </Heading>
             </div>
           </li>
           <li>
             <div>
-              <Heading color="teal" style={{ marginBottom: 0 }}>
-                <a href="/About#others">All Other Members</a>
+              <Heading style={{ marginBottom: 0 }}>
+                <a href="/About#others">Members</a>
               </Heading>
             </div>
           </li>
         </ProductsSection>
-      </DropdownSection>
-      <DropdownSection>
-        <SubProductsList>
-          <ul>
-            <HeadingLink>
-              <a href="/About#mission">
-                <Icon /> Mission Statement
-              </a>
-            </HeadingLink>
-
-            <HeadingLink noMarginBottom>
-              <a href="/About#foundation">
-                <Icon /> Foundation
-              </a>
-            </HeadingLink>
-          </ul>
-        </SubProductsList>
       </DropdownSection>
     </ProductsDropdownEl>
   )

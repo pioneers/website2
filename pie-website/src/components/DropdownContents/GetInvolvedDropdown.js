@@ -1,85 +1,56 @@
 import React from "react"
 import styled from "styled-components"
+import { Icon, DropdownSection, Heading, HeadingLink } from "./Components"
+import theme from "../../assets/themes/theme"
 
-import { Heading, LinkList, DropdownSection, Icon } from "./Components"
-
-const CompanyDropdownEl = styled.div`
-  width: 17rem;
+const ProductsDropdownEl = styled.div`
+  width: 13rem;
 `
 
-const Flex = styled.div`
-  display: flex;
-  > div:first-of-type {
-    margin-right: 48px;
+const SubProductsList = styled.ul`
+  li {
+    display: flex;
+    margin-bottom: 1rem;
   }
-  h4 a {
-    color: black;
+  h3 {
+    margin-right: 1rem;
+    width: 3.2rem;
+    display: block;
   }
-  h4 a:hover,
-  h4 a:focus {
-    opacity: 0.7;
-    outline: none;
+  a {
+    color: ${theme.colors.grey700};
   }
 `
 
-const GetInvolvedDropdown = () => {
+const ProductsSection = styled.ul`
+  li {
+    display: flex;
+  }
+`
+
+const AboutDropdown = () => {
   return (
-    <CompanyDropdownEl>
+    <ProductsDropdownEl>
       <DropdownSection data-first-dropdown-section>
-        <div>
-          <Flex>
+        <ProductsSection>
+          <li>
             <div>
-              <h4>
-                <a href="/getInvolved/Decal">Decal</a>
-              </h4>
-              <LinkList>
-                <li>
-                  <a href="/getInvolved/Decal#details">Info</a>
-                </li>
-                <li>
-                  <a href="/getInvolved/Forms">
-                    Sign Up
-                  </a>
-                </li>
-              </LinkList>
+              <Heading color="blue">
+                <a href="/getInvolved/Schools">Volunteer</a>
+              </Heading>
             </div>
+          </li>
+          <li>
             <div>
-              <h4>
-                <a href="/getInvolved/Schools">Schools</a>
-              </h4>
-              <LinkList>
-                <li>
-                  <a href="/getInvolved/Schools">Info</a>
-                </li>
-                <li>
-                  <a href="/getInvolved/Schools#signUp">Sign Up</a>
-                </li>
-              </LinkList>
+              <Heading color="green" style={{ marginBottom: 0 }}>
+                <a href="/getInvolved/Staff">Club Members</a>
+              </Heading>
             </div>
-          </Flex>
-        </div>
+          </li>
+        </ProductsSection>
       </DropdownSection>
-      <DropdownSection>
-        <div>
-          <Heading>
-            <Icon />
-            <a href="/GetInvolved">Join Our Team</a>
-          </Heading>
-          <LinkList marginLeft="25px">
-            <li>
-              <a href="/GetInvolved#timeline">Timeline &rsaquo;</a>
-            </li>
-            <li>
-              <a href="/getInvolved/Projects">Projects &rsaquo;</a>
-            </li>
-            <li>
-              <a href="/getInvolved/Forms">Forms to Join &rsaquo;</a>
-            </li>
-          </LinkList>
-        </div>
-      </DropdownSection>
-    </CompanyDropdownEl>
+    </ProductsDropdownEl>
   )
 }
 
-export default GetInvolvedDropdown
+export default AboutDropdown

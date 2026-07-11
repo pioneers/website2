@@ -20,7 +20,7 @@ import styled from "styled-components"
 
 const navbarConfig = [
   { title: "About", dropdown: AboutDropdown, link: "/About" },
-  { title: "Competition", dropdown: CompetitionDropdown, link: "/Competition" },
+  { title: "Schools", dropdown: CompetitionDropdown, link: "/Competition" },
   {
     title: "Get Involved",
     dropdown: GetInvolvedDropdown,

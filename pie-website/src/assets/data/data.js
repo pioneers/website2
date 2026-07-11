@@ -149,22 +149,6 @@ const sublinks = [
         ],
       },
       {
-        subpage: "Decal",
-        url: "/getInvolved/Decal",
-        subsections: [
-          {
-            label: "Decal Info",
-            icon: <BsInfoCircle />,
-            url: "/getInvolved/Decal#details",
-          },
-          {
-            label: "Decal Sign Up",
-            icon: <BsPencil />,
-            url: "/getInvolved/Forms", // needs to be updated info
-          },
-        ],
-      },
-      {
         subpage: "Schools",
         url: "/getInvolved/Schools",
         subsections: [
