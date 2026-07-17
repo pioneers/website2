@@ -50,7 +50,7 @@ const CompetitionDropdown = () => {
           <li>
             <div>
               <Heading>
-                <a href="/About#projectManagers">Communication</a>
+                <a href="/schools/Communication">Communication</a>
               </Heading>
             </div>
           </li>
