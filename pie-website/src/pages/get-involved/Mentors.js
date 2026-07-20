@@ -64,14 +64,14 @@ const Mentors = () => {
   return (
     <Layout>
       <HelmetWrapper
-        title="Decal"
+        title="Mentors"
         description="Become a mentor for a high school robotics team. Be a role model for local students as you guide them in building a robot for PiE’s Robotics Competition. Through our class, you’ll learn what you need to know to be a mentor and help build the robot."
       />
       <HeroWrapper>
         <div className="filler"></div>
         <div className="hero-image">
           <div>
-            <h1>Decal</h1>
+            <h1>Mentors</h1>
           </div>
         </div>
       </HeroWrapper>

@@ -4,7 +4,7 @@ import NavbarItem from "./Navbar/NavbarItem"
 import { Flipper } from "react-flip-toolkit"
 import DropdownContainer from "./DropdownContainer"
 import AboutDropdown from "./DropdownContents/AboutDropdown"
-import CompetitionDropdown from "./DropdownContents/CompetitionDropdown"
+import SchoolsDropdown from "./DropdownContents/SchoolsDropdown"
 import GetInvolvedDropdown from "./DropdownContents/GetInvolvedDropdown"
 import SupportUsDropdown from "./DropdownContents/SupportUsDropdown"
 import LibraryDropdown from "./DropdownContents/LibraryDropdown"
@@ -20,7 +20,7 @@ import styled from "styled-components"
 
 const navbarConfig = [
   { title: "About", dropdown: AboutDropdown, link: "/About" },
-  { title: "Schools", dropdown: CompetitionDropdown, link: "/Competition" },
+  { title: "Schools", dropdown: SchoolsDropdown, link: "/Competition" },
   {
     title: "Get Involved",
     dropdown: GetInvolvedDropdown,
@@ -119,7 +119,6 @@ class Helper extends Component {
                 title={n.title}
                 index={index}
                 onMouseEnter={this.onMouseEnter}
-                link={n.link}
                 nav={nav}
               >
                 {currentIndex === index && (

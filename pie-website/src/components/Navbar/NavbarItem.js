@@ -24,11 +24,8 @@ const NavbarItemTitle = styled.button`
     opacity: 0.7;
     outline: none;
   } */
-
-  a {
-    color: ${props =>
+  color: ${props =>
       props.nav === "black" ? theme.colors.grey900 : theme.colors.white};
-  }
   a:hover,
   a:focus {
     opacity: 0.7;
@@ -60,7 +57,6 @@ export default class NavbarItem extends Component {
     onMouseEnter: PropTypes.func.isRequired,
     title: PropTypes.string.isRequired,
     index: PropTypes.number.isRequired,
-    link: PropTypes.string,
     children: PropTypes.node,
     nav: PropTypes.string,
   }
@@ -69,7 +65,7 @@ export default class NavbarItem extends Component {
   }
 
   render() {
-    const { title, children, link, nav } = this.props
+    const { title, children, nav } = this.props
     return (
       <NavbarItemEl
         onMouseEnter={this.onMouseEnter}
@@ -77,7 +73,7 @@ export default class NavbarItem extends Component {
         style={{ zIndex: "3" }}
       >
         <NavbarItemTitle nav={nav}>
-          <a href={link}>{title}</a>
+          {title}
         </NavbarItemTitle>
         <DropdownSlot>{children}</DropdownSlot>
       </NavbarItemEl>

@@ -28,7 +28,7 @@ const ProductsSection = styled.ul`
   }
 `
 
-const CompetitionDropdown = () => {
+const SchoolsDropdown = () => {
   return (
     <ProductsDropdownEl>
       <DropdownSection data-first-dropdown-section>
@@ -36,7 +36,7 @@ const CompetitionDropdown = () => {
           <li>
             <div>
               <Heading>
-                <a href="/About#leadership">Compete</a>
+                <a href="/schools/compete/">Compete</a>
               </Heading>
             </div>
           </li>
@@ -67,4 +67,4 @@ const CompetitionDropdown = () => {
   )
 }
 
-export default CompetitionDropdown
+export default SchoolsDropdown
