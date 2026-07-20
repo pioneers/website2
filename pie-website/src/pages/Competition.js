@@ -2,11 +2,6 @@ import React from "react"
 
 import Header from "../components/Header"
 import Layout from "../components/Layout"
-import { TimelineTwo } from "../components/Timelines"
-
-import { FaRegHandPaper } from "@react-icons/all-files/fa/FaRegHandPaper"
-import { AiOutlineTeam } from "@react-icons/all-files/ai/AiOutlineTeam"
-import { BsBuilding } from "@react-icons/all-files/bs/BsBuilding"
 
 import styled from "styled-components"
 import CustomizedContainer from "../components/CustomizedContainer"
@@ -14,7 +9,9 @@ import AlternativeButton from "../components/AlternativeButton"
 import HelmetWrapper from "../components/HelmetWrapper"
 import { BoxesWrapper } from "../assets/themes/boxes"
 
-import { useStaticQuery, graphql } from "gatsby"
+import { FaRegHandPaper } from "@react-icons/all-files/fa/FaRegHandPaper"
+import { AiOutlineTeam } from "@react-icons/all-files/ai/AiOutlineTeam"
+import { BsBuilding } from "@react-icons/all-files/bs/BsBuilding"
 
 import theme from "../assets/themes/theme"
 
@@ -22,25 +19,6 @@ import Container from "react-bootstrap/esm/Container"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 
-import pic from "../assets/images/stock-images/robotics_competition_sp17.jpg"
-
-const query = graphql`
-  {
-    allContentfulCompetitionTimeline(
-      sort: { internalTime: ASC }
-    ) {
-      nodes {
-        content {
-          raw
-        }
-        event
-        date
-        time
-        internalTime
-      }
-    }
-  }
-`
 
 const StudentResources = () => {
   return (
@@ -104,8 +82,7 @@ const StudentResources = () => {
 }
 
 const Competition = () => {
-  const data = useStaticQuery(query)
-  const events = data.allContentfulCompetitionTimeline.nodes
+
 
   return (
     <Layout>
@@ -167,16 +144,7 @@ const Competition = () => {
         </Container>
       </CustomizedContainer>
 
-      <CustomizedContainer>
-        <div id="timeline" />
-        <Container fluid>
-          <h4 style={{ marginBottom: "1.5em", color: theme.colors.grey400 }}>
-            THE TIMELINE
-          </h4>
-          <Header type={"gold"}>Our Events</Header>
-        </Container>
-        <TimelineTwo timelineFor={events} />
-      </CustomizedContainer>
+      
 
       <CustomizedContainer>
         <div id="resources" />
@@ -199,8 +167,7 @@ const HeroWrapper = styled.div`
     z-index: -1;
   }
   .hero-image {
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
-      url(${pic}) center/cover fixed no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
     height: 100vh;
     width: 100%;
     display: flex;
