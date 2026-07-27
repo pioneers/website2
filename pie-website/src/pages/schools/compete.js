@@ -2,11 +2,14 @@ import React from "react"
 import {Link, Element} from "react-scroll"
 
 import CustomizedContainer from "../../components/CustomizedContainer"
+import AlternativeButton from "../../components/AlternativeButton"
 import Layout from "../../components/Layout"
 import HelmetWrapper from "../../components/HelmetWrapper"
 import theme from "../../assets/themes/theme"
 import styled from "styled-components"
 import Container from "react-bootstrap/esm/Container"
+import Row from "react-bootstrap/Row"
+import Col from "react-bootstrap/Col"
 import Header from "../../components/Header"
 
 import { TimelineTwo } from "../../components/Timelines"
@@ -31,6 +34,67 @@ const query = graphql`
     }
   }
 `
+
+const StudentResources = () => {
+  return (
+    <ResourcesWrapper fluid>
+      <Row className="resource-container">
+        <Col sm={12} md={6} lg={6}>
+          <div>
+            <h3>Kit Guides and Software</h3>
+            <p>
+              Download <a href="/getInvolved/Projects">Dawn</a> and{" "}
+              <a href="/getInvolved/Projects">Runtime</a> software, view
+              documents and guides, and check for updates.
+            </p>
+            <AlternativeButton link="/competition/SoftwareHub">
+              Software Hub &rsaquo;
+            </AlternativeButton>
+          </div>
+        </Col>
+        <Col sm={12} md={6} lg={6}>
+          <div>
+            <h3>Parent-Teacher Meeting Slides</h3>
+            <p>
+              The slides from the Parent-Teacher Meeting held during
+              Kickoff 2026.
+            </p>
+            <AlternativeButton link="https://docs.google.com/presentation/d/17fX-7aDVWG-cUtvcWZHVJ4zSp4ISoH6wv0ZiofRRFLc/edit?usp=sharing">
+              Slides &rsaquo;
+            </AlternativeButton>
+          </div>
+        </Col>
+        <Col sm={12} md={6} lg={6}>
+          <div>
+            <h3>Worksessions</h3>
+            <p>
+              Sign up for worksessions 24 hours in advance! Having debug issues?
+              Need some more build time or tools? Come on out!
+            </p>
+            <AlternativeButton link="https://www.signupgenius.com/go/10C0448AAAA2AA2FDC16-62918937-student">
+              Worksession Sign Up &rsaquo;
+            </AlternativeButton>
+          </div>
+        </Col>
+        <Col sm={12} md={6} lg={6}>
+          <div>
+            <h3>Robot Simulator</h3>
+            <p>
+              Get up to speed with the{" "}
+              <a href="https://github.com/pioneers/runtime/wiki/Student-API">
+                Robot API
+              </a>{" "}
+              quickly, or test your robot code.
+            </p>
+            <AlternativeButton link="https://pimulator.pierobotics.org/">
+              Simulator &rsaquo;
+            </AlternativeButton>
+          </div>
+        </Col>
+      </Row>
+    </ResourcesWrapper>
+  )
+}
 
 const Compete = () => {
   const data = useStaticQuery(query)
@@ -88,6 +152,18 @@ const Compete = () => {
             </Element>
         </Container>
       </CustomizedContainer>
+
+      
+      <CustomizedContainer>
+        <div id="resources" />
+        <Container fluid>
+          <h4 style={{ marginBottom: "1.5em", color: theme.colors.grey400 }}>
+            HELPFUL LINKS
+          </h4>
+          <Header type={"blue"}>Resources For Students</Header>
+        </Container>
+        <StudentResources />
+      </CustomizedContainer>
     </Layout>
   )
 }
@@ -122,5 +198,38 @@ const HeroWrapper = styled.div`
     }
   }
 `
+const ResourcesWrapper = styled(Container)`
+  padding: 0rem 2rem;
+  .resource-container {
+    background-color: ${theme.colors.grey100};
+    margin-top: 2rem;
+    padding: 1.5rem;
+    border-radius: 0.25rem;
+    box-shadow: ${theme.shadows.darkShadow};
+  }
+
+  & > div > div {
+    padding: 0.5rem;
+  }
+
+  p {
+    margin-bottom: 0.25rem;
+  }
+
+  h3 {
+    color: ${theme.colors.grey900};
+  }
+
+  p > a {
+    font-weight: 600;
+
+    color: ${theme.colors.gold600};
+  }
+
+  p > a:hover {
+    color: ${theme.colors.black};
+  }
+`
+
 
 export default Compete

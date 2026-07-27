@@ -36,14 +36,14 @@ const SupportUsDropdown = () => {
           <li>
             <div>
               <Heading>
-                <a href="/About#projectManagers">Individuals</a>
+                <a href="/support-us/individuals">Individuals</a>
               </Heading>
             </div>
           </li>
           <li>
             <div>
               <Heading style={{ marginBottom: 0 }}>
-                <a href="/About#others">Organizations</a>
+                <a href="/suport-us/organizations">Organizations</a>
               </Heading>
             </div>
           </li>

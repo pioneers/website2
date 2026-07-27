@@ -11,6 +11,12 @@ import { FaHandsHelping } from "@react-icons/all-files/fa/FaHandsHelping"
 import { BiGroup } from "@react-icons/all-files/bi/BiGroup"
 import { VscOpenPreview } from "@react-icons/all-files/vsc/VscOpenPreview"
 
+import { BoxesWrapper } from "../../assets/themes/boxes"
+
+import { FaRegHandPaper } from "@react-icons/all-files/fa/FaRegHandPaper"
+import { AiOutlineTeam } from "@react-icons/all-files/ai/AiOutlineTeam"
+import { BsBuilding } from "@react-icons/all-files/bs/BsBuilding"
+
 import CustomizedContainer from "../../components/CustomizedContainer"
 import HelmetWrapper from "../../components/HelmetWrapper"
 
@@ -56,6 +62,51 @@ const Competition = () => {
           </div>
         </div>
       </HeroWrapper>
+
+      <CustomizedContainer>
+        <Container fluid>
+          <h4 style={{ marginBottom: "1.5em", color: theme.colors.grey400 }}>
+            INFORMATION
+          </h4>
+          <div id="howItWorks"></div>
+          <Header type={"blue"}>How It Works</Header>
+          <WorksBoxesWrapper
+            fluid
+            align="center"
+            iconSize="4rem"
+            padding="2rem 1.25rem"
+          >
+            <Row className="inner-container">
+              <Col sm={12} md={4} lg={4}>
+                <div className="card">
+                  <div>
+                    <FaRegHandPaper />
+                    <h4>We provide mentorship and a responsive Discord</h4>
+                  </div>
+                </div>
+              </Col>
+              <Col sm={12} md={4} lg={4}>
+                <div className="card">
+                  <div>
+                    <AiOutlineTeam />
+                    <h4>
+                      Your team designs and builds an awesome, strategic robot
+                    </h4>
+                  </div>
+                </div>
+              </Col>
+              <Col sm={12} md={4} lg={4}>
+                <div className="card">
+                  <div>
+                    <BsBuilding />
+                    <h4>You compete in one epic tournament!</h4>
+                  </div>
+                </div>
+              </Col>
+            </Row>
+          </WorksBoxesWrapper>
+        </Container>
+      </CustomizedContainer>
 
       <CustomizedContainer>
         <Container fluid>
@@ -327,4 +378,6 @@ const WhoWeServe = styled(Container)`
     }
   }
 `
+const WorksBoxesWrapper = styled(BoxesWrapper)``
+
 export default Competition

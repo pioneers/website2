@@ -79,13 +79,13 @@ const SoftwareHub = () => {
                   <h3 style={{ color: theme.colors.grey900 }}>
                     Version: {dawnVersion}
                   </h3>
-                  <h3 style={{ color: theme.colors.grey500 }}>{dawnDate}</h3>
+                  <h3 style={{ color: theme.colors.grey50 }}>{dawnDate}</h3>
                   <br />
                   <div>
                     <AlternativeButton
                       link={
                         dawnWindows === "disable"
-                          ? "/competition/SoftwareHub/"
+                          ? "/schools/software-hub/"
                           : dawnWindows
                       }
                     >
@@ -94,7 +94,7 @@ const SoftwareHub = () => {
                     <AlternativeButton
                       link={
                         dawnLinux === "disable"
-                          ? "/competition/SoftwareHub/"
+                          ? "/schools/software-hub/"
                           : dawnLinux
                       }
                     >
@@ -103,7 +103,7 @@ const SoftwareHub = () => {
                     <AlternativeButton
                       link={
                         dawnMacOs === "disable"
-                          ? "/competition/SoftwareHub/"
+                          ? "/schools/software-hub/"
                           : dawnMacOs
                       }
                     >
@@ -120,12 +120,12 @@ const SoftwareHub = () => {
                   <h3 style={{ color: theme.colors.grey900 }}>
                     Version: {runtimeVersion}
                   </h3>
-                  <h3 style={{ color: theme.colors.grey500 }}>{runtimeDate}</h3>
+                  <h3 style={{ color: theme.colors.grey50 }}>{runtimeDate}</h3>
                   <br />
                   <AlternativeButton
                     link={
                       runtimeAllRobots === "disable"
-                        ? "/competition/SoftwareHub/"
+                        ? "/schools/software-hub/"
                         : runtimeAllRobots
                     }
                   >
@@ -227,7 +227,7 @@ const SoftwareHub = () => {
               <h2>Documentation</h2>
               <ul>
                 <li>
-                  <a href="/competition/SoftwareHub/QuickstartGuide/">
+                  <a href="/schools/software-hub/QuickstartGuide/">
                     Quickstart Guide
                   </a>
                 </li>
@@ -235,12 +235,12 @@ const SoftwareHub = () => {
                   <a href={robotApi}>Robot API</a>
                 </li>
                 <li>
-                  <a href="/competition/SoftwareHub/StudentSkeletonCode/">
+                  <a href="/schools/software-hub/StudentSkeletonCode/">
                     Student Skeleton Code
                   </a>
                 </li>
                 <li>
-                  <a href="/competition/SoftwareHub/DawnGuide/">
+                  <a href="/schools/software-hub/DawnGuide/">
                     Guide: Dawn
                   </a>
                 </li>
@@ -248,12 +248,12 @@ const SoftwareHub = () => {
                   Programming Guides
                   <ul>
                     <li>
-                      <a href="/competition/SoftwareHub/Teleop/">
+                      <a href="/schools/software-hub/Teleop/">
                         Guide #1: Tele-Operated Code
                       </a>
                     </li>
                     <li>
-                      <a href="/competition/SoftwareHub/Autonomous/">
+                      <a href="/schools/software-hub/Autonomous/">
                         Guide #2: Autonomous Code
                       </a>
                     </li>

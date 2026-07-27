@@ -4,6 +4,8 @@ import { Flipper, Flipped } from "react-flip-toolkit"
 import theme from "../../assets/themes/theme"
 import styled, { css, keyframes } from "styled-components"
 
+import { TimelineOne } from "../../components/Timelines"
+
 import Layout from "../../components/Layout"
 import Header from "../../components/Header"
 import HelmetWrapper from "../../components/HelmetWrapper"
@@ -22,8 +24,6 @@ import Col from "react-bootstrap/esm/Col"
 import Container from "react-bootstrap/esm/Container"
 import Table from "react-bootstrap/Table"
 
-
-
 const query = graphql`
   {
     allContentfulProjects {
@@ -36,7 +36,21 @@ const query = graphql`
         program
       }
     }
-  }
+    allContentfulRecruitingTimeline(
+      sort: { internalTime: ASC }
+    ) {
+      nodes {
+        content {
+          raw
+        }
+        event
+        time
+        week
+        link
+        internalTime
+      }
+    }
+}
 `
 
 const Square = ({ toggleFullScreen, name, program }) => {
@@ -254,9 +268,15 @@ const Forms = () => {
 }
 
 const Staff = () => {
+    const data = useStaticQuery(query)
+    const events = data.allContentfulRecruitingTimeline.nodes
     return(
     <Layout>
-        <HeroWrapper>
+      <HelmetWrapper
+        title="Club Staff"
+        description="Want to help out? Here at PiE, we don't have an application process. Rather, we firmly believe that any UC Berkeley student who is interested in our club has something to offer, whether community-wise, project-wise, or anything else that we can't think of ourselves! Simply fill out the forms or come check out worksession and we'll get you started!"
+      />
+      <HeroWrapper>
         <div className="filler"></div>
         <div className="hero-image">
           <div>
@@ -264,6 +284,55 @@ const Staff = () => {
           </div>
         </div>
       </HeroWrapper>
+
+      <CustomizedContainer color={theme.colors.white}>
+        <div id="recruiting" />
+        <HeaderContainer fluid>
+          <h4 style={{ marginBottom: "1.5em", color: theme.colors.grey400 }}>
+            JOIN US
+          </h4>
+          <Header type={"blue-header"}>Fall Recruiting</Header>
+          <p>
+            We've got a great lineup of events ready to welcome you to
+            Berkeley. Come to an infosession to find out what we're all about,
+            then decide which{" "}
+            <a href="/getInvolved/Projects">project team</a> you want to
+            help out with at Project Expo. We believe that everyone can find a
+            place to contribute in PiE, regardless of year or major, so don't
+            hesitate to come out! You'll also be able to find us tabling at{" "}
+            <a
+              href="https://lead.berkeley.edu/calapalooza/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Calapalooza
+            </a>.
+          </p>
+          <p>
+            If you're interested in joining, fill out our interest form{" "}
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSd1tHle9P-RwM608u0iMOOXlPt26cCSCqKKQaa5ND8WjL0aWQ/viewform"
+              target="_blank"
+              rel="noreferrer"
+            >
+              here
+            </a>
+            ! We'll send information at a later time about welcome events in the fall and how to join.
+          </p>
+        </HeaderContainer>
+      </CustomizedContainer>
+
+      <CustomizedContainer>
+        <div id="timeline" />
+        <Container fluid>
+          <h4 style={{ marginBottom: "1.5em", color: theme.colors.grey400 }}>
+            THE TIMELINE
+          </h4>
+          <Header type={"gold-header"}>Our Events</Header>
+        </Container>
+        <TimelineOne timelineFor={events} />
+      </CustomizedContainer>
+
             <Forms />
             <Projects />
     </Layout>
@@ -468,6 +537,17 @@ const Wrapper = styled(Container)`
   svg {
     font-size: 7rem;
     margin-bottom: 1rem;
+  }
+`
+
+const HeaderContainer = styled(Container)`
+  p > a {
+    font-weight: 600;
+    color: ${theme.colors.blue500};
+  }
+
+  p > a:hover {
+    color: ${theme.colors.black};
   }
 `
 
