@@ -8,7 +8,7 @@ import sublinks from "../assets/data/data"
 import CustomizedContainer from "./CustomizedContainer"
 
 import { AiFillGithub } from "@react-icons/all-files/ai/AiFillGithub"
-import { AiFillFacebook } from "@react-icons/all-files/ai/AiFillFacebook"
+import { AiFillInstagram } from "@react-icons/all-files/ai/AiFillInstagram"
 import { AiFillYoutube } from "@react-icons/all-files/ai/AiFillYoutube"
 
 /*
@@ -43,8 +43,8 @@ function Footer() {
               <a href="https://github.com/pioneers">
                 <AiFillGithub />
               </a>
-              <a href="https://www.facebook.com/pierobotics">
-                <AiFillFacebook />
+              <a href="https://www.instagram.com/pierobotics/">
+                <AiFillInstagram />
               </a>
               <a href="https://www.youtube.com/user/pierobotics">
                 <AiFillYoutube />

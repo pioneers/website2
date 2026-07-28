@@ -7,7 +7,6 @@ import AboutDropdown from "./DropdownContents/AboutDropdown"
 import SchoolsDropdown from "./DropdownContents/SchoolsDropdown"
 import GetInvolvedDropdown from "./DropdownContents/GetInvolvedDropdown"
 import SupportUsDropdown from "./DropdownContents/SupportUsDropdown"
-import LibraryDropdown from "./DropdownContents/LibraryDropdown"
 import ContactUs from "./ContactUs"
 import { GiHamburgerMenu } from "@react-icons/all-files/gi/GiHamburgerMenu"
 import { useGlobalContext } from "../assets/data/context"
@@ -19,15 +18,10 @@ import theme from "../assets/themes/theme"
 import styled from "styled-components"
 
 const navbarConfig = [
-  { title: "About", dropdown: AboutDropdown, link: "/About" },
-  { title: "Schools", dropdown: SchoolsDropdown, link: "/Competition" },
-  {
-    title: "Get Involved",
-    dropdown: GetInvolvedDropdown,
-    link: "/GetInvolved",
-  },
-  { title: "Support Us", dropdown: SupportUsDropdown, link: "/SupportUs" },
-  { title: "Library", dropdown: LibraryDropdown, link: "/Gallery" },
+  { title: "About", dropdown: AboutDropdown},
+  { title: "Schools", dropdown: SchoolsDropdown},
+  { title: "Get Involved", dropdown: GetInvolvedDropdown},
+  { title: "Support Us", dropdown: SupportUsDropdown},
 ]
 
 class Helper extends Component {
@@ -134,6 +128,11 @@ class Helper extends Component {
               </NavbarItem>
             )
           })}
+          <ResponsiveItem nav={nav}>
+            <div>
+              <a href="/gallery">Gallery</a>
+            </div>
+          </ResponsiveItem>
           <ContactUs />
           <ButtonSide onClick={myHookValue} aria-label="Open navigation menu">
             <span style={{position: 'absolute', width: '1px', height: '1px', padding: 0, margin: '-1px', overflow: 'hidden', clip: 'rect(0,0,0,0)', border: 0}}>
@@ -250,5 +249,10 @@ const ResponsiveTitle = styled.button`
       display: none;
     }
     /* padding: 2rem 0 1.2rem 0; */
+  }
+`
+const ResponsiveItem = styled(ResponsiveTitle)`
+  @media screen and (max-width: 900px) {
+    display: none;
   }
 `
