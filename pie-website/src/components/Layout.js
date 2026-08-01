@@ -8,6 +8,9 @@ import { AppProvider } from "../assets/data/context"
 import GlobalStyles from "../assets/themes/globalStyles"
 import AnimatedNavbar from "./AnimatedNavbar"
 
+import Banner from "../components/AnnouncementBanner/BannerContainer"
+import theme from "../assets/themes/theme"
+
 /*
 Creates a wrapper for all pages which includes a navbar at the top and a footer at the bottom
 */
@@ -18,6 +21,7 @@ const Layout = ({ children, nav }) => {
     <React.Fragment>
       <AppProvider>
         <GlobalStyles />
+        <Banner/>
         <AnimatedNavbar duration={duration} nav={nav} />
         <Sidebar />
         <main>{children}</main>

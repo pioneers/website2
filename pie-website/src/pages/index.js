@@ -2,6 +2,9 @@
 import React from "react"
 import Layout from "../components/Layout"
 
+// Attempt to create announcement banner container
+import BannerContainer from "../components/AnnouncementBanner/BannerContainer"
+
 import Header from "../components/Header"
 import AlternativeButton from "../components/AlternativeButton"
 

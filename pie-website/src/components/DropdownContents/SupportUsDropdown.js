@@ -36,7 +36,7 @@ const SupportUsDropdown = () => {
           <li>
             <div>
               <Heading>
-                <a href="/About#projectManagers">Individuals</a>
+                <a href="/support-us/individuals">Individuals</a>
               </Heading>
             </div>
           </li>
