@@ -3,7 +3,6 @@ import React from "react"
 import Layout from "../../components/Layout"
 
 import Header from "../../components/Header"
-import AlternativeButton from "../../components/AlternativeButton"
 
 import styled from "styled-components"
 
@@ -58,7 +57,6 @@ const Competition = () => {
         <div className="hero-image">
           <div>
             <h1>Competition</h1>
-            
           </div>
         </div>
       </HeroWrapper>
@@ -108,7 +106,7 @@ const Competition = () => {
         </Container>
       </CustomizedContainer>
 
-      <CustomizedContainer>
+      <CustomizedContainer color={theme.colors.grey100}>
         <Container fluid>
           <h4 style={{ marginBottom: "1.5em", color: theme.colors.grey400 }}>
             WHO WE ARE
@@ -117,12 +115,6 @@ const Competition = () => {
             Promoting STEM education to the Bay Area because we strongly believe
             that no student should be denied a quality educational experience
           </h2>
-          <AlternativeButton type="hipster" link="/GetInvolved#timeline">
-            Events
-          </AlternativeButton>
-          <AlternativeButton color="gold" link="/getInvolved/Forms">
-            Join Pie
-          </AlternativeButton>
           <br />
         </Container>
 
@@ -169,86 +161,6 @@ const Competition = () => {
             </Col>
           </Row>
         </WhoWeServe>
-      </CustomizedContainer>
-
-      <CustomizedContainer color="#f4f4f5">
-        <Students fluid>
-          <h4 style={{ marginBottom: "1.5em", color: theme.colors.grey400 }}>
-            HIGH SCHOOLERS
-          </h4>
-          <Header type={"gold-header"}>Students</Header>
-          <p>
-            Are you in high school?{" "}
-            <a href="/getInvolved/Schools">
-              Compete in our 8-week Spring robotics competition!
-            </a>{" "}
-            For only $100, your team will receive a robotics kit and 2-3 mentors
-            for support. We also host a Fall reboot of our past Spring
-            competition, as well as workshops such as PiE On The Road.
-          </p>
-
-          <AlternativeButton link="/Competition">
-            2026 Spring Competition &rsaquo;
-          </AlternativeButton>
-        </Students>
-      </CustomizedContainer>
-
-      <CustomizedContainer>
-        <JoinUsHeader fluid>
-          <h4 style={{ marginBottom: "1.5em", color: theme.colors.grey400 }}>
-            HELP US OUT
-          </h4>
-          <Header type={"blue-header"}>Be a part in our competition</Header>
-          <p style={{ marginTop: "1.5rem" }}>
-            Excited to help? You could be the next to design the back-end of our
-            robots, <Link to="/getInvolved/Decal">mentor</Link> our students,{" "}
-            <Link to="/GetInvolved#volunteer">judge our competitions</Link>, and
-            lots more!
-          </p>
-        </JoinUsHeader>
-        <JoinUs fluid>
-          <Row>
-            <Col sm={12} md={4} lg={4}>
-              <div>
-                <FaHandsHelping />
-                <h4>Become a mentor</h4>
-                <p>
-                  Interested in participating in PiE's mission by becoming a
-                  mentor and role model for a team of high school students? PiE
-                  RC DeCal, offered every spring, offers just that!
-                </p>
-                <Link to="/getInvolved/Decal">Learn More &rsaquo;</Link>
-              </div>
-            </Col>
-            <Col sm={12} md={4} lg={4}>
-              <div>
-                <BiGroup />
-                <h4>Join our team</h4>
-                <p>
-                  Join our team and be part of providing STEM education to the
-                  Bay Area
-                </p>
-                <Link to="/GetInvolved">Learn More &rsaquo;</Link>
-              </div>
-            </Col>
-            <Col sm={12} md={4} lg={4}>
-              <div>
-                <VscOpenPreview />
-                <h4>Volunteer at competition</h4>
-                <p>
-                  We are looking for professors and industry professionals to
-                  volunteer at our events. You can help us by being a judge at
-                  our Design Reviews and/or Final Competition.
-                </p>
-                <Link to="/GetInvolved">Learn More &rsaquo;</Link>
-              </div>
-            </Col>
-          </Row>
-        </JoinUs>
-      </CustomizedContainer>
-      <CustomizedContainer color={theme.colors.grey100}>
-        <div id="mailinglist"></div>
-        <MailchimpFormContainer />
       </CustomizedContainer>
     </Layout>
   )

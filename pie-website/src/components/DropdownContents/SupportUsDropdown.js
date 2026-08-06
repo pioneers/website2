@@ -43,7 +43,7 @@ const SupportUsDropdown = () => {
           <li>
             <div>
               <Heading style={{ marginBottom: 0 }}>
-                <a href="/suport-us/organizations">Organizations</a>
+                <a href="/support-us/organizations">Organizations</a>
               </Heading>
             </div>
           </li>

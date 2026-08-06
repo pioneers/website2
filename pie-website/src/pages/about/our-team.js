@@ -105,18 +105,16 @@ const OurTeam = () => {
           </div>
         </div>
       </HeroWrapper>
-      <CustomizedContainer color={theme.colors.grey100}>
+      <CustomizedContainer>
         <HeaderContainer fluid>
           <div id="2026 Team" />
           <h4 style={{ marginBottom: "1.5em", color: theme.colors.grey400 }}>
-            2026 PIONEERS IN ENGINEERING MEMBERS
+            {new Date().getFullYear()} PIONEERS IN ENGINEERING MEMBERS
           </h4>
           <h2 style={{ maxWidth: "700px", marginBottom: "3rem" }}>
-            The group for the 2026 PiE class ~
+            The group for the {new Date().getFullYear()} PiE class
           </h2>
         </HeaderContainer>
-        </CustomizedContainer>
-         <CustomizedContainer>
         <Container fluid>
           <Tabs defaultActiveKey="staff" id="uncontrolled-tab-example">
             <Tab eventKey="staff" title="Staff">

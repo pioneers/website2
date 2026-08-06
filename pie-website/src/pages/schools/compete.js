@@ -1,8 +1,9 @@
 import React from "react"
-import {Link, Element} from "react-scroll"
 
 import CustomizedContainer from "../../components/CustomizedContainer"
 import AlternativeButton from "../../components/AlternativeButton"
+import OnPageLink from "../../components/OnPageLink"
+import {Link, Element} from "react-scroll"
 import Layout from "../../components/Layout"
 import HelmetWrapper from "../../components/HelmetWrapper"
 import theme from "../../assets/themes/theme"
@@ -41,14 +42,12 @@ const StudentResources = () => {
       <Row className="resource-container">
         <Col sm={12} md={6} lg={6}>
           <div>
-            <h3>Kit Guides and Software</h3>
+            <h3>Robot API Reference</h3>
             <p>
-              Download <a href="/getInvolved/Projects">Dawn</a> and{" "}
-              <a href="/getInvolved/Projects">Runtime</a> software, view
-              documents and guides, and check for updates.
+              Read documentation for all functions that students can use to communicate with the robot
             </p>
-            <AlternativeButton link="/competition/SoftwareHub">
-              Software Hub &rsaquo;
+            <AlternativeButton link="https://github.com/pioneers/runtime/wiki/Student-API">
+              API Docs &rsaquo;
             </AlternativeButton>
           </div>
         </Col>
@@ -66,13 +65,14 @@ const StudentResources = () => {
         </Col>
         <Col sm={12} md={6} lg={6}>
           <div>
-            <h3>Worksessions</h3>
+            <h3>Game Manual</h3>
             <p>
-              Sign up for worksessions 24 hours in advance! Having debug issues?
-              Need some more build time or tools? Come on out!
+              All information about scoring points, avoiding penalties, and 
+              robot regulations for this year's game. An essential resource for
+              designing your robot!
             </p>
-            <AlternativeButton link="https://www.signupgenius.com/go/10C0448AAAA2AA2FDC16-62918937-student">
-              Worksession Sign Up &rsaquo;
+            <AlternativeButton link="https://docs.google.com/document/d/1uV0uzHG8RQDaAgpSAi-2Ipqt3Z-qHrcIRRa6A0YTSFA/edit?tab=t.0">
+              Game Manual &rsaquo;
             </AlternativeButton>
           </div>
         </Col>
@@ -80,10 +80,7 @@ const StudentResources = () => {
           <div>
             <h3>Robot Simulator</h3>
             <p>
-              Get up to speed with the{" "}
-              <a href="https://github.com/pioneers/runtime/wiki/Student-API">
-                Robot API
-              </a>{" "}
+              Get up to speed with the Robot API
               quickly, or test your robot code.
             </p>
             <AlternativeButton link="https://pimulator.pierobotics.org/">
@@ -94,6 +91,28 @@ const StudentResources = () => {
       </Row>
     </ResourcesWrapper>
   )
+}
+
+const Intro = () => {
+  const month = new Date().getMonth();
+  if (month <= 4) {
+    return (
+      <p>
+        Welcome to the compete page! Here you can find all information regarding the current competition season as well 
+        as helpful resources for participating in PiE. To read about 
+        our robotics competition in general, visit our <a href="/about/competition">about competition</a> page.
+        Not a current participant? See how to <OnPageLink to="new-teams" smooth={true} offset={-50}>join</OnPageLink>!
+      </p>
+    );
+  }
+  return (
+      <p>
+        Welcome to the compete page! Here you can find all information regarding our most recent competition season as well 
+        as helpful resources for participating in PiE. To read about 
+        our robotics competition in general, visit our <a href="/about/competition">about competition</a> page.
+        Not a current participant? See how to <OnPageLink to="new-teams" smooth={true} offset={-50}>join</OnPageLink>!
+      </p>
+  );
 }
 
 const Compete = () => {
@@ -112,14 +131,10 @@ const Compete = () => {
       </HeroWrapper>
       <CustomizedContainer>
         <Header type="blue">Competition Information</Header>
-        <p>
-            Here you can find all information regarding the current competition season. To read about 
-            our robotics competition in general, visit our <a href="/about/competition">cometition about</a> page. Not a current 
-            participant? See how to <Hyperlink to="new-teams" smooth={true} offset={-50}>join</Hyperlink>!
-        </p>
+        <Intro />
         <div id="timeline" />
       </CustomizedContainer>
-      <CustomizedContainer>
+      <CustomizedContainer color={theme.colors.grey100}>
         <Container fluid>
           <h4 style={{ marginBottom: "1.5em", color: theme.colors.grey400 }}>
             THE TIMELINE
@@ -152,9 +167,8 @@ const Compete = () => {
             </Element>
         </Container>
       </CustomizedContainer>
-
       
-      <CustomizedContainer>
+      <CustomizedContainer color={theme.colors.grey100}>
         <div id="resources" />
         <Container fluid>
           <h4 style={{ marginBottom: "1.5em", color: theme.colors.grey400 }}>
@@ -167,11 +181,6 @@ const Compete = () => {
     </Layout>
   )
 }
-
-const Hyperlink = styled(Link)`
-    color: cerulean;
-    cursor: pointer;
-`
 
 const HeroWrapper = styled.div`
   .filler {

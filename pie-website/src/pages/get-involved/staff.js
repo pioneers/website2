@@ -19,6 +19,9 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 
+import OnPageLink from "../../components/OnPageLink"
+import {Link, Element} from "react-scroll"
+
 import Row from "react-bootstrap/esm/Row"
 import Col from "react-bootstrap/esm/Col"
 import Container from "react-bootstrap/esm/Container"
@@ -162,11 +165,9 @@ const Projects = () => {
   const data = useStaticQuery(query)
   const projects = data.allContentfulProjects.nodes
   return (
-    <Container fluid>
       <CustomizedContainer>
         <Container fluid>
           <h2>Click on any box for more details!</h2>
-        </Container>
         <ListOfProjects>
           {projects.map(project => {
             const { description, name, pMs, program } = project
@@ -183,15 +184,15 @@ const Projects = () => {
             )
           })}
         </ListOfProjects>
+        </Container>
       </CustomizedContainer>
-    </Container>
   )
 }
 
 const Forms = () => {
   return (
     <Container fluid>
-        <CustomizedContainer fluid>
+        <CustomizedContainer>
         <Wrapper fluid>
           <Row style={{ color: theme.colors.grey900 }}>
             <Col sm={12} md={6}>
@@ -227,13 +228,84 @@ const Forms = () => {
           </Row>
         </Wrapper>
       </CustomizedContainer>
+    </Container>
+  )
+}
+
+const Staff = () => {
+    const data = useStaticQuery(query)
+    const events = data.allContentfulRecruitingTimeline.nodes
+    return(
+    <Layout>
+      <HelmetWrapper
+        title="Club Staff"
+        description="Want to help out? Here at PiE, we don't have an application process. Rather, we firmly believe that any UC Berkeley student who is interested in our club has something to offer, whether community-wise, project-wise, or anything else that we can't think of ourselves! Simply fill out the forms or come check out worksession and we'll get you started!"
+      />
+      <HeroWrapper>
+        <div className="filler"></div>
+        <div className="hero-image">
+          <div>
+            <h1>Club Staff</h1>
+          </div>
+        </div>
+      </HeroWrapper>
+
+      <CustomizedContainer>
+        <div id="recruiting" />
+        <HeaderContainer fluid>
+          <h4 style={{ marginBottom: "1.5em", color: theme.colors.grey400 }}>
+            JOIN US
+          </h4>
+          <Header type={"blue-header"}>Fall Recruiting</Header>
+          <p>
+            We've got a great lineup of events ready to welcome you to
+            Berkeley. Come to an infosession to find out what we're all about,
+            then decide which{" "}
+            <OnPageLink to="teams" smooth={true} offset={-50}>project team</OnPageLink> you want to
+            help out with at Project Expo. We believe that everyone can find a
+            place to contribute in PiE, regardless of year or major, so don't
+            hesitate to come out! You'll also be able to find us tabling at{" "}
+            <a
+              href="https://lead.berkeley.edu/calapalooza/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Calapalooza
+            </a>.
+          </p>
+          <p>
+            If you're interested in joining, fill out our interest form{" "}
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSez5VV69BFY6T2VoRx15hAxg69d-RWsPxdtrnmxdlF4EJViKQ/viewform?usp=header"
+              target="_blank"
+              rel="noreferrer"
+            >
+              here
+            </a>
+            ! We'll send information at a later time about welcome events in the fall and how to join.
+          </p>
+        </HeaderContainer>
+      </CustomizedContainer>
 
       <CustomizedContainer color={theme.colors.white}>
+        <div id="timeline" />
+        <Container fluid>
+          <h4 style={{ marginBottom: "1.5em", color: theme.colors.grey400 }}>
+            THE TIMELINE
+          </h4>
+          <Header type={"gold-header"}>Our Events</Header>
+        </Container>
+        <TimelineOne timelineFor={events} />
+      </CustomizedContainer>
+            <Element name="teams">
+            <Projects />
+            </Element>
+        <CustomizedContainer color={theme.colors.white}>
         <Container fluid>
           <Header type={"blue-header"}>Our Worksessions</Header>
           <p>
-            After filling out our forms and emailing us, the next thing to do is
-            attend our worksessions.
+            Missed the recruiting season? You can still join! Start by attending our worksessions 
+            and filling out the new member forms below.
           </p>
         </Container>
         <Container fluid>
@@ -261,80 +333,9 @@ const Forms = () => {
             </tbody>
           </Table>
         </Container>
-        <br />
       </CustomizedContainer>
-    </Container>
-  )
-}
+      <Forms />
 
-const Staff = () => {
-    const data = useStaticQuery(query)
-    const events = data.allContentfulRecruitingTimeline.nodes
-    return(
-    <Layout>
-      <HelmetWrapper
-        title="Club Staff"
-        description="Want to help out? Here at PiE, we don't have an application process. Rather, we firmly believe that any UC Berkeley student who is interested in our club has something to offer, whether community-wise, project-wise, or anything else that we can't think of ourselves! Simply fill out the forms or come check out worksession and we'll get you started!"
-      />
-      <HeroWrapper>
-        <div className="filler"></div>
-        <div className="hero-image">
-          <div>
-            <h1>Club Staff</h1>
-          </div>
-        </div>
-      </HeroWrapper>
-
-      <CustomizedContainer color={theme.colors.white}>
-        <div id="recruiting" />
-        <HeaderContainer fluid>
-          <h4 style={{ marginBottom: "1.5em", color: theme.colors.grey400 }}>
-            JOIN US
-          </h4>
-          <Header type={"blue-header"}>Fall Recruiting</Header>
-          <p>
-            We've got a great lineup of events ready to welcome you to
-            Berkeley. Come to an infosession to find out what we're all about,
-            then decide which{" "}
-            <a href="/getInvolved/Projects">project team</a> you want to
-            help out with at Project Expo. We believe that everyone can find a
-            place to contribute in PiE, regardless of year or major, so don't
-            hesitate to come out! You'll also be able to find us tabling at{" "}
-            <a
-              href="https://lead.berkeley.edu/calapalooza/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Calapalooza
-            </a>.
-          </p>
-          <p>
-            If you're interested in joining, fill out our interest form{" "}
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSd1tHle9P-RwM608u0iMOOXlPt26cCSCqKKQaa5ND8WjL0aWQ/viewform"
-              target="_blank"
-              rel="noreferrer"
-            >
-              here
-            </a>
-            ! We'll send information at a later time about welcome events in the fall and how to join.
-          </p>
-        </HeaderContainer>
-      </CustomizedContainer>
-
-      <CustomizedContainer>
-        <div id="timeline" />
-        <Container fluid>
-          <h4 style={{ marginBottom: "1.5em", color: theme.colors.grey400 }}>
-            THE TIMELINE
-          </h4>
-          <Header type={"gold-header"}>Our Events</Header>
-        </Container>
-        <TimelineOne timelineFor={events} />
-      </CustomizedContainer>
-
-            <Forms />
-            <Projects />
     </Layout>
     )
 }

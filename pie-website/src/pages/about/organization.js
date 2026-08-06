@@ -207,7 +207,7 @@ const Organization = () => {
           </div>
         </div>
       </HeroWrapper>
-      <CustomizedContainer color={theme.colors.grey100}>
+      <CustomizedContainer>
         <HeaderContainer fluid>
           <div id="mission" />
           <h4 style={{ marginBottom: "1.5em", color: theme.colors.grey400 }}>
@@ -253,8 +253,7 @@ const Organization = () => {
                 <h4>Dedicated club members</h4>
                 <p>
                   A group of talented students who make everything happen from
-                  the game design to the {" "}
-                  <a href="/competition/SoftwareHub">software</a> to the {" "}
+                  the game design to the software to
                   the logistical planning and community outreach
                 </p>
               </div>
@@ -262,8 +261,7 @@ const Organization = () => {
           </Row>
         </WhyThisWorks>
       </CustomizedContainer>
-
-        <CustomizedContainer color={theme.colors.grey100}>
+      <CustomizedContainer color={theme.colors.grey100}>
         <div id="foundation" />
         <Container fluid>
           <Header type={"gold-header"}>PiE Foundation</Header>

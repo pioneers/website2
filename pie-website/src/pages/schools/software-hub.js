@@ -72,10 +72,10 @@ const SoftwareHub = () => {
           padding="3rem 1.5rem"
         >
           <Row className="inner-container">
-            <Col sm={12} md={6} lg={6}>
+            <Col>
               <div className="card">
                 <div>
-                  <h2 style={{ color: theme.colors.blue700 }}>Dawn</h2>
+                  <h2 style={{ color: theme.colors.blue800 }}>Dawn</h2>
                   <h3 style={{ color: theme.colors.grey900 }}>
                     Version: {dawnVersion}
                   </h3>
@@ -110,27 +110,6 @@ const SoftwareHub = () => {
                       MacOS
                     </AlternativeButton>
                   </div>
-                </div>
-              </div>
-            </Col>
-            <Col sm={12} md={6} lg={6}>
-              <div className="card">
-                <div>
-                  <h2 style={{ color: theme.colors.blue700 }}>Runtime</h2>
-                  <h3 style={{ color: theme.colors.grey900 }}>
-                    Version: {runtimeVersion}
-                  </h3>
-                  <h3 style={{ color: theme.colors.grey50 }}>{runtimeDate}</h3>
-                  <br />
-                  <AlternativeButton
-                    link={
-                      runtimeAllRobots === "disable"
-                        ? "/schools/software-hub/"
-                        : runtimeAllRobots
-                    }
-                  >
-                    All Robots
-                  </AlternativeButton>
                 </div>
               </div>
             </Col>

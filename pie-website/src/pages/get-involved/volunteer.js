@@ -29,7 +29,7 @@ const Volunteer = () => {
           </div>
         </div>
       </HeroWrapper>
-      <CustomizedContainer color="#f4f4f5">
+      <CustomizedContainer>
         <VolunteerWrapper fluid>
           <Row>
             <Col sm={12} md={12} lg={12}>

@@ -24,99 +24,42 @@ import Col from "react-bootstrap/Col"
 
 import pic from "../../assets/images/stock-images/robotics_competition_sp17.jpg"
 
-const StudentResources = () => {
-  return (
-    <ResourcesWrapper fluid>
-      <Row className="resource-container">
-        <Col sm={12} md={6} lg={6}>
-          <div>
-            <h3>Kit Guides and Software</h3>
-            <p>
-              Download <a href="/getInvolved/Projects">Dawn</a> and{" "}
-              <a href="/getInvolved/Projects">Runtime</a> software, view
-              documents and guides, and check for updates.
-            </p>
-            <AlternativeButton link="/competition/SoftwareHub">
-              Software Hub &rsaquo;
-            </AlternativeButton>
-          </div>
-        </Col>
-        <Col sm={12} md={6} lg={6}>
-          <div>
-            <h3>Parent-Teacher Meeting Slides</h3>
-            <p>
-              The slides from the Parent-Teacher Meeting held during
-              Kickoff 2026.
-            </p>
-            <AlternativeButton link="https://docs.google.com/presentation/d/17fX-7aDVWG-cUtvcWZHVJ4zSp4ISoH6wv0ZiofRRFLc/edit?usp=sharing">
-              Slides &rsaquo;
-            </AlternativeButton>
-          </div>
-        </Col>
-        <Col sm={12} md={6} lg={6}>
-          <div>
-            <h3>Worksessions</h3>
-            <p>
-              Sign up for worksessions 24 hours in advance! Having debug issues?
-              Need some more build time or tools? Come on out!
-            </p>
-            <AlternativeButton link="https://www.signupgenius.com/go/10C0448AAAA2AA2FDC16-62918937-student">
-              Worksession Sign Up &rsaquo;
-            </AlternativeButton>
-          </div>
-        </Col>
-        <Col sm={12} md={6} lg={6}>
-          <div>
-            <h3>Robot Simulator</h3>
-            <p>
-              Get up to speed with the{" "}
-              <a href="https://github.com/pioneers/runtime/wiki/Student-API">
-                Robot API
-              </a>{" "}
-              quickly, or test your robot code.
-            </p>
-            <AlternativeButton link="https://pimulator.pierobotics.org/">
-              Simulator &rsaquo;
-            </AlternativeButton>
-          </div>
-        </Col>
-      </Row>
-    </ResourcesWrapper>
-  )
-}
-
 const Communication = () => {
-
-
   return (
     <Layout>
       <HelmetWrapper
-        title="Competition"
-        description="Linked here will be the various resources pertaining to our competition."
+        title="Communication"
+        description="Linked here will be the various resources to get in contact with PiE staff."
       />
       <HeroWrapper>
         <div className="filler"></div>
         <div className="hero-image">
           <div>
-            <h1>Competition</h1>
+            <h1>Communication</h1>
           </div>
         </div>
       </HeroWrapper>
 
-     
       <CustomizedContainer>
-        <div id="resources" />
         <Container fluid>
           <h4 style={{ marginBottom: "1.5em", color: theme.colors.grey400 }}>
-            HELPFUL LINKS
+            REACH OUT TO STAFF
           </h4>
-          <Header type={"blue"}>Resources For Students</Header>
+          <Header type={"blue"}>Discord</Header>
+          <p style={{ maxWidth: "700px"}}>
+            If you have questions about events, debugging, hardware, or anything else relating
+            to the PiE competition, we're here to help! The best way to reach out to PiE staff is
+            through our student discord, where high school teams can directly communicate with the
+            competition organizers. Don't need help right now? We encourage all high schoolers
+            to join the discord to receive important announcements about our events.
+          </p>
+          <AlternativeButton type="hipster" link="https://discord.com/invite/hYREQD2N5r">
+            Join the Discord
+          </AlternativeButton>
         </Container>
-        <StudentResources />
       </CustomizedContainer>
 
-      <CustomizedContainer>
-        <div id="resources" />
+      <CustomizedContainer color={theme.colors.grey100}>
         <Container fluid>
           
           <Header type={"blue"}>Schedule a Worksession With Our Staff!</Header>
