@@ -23,6 +23,12 @@ import Col from "react-bootstrap/esm/Col"
 import Container from "react-bootstrap/esm/Container"
 
 import pic from "../../assets/images/robot2.jpg"
+import { propsToClassKey } from "@mui/styles"
+import {dangerouslySetInnerHTML} from "react"
+
+import {renderToStaticMarkup} from 'react-dom/server';
+import {useRef, useLayoutEffect} from 'react';
+
 
 const query = graphql`
   {
@@ -42,6 +48,15 @@ const query = graphql`
     }
   }
 `
+const filepath = "../donorbox.html"
+const filecont = fetch(filepath)
+  .then(response =>response.text()
+  )
+  .then(html => console.log(html)
+  )
+  
+
+{/*const __htmlString = fetch(filepath) */}
 
 const Individuals = () => {
   const data = useStaticQuery(query)
@@ -52,6 +67,36 @@ const Individuals = () => {
     "Silver Sponsor",
     "Bronze Sponsor",
   ]
+  const showDonorbox = () => {
+    const htmlSet = '<script type="module" src="https://donorbox.org/widgets.js" asynch={true}></script><dbox-widget campaign="pioneers-in-engineering" type="donation_form" enable-auto-scroll="true"></dbox-widget>';
+    return(<div dangerouslySetInnerHTML={{__html: htmlSet}}/>);
+    
+  }
+
+const markup = `
+  <script type="module" src="https://donorbox.org/widgets.js" asynch={true}></script><dbox-widget campaign="pioneers-in-engineering" type="donation_form" enable-auto-scroll="true"></dbox-widget>;
+	
+`;
+
+<DangerousElement markup={markup} />
+  function DangerousElement({ markup }) {
+    const refScr = useRef<HTMLDivElement>(null);
+    useLayoutEffect(() => {
+        const range = document.createRange();
+        range.selectNode(refScr.current);
+        const documentFragment = range.createContextualFragment(markup);
+        refScr.current.innerHTML = '<script type="module" src="https://donorbox.org/widgets.js" asynch={true}></script><dbox-widget campaign="pioneers-in-engineering" type="donation_form" enable-auto-scroll="true"></dbox-widget>';
+        refScr.current.append(documentFragment);
+    }, [markup]);
+    return (
+      <div>
+        ref = {refScr};
+        dangerouslySetInnerHTML = {{__html: markup}};
+      </div>
+    );
+  }
+  
+  
   return (
     <React.Fragment>
       <Layout>
@@ -133,9 +178,59 @@ const Individuals = () => {
           </DonationsWrapper>
         </CustomizedContainer>
 
-        <CustomizedContainer color="#e8f1fb">
-          <Container fluid>
-            <Header type={"gold-header"}>What PiE Can Do For You</Header>
+         <CustomizedContainer>
+        <div id="resources" />
+        <Container fluid>
+          
+          <Header type={"blue"}>Consider Donating to Our Donorbox Campaign</Header>
+          <div>
+            <p>Consider a recurring or one-time donation to help further PiE's capacity to reach students!</p>
+            {/*<p>
+              Find and {" "}
+              <a href="https://calendar.app.google/iRvf5JCuYUjFw23R7">
+                Schedule a Time
+              </a>{" "}
+              for Office Hours with Members of PiE.
+            </p>/*}
+            {/* <AlternativeButton link="https://pimulator.pierobotics.org/">
+              Simulator &rsaquo;
+            </AlternativeButton> */}
+            {/*<iframe src="https://donorbox.org/pioneers-in-engineering" title = "Schedule a Worksession" 
+                style = {{width: '100vh', height: '70vh' }}/> 
+                */}
+          </div>
+          <div>
+            {showDonorbox()}
+          </div>
+          <div>
+            <script type="module" src="https://donorbox.org/widgets.js" async></script><dbox-widget campaign="pioneers-in-engineering" type="donation_form" enable-auto-scroll="true"></dbox-widget>          
+          </div>
+
+        </Container>
+      </CustomizedContainer>
+        
+    
+          
+
+       
+        {/*<div>
+            <p>
+              text
+            </p>
+          <script type="module" src="https://donorbox.org/widgets.js" async></script>{/*<dbox-widget campaign="pioneers-in-engineering" type="donation_form" enable-auto-scroll="true"></dbox-widget>
+
+        </div> */}
+       
+
+        <CustomizedContainer color="white">
+          <Sponsors fluid>
+            <h4 style={{ marginBottom: "1.5em", color: theme.colors.grey400 }}>
+              OUR THANKS
+            </h4>
+            <div id="sponsors" />
+            {/*<Header type={"gold-header"}>Sponsors</Header>*/}
+            <Container fluid>
+            <Header type={"gold-header"}>To Our Sponsors</Header>
 
             <ForYouWrapper fluid>
               <Row>
@@ -143,14 +238,6 @@ const Individuals = () => {
                   <img src={Poster} className="img" alt="Poster" />
                 </Col>
                 <Col sm={12} md={6} lg={6}>
-                  <p>
-                    As PiE is an organization with close ties to{" "}
-                    <a href="https://tbp.berkeley.edu/">Tau Beta Pi</a>, the
-                    staff and faculty of the College of Engineering, engineering
-                    honor societies, and about 27,000 undergraduate students at
-                    UC Berkeley, your support of the program is extremely
-                    visible to the community at and around UC Berkeley.
-                  </p>
                   <p>
                     We appreciate and recognize our{" "}
                     <a href="/SupportUs#sponsors">sponsors</a> in the form
@@ -173,40 +260,9 @@ const Individuals = () => {
               </Row>
             </ForYouWrapper>
           </Container>
-        </CustomizedContainer>
-
-
-        <CustomizedContainer>
-        <div id="resources" />
-        <Container fluid>
-          
-          <Header type={"blue"}>Schedule a Donatesession With Our Staff!</Header>
-          <div>
-            <h3>Book an Appointment</h3>
-            {/*<p>
-              Find and {" "}
-              <a href="https://calendar.app.google/iRvf5JCuYUjFw23R7">
-                Schedule a Time
-              </a>{" "}
-              for Office Hours with Members of PiE.
-            </p>/*}
-            {/* <AlternativeButton link="https://pimulator.pierobotics.org/">
-              Simulator &rsaquo;
-            </AlternativeButton> */}
-            <iframe src="https://donorbox.org/pioneers-in-engineering" title = "Schedule a Worksession" 
-                style = {{width: '100vh', height: '70vh' }}/> 
-          </div>
-        </Container>
         
-      </CustomizedContainer>
 
-        <CustomizedContainer color="white">
-          <Sponsors fluid>
-            <h4 style={{ marginBottom: "1.5em", color: theme.colors.grey400 }}>
-              OUR THANKS
-            </h4>
-            <div id="sponsors" />
-            <Header type={"gold-header"}>Sponsors</Header>
+            {/*}
             <p>
               As of 2021-2022 competition year, Pioneers in Engineering would
               like to extend its thanks for the support granted by the following
@@ -220,6 +276,7 @@ const Individuals = () => {
                 Sponsorship Packet 2022-2023.pdf
               </a>
             </p>
+            */}
             <div style={{display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center"}}>
                 <Header type={"gold-header"}>Special thanks to our 2026 Crowdfunders!</Header>
                 <p style={{fontSize: "1.5rem"}}>
@@ -232,12 +289,14 @@ const Individuals = () => {
                   <strong>Lisa Branum</strong>
                 </p>
             </div>
-            <div style={{display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center"}}>
+
+            {/*<div style={{display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center"}}>
               <Header style={{color: theme.colors.grey400}}>Silver Sponsors:</Header>
               <a href="https://www.tsmc.com/english">
                 <img src="/assets/sponsors/tsmc.png" alt="TSMC logo" style={{width:"12rem", height:"auto"}} />
               </a>
             </div>
+            */}
             {/* {levels.map(level => {
               const items = sponsors.filter(
                 sponsor => sponsor.sponsorshipLevel === level
@@ -273,6 +332,8 @@ const Individuals = () => {
     </React.Fragment>
   )
 }
+
+
 const HeroWrapper = styled.div`
   .filler {
     position: relative;

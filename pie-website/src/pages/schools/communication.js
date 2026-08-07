@@ -59,11 +59,11 @@ const Communication = () => {
         </Container>
       </CustomizedContainer>
 
-      <CustomizedContainer color={theme.colors.grey100}>
+      <CustomizedContainer color={theme.colors.grey100} align-items="center">
         <Container fluid>
           
           <Header type={"blue"}>Schedule a Worksession With Our Staff!</Header>
-          <div>
+          <bookingFrame class="iframe-wrapper">
             <h3>Book an Appointment</h3>
             <p>
               Find and {" "}
@@ -76,8 +76,8 @@ const Communication = () => {
               Simulator &rsaquo;
             </AlternativeButton> */}
             <iframe src="https://calendar.app.google/iRvf5JCuYUjFw23R7" title = "Schedule a Worksession" 
-                style = {{width: '100vh', height: '70vh' }}/> 
-          </div>
+                style = {{width: '150%', height: '150%', overflow: "hidden", transform: 'scale(0.65)' }}  /> 
+          </bookingFrame>
         </Container>
         
       </CustomizedContainer>
@@ -85,6 +85,19 @@ const Communication = () => {
   )
 }
 
+const bookingFrame = styled.div`
+  .iframe-wrapper{
+    height: 60vw;
+    width: 100%;
+    overflow: hidden;
+  }
+  .iframe-wrapper iframe{
+    height: 150%;
+    width: 150%;
+    transform: (0.65);
+    overflow: hidden;
+  }
+`
 const HeroWrapper = styled.div`
   .filler {
     position: relative;
@@ -145,5 +158,12 @@ const ResourcesWrapper = styled(Container)`
     color: ${theme.colors.black};
   }
 `
+
+{/*const frameDiv = styled.div`
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  width: 40vw;
+`*/}
 
 export default Communication

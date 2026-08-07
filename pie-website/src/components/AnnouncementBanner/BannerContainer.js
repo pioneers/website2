@@ -22,15 +22,41 @@ function Banner() {
      
 */
 const Banner = () => {
+const dateInfo = new Date()
+  const year = dateInfo.getFullYear()
+  const day = dateInfo.getDate()
+  const month = dateInfo.getMonth()
+    if((month<3 || (month<4 && day<14))  || (month==11 || (month==10&& day>8))){
+        return(
+            <AlertThemed variant="info" dismissible="true">
+                <p>
+                    PiE Student Team Participants: Reminder that the {year} RC Scholarship is accepting applications. {" "}
+                    <a href="/schools/scholarship">Apply now!</a>
+                </p>
+            </AlertThemed>
+        )
 
+    }
+    if(month==9 && day==6){
     return(
-        <AlertThemed variant="info" >
+        <AlertThemed variant="info" dismissible="true">
                 <p>
                     Test banner for information.  
                     <Alert.Link href="pioneers.berkeley.edu">pioneers.berkeley.edu </Alert.Link>
                 </p>
         </AlertThemed>
     )
+    }
+    if(month==9 && day==7){
+    return(
+        <AlertThemed variant="info" dismissible="true">
+                <p>
+                    PiE Student Team Participants: Reminder that the {year} RC Scholarship is accepting applications. {" "}
+                    <a href="../schools/scholarship">Apply now!</a>
+                </p>
+        </AlertThemed>
+    )
+    }
 }
 {/*}
 */}
@@ -62,7 +88,11 @@ Alert.muiAlert-colorInfo(
 
 const AlertThemed = styled(Alert)`
     background-color: ${theme.colors.blue100};
+    display: 'flex';
+    justify-content: "center";
     text-align: "center";
+    align-items: "center";
+
 `
 
 

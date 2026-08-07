@@ -7,15 +7,22 @@ import Layout from "../../components/Layout"
 import styled from "styled-components"
 import AlternativeButton from "../../components/AlternativeButton"
 import CustomizedContainer from "../../components/CustomizedContainer"
+import Carousel from "react-bootstrap/Carousel"
 
 import KitCost from "../../assets/images/sponsors/kit-cost.png"
 import Poster from "../../assets/images/companyposter.jpg"
+
+import sponsor1 from "../../assets/images/pie-expo.jpg"
+import sponsor2 from  "../../assets/images/comp.jpg"
+
 
 import HelmetWrapper from "../../components/HelmetWrapper"
 import { BoxesWrapper } from "../../assets/themes/boxes"
 
 import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
+
+import RedirectExternalURL from "../../components/redirect"
 
 import theme from "../../assets/themes/theme"
 import Row from "react-bootstrap/esm/Row"
@@ -52,6 +59,9 @@ const Organizations = () => {
     "Silver Sponsor",
     "Bronze Sponsor",
   ]
+  const sponsorImages = [
+    sponsor1, sponsor2,
+  ]
   return (
     <React.Fragment>
       <Layout>
@@ -60,7 +70,7 @@ const Organizations = () => {
           description="Because of our low entry fee to our competition over $900 of our kit is subsidized by Pioneers in Engineering. For that reason, we rely on donations and grants to continue our operation to provide STEM education to the Bay Area"
         />
         <HeroWrapper>
-          <div className="filler"></div>
+          <div className="filler"/>
           <div className="hero-image">
             <div>
               <h1>Organizations</h1>
@@ -68,7 +78,7 @@ const Organizations = () => {
           </div>
         </HeroWrapper>
 
-            <CustomizedContainer color="#f4f4f5">
+        <CustomizedContainer color="#f4f4f5">
           <HowToDonateWrapper
             fluid
             padding="3rem 2rem"
@@ -110,13 +120,30 @@ const Organizations = () => {
                       <br></br>
                       If you would like more information about PiE and how to
                       partner with us, please email{" "}
-                      <a href="mailto:partnerships@pierobotics.org">
+                      <a style={{color: theme.colors.black }} href="mailto:partnerships@pierobotics.org">
                         partnerships@pierobotics.org
                       </a>
                     </p>
-                    <AlternativeButton link="https://donorbox.org/pioneers-in-engineering">
+                    {/* <AlternativeButton link="https://donorbox.org/pioneers-in-engineering">
+                      Big Give Link &rsaquo;
+                    </AlternativeButton> */}
+                  </div>
+                </div>
+              </Col>
+              <Col sm={12} md={12} lg={6}>
+                <div className="card">
+                  <div>
+                    <div id="donate" />
+                    <h2>Donation Considerations</h2>
+                    <p>
+                     Are you an industry professional considering supporting us as a one-time donor? Consider a Donorbox donation on our {" "}
+                     <a style={{color: theme.colors.black }} href = "../individuals">
+                      individual sponsors page!
+                    </a>
+                    </p>
+                    {/*<AlternativeButton link="https://donorbox.org/pioneers-in-engineering">
                       Donorbox Link &rsaquo;
-                    </AlternativeButton>
+                    </AlternativeButton>*/}
                     {/* <AlternativeButton link="https://donorbox.org/pioneers-in-engineering">
                       Big Give Link &rsaquo;
                     </AlternativeButton> */}
@@ -189,7 +216,26 @@ const Organizations = () => {
               </Col>
             </Row>
           </DonationsWrapper>
-        </CustomizedContainer>
+          </CustomizedContainer>
+        <CustomizedContainer color={theme.colors.grey200}>
+        <Container fluid>
+          {/*<img src={sponsor1}/>*/}
+          <CustomCarousel variant="dark">
+            {sponsorImages.map(item => {
+              const sponsorImage = item
+              return (
+                <Carousel.Item>
+                  <div className="carouselImage">
+                    <img src={sponsorImage} width='75%'/>
+                  </div>
+                </Carousel.Item>
+                
+              )
+            })}
+          </CustomCarousel> 
+        </Container>
+      </CustomizedContainer>
+      
 
         <CustomizedContainer color="#e8f1fb">
           <Container fluid>
@@ -208,6 +254,7 @@ const Organizations = () => {
                     honor societies, and about 27,000 undergraduate students at
                     UC Berkeley, your support of the program is extremely
                     visible to the community at and around UC Berkeley.
+                    <RedirectExternalURL linkDestination="https://tbp.berkeley.edu"/>
                   </p>
                   <p>
                     We appreciate and recognize our{" "}
@@ -254,19 +301,7 @@ const Organizations = () => {
               </a>
             </p>
             <div style={{display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center"}}>
-                <Header type={"gold-header"}>Special thanks to our 2026 Crowdfunders!</Header>
-                <p style={{fontSize: "1.5rem"}}>
-                  <strong>Jacob Pruess</strong>
-                </p>
-                <p style={{fontSize: "1.5rem"}}>
-                  <strong>Ethan Seither</strong>
-                </p>
-                <p style={{fontSize: "1.5rem"}}>
-                  <strong>Lisa Branum</strong>
-                </p>
-            </div>
-            <div style={{display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center"}}>
-              <Header style={{color: theme.colors.grey400}}>Silver Sponsors:</Header>
+              <Header style={{color: theme.colors.grey400}}>Sponsors:</Header>
               <a href="https://www.tsmc.com/english">
                 <img src="/assets/sponsors/tsmc.png" alt="TSMC logo" style={{width:"12rem", height:"auto"}} />
               </a>
@@ -378,6 +413,35 @@ const Sponsors = styled(Container)`
 
   p > a:hover {
     color: ${theme.colors.black};
+  }
+`
+const CustomCarousel = styled(Carousel)`
+  .testimonial {
+    padding: 10rem;
+    text-align: center;
+  }
+
+  .carouselImage{
+    padding: 2 rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  p {
+    line-height: 1rem;
+  }
+
+  @media screen and (max-width: 860px) {
+    .testimonial {
+      padding: 5rem;
+    }
+    .carouselImage{
+      padding: 2rem;
+    }
+    h3 {
+      font-size: 1.05rem;
+    }
   }
 `
 

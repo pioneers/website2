@@ -13,7 +13,7 @@ import Tabs from "react-bootstrap/Tabs"
 
 import Layout from "../../components/Layout"
 
-import styled from "styled-components"
+import styled, { ThemeConsumer } from "styled-components"
 import HelmetWrapper from "../../components/HelmetWrapper"
 
 import { useStaticQuery, graphql } from "gatsby"
@@ -117,7 +117,7 @@ const OurTeam = () => {
         </HeaderContainer>
         <Container fluid>
           <Tabs defaultActiveKey="staff" id="uncontrolled-tab-example">
-            <Tab eventKey="staff" title="Staff">
+            <Tab eventKey="staff" title="Staff" class="styleTab">
               {/* <h3 style={{ margin: "1rem 0" }}>Click on us to learn more!</h3> */}
               <div id="leadership"></div>
               <br />
@@ -263,6 +263,35 @@ const OurTeam = () => {
     )  
 }
 
+{/* const styledTabs = styled(Tabs)`
+   .nav-tabs .nav-link{
+  color: ${theme.colors.blue500}
+  background-color: ${theme.colors.black}
+}
+  .nav-tabs .nav-link.active{
+  color: ${theme.colors.blue300}
+  background-color: ${theme.colors.white}
+  border-color: ${theme.colors.gold300}
+  }
+  
+` */}
+const styledTabs = styled(Tabs)`
+  .tab-item{
+  color: ${theme.colors.blue500}
+  }
+`
+
+const customTab = styled(Tab)`
+.styleTab{
+  background-color: ${theme.colors.blue100}
+}
+.tab-btn{
+  backgroundcolor: ${theme.colors.blue100}
+}
+.tab-btn.active{
+  backgroundcolor: ${theme.colors.bleu500}  
+}
+`
 const SpecialCol = styled(Col)`
   padding: 1rem;
   & > div {

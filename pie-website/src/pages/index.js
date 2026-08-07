@@ -189,7 +189,7 @@ export default function Home(props) {
 const HeroWrapper = styled.div`
   .filler {
     position: relative;
-    height: 92vh;
+    height: 94vh;
     z-index: -1;
   }
   .hero-image {
