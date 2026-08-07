@@ -254,7 +254,7 @@ const Organizations = () => {
                     honor societies, and about 27,000 undergraduate students at
                     UC Berkeley, your support of the program is extremely
                     visible to the community at and around UC Berkeley.
-                    <RedirectExternalURL linkDestination="https://tbp.berkeley.edu"/>
+                    {/*<RedirectExternalURL linkDestination="https://tbp.berkeley.edu"/>*/}
                   </p>
                   <p>
                     We appreciate and recognize our{" "}
