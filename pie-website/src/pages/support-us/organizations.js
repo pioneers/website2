@@ -15,6 +15,8 @@ import Poster from "../../assets/images/companyposter.jpg"
 import sponsor1 from "../../assets/images/pie-expo.jpg"
 import sponsor2 from  "../../assets/images/comp.jpg"
 
+import {Link} from 'gatsby'
+
 
 import HelmetWrapper from "../../components/HelmetWrapper"
 import { BoxesWrapper } from "../../assets/themes/boxes"
@@ -22,7 +24,7 @@ import { BoxesWrapper } from "../../assets/themes/boxes"
 import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 
-import RedirectExternalURL from "../../components/redirect"
+import RedirectExternalURL from "../redirect"
 
 import theme from "../../assets/themes/theme"
 import Row from "react-bootstrap/esm/Row"
@@ -32,6 +34,7 @@ import Container from "react-bootstrap/esm/Container"
 import bluegoldImg from "../../assets/images/sponsors/coe-ess-bluegold.jpg"
 
 import pic from "../../assets/images/robot2.jpg"
+import { Script } from "gatsby"
 
 const query = graphql`
   {
@@ -256,7 +259,10 @@ const Organizations = () => {
                     honor societies, and about 27,000 undergraduate students at
                     UC Berkeley, your support of the program is extremely
                     visible to the community at and around UC Berkeley.
-                    {/*<RedirectExternalURL linkDestination="https://tbp.berkeley.edu"/>*/}
+                    {/*} <Link to="/redirect" state={{linkDestination:"https://tbp.berkeley.edu"}}> </Link>*/}
+                    <RedirectExternalURL linkDestination="https://tbp.berkeley.edu">  link </RedirectExternalURL>
+                    {/* </Link> */}
+                    {/*<RedirectExternalURL linkDestination="https://tbp.berkeley.edu/"/> */}
                   </p>
                   <p>
                     We appreciate and recognize our{" "}

@@ -14,7 +14,7 @@ import Poster from "../../assets/images/companyposter.jpg"
 import HelmetWrapper from "../../components/HelmetWrapper"
 import { BoxesWrapper } from "../../assets/themes/boxes"
 
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Script } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 import theme from "../../assets/themes/theme"
@@ -27,7 +27,7 @@ import { propsToClassKey } from "@mui/styles"
 import {dangerouslySetInnerHTML} from "react"
 
 import {renderToStaticMarkup} from 'react-dom/server';
-import {useRef, useLayoutEffect} from 'react';
+import {useRef, useEffect, useLayoutEffect} from 'react';
 
 
 const query = graphql`
@@ -48,6 +48,7 @@ const query = graphql`
     }
   }
 `
+{/* Donorbox method 1, object[promise] error
 const filepath = "../donorbox.html"
 const filecont = fetch(filepath)
   .then(response =>response.text()
@@ -56,7 +57,7 @@ const filecont = fetch(filepath)
   )
   
 
-{/*const __htmlString = fetch(filepath) */}
+const __htmlString = fetch(filepath) */}
 
 const Individuals = () => {
   const data = useStaticQuery(query)
@@ -67,12 +68,27 @@ const Individuals = () => {
     "Silver Sponsor",
     "Bronze Sponsor",
   ]
+  {/* Donorbox Method 2, dangerouslysetInnerhtml not rendering 
   const showDonorbox = () => {
-    const htmlSet = '<script type="module" src="https://donorbox.org/widgets.js" asynch={true}></script><dbox-widget campaign="pioneers-in-engineering" type="donation_form" enable-auto-scroll="true"></dbox-widget>';
+    const htmlSet = '<script type="module" src="https://donorbox.org/widgets.js" async={true}></script><dbox-widget campaign="pioneers-in-engineering" type="donation_form" enable-auto-scroll="true"></dbox-widget>';
     return(<div dangerouslySetInnerHTML={{__html: htmlSet}}/>);
     
   }
+*/}
 
+{/* Method 5 - */}
+function showDonorbox() {
+    
+    return(
+      <div>
+        <Script type="module" src="https://donorbox.org/widgets.js" async={true} strategy="post-hydrate"/><dbox-widget campaign="pioneers-in-engineering" type="donation_form" enable-auto-scroll="true"></dbox-widget>
+      </div>
+    );
+    
+}
+
+
+  {/* Donorbox Method 3, Objects are not valid as a React child (found: [object Promise]). If you meant to render a collection of children, use an array instead.
 const markup = `
   <script type="module" src="https://donorbox.org/widgets.js" asynch={true}></script><dbox-widget campaign="pioneers-in-engineering" type="donation_form" enable-auto-scroll="true"></dbox-widget>;
 	
@@ -95,8 +111,31 @@ const markup = `
       </div>
     );
   }
-  
-  
+    */}
+  {/*} Donorbox Method 4
+  async function ShowDonorbox2(){
+    const scriptContRef = useRef(null)
+    const script = document.createElement('script')
+
+    useEffect(() => {
+
+    const currCont = scriptContRef.current
+    script.src = "https://donorbox.org/widgets.js"
+    script.async=true
+    script.setAttribute("campaign", "pioneers-in-engineering")
+    script.setAttribute("type", "donation_form")
+    script.setAttribute("enable-auto-scroll", "true")
+
+    currCont.appendChild(script)
+
+    
+    }, []
+  )
+    return(
+      <div ref={scriptContRef}/>
+    )
+  }
+    */}
   return (
     <React.Fragment>
       <Layout>
@@ -199,12 +238,13 @@ const markup = `
                 style = {{width: '100vh', height: '70vh' }}/> 
                 */}
           </div>
-          <div>
-            {showDonorbox()}
-          </div>
-          <div>
+        
+            {/* {ShowDonorbox2()} */}
+          {showDonorbox()} 
+          
+          {/*<div>
             <script type="module" src="https://donorbox.org/widgets.js" async></script><dbox-widget campaign="pioneers-in-engineering" type="donation_form" enable-auto-scroll="true"></dbox-widget>          
-          </div>
+          </div> */}
 
         </Container>
       </CustomizedContainer>

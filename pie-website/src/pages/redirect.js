@@ -24,12 +24,27 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import Col from "react-bootstrap/esm/Col"
 import Row from "react-bootstrap/esm/Row"
 
+
+
 import theme from "../assets/themes/theme"
 import CustomizedContainer from "../components/CustomizedContainer"
 
 export default function RedirectExternalURL(props) {
-    const targetURL = props.linkDestination
+    /* const targetURLState = useState(window.state) */
+    /*const targetURL = targetURLState.linkDestination */
+    const targetURL = props.linkDestination 
     const [countdown, redirCountdown] = useState(5)
+    const [redir, setCount] = useState(0)
+
+    function FindPath(){
+            const [pathname, setPathname] = useState(window.location.pathname);
+            useEffect(()=>{
+                setPathname(window.location.pathname);
+            }, []);
+            return pathname;
+        }
+    const currPath = FindPath()
+
     useEffect(() => {
         const redirTimer = setInterval(() => {
             redirCountdown((countdown) => {
@@ -44,14 +59,40 @@ export default function RedirectExternalURL(props) {
         }, 1000
     );
     return () => clearInterval(redirTimer);
-    }, [targetURL]
-)
-    return(
+    }, []
+    )
+    {/*if(currPath === "/redirect"){ */}
+        return ( <div>
+            <h1>You are following an external link outside of pioneers.berkeley.edu. No redirect?</h1>
+            <button onClick={()=> window.location.replace(targetURL)}>
+                Click here.
+            </button>
+        </div>
+        ), []
+    
+    {/*    else if(redir<1){
+        setCount(redir => redir +1)
+        return(
+            window.location.replace("/redirect")
+        ), []
+    }
+    else{
+        return(
+            <div>
+                <p>
+                    has redirected
+                </p>
+            </div>
+        ), []
+    }
+    {/* return(
         <div>
             <h1>You are following an external link outside of pioneers.berkeley.edu. No redirect?</h1>
             <button onClick={()=> window.location.replace(targetURL)}>
                 Click here.
             </button>
         </div>
-    )
+    ) */} 
 }
+
+
