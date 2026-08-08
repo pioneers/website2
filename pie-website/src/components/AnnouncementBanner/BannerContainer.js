@@ -1,9 +1,9 @@
 import React, { Component } from "react"
-import {useState} from "react"
 import styled from "styled-components"
 import theme from "../../assets/themes/theme"
 import { CloseButton } from "react-bootstrap"
 import {Alert} from "react-bootstrap"
+import {useEffect, useState} from 'react'
 
 {/*const BannerContainer = () => {
     const[show, setShow] = useState(true)
@@ -22,44 +22,77 @@ function Banner() {
      
 */
 const Banner = () => {
-const dateInfo = new Date()
+    function FindPath(){
+        const [pathname, setPathname] = useState(window.location.pathname);
+        useEffect(()=>{
+            setPathname(window.location.pathname);
+        }, []);
+        return pathname;
+    }
+    const currPath = FindPath()
+    {/* const location = useLocation() */}
+    const dateInfo = new Date()
   const year = dateInfo.getFullYear()
   const day = dateInfo.getDate()
   const month = dateInfo.getMonth()
-    if((month<3 || (month<4 && day<14))  || (month==11 || (month==10&& day>8))){
+  {/*return(
+        <AlertThemed variant="info" dismissible="true">
+                <p>
+                    PiE Student Team Participants: The  RC Scholarship is accepting applications. {" "}
+                    <Alert.Link href="schools/scholarship"> Apply now!</Alert.Link>
+                </p>
+        </AlertThemed>
+        );*/}
+    {/*if(location.pathname == "/schools/scholarship"){
+            return(
+                null
+            )
+        } */}
+    if(currPath === "/schools/scholarship/"){
+        return null;
+    }
+    else if((month < 3 || (month<4 && day<14))  || ((month==11) || (month==10 && day>8))){
         return(
             <AlertThemed variant="info" dismissible="true">
                 <p>
-                    PiE Student Team Participants: Reminder that the {year} RC Scholarship is accepting applications. {" "}
+                    PiE Student Team Participants: Reminder that the RC Scholarship is accepting applications. {" "}
                     <a href="/schools/scholarship">Apply now!</a>
                 </p>
             </AlertThemed>
-        )
+        );
 
     }
-    if(month==9 && day==6){
-    return(
+    else if(month==7 && day==6){
+        return(
         <AlertThemed variant="info" dismissible="true">
                 <p>
                     Test banner for information.  
                     <Alert.Link href="pioneers.berkeley.edu">pioneers.berkeley.edu </Alert.Link>
                 </p>
         </AlertThemed>
-    )
+    );
     }
-    if(month==9 && day==7){
-    return(
+    else if(month==7 && day==7) {
+        return(
         <AlertThemed variant="info" dismissible="true">
                 <p>
-                    PiE Student Team Participants: Reminder that the {year} RC Scholarship is accepting applications. {" "}
-                    <a href="../schools/scholarship">Apply now!</a>
+                    PiE Student Team Participants: Reminder that the RC Scholarship is accepting applications. {" "}
+                    <a href="schools/scholarship"> Apply now!</a>
                 </p>
         </AlertThemed>
-    )
+        );
     }
+    else {
+        return (null);
+    }
+  
+    /*return(
+        <div>
+            {year}
+        </div>
+    ) */
 }
-{/*}
-*/}
+
 /*
 const Alertupdatedtheme(){
     component: {
@@ -88,9 +121,9 @@ Alert.muiAlert-colorInfo(
 
 const AlertThemed = styled(Alert)`
     background-color: ${theme.colors.blue100};
-    display: 'flex';
-    justify-content: "center";
+    width: 100%;
     text-align: "center";
+    justify-content: "center";
     align-items: "center";
 
 `

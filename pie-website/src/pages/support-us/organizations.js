@@ -29,6 +29,8 @@ import Row from "react-bootstrap/esm/Row"
 import Col from "react-bootstrap/esm/Col"
 import Container from "react-bootstrap/esm/Container"
 
+import bluegoldImg from "../../assets/images/sponsors/coe-ess-bluegold.jpg"
+
 import pic from "../../assets/images/robot2.jpg"
 
 const query = graphql`
@@ -302,6 +304,9 @@ const Organizations = () => {
             </p>
             <div style={{display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center"}}>
               <Header style={{color: theme.colors.grey400}}>Sponsors:</Header>
+              <a href="https://esc.studentorg.berkeley.edu/blueandgold.html">
+                <img src={bluegoldImg} style={{width:"15rem", height:"auto"}}/>
+              </a>
               <a href="https://www.tsmc.com/english">
                 <img src="/assets/sponsors/tsmc.png" alt="TSMC logo" style={{width:"12rem", height:"auto"}} />
               </a>
