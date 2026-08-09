@@ -260,7 +260,7 @@ const Organizations = () => {
                     UC Berkeley, your support of the program is extremely
                     visible to the community at and around UC Berkeley.
                     {/*} <Link to="/redirect" state={{linkDestination:"https://tbp.berkeley.edu"}}> </Link>*/}
-                    <RedirectExternalURL linkDestination="https://tbp.berkeley.edu">  link </RedirectExternalURL>
+                    {/*<RedirectExternalURL linkDestination="https://tbp.berkeley.edu">  link </RedirectExternalURL> */}
                     {/* </Link> */}
                     {/*<RedirectExternalURL linkDestination="https://tbp.berkeley.edu/"/> */}
                   </p>

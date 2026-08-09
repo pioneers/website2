@@ -28,7 +28,39 @@ import pic from "../assets/images/homepage-banners/explaining.jpg"
 
 import MailchimpFormContainer from "../components/Mailchimp"
 import { Link } from "gatsby"
+{/*import {useStaticQuery, graphql} from "gatsby"
 
+const PullPages = () => {
+  const PagesGroup = useStaticQuery(graphql`
+    query GetPages{
+      allSitePage{
+        nodes{
+          path
+        }
+      }
+    }
+
+  
+    `)
+
+  const pages = PagesGroup.allSitePage.nodes
+
+  return(
+    <div>
+      <ul>
+        {pages.map((page) =>{
+          <li key={page.path}>
+            <Link to={page.path}>
+              {page.path}
+            </Link>
+          </li>
+        })}
+      </ul>
+    </div>
+  )
+
+}
+*/}
 // const query = graphql`
 //   {
 //     allContentfulIndexCarousel {
@@ -125,6 +157,12 @@ export default function Home(props) {
         </Students>
       </CustomizedContainer>
 
+      {/*}
+      <div>
+        {PullPages}
+      </div>
+ */}
+ 
       <CustomizedContainer>
         <JoinUsHeader fluid>
           <h4 style={{ marginBottom: "1.5em", color: theme.colors.grey400 }}>

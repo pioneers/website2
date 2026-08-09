@@ -4,11 +4,46 @@ import { useGlobalContext } from "../assets/data/context"
 import sublinks from "../assets/data/data"
 import styled from "styled-components"
 import theme from "../assets/themes/theme"
+{/*}
+import {useStaticQuery, graphql, Link} from "gatsby"
+
+const PullPages = () => {
+  const PagesGroup = useStaticQuery(graphql`
+    query GetPages{
+      allSitePage{
+        nodes{
+          path
+        }
+      }
+    }
+
+  
+    `)
+
+  const pages = PagesGroup.allSitePage.nodes
+
+  return(
+    <div>
+      <ul>
+        {pages.map((page) =>{
+          <li key={page.path}>
+            <Link to={page.path}>
+              {page.path}
+            </Link>
+          </li>
+        })}
+      </ul>
+    </div>
+  )
+
+}
+  */}
 
 // the modal that pops up for the navabar after collapse
 const Sidebar = () => {
   const { isSidebarOpen, closeSidebar } = useGlobalContext()
   return (
+  
     <SidebarWrapper>
       <div
         className={`${

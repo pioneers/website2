@@ -32,7 +32,13 @@ import CustomizedContainer from "../components/CustomizedContainer"
 export default function RedirectExternalURL(props) {
     /* const targetURLState = useState(window.state) */
     /*const targetURL = targetURLState.linkDestination */
+    {/*if(props){ */}
     const targetURL = props.linkDestination 
+    {/* }}
+    else{ 
+        const targetURL = "https://pioneers.berkeley.edu"
+    } */}
+    
     const [countdown, redirCountdown] = useState(5)
     const [redir, setCount] = useState(0)
 
@@ -43,7 +49,7 @@ export default function RedirectExternalURL(props) {
             }, []);
             return pathname;
         }
-    const currPath = FindPath()
+    const currPath = FindPath() 
 
     useEffect(() => {
         const redirTimer = setInterval(() => {
@@ -61,7 +67,7 @@ export default function RedirectExternalURL(props) {
     return () => clearInterval(redirTimer);
     }, []
     )
-    {/*if(currPath === "/redirect"){ */}
+    {/* if(currPath === "/redirect"){ */} 
         return ( <div>
             <h1>You are following an external link outside of pioneers.berkeley.edu. No redirect?</h1>
             <button onClick={()=> window.location.replace(targetURL)}>
@@ -70,7 +76,7 @@ export default function RedirectExternalURL(props) {
         </div>
         ), []
     
-    {/*    else if(redir<1){
+    {/*}}   else if(redir<1){
         setCount(redir => redir +1)
         return(
             window.location.replace("/redirect")

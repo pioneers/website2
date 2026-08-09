@@ -72,7 +72,7 @@ const Banner = () => {
         </AlertThemed>
     );
     }
-    else if(month==7 && day==7) {
+    else if(month==7 && day==8) {
         return(
         <AlertThemed variant="info" dismissible="true">
                 <p>
