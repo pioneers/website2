@@ -11,7 +11,7 @@ import ContactUs from "./ContactUs"
 import { GiHamburgerMenu } from "@react-icons/all-files/gi/GiHamburgerMenu"
 import { useGlobalContext } from "../assets/data/context"
 
-import logo from "../assets/images/logo-border-20px-v3.png"
+import logo from "../assets/images/2026-logo-transparent.png"
 
 import theme from "../assets/themes/theme"
 

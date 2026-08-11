@@ -75,7 +75,7 @@ const SoftwareHub = () => {
             <Col>
               <div className="card">
                 <div>
-                  <h2 style={{ color: theme.colors.blue800 }}>Dawn</h2>
+                  <h2 style={{ color: theme.colors.blue700 }}>Dawn</h2>
                   <h3 style={{ color: theme.colors.grey900 }}>
                     Version: {dawnVersion}
                   </h3>
@@ -206,7 +206,7 @@ const SoftwareHub = () => {
               <h2>Documentation</h2>
               <ul>
                 <li>
-                  <a href="/schools/software-hub/QuickstartGuide/">
+                  <a href="/schools/dawn-docs/quickstart-guide/">
                     Quickstart Guide
                   </a>
                 </li>
@@ -214,12 +214,12 @@ const SoftwareHub = () => {
                   <a href={robotApi}>Robot API</a>
                 </li>
                 <li>
-                  <a href="/schools/software-hub/StudentSkeletonCode/">
+                  <a href="/schools/dawn-docs/student-skeleton-code/">
                     Student Skeleton Code
                   </a>
                 </li>
                 <li>
-                  <a href="/schools/software-hub/DawnGuide/">
+                  <a href="/schools/dawn-docs/dawn-guide/">
                     Guide: Dawn
                   </a>
                 </li>
@@ -227,12 +227,12 @@ const SoftwareHub = () => {
                   Programming Guides
                   <ul>
                     <li>
-                      <a href="/schools/software-hub/Teleop/">
+                      <a href="/schools/dawn-docs/teleop/">
                         Guide #1: Tele-Operated Code
                       </a>
                     </li>
                     <li>
-                      <a href="/schools/software-hub/Autonomous/">
+                      <a href="/schools/dawn-docs/autonomous/">
                         Guide #2: Autonomous Code
                       </a>
                     </li>

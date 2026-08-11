@@ -100,13 +100,6 @@ export default function Home(props) {
             Promoting STEM education to the Bay Area because we strongly believe
             that no student should be denied a quality educational experience
           </h2>
-          <AlternativeButton type="hipster" link="/GetInvolved#timeline">
-            Events
-          </AlternativeButton>
-          <AlternativeButton color="gold" link="/getInvolved/Forms">
-            Join Pie
-          </AlternativeButton>
-          <br />
         </Container>
 
         <WhoWeServe fluid>
@@ -143,16 +136,16 @@ export default function Home(props) {
           <Header type={"gold-header"}>Students</Header>
           <p>
             Are you in high school?{" "}
-            <a href="/getInvolved/Schools">
+            <strong>
               Compete in our 8-week Spring robotics competition!
-            </a>{" "}
+            </strong>{" "}
             For only $100, your team will receive a robotics kit and 2-3 mentors
             for support. We also host a Fall reboot of our past Spring
             competition, as well as workshops such as PiE On The Road.
           </p>
 
-          <AlternativeButton link="/Competition">
-            2026 Spring Competition &rsaquo;
+          <AlternativeButton link="/schools/compete">
+            {new Date().getFullYear()} Spring Competition &rsaquo;
           </AlternativeButton>
         </Students>
       </CustomizedContainer>
@@ -171,8 +164,7 @@ export default function Home(props) {
           <Header type={"blue-header"}>Be a part in our competition</Header>
           <p style={{ marginTop: "1.5rem" }}>
             Excited to help? You could be the next to design the back-end of our
-            robots, <Link to="/getInvolved/Decal">mentor</Link> our students,{" "}
-            <Link to="/GetInvolved#volunteer">judge our competitions</Link>, and
+            robots, mentor our students, judge our competitions, and
             lots more!
           </p>
         </JoinUsHeader>
@@ -187,7 +179,7 @@ export default function Home(props) {
                   mentor and role model for a team of high school students? PiE
                   RC DeCal, offered every spring, offers just that!
                 </p>
-                <Link to="/getInvolved/Decal">Learn More &rsaquo;</Link>
+                <Link to="/get-involved/mentors">Learn More &rsaquo;</Link>
               </div>
             </Col>
             <Col sm={12} md={4} lg={4}>
@@ -198,7 +190,7 @@ export default function Home(props) {
                   Join our team and be part of providing STEM education to the
                   Bay Area
                 </p>
-                <Link to="/GetInvolved">Learn More &rsaquo;</Link>
+                <Link to="/get-involved/staff">Learn More &rsaquo;</Link>
               </div>
             </Col>
             <Col sm={12} md={4} lg={4}>
@@ -210,7 +202,7 @@ export default function Home(props) {
                   volunteer at our events. You can help us by being a judge at
                   our Design Reviews and/or Final Competition.
                 </p>
-                <Link to="/GetInvolved">Learn More &rsaquo;</Link>
+                <Link to="/get-involved/volunteer">Learn More &rsaquo;</Link>
               </div>
             </Col>
           </Row>

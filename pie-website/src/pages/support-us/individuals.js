@@ -281,7 +281,7 @@ const markup = `
                     thousands of members of the UC Berkeley community. In
                     addition, sponsors are warmly welcomed and encouraged to
                     attend the{" "}
-                    <a href="/Competition#timeline">competition day</a>. If
+                    <a href="/about/competition">competition day</a>. If
                     you would like more information about the benefits, please
                     refer to{" "}
                     <a

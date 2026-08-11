@@ -227,7 +227,7 @@ const Organization = () => {
                 <FaHandsHelping />
                 <h4>Helpful college mentors</h4>
                 <p>
-                  PiE runs a <a href="/getInvolved/Decal">decal</a> which
+                  PiE runs a decal which
                   trains a group of dedicated mentors consisting of current and
                   past Berkeley students who are ready and willing to help the
                   students
@@ -240,8 +240,7 @@ const Organization = () => {
                 <h4>Low cost for schools</h4>
                 <p>
                   Because PiE creates everything in the competition and has a
-                  group of wonderful{" "}
-                  <a href="/SupportUs#sponsors">sponsors</a>, we can keep
+                  group of wonderful sponsors, we can keep
                   costs low which lowers the barrier to entry for Bay Area
                   schools
                 </p>
