@@ -186,17 +186,11 @@ const Organizations = () => {
               <Col sm={12} md={6} lg={6}>
                 <h3>Workshops</h3>
                 <p>
-                  We hold a number of workshops on and off Berkeley's campus,
+                  We hold a number of workshops on Berkeley's campus,
                   for high school students and Berkeley students alike. Our
                   workshops are always free for participants, so funding comes
                   out of our own budget. Your donations help us provide:
-                  <li>Trebuchet construction materials</li>
-                  <li>
-                    Materials to fabricate a plywood gear kit for 90+ students
-                  </li>
-                  <li>
-                    Printing to help schools hosting our workshops advertise
-                  </li>
+                
                   <li>
                     Passes to utilize campus spaces and resources to create
                     workshop materials
@@ -242,7 +236,7 @@ const Organizations = () => {
       </CustomizedContainer>
       
 
-        <CustomizedContainer color="#e8f1fb">
+        <CustomizedContainer color="#e8f1fb" marginBottom="5rem">
           <Container fluid>
             <Header type={"gold-header"}>What PiE Can Do For You</Header>
 
@@ -265,8 +259,7 @@ const Organizations = () => {
                     {/*<RedirectExternalURL linkDestination="https://tbp.berkeley.edu/"/> */}
                   </p>
                   <p>
-                    We appreciate and recognize our{" "}
-                    <a href="/SupportUs#sponsors">sponsors</a> in the form
+                    We appreciate and recognize our sponsors in the form
                     of posters, banners and logos, and t-shirts seen by
                     thousands of members of the UC Berkeley community. In
                     addition, sponsors are warmly welcomed and encouraged to
@@ -352,6 +345,8 @@ const Organizations = () => {
     </React.Fragment>
   )
 }
+
+
 const HeroWrapper = styled.div`
   .filler {
     position: relative;

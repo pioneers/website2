@@ -184,10 +184,7 @@ const markup = `
                   for high school students and Berkeley students alike. Our
                   workshops are always free for participants, so funding comes
                   out of our own budget. Your donations help us provide:
-                  <li>Trebuchet construction materials</li>
-                  <li>
-                    Materials to fabricate a plywood gear kit for 90+ students
-                  </li>
+                  
                   <li>
                     Printing to help schools hosting our workshops advertise
                   </li>
@@ -279,8 +276,7 @@ const markup = `
                 </Col>
                 <Col sm={12} md={6} lg={6}>
                   <p>
-                    We appreciate and recognize our{" "}
-                    <a href="/SupportUs#sponsors">sponsors</a> in the form
+                    We appreciate and recognize our sponsors in the form
                     of posters, banners and logos, and t-shirts seen by
                     thousands of members of the UC Berkeley community. In
                     addition, sponsors are warmly welcomed and encouraged to
@@ -300,6 +296,7 @@ const markup = `
               </Row>
             </ForYouWrapper>
           </Container>
+          <Container style={{marginTop:"4rem"}}>
         
 
             {/*}
@@ -366,6 +363,7 @@ const markup = `
               }
               return <div></div>
             })} */}
+            </Container>
           </Sponsors>
         </CustomizedContainer>
       </Layout>
