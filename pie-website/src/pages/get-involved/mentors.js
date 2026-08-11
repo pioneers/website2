@@ -66,7 +66,7 @@ const Mentors = () => {
       },
     },
   }
-if((month>=>9 && day>15) || (month<4 && day<15)){
+if((month>=9 && day>15) || (month<4 && day<15)){
   return (
     <Layout>
       <HelmetWrapper
@@ -226,7 +226,7 @@ if((month>=>9 && day>15) || (month<4 && day<15)){
     </Layout>
   )
 }
-}
+
 else {
    return (
     <Layout>
@@ -387,8 +387,8 @@ else {
     </Layout>
   )
 }
-
 }
+
 
 const HeroWrapper = styled.div`
   .filler {
