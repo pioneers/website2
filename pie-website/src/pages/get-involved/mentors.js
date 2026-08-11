@@ -253,27 +253,32 @@ else {
             local students as you guide them in building a robot for PiE’s
             Robotics Competition. Through our class, you’ll learn what you need
             to know to be a mentor and help build the robot.
-            <br />
-            Join us by enrolling in the decal using the CCN 21910 for the Monday
-            section, and 21911 for the Thursday one. Additionally, fill out our
-            accompying forms linked by the sign up button. Class starts the week
-            of 1/31!
           </p>
-          <AlternativeButton link="/getInvolved/Forms">
+          <p>
+            Mentors can enroll in the Pioneers in Engineering DeCal during the spring
+            semester, and each week will cover content about the parts of the robot, the build
+            process, and the software running the robots. Check back once the enrollment process for 
+            the next spring semester begins! In the meantime, we encourage you to visit our {" "}
+            <a href="/get-involved/staff">staff page </a> 
+            or fill out our contact us form to remain updated.
+          </p>
+          {/*<AlternativeButton link="/getInvolved/Forms">
             Sign Up &rsaquo;
-          </AlternativeButton>
+          </AlternativeButton> */}
         </Container>
       </CustomizedContainer>
+     {/* -----------------Must Update Timeline----------------
       <CustomizedContainer color={theme.colors.white}>
         <Container fluid>
           <h4 style={{ marginBottom: "1.5em", color: theme.colors.grey400 }}>
             THE TIMELINE
           </h4>
           <Header type="yellow">List of Events</Header>
-          {/* <h1>Events to Come</h1> */}
+           <h1>Events to Come</h1> 
           <TimelineOne timelineFor={events} />
         </Container>
       </CustomizedContainer>
+      */}
       <CustomizedContainer>
         <Container fluid>
           <div>
@@ -323,15 +328,7 @@ else {
                   <p>
                     <ul>
                       <li>Enroll in our DeCal class for 2 units, P/NP.</li>
-                      <li>
-                        Choose to attend section on either (not both):{" "}
-                        <ul>
-                          <li>Monday 6:30 PM - 8</li>
-                          <li>Thursday 6:30 PM - 8</li>
-                        </ul>
-                      </li>
-                      <li>Monday section meets online</li>
-                      <li>Thursday section meets in Jacobs Hall Room 10C</li>
+                      
                       <li>
                         Meet with your team for one hour each week during our
                         8-week competition.
@@ -341,8 +338,11 @@ else {
                         on select weekend season events.
                       </li>
                       <li>
-                        Help students at worksessions at O'Brien Hall Breezeway
-                        (2nd floor).
+                        Help students at worksessions at O'Brien Hall.
+                      </li>
+                      <li>
+                        Class location will be announced as the classes for the next class
+                        offering are posted.
                       </li>
                     </ul>
                   </p>
