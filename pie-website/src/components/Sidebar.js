@@ -76,6 +76,7 @@ const Sidebar = () => {
                       <div className="linkContainer">
                         {links.map(link => {
                           const { subpage, url, subsections } = link
+                          if (subpage!= "Policies"){
                           return (
                             <React.Fragment>
                               <div>
@@ -89,6 +90,8 @@ const Sidebar = () => {
                             
                             </React.Fragment>
                           )
+                        }
+                    
                         })}
                       </div>
                       <vr />

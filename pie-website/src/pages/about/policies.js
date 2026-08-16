@@ -1,11 +1,11 @@
 import React from "react"
 
-import theme from "../assets/themes/theme"
+import theme from "../../assets/themes/theme"
 import styled from "styled-components"
 import Col from "react-bootstrap/esm/Col"
-import CustomizedContainer from "../components/CustomizedContainer"
-import HelmetWrapper from "../components/HelmetWrapper"
-import Layout from "../components/Layout"
+import CustomizedContainer from "../../components/CustomizedContainer"
+import HelmetWrapper from "../../components/HelmetWrapper"
+import Layout from "../../components/Layout"
 import { GrDocumentPdf } from "@react-icons/all-files/gr/GrDocumentPdf"
 
 const Policies = () => {

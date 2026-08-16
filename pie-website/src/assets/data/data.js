@@ -33,7 +33,12 @@ const sublinks = [
       }, {
         subpage: "Our Team",
         url: "/our-team",
+      }, 
+      {
+        subpage: "Policies",
+        url: "/policies",
       }
+
 
     ],
   },
