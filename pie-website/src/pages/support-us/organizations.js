@@ -184,6 +184,8 @@ const Organizations = () => {
                   Through our Robotics Competition program, we are able to
                   provide robotics kits, parts, and mentors for 24 teams. Our
                   program includes:
+                </p>
+                <ul style={{listStyleType: 'square', marginLeft: '2rem'}}>
                   <li>Competition field construction</li>
                   <li>Campus-mandated insurance</li>
                   <li>Room reservation fees</li>
@@ -192,7 +194,7 @@ const Organizations = () => {
                     Tools available to teams when working on the UC Berkeley
                     campus
                   </li>
-                </p>
+                </ul>
               </Col>
               <Col sm={12} md={6} lg={6}>
                 <h3>Workshops</h3>
@@ -201,12 +203,13 @@ const Organizations = () => {
                   for high school students and Berkeley students alike. Our
                   workshops are always free for participants, so funding comes
                   out of our own budget. Your donations help us provide:
-                
+                </p>
+                <ul style={{listStyleType: 'square', marginLeft: '2rem'}}>
                   <li>
                     Passes to utilize campus spaces and resources to create
                     workshop materials
                   </li>
-                </p>
+                </ul>
               </Col>
               <Col sm={12} md={5} lg={5}>
                 <h3>Cost of Participation</h3>

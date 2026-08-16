@@ -204,20 +204,17 @@ const SidebarWrapper = styled.div`
 
   h3 {
     font-size: 1.15rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    margin-top: .25rem;
   }
 
   .sidebar h3 {
     color: ${theme.colors.grey500};
   }
 
-  .sidebar h3:hover {
-    color: ${theme.colors.grey600};
-  }
-
   h4 {
     margin: 0;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1rem;
     text-transform: uppercase;
     color: ${theme.colors.blue400};
     font-size: 0.8rem;

@@ -63,12 +63,6 @@ const __htmlString = fetch(filepath) */}
 const Individuals = () => {
   const data = useStaticQuery(query)
   const sponsors = data.allContentfulSponsors.nodes
-  const levels = [
-    "Platinum Sponsor",
-    "Gold Sponsor",
-    "Silver Sponsor",
-    "Bronze Sponsor",
-  ]
   {/* Donorbox Method 2, dangerouslysetInnerhtml not rendering 
   const showDonorbox = () => {
     const htmlSet = '<script type="module" src="https://donorbox.org/widgets.js" async={true}></script><dbox-widget campaign="pioneers-in-engineering" type="donation_form" enable-auto-scroll="true"></dbox-widget>';
@@ -148,7 +142,7 @@ const markup = `
           <div className="filler"></div>
           <div className="hero-image">
             <div>
-              <h1>Support Us</h1>
+              <h1>Individuals</h1>
             </div>
           </div>
         </HeroWrapper>
@@ -168,15 +162,18 @@ const markup = `
                   Through our Robotics Competition program, we are able to
                   provide robotics kits, parts, and mentors for 24 teams. Our
                   program includes:
-                  <li>Competition field construction</li>
-                  <li>Campus-mandated insurance</li>
-                  <li>Room reservation fees</li>
-                  <li>Funding for mentor transportation to school campuses</li>
-                  <li>
+                </p>
+                  <ul style={{listStyleType: 'square', marginLeft: '2rem'}}>
+                    <li>Competition field construction</li>
+                    <li>Campus-mandated insurance</li>
+                    <li>Room reservation fees</li>
+                    <li>Funding for mentor transportation to school campuses</li>
+                    <li>
                     Tools available to teams when working on the UC Berkeley
                     campus
                   </li>
-                </p>
+                  </ul>
+
               </Col>
               <Col sm={12} md={6} lg={6}>
                 <h3>Workshops</h3>
@@ -185,15 +182,13 @@ const markup = `
                   for high school students and Berkeley students alike. Our
                   workshops are always free for participants, so funding comes
                   out of our own budget. Your donations help us provide:
-                  
-                  <li>
-                    Printing to help schools hosting our workshops advertise
-                  </li>
+                </p>
+                <ul style={{listStyleType: 'square', marginLeft: '2rem'}}>
                   <li>
                     Passes to utilize campus spaces and resources to create
                     workshop materials
                   </li>
-                </p>
+                </ul>
               </Col>
               <Col sm={12} md={5} lg={5}>
                 <h3>Cost of Participation</h3>
