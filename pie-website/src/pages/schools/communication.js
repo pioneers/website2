@@ -63,11 +63,10 @@ const Communication = () => {
         <Container fluid>
           
           <Header type={"blue"}>Schedule a Worksession With Our Staff!</Header>
-          <bookingFrame class="iframe-wrapper">
             <h3>Book an Appointment</h3>
             <p>
               Find and {" "}
-              <a href="https://calendar.app.google/iRvf5JCuYUjFw23R7">
+              <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSf__E2o0QDCux2njhfFJY9onZxhPnAFv4Kv2hG8j5wxu6C55g/viewform?usp=header">
                 Schedule a Time
               </a>{" "}
               for Office Hours with Members of PiE.
@@ -75,9 +74,7 @@ const Communication = () => {
             {/* <AlternativeButton link="https://pimulator.pierobotics.org/">
               Simulator &rsaquo;
             </AlternativeButton> */}
-            <iframe src="https://calendar.app.google/iRvf5JCuYUjFw23R7" title = "Schedule a Worksession" 
-                style = {{width: '150%', height: '150%', overflow: "hidden", transform: 'scale(0.65)' }}  /> 
-          </bookingFrame>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf__E2o0QDCux2njhfFJY9onZxhPnAFv4Kv2hG8j5wxu6C55g/viewform?embedded=true" width="720" height="1500" frameborder="0" marginheight="0" marginwidth="0" title="Schedule a Worksession">Loading…</iframe> 
         </Container>
         
       </CustomizedContainer>

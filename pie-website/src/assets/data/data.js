@@ -21,203 +21,86 @@ import React from "react"
 const sublinks = [
   {
     page: "About",
-    url: "/About",
+    url: "/about",
     links: [
       {
-        subpage: "About",
-        url: "/About",
-        subsections: [
-          { label: "Mission", icon: <BiGroup />, url: "/About#mission" },
-          {
-            label: "Leadership",
-            icon: <BsPeopleCircle />,
-            url: "/About#leadership",
-          },
-          {
-            label: "Project Managers",
-            icon: <BsPeopleCircle />,
-            url: "/About#projectManagers",
-          },
-          {
-            label: "Foundation",
-            icon: <BsPeopleCircle />,
-            url: "/About#foundation",
-          },
-          {
-            label: "Policies",
-            icon: <BsPeopleCircle />,
-            url: "/Policies",
-          }
-        ],
+        subpage: "Organization",
+        url: "/organization",
       },
+      {
+        subpage: "Competition",
+        url: "/competition",
+      }, {
+        subpage: "Our Team",
+        url: "/our-team",
+      }
+
     ],
   },
   {
-    page: "Competition",
-    url: "/Competition",
+    page: "Schools",
+    url: "/schools",
     links: [
       {
-        subpage: "Hubs + Pimulator",
-        url: "/Competition",
-        subsections: [
-          {
-            label: "Software Hub",
-            icon: <AiFillCode />,
-            url: "/competition/SoftwareHub",
-          },
-
-          /*{
-            label: "Edu Hub",
-            icon: <GiTeacher />,
-            url: "/competition/EduHub",
-          },*/
-          {
-            label: "Pimulator",
-            icon: <GiPieSlice />,
-            url: "https://pimulator.pierobotics.org/",
-          },
-        ],
+        subpage: "Compete",
+        url: "/compete",
       },
       {
-        subpage: "Competition Info",
-        url: "/Competition",
-        subsections: [
-          {
-            label: "How it Works",
-            icon: <RiTeamFill />,
-            url: "/Competition#howItWorks",
-          },
-          {
-            label: "Timeline",
-            icon: <ImCalendar />,
-            url: "/Competition#timeline",
-          },
-          {
-            label: "Game Manual",
-            icon: <AiOutlineRead />,
-            url: "https://docs.google.com/document/d/193eKA8520k7EMORqC0WkdeisCfz2OOUw0mMGtfk0tXU/edit",
-          },
-          {
-            label: "RC Scholarship",
-            icon: <SiGooglescholar />,
-            url: "/competition/RCScholarship",
-          },
-        ],
+        subpage: "Scholarship",
+        url: "/scholarship",
       },
       {
         subpage: "Communication",
-        url: "",
-        subsections: [
-          {
-          label: "Discord",
-          icon: <FaDiscord />,
-          url: "https://discord.gg/hYREQD2N5r/",
-          },
-          // {
-          //   label: "Piazza",
-          //   icon: <BiCommentDots />,
-          //   url: "https://piazza.com/class/kjxv8nixe2v69p",
-          // },
-        ],
+        url: "/communication",
+      },
+      {
+        subpage: "Software Hub",
+        url: "/softwarehub",
       },
     ],
   },
 
   {
     page: "Get Involved",
-    url: "/GetInvolved",
+    url: "/get-involved",
     links: [
       {
-        subpage: "Join the Team",
-        url: "/GetInvolved",
-        subsections: [
-          {
-            label: "Timeline",
-            icon: <ImCalendar />,
-            url: "/GetInvolved#timeline",
-          },
-          {
-            label: "Projects",
-            icon: <AiOutlineProject />,
-            url: "/getInvolved/Projects",
-          },
-          {
-            label: "Forms",
-            icon: <AiOutlineForm />,
-            url: "/getInvolved/Forms",
-          },
-        ],
+        subpage: "Mentors",
+        url: "/mentors",
       },
       {
-        subpage: "Schools",
-        url: "/getInvolved/Schools",
-        subsections: [
-          {
-            label: "School Info",
-            icon: <BsInfoCircle />,
-            url: "/getInvolved/Schools", // not sure what needs to be on this page
-          },
-          {
-            label: "School Sign Up",
-            icon: <BsPencil />,
-            url: "/getInvolved/Schools#signUp",
-          },
-        ],
+        subpage: "Club Members",
+        url: "/staff",
+      },
+       {
+        subpage: "Volunteer",
+        url: "/volunteer",
       },
     ],
   },
   {
     page: "Support Us",
-    url: "/SupportUs",
+    url: "/support-us",
     links: [
       {
-        subpage: "Support Us",
-        url: "/SupportUs",
-        subsections: [
-          {
-            label: "Info",
-            icon: <BsInfoCircle />,
-            url: "/SupportUs#howused",
-          },
-          {
-            label: "Donate Now",
-            icon: <BiDonateHeart />,
-            url: "https://donorbox.org/pioneers-in-engineering",
-          },
-          {
-            label: "Sponsors",
-            icon: <FaCreditCard />,
-            url: "/SupportUs#sponsors",
-          },
-          {
-            label: "Mailing List",
-            icon: <AiOutlineMail />,
-            url: "/#mailinglist",
-          },
-        ],
+        subpage: "Individuals",
+        url: "/individuals",  
+      },
+       {
+        subpage: "Organizations",
+        url: "/organizations",  
       },
     ],
   },
   {
-    page: "Library",
-    url: "/Gallery",
+    page: "Gallery",
+    url: "",
     links: [
       {
-        subpage: "Library",
-        url: "",
-        subsections: [
-          {
-            label: "Blog",
-            icon: <FaRegNewspaper />,
-            url: "https://pierobotics.medium.com/",
-          },
-          {
-            label: "Gallery",
-            icon: <AiFillCamera />,
-            url: "/Gallery",
-          },
-        ],
-      },
+      subpage: "Gallery",
+      url: "/gallery",
+    }
+      
     ],
   },
 ]

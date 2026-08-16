@@ -30,6 +30,7 @@ import {renderToStaticMarkup} from 'react-dom/server';
 import {useRef, useEffect, useLayoutEffect} from 'react';
 
 
+
 const query = graphql`
   {
     allContentfulSponsors {
@@ -152,7 +153,7 @@ const markup = `
           </div>
         </HeroWrapper>
 
-
+        
         <CustomizedContainer>
           <div id="howused"></div>
           <h4 style={{ marginBottom: "1.5em", color: theme.colors.grey400 }}>
@@ -285,11 +286,11 @@ const markup = `
                     you would like more information about the benefits, please
                     refer to{" "}
                     <a
-                      href="/assets/sponsors/PiE_Sponsorship_Packet_2022_23.pdf"
+                      href="/assets/sponsors/PiE_Sponsorship_Packet_2025_2026.pdf"
                       target="_blank"
                       rel="noreferrer"
                     >
-                      Sponsorship Packet 2022-2023.pdf
+                      Sponsorship Packet 2025-2026.pdf
                     </a>
                   </p>
                 </Col>

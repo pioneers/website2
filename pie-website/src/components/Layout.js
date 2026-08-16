@@ -11,6 +11,8 @@ import AnimatedNavbar from "./AnimatedNavbar"
 import Banner from "../components/AnnouncementBanner/BannerContainer"
 import theme from "../assets/themes/theme"
 
+import SidebarNew from "./SidebarNew"
+
 /*
 Creates a wrapper for all pages which includes a navbar at the top and a footer at the bottom
 */

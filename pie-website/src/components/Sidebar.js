@@ -4,20 +4,21 @@ import { useGlobalContext } from "../assets/data/context"
 import sublinks from "../assets/data/data"
 import styled from "styled-components"
 import theme from "../assets/themes/theme"
-{/*}
+{/*
 import {useStaticQuery, graphql, Link} from "gatsby"
 
 const PullPages = () => {
   const PagesGroup = useStaticQuery(graphql`
-    query GetPages{
-      allSitePage{
-        nodes{
-          path
+  query MyQuery {
+    allSitePage {
+      edges {
+        node {
+          id
+          matchPath
         }
       }
     }
-
-  
+  }
     `)
 
   const pages = PagesGroup.allSitePage.nodes
@@ -37,11 +38,18 @@ const PullPages = () => {
   )
 
 }
-  */}
+*/}
+{/* const pagesQuery = () {
+  return useMediaQuery({
+    queryKey: []
+  })
+} */}
 
 // the modal that pops up for the navabar after collapse
 const Sidebar = () => {
   const { isSidebarOpen, closeSidebar } = useGlobalContext()
+
+  
   return (
   
     <SidebarWrapper>
@@ -57,97 +65,38 @@ const Sidebar = () => {
           <div className="sidebar-links">
             <div className="about-grid">
               {sublinks
-                .filter(
-                  thing =>
-                    thing.page === "About" ||
-                    thing.page === "Support Us" ||
-                    thing.page === "Library"
-                )
+                
                 .map((item, index) => {
                   const { links, page, url } = item
                   return (
                     <div key={index}>
-                      <a href={url}>
+                      
                         <h3>{page}</h3>
-                      </a>
-                      <div>
+                      
+                      <div className="linkContainer">
                         {links.map(link => {
                           const { subpage, url, subsections } = link
                           return (
                             <React.Fragment>
                               <div>
-                                {page !== subpage && (
-                                  <a href={url}>
+                                {(
+                                  <a href={item.url+url}>
                                     <h4>{subpage}</h4>
                                   </a>
                                 )}
 
-                                {subsections.map((someLink, index) => {
-                                  const { label, icon, url } = someLink
-                                  return (
-                                    <div className="one-link">
-                                      <a key={page + "_" + index} href={url}>
-                                        {icon}
-                                        {label}
-                                      </a>
-                                    </div>
-                                  )
-                                })}
                               </div>
+                            
                             </React.Fragment>
                           )
                         })}
                       </div>
+                      <vr />
                     </div>
                   )
                 })}
             </div>
-            <hr />
-            {sublinks
-              .filter(
-                thing =>
-                  thing.page === "Competition" || thing.page === "Get Involved"
-              )
-              .map((item, index) => {
-                const { links, page, url } = item
-                return (
-                  <React.Fragment>
-                    <article key={index}>
-                      <a href={url}>
-                        <h3>{page}</h3>
-                      </a>
-                      <div className="sidebar-sublinks">
-                        {links.map(link => {
-                          const { subpage, url, subsections } = link
-                          return (
-                            <React.Fragment>
-                              <div>
-                                {page !== subpage && (
-                                  <a href={url}>
-                                    <h4>{subpage}</h4>
-                                  </a>
-                                )}
-                                {subsections.map((someLink, index) => {
-                                  const { label, icon, url } = someLink
-                                  return (
-                                    <div className="one-link">
-                                      <a key={page + index} href={url}>
-                                        {icon}
-                                        {label}
-                                      </a>
-                                    </div>
-                                  )
-                                })}
-                              </div>
-                            </React.Fragment>
-                          )
-                        })}
-                      </div>
-                    </article>
-                    <hr />
-                  </React.Fragment>
-                )
-              })}
+            
           </div>
         </aside>
       </div>
@@ -164,6 +113,10 @@ const SidebarWrapper = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 0.15rem;
+    gap-bottom: 3rem;
+    margin-bottom: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
   }
   a {
     font-size: 14px;
@@ -187,9 +140,13 @@ const SidebarWrapper = styled.div`
     color: ${theme.colors.blue700};
   }
   .sidebar-sublinks > div {
-    margin: 0;
+    margin-bottom: 5rem;
+    padding-bottom: 3rem;
   }
-
+  .linkContainer{
+    padding-bottom: 3 rem;
+    margin-bottom: 5 rem;
+    }
   .sidebar-wrapper {
     position: fixed;
     top: 0;
@@ -213,6 +170,7 @@ const SidebarWrapper = styled.div`
     /* transform: scale(1); */
     transform: translateY(0);
     overflow-y: scroll;
+    
   }
   .sidebar {
     width: 95vw;
@@ -259,8 +217,9 @@ const SidebarWrapper = styled.div`
 
   h4 {
     margin: 0;
+    margin-bottom: 1.25rem;
     text-transform: uppercase;
-    color: ${theme.colors.gold600};
+    color: ${theme.colors.blue400};
     font-size: 0.8rem;
   }
 

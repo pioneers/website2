@@ -57,6 +57,44 @@ const Mentors = () => {
   const day = dateInfo.getDate()
   const month = dateInfo.getMonth()
 
+  const seasonParagraph = () => {
+    if((month==9 && day>15) || (month>9) || (month==3 && day<15) || (month<3)){
+      return(
+        <p>
+            Become a mentor for a high school robotics team. Be a role model for
+            local students as you guide them in building a robot for PiE’s
+            Robotics Competition. Through our class, you’ll learn what you need
+            to know to be a mentor and help build the robot.
+            <br/>
+            <br/>
+            Mentors can enroll in the Pioneers in Engineering DeCal during the spring
+            semester, and each week will cover content about the parts of the robot, the build
+            process, and the software running the robots. To enroll, find the Pioneers in Engineering Mentorship DeCal (EECS198) 
+            in your CalCentral Enrollment Center.
+          </p>
+      )
+  }
+  else{
+    return(
+      
+          <p>
+            Become a mentor for a high school robotics team. Be a role model for
+            local students as you guide them in building a robot for PiE’s
+            Robotics Competition. Through our class, you’ll learn what you need
+            to know to be a mentor and help build the robot.
+          <br/>
+          <br/>
+            Mentors can enroll in the Pioneers in Engineering DeCal during the spring
+            semester, and each week will cover content about the parts of the robot, the build
+            process, and the software running the robots. Check back once the enrollment process for 
+            the next spring semester begins! In the meantime, we encourage you to visit our {" "}
+            <a href="/get-involved/staff">staff page </a> 
+            or fill out our contact us form to remain updated.
+          </p>
+          
+    )
+  }
+}
 
   const options = {
     renderNode: {
@@ -66,168 +104,7 @@ const Mentors = () => {
       },
     },
   }
-if((month>=9 && day>15) || (month<4 && day<15)){
-  return (
-    <Layout>
-      <HelmetWrapper
-        title="Mentors"
-        description="Become a mentor for a high school robotics team. Be a role model for local students as you guide them in building a robot for PiE’s Robotics Competition. Through our class, you’ll learn what you need to know to be a mentor and help build the robot."
-      />
-      <HeroWrapper>
-        <div className="filler"></div>
-        <div className="hero-image">
-          <div>
-            <h1>Mentors</h1>
-          </div>
-        </div>
-      </HeroWrapper>
-      <CustomizedContainer>
-        <Container fluid>
-          <h4 style={{ marginBottom: "1.5em", color: theme.colors.grey400 }}>
-            MENTOR
-          </h4>
-          <Header type="blue">Inspire High School Students</Header>
-          <p>
-            Become a mentor for a high school robotics team. Be a role model for
-            local students as you guide them in building a robot for PiE’s
-            Robotics Competition. Through our class, you’ll learn what you need
-            to know to be a mentor and help build the robot.
-            <br />
-            Join us by enrolling in the decal using the CCN 21910 for the Monday
-            section, and 21911 for the Thursday one. Additionally, fill out our
-            accompying forms linked by the sign up button. Class starts the week
-            of 1/31!
-          </p>
-          <AlternativeButton link="/getInvolved/Forms">
-            Sign Up &rsaquo;
-          </AlternativeButton>
-        </Container>
-      </CustomizedContainer>
-      <CustomizedContainer color={theme.colors.white}>
-        <Container fluid>
-          <h4 style={{ marginBottom: "1.5em", color: theme.colors.grey400 }}>
-            THE TIMELINE
-          </h4>
-          <Header type="yellow">List of Events</Header>
-          {/* <h1>Events to Come</h1> */}
-          <TimelineOne timelineFor={events} />
-        </Container>
-      </CustomizedContainer>
-      <CustomizedContainer>
-        <Container fluid>
-          <div>
-            <div id="details"></div>
-            <h4 style={{ marginBottom: "1.5em", color: theme.colors.grey400 }}>
-              DETAILS
-            </h4>
-            <Header type="blue">What You Will Learn</Header>
-          </div>
-          <SkillsUsed fluid>
-            <Row>
-              <Col xs={12} sm={6} md={3} lg={3}>
-                <div>
-                  <h3>Guide</h3>
-                  <p>
-                    How to guide high school students in the robotics
-                    competition
-                  </p>
-                </div>
-              </Col>
-              <Col xs={12} sm={6} md={3} lg={3}>
-                <div>
-                  <h3>Robotics</h3>
-                  <p>How to work with the robotics kit</p>
-                </div>
-              </Col>
-              <Col xs={12} sm={6} md={3} lg={3}>
-                <div>
-                  <h3>Analyze</h3>
-                  <p>How to analyze and breakdown the competition</p>
-                </div>
-              </Col>
-              <Col xs={12} sm={6} md={3} lg={3}>
-                <div>
-                  <h3>Inspire</h3>
-                  <p>How to inspire high school students through STEM</p>
-                </div>
-              </Col>
-            </Row>
-          </SkillsUsed>
 
-          <DetailsWrapper fluid>
-            <Row>
-              <Col sm={12} md={12} lg={5}>
-                <br />
-                <div>
-                  <p>
-                    <ul>
-                      <li>Enroll in our DeCal class for 2 units, P/NP.</li>
-                      <li>
-                        Choose to attend section on either (not both):{" "}
-                        <ul>
-                          <li>Monday 6:30 PM - 8</li>
-                          <li>Thursday 6:30 PM - 8</li>
-                        </ul>
-                      </li>
-                      <li>Monday section meets online</li>
-                      <li>Thursday section meets in Jacobs Hall Room 10C</li>
-                      <li>
-                        Meet with your team for one hour each week during our
-                        8-week competition.
-                      </li>
-                      <li>
-                        Come to PiE Robotics Competition events at UC Berkeley
-                        on select weekend season events.
-                      </li>
-                      <li>
-                        Help students at worksessions at O'Brien Hall Breezeway
-                        (2nd floor).
-                      </li>
-                    </ul>
-                  </p>
-                </div>
-              </Col>
-              <Col sm={12} md={12} lg={7}>
-                <br />
-                <div>
-                  <iframe
-                    src="https://www.youtube.com/embed/IQ-xtgo2VG4"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="video"
-                  ></iframe>
-                </div>
-              </Col>
-            </Row>
-          </DetailsWrapper>
-        </Container>
-      </CustomizedContainer>
-      <CustomizedContainer color={theme.colors.blue50}>
-        <Container fluid>
-          <CustomCarousel variant="dark">
-            {testimonials.map(item => {
-              const { quote, name, year, major } = item
-              const output = renderRichText(quote, options)
-              return (
-                <Carousel.Item>
-                  <div className="testimonial">
-                    <h3>{output}</h3>
-                    <p>
-                      - {name}, {year}, {major}
-                    </p>
-                  </div>
-                </Carousel.Item>
-              )
-            })}
-          </CustomCarousel>
-        </Container>
-      </CustomizedContainer>
-    </Layout>
-  )
-}
-
-else {
    return (
     <Layout>
       <HelmetWrapper
@@ -242,26 +119,15 @@ else {
           </div>
         </div>
       </HeroWrapper>
-      <CustomizedContainer>
+      <CustomizedContainer >
         <Container fluid>
           <h4 style={{ marginBottom: "1.5em", color: theme.colors.grey400 }}>
             MENTOR
           </h4>
           <Header type="blue">Inspire High School Students</Header>
-          <p>
-            Become a mentor for a high school robotics team. Be a role model for
-            local students as you guide them in building a robot for PiE’s
-            Robotics Competition. Through our class, you’ll learn what you need
-            to know to be a mentor and help build the robot.
-          </p>
-          <p>
-            Mentors can enroll in the Pioneers in Engineering DeCal during the spring
-            semester, and each week will cover content about the parts of the robot, the build
-            process, and the software running the robots. Check back once the enrollment process for 
-            the next spring semester begins! In the meantime, we encourage you to visit our {" "}
-            <a href="/get-involved/staff">staff page </a> 
-            or fill out our contact us form to remain updated.
-          </p>
+          <div>
+            {seasonParagraph()}
+            </div>
           {/*<AlternativeButton link="/getInvolved/Forms">
             Sign Up &rsaquo;
           </AlternativeButton> */}
@@ -279,7 +145,7 @@ else {
         </Container>
       </CustomizedContainer>
       */}
-      <CustomizedContainer>
+      <CustomizedContainer color={theme.colors.grey100}>
         <Container fluid>
           <div>
             <div id="details"></div>
@@ -341,8 +207,7 @@ else {
                         Help students at worksessions at O'Brien Hall.
                       </li>
                       <li>
-                        Class location will be announced as the classes for the next class
-                        offering are posted.
+                        Class location can be found on the UC Berkeley Class Schedule for the semester that it is offered.
                       </li>
                     </ul>
                   </p>
@@ -386,7 +251,6 @@ else {
       </CustomizedContainer>
     </Layout>
   )
-}
 }
 
 

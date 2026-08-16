@@ -50,7 +50,48 @@ const RCScholarship = () => {
   const day = dateInfo.getDate()
   const month = dateInfo.getMonth()
 
-  if((month < 3 || (month<4 && day<14))  || ((month==11) || (month==10 && day>8))){
+  const season =() => {
+    if((month < 3) || (month==3 && day<14)  || (month==11) || (month==10 && day>8)){
+      return(
+         <div>
+        <p>
+                Applicants must be current or past PiE participants in their
+                last year of high school, and must intend to pursue
+                post-secondary education (four-year, technical, vocational,
+                etc.).
+              </p>
+              <p>
+                Please use the online web application to submit your scholarship
+                application.
+              </p>
+              <a href="https://scholarship.pierobotics.org/accounts/google/login">
+                Submit Here &rsaquo;
+              </a>
+              </div>
+        
+      )
+    }
+  else {
+    return(
+      <div>
+        <p>
+                Applicants must be current or past PiE participants in their
+                last year of high school, and must intend to pursue
+                post-secondary education (four-year, technical, vocational,
+                etc.).
+                </p>
+
+                <p>
+                Best of luck to all applicants to the {year} Pioneers in Engineering Alumni Scholarship! 
+                Though the application has closed for this year, we invite all students who are eligible 
+                to apply during the next school year to read more about requirements to apply and to check
+                back in soon for any updates regarding the next application cycle!
+              </p>
+        </div>
+    )
+  }
+}
+
   return (
     <Layout>
       <HelmetWrapper
@@ -142,24 +183,15 @@ const RCScholarship = () => {
           <Row>
             <Col sm={12} md={7} lg={7}>
               <Header type="blue">Applicant Eligibility</Header>
-              <p>
-                Applicants must be current or past PiE participants in their
-                last year of high school, and must intend to pursue
-                post-secondary education (four-year, technical, vocational,
-                etc.).
-              </p>
-              <p>
-                Please use the online web application to submit your scholarship
-                application.
-              </p>
-              <a href="https://scholarship.pierobotics.org/accounts/google/login">
-                Submit Here &rsaquo;
-              </a>
-              <h3 style={{ color: theme.colors.grey900, marginTop: "1rem" }}>
-                Resources
-              </h3>
+              <div>
+               {season()}
+               </div>
+             
             </Col>
             <Resources sm={12} md={5} lg={5}>
+               <h3 style={{ color: theme.colors.grey900, marginTop: "1rem" }}>
+                Resources
+              </h3>
               <Row>
                 <Col sm={12} md={12} lg={12}>
                   <div>
@@ -263,230 +295,7 @@ const RCScholarship = () => {
       </CustomizedContainer>
     </Layout>
   )}
-  else{
-    return(
-      <Layout>
-      <HelmetWrapper
-        title="Pioneers in Engineering Alumni Scholarship"
-        description="Linked here will be the alumni scholarship that PiE provides."
-      />
-
-      <HeroWrapper>
-        <div className="filler"></div>
-        <div className="hero-image">
-          <div>
-            <h1>Pioneers in Engineering Alumni Scholarship</h1>
-          </div>
-        </div>
-      </HeroWrapper>
-      <CustomizedContainer>
-        <Container fluid>
-          <Header type="blue">
-            Pioneers in Engineering Alumni Scholarship
-          </Header>
-          <p>
-            Pioneers in Engineering strives to provide a quality STEM
-            educational experience for Bay Area high school students. In keeping
-            with our mission to promote science and engineering, we are happy to
-            announce our tenth annual PiE alumni-funded scholarship for PiE
-            students. The scholarship is for a single $2000 award, with $500 for
-            finalists.
-          </p>
-          <p>
-            The scholarship committee will review each application holistically,
-            taking into account academic achievement, extracurricular
-            activities, leadership skills, and passion. As a STEM organization,
-            we are especially interested in how your pursuits involve science
-            and engineering.
-          </p>
-        </Container>
-      </CustomizedContainer>
-      <CustomizedContainer color={theme.colors.white}>
-        <Container fluid>
-          <h4 style={{ marginBottom: "1.5em", color: theme.colors.grey400 }}>
-            THE TIMELINE
-          </h4>
-          <Header type="gold">2025 Scholarship Schedule</Header>
-          <ScheduleWrapper fluid align="center" padding="3rem 1.25rem">
-            <Row className="inner-container">
-              <Col sm={12} md={6} lg={3}>
-                <div className="card">
-                  <div>
-                    <VscDebugStart />
-                    <h3>Application opens Saturday 11/8/2025</h3>
-                  </div>
-                </div>
-              </Col>
-              <Col sm={12} md={6} lg={3}>
-                <div className="card">
-                  <div>
-                    <AiOutlineFileDone />
-                    <h3>EXTENDED!!! Application due Monday 3/16/2026</h3>
-                  </div>
-                </div>
-              </Col>
-              <Col sm={12} md={6} lg={3}>
-                <div className="card">
-                  <div>
-                    <FaUserTie />
-                    <h3>Interviews (remote) with finalists - Week of 4/5/2026 thru 4/11/2026</h3>
-                  </div>
-                </div>
-              </Col>
-              <Col sm={12} md={6} lg={3}>
-                <div className="card">
-                  <div>
-                    <GiPodiumWinner />
-                    <h3>TBD</h3>
-                  </div>
-                </div>
-              </Col>
-            </Row>
-          </ScheduleWrapper>
-        </Container>
-      </CustomizedContainer>
-      <CustomizedContainer>
-        <Container fluid>
-          <h4 style={{ marginBottom: "1.5em", color: theme.colors.grey400 }}>
-            INFORMATION
-          </h4>
-        </Container>
-        <Scholarship fluid>
-          <Row>
-            <Col sm={12} md={7} lg={7}>
-              <Header type="blue">Applicant Eligibility</Header>
-              <p>
-                Applicants must be current or past PiE participants in their
-                last year of high school, and must intend to pursue
-                post-secondary education (four-year, technical, vocational,
-                etc.).
-                </p>
-
-                <p>
-                Best of luck to all applicants to the {year} Pioneers in Engineering Alumni Scholarship! 
-                Though the application has closed for this year, we invite all students who are eligible 
-                to apply during the next school year to read more about requirements to apply and to check
-                back in soon for any updates regarding the next application cycle!
-              </p>
-              {/* -----Not Including Application Link when Not Accepting Applications
-              <p>
-                Please use the online web application to submit your scholarship
-                application.
-              </p>
-              <a href="https://scholarship.pierobotics.org/accounts/google/login">
-                Submit Here &rsaquo;
-              </a>
-              */}
-              <h3 style={{ color: theme.colors.grey900, marginTop: "1rem" }}>
-                Resources
-              </h3>
-            </Col>
-            <Resources sm={12} md={5} lg={5}>
-              <Row>
-                <Col sm={12} md={12} lg={12}>
-                  <div>
-                    <BiVideoRecording />
-                    <h4>2026 Workshop</h4>
-                    <p>
-                      <a href="https://pioneers.berkeley.edu/assets/scholarship/2026_pie_scholarship_workshop_presentation.pdf">
-                        {" "}
-                        Scholarship workshop slides &rsaquo;{" "}
-                      </a>
-                    </p>
-                  </div>
-                </Col>
-                <Col sm={12} md={12} lg={12}>
-                  <div>
-                    <BiVideoRecording />
-                    <h4>2024 Workshop Recording</h4>
-                    <p>
-                      <a href="https://www.youtube.com/watch?v=HXHkz9iH1Q8">
-                        {" "}
-                        Scholarship workshop recording &rsaquo;{" "}
-                      </a>
-                    </p>
-                  </div>
-                </Col>
-                <Col sm={12} md={12} lg={12}>
-                  <div>
-                    <AiOutlineUnorderedList />
-                    <h4>2026 Scholarship Application Summary</h4>
-                    <p>
-                      <a href="https://pioneers.berkeley.edu/assets/scholarship/2026_pie_scholarship_application.pdf">
-                        {" "}
-                        PDF of the application &rsaquo;{" "}
-                      </a>
-                    </p>
-                  </div>
-                </Col>
-                <Col sm={12} md={12} lg={12}>
-                  <div>
-                    <BsInfoCircle />
-                    <h4>Scholarship Interview Tips</h4>
-                    <p>
-                      <a href="https://pioneers.berkeley.edu/assets/scholarship/2026_pie_scholarship_interview_tips.pdf">
-                        {" "}
-                        Interview Tips &rsaquo;{" "}
-                      </a>
-                    </p>
-                  </div>
-                </Col>
-              </Row>
-            </Resources>
-          </Row>
-        </Scholarship>
-      </CustomizedContainer>
-      <CustomizedContainer color={theme.colors.white}>
-        <Container fluid>
-          <h2 style={{ color: theme.colors.grey900 }}>Past Scholars</h2>
-          <Table responsive="lg" hover>
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>High School</th>
-                <th>College</th>
-                <th>Year</th>
-              </tr>
-            </thead>
-            <tbody>
-              {scholars.map((scholar, index) => {
-                const { name, highSchool, college, year } = scholar
-                return (
-                  <tr>
-                    <td>{name}</td>
-                    <td>{highSchool}</td>
-                    <td>{college}</td>
-                    <td>{year}</td>
-                  </tr>
-                )
-              })}
-            </tbody>
-          </Table>
-        </Container>
-      </CustomizedContainer>
-      <CustomizedContainer color={theme.colors.blue50}>
-        <AnythingContainer fluid>
-          <h4 style={{ marginBottom: "1.5em", color: theme.colors.grey400 }}>
-            ANYTHING ELSE
-          </h4>
-          <Header type="gold">Questions?</Header>
-          <p>
-            For any questions about the scholarship or application, contact us
-            at{" "}
-            <a
-              href="mailto:scholarship@pierobotics.org"
-              target="_blank"
-              rel="noreferrer"
-            >
-              scholarship@pierobotics.org
-            </a>
-          </p>
-        </AnythingContainer>
-      </CustomizedContainer>
-    </Layout>
-    )
-  }
-}
+ 
 
 const AnythingContainer = styled(Container)`
   p > a {

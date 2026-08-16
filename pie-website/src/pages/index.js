@@ -28,6 +28,10 @@ import pic from "../assets/images/homepage-banners/explaining.jpg"
 
 import MailchimpFormContainer from "../components/Mailchimp"
 import { Link } from "gatsby"
+import {useStaticQuery, graphql} from "gatsby"
+
+
+import { useState } from "react"
 {/*import {useStaticQuery, graphql} from "gatsby"
 
 const PullPages = () => {
@@ -74,9 +78,15 @@ const PullPages = () => {
 //   }
 // `
 
+
+
+
+
+
 export default function Home(props) {
   // const data = useStaticQuery(query)
   // const carouselNodes = data.allContentfulIndexCarousel.nodes
+
 
   return (
     <Layout>
@@ -91,6 +101,7 @@ export default function Home(props) {
         </div>
       </HeroWrapper>
 
+   
       <CustomizedContainer>
         <Container fluid>
           <h4 style={{ marginBottom: "1.5em", color: theme.colors.grey400 }}>

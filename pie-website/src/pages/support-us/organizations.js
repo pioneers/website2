@@ -12,8 +12,19 @@ import Carousel from "react-bootstrap/Carousel"
 import KitCost from "../../assets/images/sponsors/kit-cost.png"
 import Poster from "../../assets/images/companyposter.jpg"
 
-import sponsor1 from "../../assets/images/pie-expo.jpg"
-import sponsor2 from  "../../assets/images/comp.jpg"
+import sponsor1 from "../../assets/images/CarouselSponsors/SupportCar1.jpg"
+import sponsor2 from  "../../assets/images/CarouselSponsors/SupportCar2.jpg"
+import sponsor3 from  "../../assets/images/CarouselSponsors/SupportCar3.jpg"
+import sponsor4 from  "../../assets/images/CarouselSponsors/SupportCar4.jpg"
+import sponsor5 from  "../../assets/images/CarouselSponsors/SupportCar5.jpg"
+import sponsor6 from  "../../assets/images/CarouselSponsors/SupportCar6.jpg"
+import sponsor7 from  "../../assets/images/CarouselSponsors/SupportCar7.jpg"
+import sponsor8 from  "../../assets/images/CarouselSponsors/SupportCar8.jpg"
+import sponsor9 from  "../../assets/images/CarouselSponsors/SupportCar9.jpg"
+import sponsor10 from  "../../assets/images/CarouselSponsors/SupportCar10.jpg"
+import sponsor11 from  "../../assets/images/CarouselSponsors/SupportCar11.jpg"
+import sponsor12 from  "../../assets/images/CarouselSponsors/SupportCar12.jpg"
+
 
 import {Link} from 'gatsby'
 
@@ -65,7 +76,7 @@ const Organizations = () => {
     "Bronze Sponsor",
   ]
   const sponsorImages = [
-    sponsor1, sponsor2,
+    sponsor1, sponsor2, sponsor3, sponsor4, sponsor5, sponsor6, sponsor7, sponsor8, sponsor9, sponsor10, sponsor11, sponsor12
   ]
   return (
     <React.Fragment>
@@ -225,7 +236,7 @@ const Organizations = () => {
               return (
                 <Carousel.Item>
                   <div className="carouselImage">
-                    <img src={sponsorImage} width='75%'/>
+                    <img src={sponsorImage} height='500rem'/>
                   </div>
                 </Carousel.Item>
                 
@@ -268,11 +279,11 @@ const Organizations = () => {
                     you would like more information about the benefits, please
                     refer to{" "}
                     <a
-                      href="/assets/sponsors/PiE_Sponsorship_Packet_2022_23.pdf"
+                      href="/assets/sponsors/PiE_Sponsorship_Packet_2025_2026.pdf"
                       target="_blank"
                       rel="noreferrer"
                     >
-                      Sponsorship Packet 2022-2023.pdf
+                      Sponsorship Packet 2025-2026.pdf
                     </a>
                   </p>
                 </Col>
@@ -289,16 +300,16 @@ const Organizations = () => {
             <div id="sponsors" />
             <Header type={"gold-header"}>Sponsors</Header>
             <p>
-              As of 2021-2022 competition year, Pioneers in Engineering would
+              Pioneers in Engineering would
               like to extend its thanks for the support granted by the following
               organizations. If you interested in becoming one of our sponsors
               and the benefits of being one, please refer to{" "}
               <a
-                href="/assets/sponsors/PiE_Sponsorship_Packet_2022_23.pdf"
+                href="/assets/sponsors/PiE_Sponsorship_Packet_2025_2026.pdf"
                 target="_blank"
                 rel="noreferrer"
               >
-                Sponsorship Packet 2022-2023.pdf
+                Sponsorship Packet 2025-2026.pdf
               </a>
             </p>
             <div style={{display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center"}}>

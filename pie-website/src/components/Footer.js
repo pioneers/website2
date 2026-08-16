@@ -10,6 +10,7 @@ import CustomizedContainer from "./CustomizedContainer"
 import { AiFillGithub } from "@react-icons/all-files/ai/AiFillGithub"
 import { AiFillInstagram } from "@react-icons/all-files/ai/AiFillInstagram"
 import { AiFillYoutube } from "@react-icons/all-files/ai/AiFillYoutube"
+import Header from "./Header"
 
 /*
 Creates a footer component
@@ -57,22 +58,23 @@ function Footer() {
             const { page, url, links } = item
             return (
               <div>
-                <HeaderLink href={url}>{page}</HeaderLink>
-                {links.map(subsect => {
-                  const { subsections } = subsect
-                  return (
-                    <React.Fragment>
-                      {subsections.map((thing, idx) => {
-                        const { label, url } = thing
-                        return (
-                          <CustomLink href={url}>
-                            {label}
-                          </CustomLink>
-                        )
-                      })}
-                    </React.Fragment>
-                  )
-                })}
+                <HeaderGroup>{page}</HeaderGroup>
+                 {links.map(link => {
+                                          const { subpage, url, subsections } = link
+                                          return (
+                                            <React.Fragment>
+                                              <div>
+                                                { (
+                                                  <a href={item.url+url}>
+                                                    <p style={{color: "white", fontSize: '100%'}}>{subpage}</p>
+                                                  </a>
+                                                )}
+                
+                                              </div>
+                                            </React.Fragment>
+                                          )
+                                        })}
+                
                 <hr className="hide" />
               </div>
             )
@@ -230,4 +232,10 @@ const HeaderLink = styled(CustomLink)`
   letter-spacing: ${theme.letterSpacing};
 `
 
+const HeaderGroup = styled.h1`
+  font-weight: 600 !important;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  letter-spacing: ${theme.letterSpacing};
+`
 export default Footer

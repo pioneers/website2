@@ -112,7 +112,7 @@ const OurTeam = () => {
             {new Date().getFullYear()} PIONEERS IN ENGINEERING MEMBERS
           </h4>
           <h2 style={{ maxWidth: "700px", marginBottom: "3rem" }}>
-            The group for the {new Date().getFullYear()} PiE class
+            The group for the {new Date().getFullYear()} PiE class!
           </h2>
         </HeaderContainer>
         <Container fluid>
