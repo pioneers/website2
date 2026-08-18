@@ -6,11 +6,11 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0
       - name: Push to dokku
-        uses: dokku/github-action@master
+        uses: dokku/github-action@cc7dec1d2b9fed249a14ae462bc953bba436f78c # v1.10.0
         with:
           git_remote_url: ${{ format('ssh://{0}@{1}:22/website', secrets.DOKKU_USER, secrets.DOKKU_SERVER) }}
           ssh_private_key: ${{ secrets.DOKKU_WEBSITE_KEY }}
