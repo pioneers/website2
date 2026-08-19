@@ -4,6 +4,8 @@ import theme from "../../assets/themes/theme"
 import { CloseButton } from "react-bootstrap"
 import {Alert} from "react-bootstrap"
 import {useEffect, useState} from 'react'
+import {useLocation} from '@reach/router'
+import { Location } from "@reach/router"
 
 {/*const BannerContainer = () => {
     const[show, setShow] = useState(true)
@@ -21,14 +23,32 @@ function Banner() {
   const [show, setShow] = useState(true);
      
 */
-const Banner = () => {
-    function FindPath(){
-        const [pathname, setPathname] = useState(window.location.pathname);
-        useEffect(()=>{
-            setPathname(window.location.pathname);
-        }, []);
-        return pathname;
-    }
+const Banner = ({children, location}) => {
+    
+   {/* const locationval = useLocation() */}
+   {/* const location1 = location */}
+   function FindPath(){
+   {/*useEffect(()=>{ */}
+    
+        {/**const [pathname, setPathname] = useState(location.pathname);*/}
+       {/*} const locationUse =({Location}) */}
+        const locationUse2 = useLocation()
+       
+            
+        const pathnameUse =(locationUse2.pathname);
+            return pathnameUse;
+    
+    
+{/*}}, []); */}
+}
+
+
+
+    
+
+        
+        
+
     const currPath = FindPath()
     {/* const location = useLocation() */}
     const dateInfo = new Date()
@@ -48,7 +68,7 @@ const Banner = () => {
                 null
             )
         } */}
-    
+    if(currPath!=null){
     if((month==7 && day==16)){
          if(currPath === "/support-us/individuals/"){
             return(
@@ -126,18 +146,20 @@ const Banner = () => {
         );
     }
 }
-    
-    
+        
 
     else {
         return (null);
     }
+}
+    else return (null);
   
     /*return(
         <div>
             {year}
         </div>
     ) */
+
 }
 
 /*

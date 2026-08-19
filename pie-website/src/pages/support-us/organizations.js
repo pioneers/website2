@@ -261,14 +261,15 @@ const Organizations = () => {
                 </Col>
                 <Col sm={12} md={6} lg={6}>
                   <p>
-                    As PiE is an organization with close ties to{" "}
-                    <a href="https://tbp.berkeley.edu/">Tau Beta Pi</a>, the
+                    As PiE is an organization with close ties to <Link to={"/redirect"} state={{linkDestination:"https://tbp.berkeley.edu"}}> Tau Beta Pi </Link>
+                    {/*{" "}
+                    <a href="https://tbp.berkeley.edu/">Tau Beta Pi</a> */}, the
                     staff and faculty of the College of Engineering, engineering
                     honor societies, and about 27,000 undergraduate students at
                     UC Berkeley, your support of the program is extremely
                     visible to the community at and around UC Berkeley.
-                    {/*} <Link to="/redirect" state={{linkDestination:"https://tbp.berkeley.edu"}}> </Link>*/}
-                    {/*<RedirectExternalURL linkDestination="https://tbp.berkeley.edu">  link </RedirectExternalURL> */}
+                    
+                    {/*<RedirectExternalURL linkDestination="https://tbp.berkeley.edu">  link </RedirectExternalURL>*/}
                     {/* </Link> */}
                     {/*<RedirectExternalURL linkDestination="https://tbp.berkeley.edu/"/> */}
                   </p>

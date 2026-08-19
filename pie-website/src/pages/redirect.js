@@ -28,12 +28,15 @@ import Row from "react-bootstrap/esm/Row"
 
 import theme from "../assets/themes/theme"
 import CustomizedContainer from "../components/CustomizedContainer"
+import bannerImg from "../assets/images/2026UpdatedLogoBanner.png"
+import { navigate } from "gatsby"
+import { Link } from "gatsby"
 
-export default function RedirectExternalURL(props) {
+export default function RedirectExternalURL({location}) {
     /* const targetURLState = useState(window.state) */
     /*const targetURL = targetURLState.linkDestination */
     {/*if(props){ */}
-    const targetURL = props.linkDestination 
+    const targetURL = location.state?.linkDestination
     {/* }}
     else{ 
         const targetURL = "https://pioneers.berkeley.edu"
@@ -51,6 +54,11 @@ export default function RedirectExternalURL(props) {
         }
     const currPath = FindPath() 
 
+    if(!targetURL && typeof window!=="undefined"){
+        window.location.replace("/"
+            
+        )
+    }
     useEffect(() => {
         const redirTimer = setInterval(() => {
             redirCountdown((countdown) => {
@@ -65,16 +73,30 @@ export default function RedirectExternalURL(props) {
         }, 1000
     );
     return () => clearInterval(redirTimer);
-    }, []
+    }, [countdown, targetURL]
     )
     {/* if(currPath === "/redirect"){ */} 
-        return ( <div>
-            <h1>You are following an external link outside of pioneers.berkeley.edu. No redirect?</h1>
-            <button onClick={()=> window.location.replace(targetURL)}>
-                Click here.
-            </button>
-        </div>
-        ), []
+        return ( 
+            <div>
+                <CustomizedContainer color={theme.colors.white} >
+                    {/*<Link to="/"> */}
+                    <img src ={bannerImg}/>
+                    {/* </Link> */}
+                </CustomizedContainer>
+                <CustomizedContainer color={theme.colors.grey100} >
+                    <div>
+                         <p>You are following an external link outside of pioneers.berkeley.edu. 
+                             You'll be redirected to {targetURL} in {countdown} seconds No redirect?</p>
+                            <button onClick={()=> window.location.replace(targetURL)}>
+                                Click here to leave Pioneers site.
+                            </button>
+                            <button onClick={() => navigate(-1)}>
+                                Go back to Pioneers site.
+                            </button>
+                    </div>
+                </CustomizedContainer>
+            </div>
+        )
     
     {/*}}   else if(redir<1){
         setCount(redir => redir +1)
