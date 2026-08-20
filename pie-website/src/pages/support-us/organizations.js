@@ -261,7 +261,7 @@ const Organizations = () => {
                 </Col>
                 <Col sm={12} md={6} lg={6}>
                   <p>
-                    As PiE is an organization with close ties to <Link to={"/redirect"} state={{linkDestination:"https://tbp.berkeley.edu"}}> Tau Beta Pi </Link>
+                    As PiE is an organization with close ties to <Link to={"https://tbp.berkeley.edu"}> Tau Beta Pi </Link>
                     {/*{" "}
                     <a href="https://tbp.berkeley.edu/">Tau Beta Pi</a> */}, the
                     staff and faculty of the College of Engineering, engineering
