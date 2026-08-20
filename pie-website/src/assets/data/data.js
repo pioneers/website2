@@ -60,7 +60,7 @@ const sublinks = [
       },
       {
         subpage: "Software Hub",
-        url: "/softwarehub",
+        url: "/software-hub",
       },
     ],
   },
