@@ -35,8 +35,6 @@ import { BoxesWrapper } from "../../assets/themes/boxes"
 import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 
-import RedirectExternalURL from "../redirect-progress"
-
 import theme from "../../assets/themes/theme"
 import Row from "react-bootstrap/esm/Row"
 import Col from "react-bootstrap/esm/Col"
