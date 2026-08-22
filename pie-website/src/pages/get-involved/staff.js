@@ -49,7 +49,6 @@ const query = graphql`
         event
         time
         week
-        link
         internalTime
       }
     }
