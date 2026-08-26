@@ -12,11 +12,11 @@ import {useStaticQuery, graphql} from "gatsby"
 import { useState } from "react"
 import CustomizedContainer from "./CustomizedContainer"
 import { useEffect } from "react"
-{/*}
-export default function RedirectHandle () {
+
+export default function RedirectHandle ({children}) {
     
         const linkListener = (linkClick) => {
-            {/* const linkLocation = linkClick.getAttrbute('a') 
+            {/* const linkLocation = linkClick.getAttrbute('a')  */}
             const linkLocation = linkClick.target.closest('a')
             if(!linkLocation){
                 return
@@ -29,7 +29,7 @@ export default function RedirectHandle () {
             }
             
             else if(linkToGo.includes("http://") || linkToGo.includes("https://")){
-                {/*linkToGo.setAttribute() 
+                {/*linkToGo.setAttribute()  */}
                 linkLocation.setAttribute(linkToGo, "/redirect")
                 const linkState = {linkDestination: linkToGo}
 
@@ -38,10 +38,9 @@ export default function RedirectHandle () {
 
         }
          return(
-        <div onClick={linkListener} style={{display: "contents"}}>
+        <div onClick={(linkClick) => linkListener(linkClick)} style={{display: "contents"}}>
             {children}
-            </div>    
+        </div>    
         )
 }
 
-*/}

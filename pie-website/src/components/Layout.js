@@ -12,6 +12,7 @@ import Banner from "../components/AnnouncementBanner/BannerContainer"
 import theme from "../assets/themes/theme"
 
 import SidebarNew from "./SidebarNew"
+import RedirectHandle from "./RedirectHandle"
 
 
 /*
@@ -24,13 +25,13 @@ const Layout = ({ children, nav }) => {
     <React.Fragment>
       <AppProvider>
         <GlobalStyles />
-        
+        <RedirectHandle>
         <Banner/>
         <AnimatedNavbar duration={duration} nav={nav} />
         <Sidebar />
         <main>{children}</main>
         <Footer />
-        
+        </RedirectHandle>
       </AppProvider>
     </React.Fragment>
   )
