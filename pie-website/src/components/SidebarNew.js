@@ -11,48 +11,7 @@ import {useStaticQuery, graphql} from "gatsby"
 
 import { useState } from "react"
 import CustomizedContainer from "./CustomizedContainer"
-{/*
-import {useStaticQuery, graphql, Link} from "gatsby"
 
-const PullPages = () => {
-  const PagesGroup = useStaticQuery(graphql`
-  query MyQuery {
-    allSitePage {
-      edges {
-        node {
-          id
-          matchPath
-        }
-      }
-    }
-  }
-    `)
-
-  const pages = PagesGroup.allSitePage.nodes
-
-  return(
-    <div>
-      <ul>
-        {pages.map((page) =>{
-          <li key={page.path}>
-            <Link to={page.path}>
-              {page.path}
-            </Link>
-          </li>
-        })}
-      </ul>
-    </div>
-  )
-
-}
-*/}
-{/* const pagesQuery = () {
-  return useMediaQuery({
-    queryKey: []
-  })
-} */}
-
-// the modal that pops up for the navabar after collapse
 const SidebarNew = () => {
   const { isSidebarOpen, closeSidebar } = useGlobalContext()
 
@@ -79,20 +38,9 @@ const addMenuLinks = () =>{
     
   
     const pages = PagesGroup.allSitePage.nodes
-   //{/*const pages2 = pages.map(page)
-    //const cleanedPages = pages2.map(pages2.page.id.replace('SitePage ', '')) */}
-  
-    {/* ---CleanedNames not quite working---- */}
-   {/*const cleanedNames = pages.map((page)=>{
-      {page.path.toString()}
-   })
-      */}
-  
       
    const [pageTitles, setTitles] = useState([])
    const [pastGroup, setGroup] = useState([])
-   {/*}
-   const [groupTitles, setGroupTitle] = useState([]) */}
   
   const findGroup = () => {
     const pastGroupFragments = pageTitles.map(item => {item.split("/")
@@ -114,50 +62,6 @@ const addMenuLinks = () =>{
                 {page.pathAddress = page.path}
                 {page.lengthWay = page.linkName.split("/").slice(page.linkName.split("/").length - 2)}
                 {page.linkTitleSlice = page.linkName.split("/").slice(2)}
-                
-
-                 {/*------Works, but trying to use cleanedNames----- */}
-                 {/* {(page.path.toString())} */}
-                 {/* {cleanedNames.page[index]} */}
-                 {/*------Adding string of '...pageTitles'
-                 setTitles([{page.path.toString()}, ...pageTitles]) */}
-                 {/* {setTitles(page.path.toString())} */}
-                 {/*{setGroup(page.path.toString().split("/")[0])} */}
-                 {/*{ ----- works to print each one, cant split pageTitles[index]}  */}
-                 {/*} {findGroup} */}
-                 
-                 
-                  {/* {page.groupName=page.linkName.split("/")}
-                 {page.groupTitle = page.groupName[0][0]}
-                 */}
-                 
-                 
-                 {/*{page.groupName[1]} */}
-                 {/* ---- Might be out of order
-                 {groupTitleAdd(pageTitles[index])} */}
-             
-             
-            {/* ----commenting out to try to get pages in upper function addmenulinks -----
-                <p>
-               Slice:
-            </p>
-             {page.linkTitle = page.linkName.split("/").slice(2)}
-            <p>
-               Last element pop:
-            </p>
-             {page.possibleLinkName = page.linkName.split("/").pop()}
-             <p>
-             Arr length - 2:
-             </p>
-             {page.lengthWay = page.linkName.split("/").slice(page.linkName.split("/").length - 2)}
-             <p>
-               Group Name:
-             </p>
-             {/* {page.groupName} 
-             <br/>
-             {page.multLevels = page.lengthWay}
-             */}
-             
             
            })  
         return (
@@ -167,21 +71,8 @@ const addMenuLinks = () =>{
 }
 
 const pagesInfo = PullPages();
-{/*----Moved into addMenulink to try to get page value ------ */}
-    {/* ------ used with Error 1 const finalLinkInfo = new Map() ------ */}
-    pagesInfo.map((page) => {
-        
-        {/* if((page.lengthWay!=page.groupName) && (page.lengthWay == page.linkTitleSlice)) {
-            {/* page.groupTitle = page.groupName;
-            page.pageTitle = page.lengthWay; 
 
-            page.groupTitle = 'three';
-            page.pageTitle = "not three";
-        }   else{
-            page.groupTitle = "none";
-            page.pageTitle = "none";
-        }
-        */}
+    pagesInfo.map((page) => {
 
         if((page.lengthWay == page.groupName) || (page.lengthWay != page.linkTitleSlice)){
             page.groupTitle = "none"
@@ -201,13 +92,6 @@ const pagesInfo = PullPages();
         else{
             page.pageTitleUse = page.pageTitle;
         }
-        {/* ------ Error 1 Object cannot be children compile error -------
-        if(!finalLinkInfo.has(page.groupTitle)){
-            finalLinkInfo.set(page.groupTitle, {finalGroups: page.groupTitle, finalGroupedLinks: [page.pageTitleUse]})
-        } else{
-            finalLinkInfo.get(page.groupTitle).finalGroupedLinks.push(page.pageTitleUse)
-        }
-            */}
     })
     const finalLinkInfo = pagesInfo.reduce((finalLinkInfoBuild, page) => {
         {/* if(!finalLinkInfoBuild.has(page.groupTitle)) */}
@@ -251,102 +135,6 @@ const pagesInfo = PullPages();
             <div className = "about-grid">
                 {addMenuLinks()}
             </div>
-            
-            {/*
-            <div className="about-grid">
-              {sublinks
-                .filter(
-                  thing =>
-                    thing.page === "About" ||
-                    thing.page === "Support Us" ||
-                    thing.page === "Library"
-                )
-                .map((item, index) => {
-                  const { links, page, url } = item
-                  return (
-                    <div key={index}>
-                      <a href={url}>
-                        <h3>{page}</h3>
-                      </a>
-                      <div>
-                        {links.map(link => {
-                          const { subpage, url, subsections } = link
-                          return (
-                            <React.Fragment>
-                              <div>
-                                {page !== subpage && (
-                                  <a href={url}>
-                                    <h4>{subpage}</h4>
-                                  </a>
-                                )}
-
-                                {subsections.map((someLink, index) => {
-                                  const { label, icon, url } = someLink
-                                  return (
-                                    <div className="one-link">
-                                      <a key={page + "_" + index} href={url}>
-                                        {icon}
-                                        {label}
-                                      </a>
-                                    </div>
-                                  )
-                                })}
-                              </div>
-                            </React.Fragment>
-                          )
-                        })}
-                      </div>
-                    </div>
-                  )
-                })}
-            </div>
-            <hr />
-            {sublinks
-              .filter(
-                thing =>
-                  thing.page === "Competition" || thing.page === "Get Involved"
-              )
-              .map((item, index) => {
-                const { links, page, url } = item
-                return (
-                  <React.Fragment>
-                    <article key={index}>
-                      <a href={url}>
-                        <h3>{page}</h3>
-                      </a>
-                      <div className="sidebar-sublinks">
-                        {links.map(link => {
-                          const { subpage, url, subsections } = link
-                          return (
-                            <React.Fragment>
-                              <div>
-                                {page !== subpage && (
-                                  <a href={url}>
-                                    <h4>{subpage}</h4>
-                                  </a>
-                                )}
-                                {subsections.map((someLink, index) => {
-                                  const { label, icon, url } = someLink
-                                  return (
-                                    <div className="one-link">
-                                      <a key={page + index} href={url}>
-                                        {icon}
-                                        {label}
-                                      </a>
-                                    </div>
-                                  )
-                                })}
-                              </div>
-                            </React.Fragment>
-                          )
-                        })}
-                      </div>
-                    </article>
-                    <hr />
-                  </React.Fragment>
-                )
-              })}
-                */}
           </div>
         </aside>
       </div>
