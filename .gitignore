@@ -1,3 +1,8 @@
 # vim files
 *.swp
 *.un~
+
+# package files
+/package.json
+/package-lock.json
+/node_modules/
