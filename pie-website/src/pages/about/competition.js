@@ -5,11 +5,6 @@ import Layout from "../../components/Layout"
 import Header from "../../components/Header"
 
 import styled from "styled-components"
-
-import { FaHandsHelping } from "@react-icons/all-files/fa/FaHandsHelping"
-import { BiGroup } from "@react-icons/all-files/bi/BiGroup"
-import { VscOpenPreview } from "@react-icons/all-files/vsc/VscOpenPreview"
-
 import { BoxesWrapper } from "../../assets/themes/boxes"
 
 import { FaRegHandPaper } from "@react-icons/all-files/fa/FaRegHandPaper"
@@ -18,9 +13,6 @@ import { BsBuilding } from "@react-icons/all-files/bs/BsBuilding"
 
 import CustomizedContainer from "../../components/CustomizedContainer"
 import HelmetWrapper from "../../components/HelmetWrapper"
-
-// import { useStaticQuery, graphql } from "gatsby"
-// import { GatsbyImage } from "gatsby-plugin-image"
 import theme from "../../assets/themes/theme"
 import Row from "react-bootstrap/esm/Row"
 import Col from "react-bootstrap/esm/Col"
@@ -29,25 +21,9 @@ import Container from "react-bootstrap/esm/Container"
 import pic from "../../assets/images/homepage-banners/explaining.jpg"
 import mapimg from "../../assets/images/about-us/schoolmap.png"
 
-import MailchimpFormContainer from "../../components/Mailchimp"
-import { Link } from "gatsby"
-
-// const query = graphql`
-//   {
-//     allContentfulIndexCarousel {
-//       nodes {
-//         name
-//         image {
-//           gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
-//         }
-//       }
-//     }
-//   }
-// `
 
 const Competition = () => {
-  // const data = useStaticQuery(query)
-  // const carouselNodes = data.allContentfulIndexCarousel.nodes
+ 
 
   return (
     <Layout>

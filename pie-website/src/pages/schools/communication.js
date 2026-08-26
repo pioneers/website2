@@ -2,26 +2,15 @@ import React from "react"
 
 import Header from "../../components/Header"
 import Layout from "../../components/Layout"
-import { TimelineTwo } from "../../components/Timelines"
-
-import { FaRegHandPaper } from "@react-icons/all-files/fa/FaRegHandPaper"
-import { AiOutlineTeam } from "@react-icons/all-files/ai/AiOutlineTeam"
-import { BsBuilding } from "@react-icons/all-files/bs/BsBuilding"
-
 import styled from "styled-components"
 import CustomizedContainer from "../../components/CustomizedContainer"
 import AlternativeButton from "../../components/AlternativeButton"
 import HelmetWrapper from "../../components/HelmetWrapper"
 import { BoxesWrapper } from "../../assets/themes/boxes"
 
-import { useStaticQuery, graphql } from "gatsby"
-
 import theme from "../../assets/themes/theme"
 
 import Container from "react-bootstrap/esm/Container"
-import Row from "react-bootstrap/Row"
-import Col from "react-bootstrap/Col"
-
 import pic from "../../assets/images/stock-images/robotics_competition_sp17.jpg"
 
 const Communication = () => {
@@ -71,9 +60,6 @@ const Communication = () => {
               </a>{" "}
               for Office Hours with Members of PiE.
             </p>
-            {/* <AlternativeButton link="https://pimulator.pierobotics.org/">
-              Simulator &rsaquo;
-            </AlternativeButton> */}
             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf__E2o0QDCux2njhfFJY9onZxhPnAFv4Kv2hG8j5wxu6C55g/viewform?embedded=true" width="720" height="1500" frameborder="0" marginheight="0" marginwidth="0" title="Schedule a Worksession">Loading…</iframe> 
         </Container>
         
@@ -155,12 +141,5 @@ const ResourcesWrapper = styled(Container)`
     color: ${theme.colors.black};
   }
 `
-
-{/*const frameDiv = styled.div`
-  align-items: center;
-  justify-content: center;
-  height: 50vh;
-  width: 40vw;
-`*/}
 
 export default Communication

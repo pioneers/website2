@@ -13,11 +13,9 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import { BLOCKS } from "@contentful/rich-text-types"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
-import { TimelineOne } from "../../components/Timelines"
 import Row from "react-bootstrap/esm/Row"
 import Col from "react-bootstrap/esm/Col"
 import Container from "react-bootstrap/esm/Container"
-import AlternativeButton from "../../components/AlternativeButton"
 
 import pic from "../../assets/images/stock-images/mentor.jpg"
 
@@ -128,23 +126,9 @@ const Mentors = () => {
           <div>
             {seasonParagraph()}
             </div>
-          {/*<AlternativeButton link="/getInvolved/Forms">
-            Sign Up &rsaquo;
-          </AlternativeButton> */}
         </Container>
       </CustomizedContainer>
-     {/* -----------------Must Update Timeline----------------
-      <CustomizedContainer color={theme.colors.white}>
-        <Container fluid>
-          <h4 style={{ marginBottom: "1.5em", color: theme.colors.grey400 }}>
-            THE TIMELINE
-          </h4>
-          <Header type="yellow">List of Events</Header>
-           <h1>Events to Come</h1> 
-          <TimelineOne timelineFor={events} />
-        </Container>
-      </CustomizedContainer>
-      */}
+
       <CustomizedContainer color={theme.colors.grey100}>
         <Container fluid>
           <div>

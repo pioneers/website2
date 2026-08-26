@@ -8,16 +8,13 @@ import { FaHandsHelping } from "@react-icons/all-files/fa/FaHandsHelping"
 import { RiMoneyDollarCircleLine } from "@react-icons/all-files/ri/RiMoneyDollarCircleLine"
 import { BiGroup } from "@react-icons/all-files/bi/BiGroup"
 
-import Tab from "react-bootstrap/Tab"
-import Tabs from "react-bootstrap/Tabs"
 
 import Layout from "../../components/Layout"
 
 import styled from "styled-components"
 import HelmetWrapper from "../../components/HelmetWrapper"
 
-import { useStaticQuery, graphql } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
+
 
 import Col from "react-bootstrap/esm/Col"
 import Row from "react-bootstrap/esm/Row"

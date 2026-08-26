@@ -4,9 +4,7 @@ import Container from "react-bootstrap/Container"
 
 import Header from "../../components/Header"
 
-import { FaHandsHelping } from "@react-icons/all-files/fa/FaHandsHelping"
-import { RiMoneyDollarCircleLine } from "@react-icons/all-files/ri/RiMoneyDollarCircleLine"
-import { BiGroup } from "@react-icons/all-files/bi/BiGroup"
+
 
 import Tab from "react-bootstrap/Tab"
 import Tabs from "react-bootstrap/Tabs"
@@ -118,7 +116,6 @@ const OurTeam = () => {
         <Container fluid>
           <Tabs defaultActiveKey="staff" id="uncontrolled-tab-example">
             <Tab eventKey="staff" title="Staff" class="styleTab">
-              {/* <h3 style={{ margin: "1rem 0" }}>Click on us to learn more!</h3> */}
               <div id="leadership"></div>
               <br />
               <Header type={"blue-header"}>Leadership</Header>
@@ -263,18 +260,6 @@ const OurTeam = () => {
     )  
 }
 
-{/* const styledTabs = styled(Tabs)`
-   .nav-tabs .nav-link{
-  color: ${theme.colors.blue500}
-  background-color: ${theme.colors.black}
-}
-  .nav-tabs .nav-link.active{
-  color: ${theme.colors.blue300}
-  background-color: ${theme.colors.white}
-  border-color: ${theme.colors.gold300}
-  }
-  
-` */}
 const styledTabs = styled(Tabs)`
   .tab-item{
   color: ${theme.colors.blue500}

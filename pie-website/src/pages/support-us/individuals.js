@@ -5,7 +5,6 @@ import Header from "../../components/Header"
 import Layout from "../../components/Layout"
 
 import styled from "styled-components"
-import AlternativeButton from "../../components/AlternativeButton"
 import CustomizedContainer from "../../components/CustomizedContainer"
 
 import KitCost from "../../assets/images/sponsors/kit-cost.png"
@@ -15,7 +14,6 @@ import HelmetWrapper from "../../components/HelmetWrapper"
 import { BoxesWrapper } from "../../assets/themes/boxes"
 
 import { useStaticQuery, graphql, Script } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
 
 import theme from "../../assets/themes/theme"
 import Row from "react-bootstrap/esm/Row"
@@ -23,12 +21,6 @@ import Col from "react-bootstrap/esm/Col"
 import Container from "react-bootstrap/esm/Container"
 
 import pic from "../../assets/images/robot2.jpg"
-import { propsToClassKey } from "@mui/styles"
-import {dangerouslySetInnerHTML} from "react"
-
-import {renderToStaticMarkup} from 'react-dom/server';
-import {useRef, useEffect, useLayoutEffect} from 'react';
-
 
 
 const query = graphql`
@@ -49,29 +41,11 @@ const query = graphql`
     }
   }
 `
-{/* Donorbox method 1, object[promise] error
-const filepath = "../donorbox.html"
-const filecont = fetch(filepath)
-  .then(response =>response.text()
-  )
-  .then(html => console.log(html)
-  )
-  
-
-const __htmlString = fetch(filepath) */}
 
 const Individuals = () => {
   const data = useStaticQuery(query)
   const sponsors = data.allContentfulSponsors.nodes
-  {/* Donorbox Method 2, dangerouslysetInnerhtml not rendering 
-  const showDonorbox = () => {
-    const htmlSet = '<script type="module" src="https://donorbox.org/widgets.js" async={true}></script><dbox-widget campaign="pioneers-in-engineering" type="donation_form" enable-auto-scroll="true"></dbox-widget>';
-    return(<div dangerouslySetInnerHTML={{__html: htmlSet}}/>);
-    
-  }
-*/}
 
-{/* Method 5 - */}
 function showDonorbox() {
     
     return(
@@ -82,55 +56,6 @@ function showDonorbox() {
     
 }
 
-
-  {/* Donorbox Method 3, Objects are not valid as a React child (found: [object Promise]). If you meant to render a collection of children, use an array instead.
-const markup = `
-  <script type="module" src="https://donorbox.org/widgets.js" asynch={true}></script><dbox-widget campaign="pioneers-in-engineering" type="donation_form" enable-auto-scroll="true"></dbox-widget>;
-	
-`;
-
-<DangerousElement markup={markup} />
-  function DangerousElement({ markup }) {
-    const refScr = useRef<HTMLDivElement>(null);
-    useLayoutEffect(() => {
-        const range = document.createRange();
-        range.selectNode(refScr.current);
-        const documentFragment = range.createContextualFragment(markup);
-        refScr.current.innerHTML = '<script type="module" src="https://donorbox.org/widgets.js" asynch={true}></script><dbox-widget campaign="pioneers-in-engineering" type="donation_form" enable-auto-scroll="true"></dbox-widget>';
-        refScr.current.append(documentFragment);
-    }, [markup]);
-    return (
-      <div>
-        ref = {refScr};
-        dangerouslySetInnerHTML = {{__html: markup}};
-      </div>
-    );
-  }
-    */}
-  {/*} Donorbox Method 4
-  async function ShowDonorbox2(){
-    const scriptContRef = useRef(null)
-    const script = document.createElement('script')
-
-    useEffect(() => {
-
-    const currCont = scriptContRef.current
-    script.src = "https://donorbox.org/widgets.js"
-    script.async=true
-    script.setAttribute("campaign", "pioneers-in-engineering")
-    script.setAttribute("type", "donation_form")
-    script.setAttribute("enable-auto-scroll", "true")
-
-    currCont.appendChild(script)
-
-    
-    }, []
-  )
-    return(
-      <div ref={scriptContRef}/>
-    )
-  }
-    */}
   return (
     <React.Fragment>
       <Layout>
@@ -217,43 +142,11 @@ const markup = `
           <Header type={"blue"}>Consider Donating to Our Donorbox Campaign</Header>
           <div>
             <p>Consider a recurring or one-time donation to help further PiE's capacity to reach students!</p>
-            {/*<p>
-              Find and {" "}
-              <a href="https://calendar.app.google/iRvf5JCuYUjFw23R7">
-                Schedule a Time
-              </a>{" "}
-              for Office Hours with Members of PiE.
-            </p>/*}
-            {/* <AlternativeButton link="https://pimulator.pierobotics.org/">
-              Simulator &rsaquo;
-            </AlternativeButton> */}
-            {/*<iframe src="https://donorbox.org/pioneers-in-engineering" title = "Schedule a Worksession" 
-                style = {{width: '100vh', height: '70vh' }}/> 
-                */}
           </div>
-        
-            {/* {ShowDonorbox2()} */}
           {showDonorbox()} 
-          
-          {/*<div>
-            <script type="module" src="https://donorbox.org/widgets.js" async></script><dbox-widget campaign="pioneers-in-engineering" type="donation_form" enable-auto-scroll="true"></dbox-widget>          
-          </div> */}
 
         </Container>
       </CustomizedContainer>
-        
-    
-          
-
-       
-        {/*<div>
-            <p>
-              text
-            </p>
-          <script type="module" src="https://donorbox.org/widgets.js" async></script>{/*<dbox-widget campaign="pioneers-in-engineering" type="donation_form" enable-auto-scroll="true"></dbox-widget>
-
-        </div> */}
-       
 
         <CustomizedContainer color="white">
           <Sponsors fluid>
@@ -261,7 +154,6 @@ const markup = `
               OUR THANKS
             </h4>
             <div id="sponsors" />
-            {/*<Header type={"gold-header"}>Sponsors</Header>*/}
             <Container fluid>
             <Header type={"gold-header"}>To Our Sponsors</Header>
 
@@ -294,22 +186,6 @@ const markup = `
           </Container>
           <Container style={{marginTop:"4rem"}}>
         
-
-            {/*}
-            <p>
-              As of 2021-2022 competition year, Pioneers in Engineering would
-              like to extend its thanks for the support granted by the following
-              organizations. If you interested in becoming one of our sponsors
-              and the benefits of being one, please refer to{" "}
-              <a
-                href="/assets/sponsors/PiE_Sponsorship_Packet_2022_23.pdf"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Sponsorship Packet 2022-2023.pdf
-              </a>
-            </p>
-            */}
             <div style={{display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center"}}>
                 <Header type={"gold-header"}>Special thanks to our 2026 Crowdfunders!</Header>
                 <p style={{fontSize: "1.5rem"}}>
@@ -322,43 +198,6 @@ const markup = `
                   <strong>Lisa Branum</strong>
                 </p>
             </div>
-
-            {/*<div style={{display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center"}}>
-              <Header style={{color: theme.colors.grey400}}>Silver Sponsors:</Header>
-              <a href="https://www.tsmc.com/english">
-                <img src="/assets/sponsors/tsmc.png" alt="TSMC logo" style={{width:"12rem", height:"auto"}} />
-              </a>
-            </div>
-            */}
-            {/* {levels.map(level => {
-              const items = sponsors.filter(
-                sponsor => sponsor.sponsorshipLevel === level
-              )
-              if (items.length > 0) {
-                return (
-                  <SponsorWrapper>
-                    <div className="outer-container">
-                      <h3>{level}</h3>
-                      <div className="container">
-                        {items.map(thing => {
-                          const { link, image } = thing
-                          return (
-                            <React.Fragment>
-                              <a href={link} target="_blank" rel="noreferrer">
-                                <GatsbyImage
-                                  image={image.gatsbyImageData}
-                                ></GatsbyImage>
-                              </a>
-                            </React.Fragment>
-                          )
-                        })}
-                      </div>
-                    </div>
-                  </SponsorWrapper>
-                )
-              }
-              return <div></div>
-            })} */}
             </Container>
           </Sponsors>
         </CustomizedContainer>

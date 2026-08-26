@@ -1,9 +1,5 @@
-// scope css locally
 import React from "react"
 import Layout from "../components/Layout"
-
-// Attempt to create announcement banner container
-import BannerContainer from "../components/AnnouncementBanner/BannerContainer"
 
 import Header from "../components/Header"
 import AlternativeButton from "../components/AlternativeButton"
@@ -17,8 +13,6 @@ import { VscOpenPreview } from "@react-icons/all-files/vsc/VscOpenPreview"
 import CustomizedContainer from "../components/CustomizedContainer"
 import HelmetWrapper from "../components/HelmetWrapper"
 
-// import { useStaticQuery, graphql } from "gatsby"
-// import { GatsbyImage } from "gatsby-plugin-image"
 import theme from "../assets/themes/theme"
 import Row from "react-bootstrap/esm/Row"
 import Col from "react-bootstrap/esm/Col"
@@ -28,64 +22,11 @@ import pic from "../assets/images/homepage-banners/explaining.jpg"
 
 import MailchimpFormContainer from "../components/Mailchimp"
 import { Link } from "gatsby"
-import {useStaticQuery, graphql} from "gatsby"
-
-
-import { useState } from "react"
-{/*import {useStaticQuery, graphql} from "gatsby"
-
-const PullPages = () => {
-  const PagesGroup = useStaticQuery(graphql`
-    query GetPages{
-      allSitePage{
-        nodes{
-          path
-        }
-      }
-    }
-
-  
-    `)
-
-  const pages = PagesGroup.allSitePage.nodes
-
-  return(
-    <div>
-      <ul>
-        {pages.map((page) =>{
-          <li key={page.path}>
-            <Link to={page.path}>
-              {page.path}
-            </Link>
-          </li>
-        })}
-      </ul>
-    </div>
-  )
-
-}
-*/}
-// const query = graphql`
-//   {
-//     allContentfulIndexCarousel {
-//       nodes {
-//         name
-//         image {
-//           gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
-//         }
-//       }
-//     }
-//   }
-// `
-
-
 
 
 
 
 export default function Home(props) {
-  // const data = useStaticQuery(query)
-  // const carouselNodes = data.allContentfulIndexCarousel.nodes
 
 
   return (
@@ -160,12 +101,6 @@ export default function Home(props) {
           </AlternativeButton>
         </Students>
       </CustomizedContainer>
-
-      {/*}
-      <div>
-        {PullPages}
-      </div>
- */}
  
       <CustomizedContainer>
         <JoinUsHeader fluid>
