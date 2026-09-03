@@ -46,21 +46,13 @@ const query = graphql`
         }
       }
     }
-    allContentfulFoundation {
-      nodes {
-        name
-        position
-      }
-    }
     allContentfulStaffMember {
       nodes {
-        major
         name
         picture {
           gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
         }
         role
-        year
       }
     }
     allContentfulDefaultStaffMember {
