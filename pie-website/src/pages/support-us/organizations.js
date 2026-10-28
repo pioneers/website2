@@ -13,21 +13,19 @@ import KitCost from "../../assets/images/sponsors/kit-cost.png"
 import Poster from "../../assets/images/companyposter.jpg"
 
 import sponsor1 from "../../assets/images/CarouselSponsors/SupportCar1.jpg"
-import sponsor2 from  "../../assets/images/CarouselSponsors/SupportCar2.jpg"
-import sponsor3 from  "../../assets/images/CarouselSponsors/SupportCar3.jpg"
-import sponsor4 from  "../../assets/images/CarouselSponsors/SupportCar4.jpg"
-import sponsor5 from  "../../assets/images/CarouselSponsors/SupportCar5.jpg"
-import sponsor6 from  "../../assets/images/CarouselSponsors/SupportCar6.jpg"
-import sponsor7 from  "../../assets/images/CarouselSponsors/SupportCar7.jpg"
-import sponsor8 from  "../../assets/images/CarouselSponsors/SupportCar8.jpg"
-import sponsor9 from  "../../assets/images/CarouselSponsors/SupportCar9.jpg"
-import sponsor10 from  "../../assets/images/CarouselSponsors/SupportCar10.jpg"
-import sponsor11 from  "../../assets/images/CarouselSponsors/SupportCar11.jpg"
-import sponsor12 from  "../../assets/images/CarouselSponsors/SupportCar12.jpg"
+import sponsor2 from "../../assets/images/CarouselSponsors/SupportCar2.jpg"
+import sponsor3 from "../../assets/images/CarouselSponsors/SupportCar3.jpg"
+import sponsor4 from "../../assets/images/CarouselSponsors/SupportCar4.jpg"
+import sponsor5 from "../../assets/images/CarouselSponsors/SupportCar5.jpg"
+import sponsor6 from "../../assets/images/CarouselSponsors/SupportCar6.jpg"
+import sponsor7 from "../../assets/images/CarouselSponsors/SupportCar7.jpg"
+import sponsor8 from "../../assets/images/CarouselSponsors/SupportCar8.jpg"
+import sponsor9 from "../../assets/images/CarouselSponsors/SupportCar9.jpg"
+import sponsor10 from "../../assets/images/CarouselSponsors/SupportCar10.jpg"
+import sponsor11 from "../../assets/images/CarouselSponsors/SupportCar11.jpg"
+import sponsor12 from "../../assets/images/CarouselSponsors/SupportCar12.jpg"
 
-
-import {Link} from 'gatsby'
-
+import { Link } from "gatsby"
 
 import HelmetWrapper from "../../components/HelmetWrapper"
 import { BoxesWrapper } from "../../assets/themes/boxes"
@@ -74,7 +72,18 @@ const Organizations = () => {
     "Bronze Sponsor",
   ]
   const sponsorImages = [
-    sponsor1, sponsor2, sponsor3, sponsor4, sponsor5, sponsor6, sponsor7, sponsor8, sponsor9, sponsor10, sponsor11, sponsor12
+    sponsor1,
+    sponsor2,
+    sponsor3,
+    sponsor4,
+    sponsor5,
+    sponsor6,
+    sponsor7,
+    sponsor8,
+    sponsor9,
+    sponsor10,
+    sponsor11,
+    sponsor12,
   ]
   return (
     <React.Fragment>
@@ -84,7 +93,7 @@ const Organizations = () => {
           description="Because of our low entry fee to our competition over $900 of our kit is subsidized by Pioneers in Engineering. For that reason, we rely on donations and grants to continue our operation to provide STEM education to the Bay Area"
         />
         <HeroWrapper>
-          <div className="filler"/>
+          <div className="filler" />
           <div className="hero-image">
             <div>
               <h1>Organizations</h1>
@@ -134,7 +143,10 @@ const Organizations = () => {
                       <br></br>
                       If you would like more information about PiE and how to
                       partner with us, please email{" "}
-                      <a style={{color: theme.colors.black }} href="mailto:partnerships@pierobotics.org">
+                      <a
+                        style={{ color: theme.colors.black }}
+                        href="mailto:partnerships@pierobotics.org"
+                      >
                         partnerships@pierobotics.org
                       </a>
                     </p>
@@ -150,10 +162,14 @@ const Organizations = () => {
                     <div id="donate" />
                     <h2>Donation Considerations</h2>
                     <p>
-                     Are you an industry professional considering supporting us as a one-time donor? Consider a Donorbox donation on our {" "}
-                     <a style={{color: theme.colors.black }} href = "../individuals">
-                      individual sponsors page!
-                    </a>
+                      Are you an industry professional considering supporting us
+                      as a one-time donor? Consider a Donorbox donation on our{" "}
+                      <a
+                        style={{ color: theme.colors.black }}
+                        href="../individuals"
+                      >
+                        individual sponsors page!
+                      </a>
                     </p>
                     {/*<AlternativeButton link="https://donorbox.org/pioneers-in-engineering">
                       Donorbox Link &rsaquo;
@@ -183,7 +199,7 @@ const Organizations = () => {
                   provide robotics kits, parts, and mentors for 24 teams. Our
                   program includes:
                 </p>
-                <ul style={{listStyleType: 'square', marginLeft: '2rem'}}>
+                <ul style={{ listStyleType: "square", marginLeft: "2rem" }}>
                   <li>Competition field construction</li>
                   <li>Campus-mandated insurance</li>
                   <li>Room reservation fees</li>
@@ -197,12 +213,12 @@ const Organizations = () => {
               <Col sm={12} md={6} lg={6}>
                 <h3>Workshops</h3>
                 <p>
-                  We hold a number of workshops on Berkeley's campus,
-                  for high school students and Berkeley students alike. Our
-                  workshops are always free for participants, so funding comes
-                  out of our own budget. Your donations help us provide:
+                  We hold a number of workshops on Berkeley's campus, for high
+                  school students and Berkeley students alike. Our workshops are
+                  always free for participants, so funding comes out of our own
+                  budget. Your donations help us provide:
                 </p>
-                <ul style={{listStyleType: 'square', marginLeft: '2rem'}}>
+                <ul style={{ listStyleType: "square", marginLeft: "2rem" }}>
                   <li>
                     Passes to utilize campus spaces and resources to create
                     workshop materials
@@ -227,26 +243,24 @@ const Organizations = () => {
               </Col>
             </Row>
           </DonationsWrapper>
-          </CustomizedContainer>
+        </CustomizedContainer>
         <CustomizedContainer color={theme.colors.grey200}>
-        <Container fluid>
-          {/*<img src={sponsor1}/>*/}
-          <CustomCarousel variant="dark">
-            {sponsorImages.map(item => {
-              const sponsorImage = item
-              return (
-                <Carousel.Item>
-                  <div className="carouselImage">
-                    <img src={sponsorImage} height='500rem'/>
-                  </div>
-                </Carousel.Item>
-                
-              )
-            })}
-          </CustomCarousel> 
-        </Container>
-      </CustomizedContainer>
-      
+          <Container fluid>
+            {/*<img src={sponsor1}/>*/}
+            <CustomCarousel variant="dark">
+              {sponsorImages.map(item => {
+                const sponsorImage = item
+                return (
+                  <Carousel.Item>
+                    <div className="carouselImage">
+                      <img src={sponsorImage} height="500rem" />
+                    </div>
+                  </Carousel.Item>
+                )
+              })}
+            </CustomCarousel>
+          </Container>
+        </CustomizedContainer>
 
         <CustomizedContainer color="#e8f1fb" marginBottom="5rem">
           <Container fluid>
@@ -259,27 +273,27 @@ const Organizations = () => {
                 </Col>
                 <Col sm={12} md={6} lg={6}>
                   <p>
-                    As PiE is an organization with close ties to <Link to={"https://tbp.berkeley.edu"}> Tau Beta Pi </Link>
+                    As PiE is an organization with close ties to{" "}
+                    <Link to={"https://tbp.berkeley.edu"}> Tau Beta Pi </Link>
                     {/*{" "}
-                    <a href="https://tbp.berkeley.edu/">Tau Beta Pi</a> */}, the
-                    staff and faculty of the College of Engineering, engineering
-                    honor societies, and about 27,000 undergraduate students at
-                    UC Berkeley, your support of the program is extremely
-                    visible to the community at and around UC Berkeley.
-                    
+                    <a href="https://tbp.berkeley.edu/">Tau Beta Pi</a> */}
+                    , the staff and faculty of the College of Engineering,
+                    engineering honor societies, and about 27,000 undergraduate
+                    students at UC Berkeley, your support of the program is
+                    extremely visible to the community at and around UC
+                    Berkeley.
                     {/*<RedirectExternalURL linkDestination="https://tbp.berkeley.edu">  link </RedirectExternalURL>*/}
                     {/* </Link> */}
                     {/*<RedirectExternalURL linkDestination="https://tbp.berkeley.edu/"/> */}
                   </p>
                   <p>
-                    We appreciate and recognize our sponsors in the form
-                    of posters, banners and logos, and t-shirts seen by
-                    thousands of members of the UC Berkeley community. In
-                    addition, sponsors are warmly welcomed and encouraged to
-                    attend the{" "}
-                    <a href="/about/competition">competition day</a>. If
-                    you would like more information about the benefits, please
-                    refer to{" "}
+                    We appreciate and recognize our sponsors in the form of
+                    posters, banners and logos, and t-shirts seen by thousands
+                    of members of the UC Berkeley community. In addition,
+                    sponsors are warmly welcomed and encouraged to attend the{" "}
+                    <a href="/about/competition">competition day</a>. If you
+                    would like more information about the benefits, please refer
+                    to{" "}
                     <a
                       href="/assets/sponsors/PiE_Sponsorship_Packet_2025_2026.pdf"
                       target="_blank"
@@ -302,10 +316,10 @@ const Organizations = () => {
             <div id="sponsors" />
             <Header type={"gold-header"}>Sponsors</Header>
             <p>
-              Pioneers in Engineering would
-              like to extend its thanks for the support granted by the following
-              organizations. If you interested in becoming one of our sponsors
-              and the benefits of being one, please refer to{" "}
+              Pioneers in Engineering would like to extend its thanks for the
+              support granted by the following organizations. If you interested
+              in becoming one of our sponsors and the benefits of being one,
+              please refer to{" "}
               <a
                 href="/assets/sponsors/PiE_Sponsorship_Packet_2025_2026.pdf"
                 target="_blank"
@@ -314,13 +328,27 @@ const Organizations = () => {
                 Sponsorship Packet 2025-2026.pdf
               </a>
             </p>
-            <div style={{display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center"}}>
-              <Header style={{color: theme.colors.grey400}}>Sponsors:</Header>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
+              <Header style={{ color: theme.colors.grey400 }}>Sponsors:</Header>
               <a href="https://esc.studentorg.berkeley.edu/blueandgold.html">
-                <img src={bluegoldImg} style={{width:"15rem", height:"auto"}}/>
+                <img
+                  src={bluegoldImg}
+                  style={{ width: "15rem", height: "auto" }}
+                />
               </a>
               <a href="https://www.tsmc.com/english">
-                <img src="/assets/sponsors/tsmc.png" alt="TSMC logo" style={{width:"12rem", height:"auto"}} />
+                <img
+                  src="/assets/sponsors/tsmc.png"
+                  alt="TSMC logo"
+                  style={{ width: "12rem", height: "auto" }}
+                />
               </a>
             </div>
             {/* {levels.map(level => {
@@ -358,7 +386,6 @@ const Organizations = () => {
     </React.Fragment>
   )
 }
-
 
 const HeroWrapper = styled.div`
   .filler {
@@ -440,7 +467,7 @@ const CustomCarousel = styled(Carousel)`
     text-align: center;
   }
 
-  .carouselImage{
+  .carouselImage {
     padding: 2 rem;
     display: flex;
     align-items: center;
@@ -455,7 +482,7 @@ const CustomCarousel = styled(Carousel)`
     .testimonial {
       padding: 5rem;
     }
-    .carouselImage{
+    .carouselImage {
       padding: 2rem;
     }
     h3 {

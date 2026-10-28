@@ -14,7 +14,6 @@ import theme from "../assets/themes/theme"
 import SidebarNew from "./SidebarNew"
 import RedirectHandle from "./RedirectHandle"
 
-
 /*
 Creates a wrapper for all pages which includes a navbar at the top and a footer at the bottom
 */
@@ -26,11 +25,11 @@ const Layout = ({ children, nav }) => {
       <AppProvider>
         <GlobalStyles />
         <RedirectHandle>
-        <Banner/>
-        <AnimatedNavbar duration={duration} nav={nav} />
-        <Sidebar />
-        <main>{children}</main>
-        <Footer />
+          <Banner />
+          <AnimatedNavbar duration={duration} nav={nav} />
+          <Sidebar />
+          <main>{children}</main>
+          <Footer />
         </RedirectHandle>
       </AppProvider>
     </React.Fragment>

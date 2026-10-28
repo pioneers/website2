@@ -30,16 +30,15 @@ const sublinks = [
       {
         subpage: "Competition",
         url: "/competition",
-      }, {
+      },
+      {
         subpage: "Our Team",
         url: "/our-team",
-      }, 
+      },
       {
         subpage: "Policies",
         url: "/policies",
-      }
-
-
+      },
     ],
   },
   {
@@ -77,7 +76,7 @@ const sublinks = [
         subpage: "Club Members",
         url: "/staff",
       },
-       {
+      {
         subpage: "Volunteer",
         url: "/volunteer",
       },
@@ -89,11 +88,11 @@ const sublinks = [
     links: [
       {
         subpage: "Individuals",
-        url: "/individuals",  
+        url: "/individuals",
       },
-       {
+      {
         subpage: "Organizations",
-        url: "/organizations",  
+        url: "/organizations",
       },
     ],
   },
@@ -102,10 +101,9 @@ const sublinks = [
     url: "",
     links: [
       {
-      subpage: "Gallery",
-      url: "/gallery",
-    }
-      
+        subpage: "Gallery",
+        url: "/gallery",
+      },
     ],
   },
 ]

@@ -4,8 +4,6 @@ import Container from "react-bootstrap/Container"
 
 import Header from "../../components/Header"
 
-
-
 import Tab from "react-bootstrap/Tab"
 import Tabs from "react-bootstrap/Tabs"
 
@@ -75,10 +73,15 @@ const OurTeam = () => {
   const defaultStaffMember = data.allContentfulDefaultStaffMember.nodes
 
   const staff = data.allContentfulStaffMember.nodes
-  const leadership = staff.filter(person => person.role && person.role.includes("Director"))
+  const leadership = staff.filter(
+    person => person.role && person.role.includes("Director")
+  )
   const pm = staff.filter(person => person.role && person.role.includes("PM"))
   const other = staff.filter(
-    person =>  person.role && !person.role.includes("Director") && !person.role.includes("PM")
+    person =>
+      person.role &&
+      !person.role.includes("Director") &&
+      !person.role.includes("PM")
   )
 
   return (
@@ -174,7 +177,7 @@ const OurTeam = () => {
                   return (
                     <SpecialCol xs={12} sm={6} md={4} lg={3}>
                       <div className="card">
-                      {person.picture ? (
+                        {person.picture ? (
                           <GatsbyImage
                             image={person.picture.gatsbyImageData}
                             className="img"
@@ -249,25 +252,25 @@ const OurTeam = () => {
         </Container>
       </CustomizedContainer>
     </Layout>
-    )  
+  )
 }
 
 const styledTabs = styled(Tabs)`
-  .tab-item{
-  color: ${theme.colors.blue500}
+  .tab-item {
+    color: ${theme.colors.blue500};
   }
 `
 
 const customTab = styled(Tab)`
-.styleTab{
-  background-color: ${theme.colors.blue100}
-}
-.tab-btn{
-  backgroundcolor: ${theme.colors.blue100}
-}
-.tab-btn.active{
-  backgroundcolor: ${theme.colors.bleu500}  
-}
+  .styleTab {
+    background-color: ${theme.colors.blue100};
+  }
+  .tab-btn {
+    backgroundcolor: ${theme.colors.blue100};
+  }
+  .tab-btn.active {
+    backgroundcolor: ${theme.colors.bleu500};
+  }
 `
 const SpecialCol = styled(Col)`
   padding: 1rem;

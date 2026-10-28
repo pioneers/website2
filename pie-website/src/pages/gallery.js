@@ -31,7 +31,7 @@ const query = graphql`
           gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
         }
       }
-      distinct(field: {relativeDirectory: SELECT})
+      distinct(field: { relativeDirectory: SELECT })
       totalCount
     }
   }

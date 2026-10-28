@@ -3,7 +3,7 @@ import React from "react"
 import CustomizedContainer from "../../components/CustomizedContainer"
 import AlternativeButton from "../../components/AlternativeButton"
 import OnPageLink from "../../components/OnPageLink"
-import {Link, Element} from "react-scroll"
+import { Link, Element } from "react-scroll"
 import Layout from "../../components/Layout"
 import HelmetWrapper from "../../components/HelmetWrapper"
 import theme from "../../assets/themes/theme"
@@ -20,9 +20,7 @@ import pic from "../../assets/images/stock-images/robotics_competition_sp17.jpg"
 
 const query = graphql`
   {
-    allContentfulCompetitionTimeline(
-      sort: { internalTime: ASC }
-    ) {
+    allContentfulCompetitionTimeline(sort: { internalTime: ASC }) {
       nodes {
         content {
           raw
@@ -44,7 +42,8 @@ const StudentResources = () => {
           <div>
             <h3>Robot API Reference</h3>
             <p>
-              Read documentation for all functions that students can use to communicate with the robot
+              Read documentation for all functions that students can use to
+              communicate with the robot
             </p>
             <AlternativeButton link="https://github.com/pioneers/runtime/wiki/Student-API">
               API Docs &rsaquo;
@@ -55,8 +54,8 @@ const StudentResources = () => {
           <div>
             <h3>Parent-Teacher Meeting Slides</h3>
             <p>
-              The slides from the Parent-Teacher Meeting held during
-              Kickoff 2026.
+              The slides from the Parent-Teacher Meeting held during Kickoff
+              2026.
             </p>
             <AlternativeButton link="https://docs.google.com/presentation/d/17fX-7aDVWG-cUtvcWZHVJ4zSp4ISoH6wv0ZiofRRFLc/edit?usp=sharing">
               Slides &rsaquo;
@@ -67,7 +66,7 @@ const StudentResources = () => {
           <div>
             <h3>Game Manual</h3>
             <p>
-              All information about scoring points, avoiding penalties, and 
+              All information about scoring points, avoiding penalties, and
               robot regulations for this year's game. An essential resource for
               designing your robot!
             </p>
@@ -80,8 +79,8 @@ const StudentResources = () => {
           <div>
             <h3>Robot Simulator</h3>
             <p>
-              Get up to speed with the Robot API
-              quickly, or test your robot code.
+              Get up to speed with the Robot API quickly, or test your robot
+              code.
             </p>
             <AlternativeButton link="https://pimulator.pierobotics.org/">
               Simulator &rsaquo;
@@ -94,25 +93,35 @@ const StudentResources = () => {
 }
 
 const Intro = () => {
-  const month = new Date().getMonth();
+  const month = new Date().getMonth()
   if (month <= 4) {
     return (
       <p>
-        Welcome to the compete page! Here you can find all information regarding the current competition season as well 
-        as helpful resources for participating in PiE. To read about 
-        our robotics competition in general, visit our <a href="/about/competition">about competition</a> page.
-        Not a current participant? See how to <OnPageLink to="new-teams" smooth={true} offset={-50}>join</OnPageLink>!
+        Welcome to the compete page! Here you can find all information regarding
+        the current competition season as well as helpful resources for
+        participating in PiE. To read about our robotics competition in general,
+        visit our <a href="/about/competition">about competition</a> page. Not a
+        current participant? See how to{" "}
+        <OnPageLink to="new-teams" smooth={true} offset={-50}>
+          join
+        </OnPageLink>
+        !
       </p>
-    );
+    )
   }
   return (
-      <p>
-        Welcome to the compete page! Here you can find all information regarding our most recent competition season as well 
-        as helpful resources for participating in PiE. To read about 
-        our robotics competition in general, visit our <a href="/about/competition">about competition</a> page.
-        Not a current participant? See how to <OnPageLink to="new-teams" smooth={true} offset={-50}>join</OnPageLink>!
-      </p>
-  );
+    <p>
+      Welcome to the compete page! Here you can find all information regarding
+      our most recent competition season as well as helpful resources for
+      participating in PiE. To read about our robotics competition in general,
+      visit our <a href="/about/competition">about competition</a> page. Not a
+      current participant? See how to{" "}
+      <OnPageLink to="new-teams" smooth={true} offset={-50}>
+        join
+      </OnPageLink>
+      !
+    </p>
+  )
 }
 
 const Compete = () => {
@@ -120,7 +129,10 @@ const Compete = () => {
   const events = data.allContentfulCompetitionTimeline.nodes
   return (
     <Layout>
-      <HelmetWrapper title="compete" description="Competition info for the current competition season and schools that want to join PiE." />
+      <HelmetWrapper
+        title="compete"
+        description="Competition info for the current competition season and schools that want to join PiE."
+      />
       <HeroWrapper>
         <div className="filler"></div>
         <div className="hero-image">
@@ -144,30 +156,32 @@ const Compete = () => {
         <TimelineTwo timelineFor={events} />
       </CustomizedContainer>
       <CustomizedContainer>
-         <Container fluid>
-            <Element name="new-teams">
+        <Container fluid>
+          <Element name="new-teams">
             <Header type="blue">Learn Robotics an at Affordable Price!</Header>
             <p>
-            Pioneers in Engineering is committed to making robotics more accessible
-            to underresourced schools. We provide all of the necessary materials,
-            resources, and support required for schools to start a robotics team and
-            participate in our biannual robotics competition at the low cost of just
-            $100 per team.
-            <br /><br />
-            If you are from a school without robotics education and are interested in 
-            starting a team, please email us at{" "}
-            <a
-              href="mailto:leadership@pierobotics.org"
-              target="_blank"
-              rel="noreferrer"
-            >
-              leadership@pierobotics.org
-            </a>{" "} for more info and to get contacted when our application opens.
+              Pioneers in Engineering is committed to making robotics more
+              accessible to underresourced schools. We provide all of the
+              necessary materials, resources, and support required for schools
+              to start a robotics team and participate in our biannual robotics
+              competition at the low cost of just $100 per team.
+              <br />
+              <br />
+              If you are from a school without robotics education and are
+              interested in starting a team, please email us at{" "}
+              <a
+                href="mailto:leadership@pierobotics.org"
+                target="_blank"
+                rel="noreferrer"
+              >
+                leadership@pierobotics.org
+              </a>{" "}
+              for more info and to get contacted when our application opens.
             </p>
-            </Element>
+          </Element>
         </Container>
       </CustomizedContainer>
-      
+
       <CustomizedContainer color={theme.colors.grey100}>
         <div id="resources" />
         <Container fluid>
@@ -239,6 +253,5 @@ const ResourcesWrapper = styled(Container)`
     color: ${theme.colors.black};
   }
 `
-
 
 export default Compete

@@ -22,7 +22,6 @@ import Container from "react-bootstrap/esm/Container"
 
 import pic from "../../assets/images/robot2.jpg"
 
-
 const query = graphql`
   {
     allContentfulSponsors {
@@ -46,15 +45,23 @@ const Individuals = () => {
   const data = useStaticQuery(query)
   const sponsors = data.allContentfulSponsors.nodes
 
-function showDonorbox() {
-    
-    return(
+  function showDonorbox() {
+    return (
       <div>
-        <Script type="module" src="https://donorbox.org/widgets.js" async={true} strategy="post-hydrate"/><dbox-widget campaign="pioneers-in-engineering" type="donation_form" enable-auto-scroll="true"></dbox-widget>
+        <Script
+          type="module"
+          src="https://donorbox.org/widgets.js"
+          async={true}
+          strategy="post-hydrate"
+        />
+        <dbox-widget
+          campaign="pioneers-in-engineering"
+          type="donation_form"
+          enable-auto-scroll="true"
+        ></dbox-widget>
       </div>
-    );
-    
-}
+    )
+  }
 
   return (
     <React.Fragment>
@@ -72,7 +79,6 @@ function showDonorbox() {
           </div>
         </HeroWrapper>
 
-        
         <CustomizedContainer>
           <div id="howused"></div>
           <h4 style={{ marginBottom: "1.5em", color: theme.colors.grey400 }}>
@@ -88,17 +94,16 @@ function showDonorbox() {
                   provide robotics kits, parts, and mentors for 24 teams. Our
                   program includes:
                 </p>
-                  <ul style={{listStyleType: 'square', marginLeft: '2rem'}}>
-                    <li>Competition field construction</li>
-                    <li>Campus-mandated insurance</li>
-                    <li>Room reservation fees</li>
-                    <li>Funding for mentor transportation to school campuses</li>
-                    <li>
+                <ul style={{ listStyleType: "square", marginLeft: "2rem" }}>
+                  <li>Competition field construction</li>
+                  <li>Campus-mandated insurance</li>
+                  <li>Room reservation fees</li>
+                  <li>Funding for mentor transportation to school campuses</li>
+                  <li>
                     Tools available to teams when working on the UC Berkeley
                     campus
                   </li>
-                  </ul>
-
+                </ul>
               </Col>
               <Col sm={12} md={6} lg={6}>
                 <h3>Workshops</h3>
@@ -108,7 +113,7 @@ function showDonorbox() {
                   workshops are always free for participants, so funding comes
                   out of our own budget. Your donations help us provide:
                 </p>
-                <ul style={{listStyleType: 'square', marginLeft: '2rem'}}>
+                <ul style={{ listStyleType: "square", marginLeft: "2rem" }}>
                   <li>
                     Passes to utilize campus spaces and resources to create
                     workshop materials
@@ -135,18 +140,21 @@ function showDonorbox() {
           </DonationsWrapper>
         </CustomizedContainer>
 
-         <CustomizedContainer>
-        <div id="resources" />
-        <Container fluid>
-          
-          <Header type={"blue"}>Consider Donating to Our Donorbox Campaign</Header>
-          <div>
-            <p>Consider a recurring or one-time donation to help further PiE's capacity to reach students!</p>
-          </div>
-          {showDonorbox()} 
-
-        </Container>
-      </CustomizedContainer>
+        <CustomizedContainer>
+          <div id="resources" />
+          <Container fluid>
+            <Header type={"blue"}>
+              Consider Donating to Our Donorbox Campaign
+            </Header>
+            <div>
+              <p>
+                Consider a recurring or one-time donation to help further PiE's
+                capacity to reach students!
+              </p>
+            </div>
+            {showDonorbox()}
+          </Container>
+        </CustomizedContainer>
 
         <CustomizedContainer color="white">
           <Sponsors fluid>
@@ -155,49 +163,56 @@ function showDonorbox() {
             </h4>
             <div id="sponsors" />
             <Container fluid>
-            <Header type={"gold-header"}>To Our Sponsors</Header>
+              <Header type={"gold-header"}>To Our Sponsors</Header>
 
-            <ForYouWrapper fluid>
-              <Row>
-                <Col sm={12} md={6} lg={6}>
-                  <img src={Poster} className="img" alt="Poster" />
-                </Col>
-                <Col sm={12} md={6} lg={6}>
-                  <p>
-                    We appreciate and recognize our sponsors in the form
-                    of posters, banners and logos, and t-shirts seen by
-                    thousands of members of the UC Berkeley community. In
-                    addition, sponsors are warmly welcomed and encouraged to
-                    attend the{" "}
-                    <a href="/about/competition">competition day</a>. If
-                    you would like more information about the benefits, please
-                    refer to{" "}
-                    <a
-                      href="/assets/sponsors/PiE_Sponsorship_Packet_2025_2026.pdf"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      Sponsorship Packet 2025-2026.pdf
-                    </a>
-                  </p>
-                </Col>
-              </Row>
-            </ForYouWrapper>
-          </Container>
-          <Container style={{marginTop:"4rem"}}>
-        
-            <div style={{display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center"}}>
-                <Header type={"gold-header"}>Special thanks to our 2026 Crowdfunders!</Header>
-                <p style={{fontSize: "1.5rem"}}>
+              <ForYouWrapper fluid>
+                <Row>
+                  <Col sm={12} md={6} lg={6}>
+                    <img src={Poster} className="img" alt="Poster" />
+                  </Col>
+                  <Col sm={12} md={6} lg={6}>
+                    <p>
+                      We appreciate and recognize our sponsors in the form of
+                      posters, banners and logos, and t-shirts seen by thousands
+                      of members of the UC Berkeley community. In addition,
+                      sponsors are warmly welcomed and encouraged to attend the{" "}
+                      <a href="/about/competition">competition day</a>. If you
+                      would like more information about the benefits, please
+                      refer to{" "}
+                      <a
+                        href="/assets/sponsors/PiE_Sponsorship_Packet_2025_2026.pdf"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Sponsorship Packet 2025-2026.pdf
+                      </a>
+                    </p>
+                  </Col>
+                </Row>
+              </ForYouWrapper>
+            </Container>
+            <Container style={{ marginTop: "4rem" }}>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  flexDirection: "column",
+                  alignItems: "center",
+                }}
+              >
+                <Header type={"gold-header"}>
+                  Special thanks to our 2026 Crowdfunders!
+                </Header>
+                <p style={{ fontSize: "1.5rem" }}>
                   <strong>Jacob Pruess</strong>
                 </p>
-                <p style={{fontSize: "1.5rem"}}>
+                <p style={{ fontSize: "1.5rem" }}>
                   <strong>Ethan Seither</strong>
                 </p>
-                <p style={{fontSize: "1.5rem"}}>
+                <p style={{ fontSize: "1.5rem" }}>
                   <strong>Lisa Branum</strong>
                 </p>
-            </div>
+              </div>
             </Container>
           </Sponsors>
         </CustomizedContainer>
@@ -205,7 +220,6 @@ function showDonorbox() {
     </React.Fragment>
   )
 }
-
 
 const HeroWrapper = styled.div`
   .filler {

@@ -47,51 +47,47 @@ const RCScholarship = () => {
   const scholarsUnordered = data.allContentfulPastScholars.nodes
   const scholars = scholarsUnordered.sort((a, b) => (a.year > b.year ? -1 : 1)) // sorts in descending order
 
-
   const dateInfo = new Date()
   const year = dateInfo.getFullYear()
 
-  const season =() => {
+  const season = () => {
     if (dateInfo >= seasonStart && dateInfo < seasonEndExclusive) {
-      return(
-         <div>
-        <p>
-                Applicants must be current or past PiE participants in their
-                last year of high school, and must intend to pursue
-                post-secondary education (four-year, technical, vocational,
-                etc.).
-              </p>
-              <p>
-                Please use the online web application to submit your scholarship
-                application.
-              </p>
-              <a href="https://scholarship.pierobotics.org/accounts/google/login">
-                Submit Here &rsaquo;
-              </a>
-              </div>
-        
+      return (
+        <div>
+          <p>
+            Applicants must be current or past PiE participants in their last
+            year of high school, and must intend to pursue post-secondary
+            education (four-year, technical, vocational, etc.).
+          </p>
+          <p>
+            Please use the online web application to submit your scholarship
+            application.
+          </p>
+          <a href="https://scholarship.pierobotics.org/accounts/google/login">
+            Submit Here &rsaquo;
+          </a>
+        </div>
+      )
+    } else {
+      return (
+        <div>
+          <p>
+            Applicants must be current or past PiE participants in their last
+            year of high school, and must intend to pursue post-secondary
+            education (four-year, technical, vocational, etc.).
+          </p>
+
+          <p>
+            Best of luck to all applicants to the {year} Pioneers in Engineering
+            Alumni Scholarship! Though the application has closed for this year,
+            we invite all students who are eligible to apply during the next
+            school year to read more about requirements to apply and to check
+            back in soon for any updates regarding the next application cycle!
+          </p>
+        </div>
       )
     }
-  else {
-    return(
-      <div>
-        <p>
-                Applicants must be current or past PiE participants in their
-                last year of high school, and must intend to pursue
-                post-secondary education (four-year, technical, vocational,
-                etc.).
-                </p>
-
-                <p>
-                Best of luck to all applicants to the {year} Pioneers in Engineering Alumni Scholarship! 
-                Though the application has closed for this year, we invite all students who are eligible 
-                to apply during the next school year to read more about requirements to apply and to check
-                back in soon for any updates regarding the next application cycle!
-              </p>
-        </div>
-    )
   }
-}
 
   return (
     <Layout>
@@ -158,7 +154,10 @@ const RCScholarship = () => {
                 <div className="card">
                   <div>
                     <FaUserTie />
-                    <h3>Interviews (remote) with finalists - Week of 4/4/2027 thru 4/11/2027</h3>
+                    <h3>
+                      Interviews (remote) with finalists - Week of 4/4/2027 thru
+                      4/11/2027
+                    </h3>
                   </div>
                 </div>
               </Col>
@@ -184,13 +183,10 @@ const RCScholarship = () => {
           <Row>
             <Col sm={12} md={7} lg={7}>
               <Header type="blue">Applicant Eligibility</Header>
-              <div>
-               {season()}
-               </div>
-             
+              <div>{season()}</div>
             </Col>
             <Resources sm={12} md={5} lg={5}>
-               <h3 style={{ color: theme.colors.grey900, marginTop: "1rem" }}>
+              <h3 style={{ color: theme.colors.grey900, marginTop: "1rem" }}>
                 Resources
               </h3>
               <Row>
@@ -295,8 +291,8 @@ const RCScholarship = () => {
         </AnythingContainer>
       </CustomizedContainer>
     </Layout>
-  )}
- 
+  )
+}
 
 const AnythingContainer = styled(Container)`
   p > a {

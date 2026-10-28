@@ -15,7 +15,7 @@ import Container from "react-bootstrap/esm/Container"
 import pic from "../../assets/images/stock-images/pie-staff.jpg"
 
 const Volunteer = () => {
-    return (
+  return (
     <Layout>
       <HelmetWrapper
         title="Volunteer"
@@ -76,7 +76,7 @@ const Volunteer = () => {
         </VolunteerWrapper>
       </CustomizedContainer>
     </Layout>
-    )
+  )
 }
 
 const HeroWrapper = styled.div`

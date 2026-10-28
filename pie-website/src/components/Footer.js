@@ -59,22 +59,23 @@ function Footer() {
             return (
               <div>
                 <HeaderGroup>{page}</HeaderGroup>
-                 {links.map(link => {
-                                          const { subpage, url, subsections } = link
-                                          return (
-                                            <React.Fragment>
-                                              <div>
-                                                { (
-                                                  <a href={item.url+url}>
-                                                    <p style={{color: "white", fontSize: '100%'}}>{subpage}</p>
-                                                  </a>
-                                                )}
-                
-                                              </div>
-                                            </React.Fragment>
-                                          )
-                                        })}
-                
+                {links.map(link => {
+                  const { subpage, url, subsections } = link
+                  return (
+                    <React.Fragment>
+                      <div>
+                        {
+                          <a href={item.url + url}>
+                            <p style={{ color: "white", fontSize: "100%" }}>
+                              {subpage}
+                            </p>
+                          </a>
+                        }
+                      </div>
+                    </React.Fragment>
+                  )
+                })}
+
                 <hr className="hide" />
               </div>
             )

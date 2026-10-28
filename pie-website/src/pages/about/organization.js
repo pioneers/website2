@@ -153,7 +153,7 @@ const PieFoundation = ({ data }) => {
 const Organization = () => {
   const data = useStaticQuery(query)
 
- return (
+  return (
     <Layout>
       <HelmetWrapper
         title="About"
@@ -187,10 +187,9 @@ const Organization = () => {
                 <FaHandsHelping />
                 <h4>Helpful college mentors</h4>
                 <p>
-                  PiE runs a decal which
-                  trains a group of dedicated mentors consisting of current and
-                  past Berkeley students who are ready and willing to help the
-                  students
+                  PiE runs a decal which trains a group of dedicated mentors
+                  consisting of current and past Berkeley students who are ready
+                  and willing to help the students
                 </p>
               </div>
             </Col>
@@ -200,9 +199,8 @@ const Organization = () => {
                 <h4>Low cost for schools</h4>
                 <p>
                   Because PiE creates everything in the competition and has a
-                  group of wonderful sponsors, we can keep
-                  costs low which lowers the barrier to entry for Bay Area
-                  schools
+                  group of wonderful sponsors, we can keep costs low which
+                  lowers the barrier to entry for Bay Area schools
                 </p>
               </div>
             </Col>
@@ -212,8 +210,8 @@ const Organization = () => {
                 <h4>Dedicated club members</h4>
                 <p>
                   A group of talented students who make everything happen from
-                  the game design to the software to
-                  the logistical planning and community outreach
+                  the game design to the software to the logistical planning and
+                  community outreach
                 </p>
               </div>
             </Col>

@@ -18,10 +18,10 @@ import theme from "../assets/themes/theme"
 import styled from "styled-components"
 
 const navbarConfig = [
-  { title: "About", dropdown: AboutDropdown},
-  { title: "Schools", dropdown: SchoolsDropdown},
-  { title: "Get Involved", dropdown: GetInvolvedDropdown},
-  { title: "Support Us", dropdown: SupportUsDropdown},
+  { title: "About", dropdown: AboutDropdown },
+  { title: "Schools", dropdown: SchoolsDropdown },
+  { title: "Get Involved", dropdown: GetInvolvedDropdown },
+  { title: "Support Us", dropdown: SupportUsDropdown },
 ]
 
 class Helper extends Component {
@@ -135,7 +135,18 @@ class Helper extends Component {
           </ResponsiveItem>
           <ContactUs />
           <ButtonSide onClick={myHookValue} aria-label="Open navigation menu">
-            <span style={{position: 'absolute', width: '1px', height: '1px', padding: 0, margin: '-1px', overflow: 'hidden', clip: 'rect(0,0,0,0)', border: 0}}>
+            <span
+              style={{
+                position: "absolute",
+                width: "1px",
+                height: "1px",
+                padding: 0,
+                margin: "-1px",
+                overflow: "hidden",
+                clip: "rect(0,0,0,0)",
+                border: 0,
+              }}
+            >
               Open navigation menu
             </span>
             <GiHamburgerMenu />

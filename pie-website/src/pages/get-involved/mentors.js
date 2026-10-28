@@ -56,43 +56,47 @@ const Mentors = () => {
   const month = dateInfo.getMonth()
 
   const seasonParagraph = () => {
-    if((month==9 && day>15) || (month>9) || (month==3 && day<15) || (month<3)){
-      return(
+    if (
+      (month == 9 && day > 15) ||
+      month > 9 ||
+      (month == 3 && day < 15) ||
+      month < 3
+    ) {
+      return (
         <p>
-            Become a mentor for a high school robotics team. Be a role model for
-            local students as you guide them in building a robot for PiE’s
-            Robotics Competition. Through our class, you’ll learn what you need
-            to know to be a mentor and help build the robot.
-            <br/>
-            <br/>
-            Mentors can enroll in the Pioneers in Engineering DeCal during the spring
-            semester, and each week will cover content about the parts of the robot, the build
-            process, and the software running the robots. To enroll, find the Pioneers in Engineering Mentorship DeCal (EECS198) 
-            in your CalCentral Enrollment Center.
-          </p>
+          Become a mentor for a high school robotics team. Be a role model for
+          local students as you guide them in building a robot for PiE’s
+          Robotics Competition. Through our class, you’ll learn what you need to
+          know to be a mentor and help build the robot.
+          <br />
+          <br />
+          Mentors can enroll in the Pioneers in Engineering DeCal during the
+          spring semester, and each week will cover content about the parts of
+          the robot, the build process, and the software running the robots. To
+          enroll, find the Pioneers in Engineering Mentorship DeCal (EECS198) in
+          your CalCentral Enrollment Center.
+        </p>
       )
+    } else {
+      return (
+        <p>
+          Become a mentor for a high school robotics team. Be a role model for
+          local students as you guide them in building a robot for PiE’s
+          Robotics Competition. Through our class, you’ll learn what you need to
+          know to be a mentor and help build the robot.
+          <br />
+          <br />
+          Mentors can enroll in the Pioneers in Engineering DeCal during the
+          spring semester, and each week will cover content about the parts of
+          the robot, the build process, and the software running the robots.
+          Check back once the enrollment process for the next spring semester
+          begins! In the meantime, we encourage you to visit our{" "}
+          <a href="/get-involved/staff">staff page </a>
+          or fill out our contact us form to remain updated.
+        </p>
+      )
+    }
   }
-  else{
-    return(
-      
-          <p>
-            Become a mentor for a high school robotics team. Be a role model for
-            local students as you guide them in building a robot for PiE’s
-            Robotics Competition. Through our class, you’ll learn what you need
-            to know to be a mentor and help build the robot.
-          <br/>
-          <br/>
-            Mentors can enroll in the Pioneers in Engineering DeCal during the spring
-            semester, and each week will cover content about the parts of the robot, the build
-            process, and the software running the robots. Check back once the enrollment process for 
-            the next spring semester begins! In the meantime, we encourage you to visit our {" "}
-            <a href="/get-involved/staff">staff page </a> 
-            or fill out our contact us form to remain updated.
-          </p>
-          
-    )
-  }
-}
 
   const options = {
     renderNode: {
@@ -103,7 +107,7 @@ const Mentors = () => {
     },
   }
 
-   return (
+  return (
     <Layout>
       <HelmetWrapper
         title="Mentors"
@@ -117,15 +121,13 @@ const Mentors = () => {
           </div>
         </div>
       </HeroWrapper>
-      <CustomizedContainer >
+      <CustomizedContainer>
         <Container fluid>
           <h4 style={{ marginBottom: "1.5em", color: theme.colors.grey400 }}>
             MENTOR
           </h4>
           <Header type="blue">Inspire High School Students</Header>
-          <div>
-            {seasonParagraph()}
-            </div>
+          <div>{seasonParagraph()}</div>
         </Container>
       </CustomizedContainer>
 
@@ -178,7 +180,7 @@ const Mentors = () => {
                   <p>
                     <ul>
                       <li>Enroll in our DeCal class for 2 units, P/NP.</li>
-                      
+
                       <li>
                         Meet with your team for one hour each week during our
                         8-week competition.
@@ -187,11 +189,10 @@ const Mentors = () => {
                         Come to PiE Robotics Competition events at UC Berkeley
                         on select weekend season events.
                       </li>
+                      <li>Help students at worksessions at O'Brien Hall.</li>
                       <li>
-                        Help students at worksessions at O'Brien Hall.
-                      </li>
-                      <li>
-                        Class location can be found on the UC Berkeley Class Schedule for the semester that it is offered.
+                        Class location can be found on the UC Berkeley Class
+                        Schedule for the semester that it is offered.
                       </li>
                     </ul>
                   </p>
@@ -236,7 +237,6 @@ const Mentors = () => {
     </Layout>
   )
 }
-
 
 const HeroWrapper = styled.div`
   .filler {

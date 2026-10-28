@@ -6,41 +6,42 @@ import styled from "styled-components"
 import theme from "../assets/themes/theme"
 
 import { Link } from "gatsby"
-import {useStaticQuery, graphql} from "gatsby"
-
+import { useStaticQuery, graphql } from "gatsby"
 
 import { useState } from "react"
 import CustomizedContainer from "./CustomizedContainer"
 import { useEffect } from "react"
 
-export default function RedirectHandle ({children}) {
-    
-        const linkListener = (linkClick) => {
-            {/* const linkLocation = linkClick.getAttrbute('a')  */}
-            const linkLocation = linkClick.target.closest('a')
-            if(!linkLocation){
-                return
-            }
+export default function RedirectHandle({ children }) {
+  const linkListener = linkClick => {
+    {
+      /* const linkLocation = linkClick.getAttrbute('a')  */
+    }
+    const linkLocation = linkClick.target.closest("a")
+    if (!linkLocation) {
+      return
+    }
 
-            const linkToGo = linkLocation.getAttribute("href")
+    const linkToGo = linkLocation.getAttribute("href")
 
-            if(linkToGo.includes("/redirect") || (!linkToGo)){
-                return
-            }
-            
-            else if(linkToGo.includes("http://") || linkToGo.includes("https://")){
-                {/*linkToGo.setAttribute()  */}
-                linkLocation.setAttribute(linkToGo, "/redirect")
-                const linkState = {linkDestination: linkToGo}
+    if (linkToGo.includes("/redirect") || !linkToGo) {
+      return
+    } else if (linkToGo.includes("http://") || linkToGo.includes("https://")) {
+      {
+        /*linkToGo.setAttribute()  */
+      }
+      linkLocation.setAttribute(linkToGo, "/redirect")
+      const linkState = { linkDestination: linkToGo }
 
-                window.location.state = linkState
-            }
-
-        }
-         return(
-        <div onClick={(linkClick) => linkListener(linkClick)} style={{display: "contents"}}>
-            {children}
-        </div>    
-        )
+      window.location.state = linkState
+    }
+  }
+  return (
+    <div
+      onClick={linkClick => linkListener(linkClick)}
+      style={{ display: "contents" }}
+    >
+      {children}
+    </div>
+  )
 }
-

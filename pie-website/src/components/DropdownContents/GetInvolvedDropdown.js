@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import {DropdownSection, Heading } from "./Components"
+import { DropdownSection, Heading } from "./Components"
 import theme from "../../assets/themes/theme"
 
 const ProductsDropdownEl = styled.div`

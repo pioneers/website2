@@ -25,7 +25,7 @@ const NavbarItemTitle = styled.button`
     outline: none;
   } */
   color: ${props =>
-      props.nav === "black" ? theme.colors.grey900 : theme.colors.white};
+    props.nav === "black" ? theme.colors.grey900 : theme.colors.white};
   a:hover,
   a:focus {
     opacity: 0.7;
@@ -72,9 +72,7 @@ export default class NavbarItem extends Component {
         onFocus={this.onMouseEnter}
         style={{ zIndex: "3" }}
       >
-        <NavbarItemTitle nav={nav}>
-          {title}
-        </NavbarItemTitle>
+        <NavbarItemTitle nav={nav}>{title}</NavbarItemTitle>
         <DropdownSlot>{children}</DropdownSlot>
       </NavbarItemEl>
     )

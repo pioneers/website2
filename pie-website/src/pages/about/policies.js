@@ -28,11 +28,13 @@ const Policies = () => {
           <div className="section">
             <h2>Non-Discrimination Resolution</h2>
             <p>
-              This document establishes that PiE-Foundation will not discriminate based on a variety of characteristics when considering membership into PiE Foundation.
+              This document establishes that PiE-Foundation will not
+              discriminate based on a variety of characteristics when
+              considering membership into PiE Foundation.
             </p>
             <GrDocumentPdf />
             <a href="/assets/policies/pie_foundation_non_discrimination_resolution.pdf">
-            PiE Foundation Non-Discrimination Resolution &rsaquo;
+              PiE Foundation Non-Discrimination Resolution &rsaquo;
             </a>
           </div>
         </Resources>
@@ -40,23 +42,29 @@ const Policies = () => {
           <div className="section">
             <h2>Sexual Violence and Sexual Harassment Policy</h2>
             <p>
-            This document specifies the guidelines PiE will follow to create a safe environment for all PiE-affiliated individuals.
+              This document specifies the guidelines PiE will follow to create a
+              safe environment for all PiE-affiliated individuals.
             </p>
             <GrDocumentPdf />
             <a href="/assets/policies/pie_policy_framework_for_sexual_violence_and_sexual_harassment.pdf">
-              Policy Framework for Sexual Violence and Sexual Harassment &rsaquo;
+              Policy Framework for Sexual Violence and Sexual Harassment
+              &rsaquo;
             </a>
           </div>
         </Resources>
         <Resources>
           <div className="section">
-            <h2>Interactions between PiE Affiliates and High School Students</h2>
+            <h2>
+              Interactions between PiE Affiliates and High School Students
+            </h2>
             <p>
-            This document specifies the guidelines all PiE affiliates should follow when working with high school students
+              This document specifies the guidelines all PiE affiliates should
+              follow when working with high school students
             </p>
             <GrDocumentPdf />
             <a href="/assets/policies/pie_policy_on_interactions_between_pie_staff_mentors_and_high_school_students.pdf">
-            Policy on Interactions Between PiE Staff/Mentors and High School Students &rsaquo;
+              Policy on Interactions Between PiE Staff/Mentors and High School
+              Students &rsaquo;
             </a>
           </div>
         </Resources>

@@ -219,9 +219,7 @@ const SoftwareHub = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="/schools/dawn-docs/dawn-guide/">
-                    Guide: Dawn
-                  </a>
+                  <a href="/schools/dawn-docs/dawn-guide/">Guide: Dawn</a>
                 </li>
                 <li>
                   Programming Guides

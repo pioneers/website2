@@ -53,4 +53,4 @@ const SupportUsDropdown = () => {
   )
 }
 
-export default SupportUsDropdown;
+export default SupportUsDropdown

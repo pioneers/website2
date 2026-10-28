@@ -36,11 +36,7 @@ const CustomForm = ({ onValidated }) => {
 
   useEffect(() => {
     if (status) clearFields()
-      return(
-    <div>
-      Thank you
-    </div>
-    )
+    return <div>Thank you</div>
   }, [status])
 
   const clearFields = () => {

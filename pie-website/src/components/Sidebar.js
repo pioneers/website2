@@ -4,7 +4,8 @@ import { useGlobalContext } from "../assets/data/context"
 import sublinks from "../assets/data/data"
 import styled from "styled-components"
 import theme from "../assets/themes/theme"
-{/*
+{
+  /*
 import {useStaticQuery, graphql, Link} from "gatsby"
 
 const PullPages = () => {
@@ -38,20 +39,21 @@ const PullPages = () => {
   )
 
 }
-*/}
-{/* const pagesQuery = () {
+*/
+}
+{
+  /* const pagesQuery = () {
   return useMediaQuery({
     queryKey: []
   })
-} */}
+} */
+}
 
 // the modal that pops up for the navabar after collapse
 const Sidebar = () => {
   const { isSidebarOpen, closeSidebar } = useGlobalContext()
 
-  
   return (
-  
     <SidebarWrapper>
       <div
         className={`${
@@ -64,42 +66,35 @@ const Sidebar = () => {
           </button>
           <div className="sidebar-links">
             <div className="about-grid">
-              {sublinks
-                
-                .map((item, index) => {
-                  const { links, page, url } = item
-                  return (
-                    <div key={index}>
-                      
-                        <h3>{page}</h3>
-                      
-                      <div className="linkContainer">
-                        {links.map(link => {
-                          const { subpage, url, subsections } = link
-                          if (subpage!= "Policies"){
+              {sublinks.map((item, index) => {
+                const { links, page, url } = item
+                return (
+                  <div key={index}>
+                    <h3>{page}</h3>
+
+                    <div className="linkContainer">
+                      {links.map(link => {
+                        const { subpage, url, subsections } = link
+                        if (subpage != "Policies") {
                           return (
                             <React.Fragment>
                               <div>
-                                {(
-                                  <a href={item.url+url}>
+                                {
+                                  <a href={item.url + url}>
                                     <h4>{subpage}</h4>
                                   </a>
-                                )}
-
+                                }
                               </div>
-                            
                             </React.Fragment>
                           )
                         }
-                    
-                        })}
-                      </div>
-                      <vr />
+                      })}
                     </div>
-                  )
-                })}
+                    <vr />
+                  </div>
+                )
+              })}
             </div>
-            
           </div>
         </aside>
       </div>
@@ -146,10 +141,10 @@ const SidebarWrapper = styled.div`
     margin-bottom: 5rem;
     padding-bottom: 3rem;
   }
-  .linkContainer{
+  .linkContainer {
     padding-bottom: 3 rem;
     margin-bottom: 5 rem;
-    }
+  }
   .sidebar-wrapper {
     position: fixed;
     top: 0;
@@ -173,7 +168,6 @@ const SidebarWrapper = styled.div`
     /* transform: scale(1); */
     transform: translateY(0);
     overflow-y: scroll;
-    
   }
   .sidebar {
     width: 95vw;
@@ -208,7 +202,7 @@ const SidebarWrapper = styled.div`
   h3 {
     font-size: 1.15rem;
     margin-bottom: 1rem;
-    margin-top: .25rem;
+    margin-top: 0.25rem;
   }
 
   .sidebar h3 {

@@ -6,8 +6,7 @@ import styled from "styled-components"
 import theme from "../assets/themes/theme"
 
 import { Link } from "gatsby"
-import {useStaticQuery, graphql} from "gatsby"
-
+import { useStaticQuery, graphql } from "gatsby"
 
 import { useState } from "react"
 import CustomizedContainer from "./CustomizedContainer"
@@ -15,109 +14,105 @@ import CustomizedContainer from "./CustomizedContainer"
 const SidebarNew = () => {
   const { isSidebarOpen, closeSidebar } = useGlobalContext()
 
-  
-   
-
-const addMenuLinks = () =>{
+  const addMenuLinks = () => {
     const PullPages = () => {
-    const PagesGroup = useStaticQuery(graphql`
-    query findPages{
-      allSitePage {
-      
-          nodes {
-            path 
-            pluginCreator {
-            name
-          }
+      const PagesGroup = useStaticQuery(graphql`
+        query findPages {
+          allSitePage {
+            nodes {
+              path
+              pluginCreator {
+                name
+              }
+            }
           }
         }
-      
-    }
       `)
-  
-    
-  
-    const pages = PagesGroup.allSitePage.nodes
-      
-   const [pageTitles, setTitles] = useState([])
-   const [pastGroup, setGroup] = useState([])
-  
-  const findGroup = () => {
-    const pastGroupFragments = pageTitles.map(item => {item.split("/")
-      if(pastGroupFragments.item[0].includes(item[0]) == false){
-        setGroup(item[0])
+
+      const pages = PagesGroup.allSitePage.nodes
+
+      const [pageTitles, setTitles] = useState([])
+      const [pastGroup, setGroup] = useState([])
+
+      const findGroup = () => {
+        const pastGroupFragments = pageTitles.map(item => {
+          item.split("/")
+          if (pastGroupFragments.item[0].includes(item[0]) == false) {
+            setGroup(item[0])
+          } else {
+          }
+        })
       }
-      else{
-        
-      }
+
+      pages.map(page => {
+        {
+          /* {page.path} */
+        }
+        {
+          page.linkName = page.path.toString()
+        }
+        {
+          page.groupName = page.linkName.split("/")[1]
+        }
+        {
+          page.pathAddress = page.path
+        }
+        {
+          page.lengthWay = page.linkName
+            .split("/")
+            .slice(page.linkName.split("/").length - 2)
+        }
+        {
+          page.linkTitleSlice = page.linkName.split("/").slice(2)
+        }
+      })
+      return pages
     }
-      )
-    
-   }
-    
-    pages.map((page) =>{
-                {/* {page.path} */}
-                {page.linkName=page.path.toString()}
-                {page.groupName = page.linkName.split("/")[1]}
-                {page.pathAddress = page.path}
-                {page.lengthWay = page.linkName.split("/").slice(page.linkName.split("/").length - 2)}
-                {page.linkTitleSlice = page.linkName.split("/").slice(2)}
-            
-           })  
-        return (
-            pages
-   
-   )
-}
 
-const pagesInfo = PullPages();
+    const pagesInfo = PullPages()
 
-    pagesInfo.map((page) => {
+    pagesInfo.map(page => {
+      if (
+        page.lengthWay == page.groupName ||
+        page.lengthWay != page.linkTitleSlice
+      ) {
+        page.groupTitle = "none"
+        page.pageTitle = "none"
+      } else {
+        page.groupTitle = page.groupName
+        page.pageTitle = page.lengthWay
+      }
 
-        if((page.lengthWay == page.groupName) || (page.lengthWay != page.linkTitleSlice)){
-            page.groupTitle = "none"
-            page.pageTitle = "none"
-        }  else {
-            page.groupTitle = page.groupName
-            page.pageTitle = page.lengthWay
-        }
-        
-
-
-    
-
-        if(page.pageTitle === "staff"){
-            page.pageTitleUse = "club members";
-        }
-        else{
-            page.pageTitleUse = page.pageTitle;
-        }
+      if (page.pageTitle === "staff") {
+        page.pageTitleUse = "club members"
+      } else {
+        page.pageTitleUse = page.pageTitle
+      }
     })
     const finalLinkInfo = pagesInfo.reduce((finalLinkInfoBuild, page) => {
-        {/* if(!finalLinkInfoBuild.has(page.groupTitle)) */}
-        if(!finalLinkInfoBuild.get(page.groupTitle)){
-            finalLinkInfoBuild.set(page.groupTitle, [page.pageTitleUse])
-        } else{
-            finalLinkInfoBuild.get(page.groupTitle).push(page.pageTitleUse)
-        }
-        return (finalLinkInfoBuild)
+      {
+        /* if(!finalLinkInfoBuild.has(page.groupTitle)) */
+      }
+      if (!finalLinkInfoBuild.get(page.groupTitle)) {
+        finalLinkInfoBuild.set(page.groupTitle, [page.pageTitleUse])
+      } else {
+        finalLinkInfoBuild.get(page.groupTitle).push(page.pageTitleUse)
+      }
+      return finalLinkInfoBuild
     }, new Map())
 
-        
-
-    return(
-        <CustomizedContainer>
+    return (
+      <CustomizedContainer>
         <p>{pagesInfo[1].lengthWay}</p>
         <p>{pagesInfo[1].linkTitleSlice}</p>
         <p>{pagesInfo[1].groupName}</p>
         <p>{finalLinkInfo.get("about")}</p>
         <p>{pagesInfo.linkTitleSlice}</p>
-        </CustomizedContainer>
+      </CustomizedContainer>
     )
-}
+  }
 
   return (
-  
     <SidebarWrapper>
       <div
         className={`${
@@ -129,20 +124,14 @@ const pagesInfo = PullPages();
             <RiCloseFill />
           </button>
           <div className="sidebar-links">
-            <h1>
-                Function for links
-            </h1>
-            <div className = "about-grid">
-                {addMenuLinks()}
-            </div>
+            <h1>Function for links</h1>
+            <div className="about-grid">{addMenuLinks()}</div>
           </div>
         </aside>
       </div>
     </SidebarWrapper>
   )
-
 }
-
 
 const SidebarWrapper = styled.div`
   hr {

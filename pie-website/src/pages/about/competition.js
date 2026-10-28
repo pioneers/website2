@@ -21,10 +21,7 @@ import Container from "react-bootstrap/esm/Container"
 import pic from "../../assets/images/homepage-banners/explaining.jpg"
 import mapimg from "../../assets/images/about-us/schoolmap.png"
 
-
 const Competition = () => {
- 
-
   return (
     <Layout>
       <HelmetWrapper title="Competition" />
@@ -119,21 +116,23 @@ const Competition = () => {
           </Row>
           <Row>
             <Col>
-                <div>
-                    <h4>
-                        Linking the Bay Area through our competition at the University of California, Berkeley.
-                    </h4>
-                    <p>
-                        Schools in the Bay Area can participate in our competition to ensure that a growing group
-                        of students with an interest in robotics are not prevented from enriching their experience
-                        by lessening barriers to participation.
-                    </p>
-                </div>
+              <div>
+                <h4>
+                  Linking the Bay Area through our competition at the University
+                  of California, Berkeley.
+                </h4>
+                <p>
+                  Schools in the Bay Area can participate in our competition to
+                  ensure that a growing group of students with an interest in
+                  robotics are not prevented from enriching their experience by
+                  lessening barriers to participation.
+                </p>
+              </div>
             </Col>
             <Col>
-                <div>
-                    <img src={mapimg} fluid alt="School Map" />
-                </div>
+              <div>
+                <img src={mapimg} fluid alt="School Map" />
+              </div>
             </Col>
           </Row>
         </WhoWeServe>

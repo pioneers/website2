@@ -20,7 +20,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 
 import OnPageLink from "../../components/OnPageLink"
-import {Link, Element} from "react-scroll"
+import { Link, Element } from "react-scroll"
 
 import Row from "react-bootstrap/esm/Row"
 import Col from "react-bootstrap/esm/Col"
@@ -39,9 +39,7 @@ const query = graphql`
         program
       }
     }
-    allContentfulRecruitingTimeline(
-      sort: { internalTime: ASC }
-    ) {
+    allContentfulRecruitingTimeline(sort: { internalTime: ASC }) {
       nodes {
         content {
           raw
@@ -52,7 +50,7 @@ const query = graphql`
         internalTime
       }
     }
-}
+  }
 `
 
 const Square = ({ toggleFullScreen, name, program }) => {
@@ -164,9 +162,9 @@ const Projects = () => {
   const data = useStaticQuery(query)
   const projects = data.allContentfulProjects.nodes
   return (
-      <CustomizedContainer>
-        <Container fluid>
-          <h2>Click on any box for more details!</h2>
+    <CustomizedContainer>
+      <Container fluid>
+        <h2>Click on any box for more details!</h2>
         <ListOfProjects>
           {projects.map(project => {
             const { description, name, pMs, program } = project
@@ -183,15 +181,15 @@ const Projects = () => {
             )
           })}
         </ListOfProjects>
-        </Container>
-      </CustomizedContainer>
+      </Container>
+    </CustomizedContainer>
   )
 }
 
 const Forms = () => {
   return (
     <Container fluid>
-        <CustomizedContainer>
+      <CustomizedContainer>
         <Wrapper fluid>
           <Row style={{ color: theme.colors.grey900 }}>
             <Col sm={12} md={6}>
@@ -232,9 +230,9 @@ const Forms = () => {
 }
 
 const Staff = () => {
-    const data = useStaticQuery(query)
-    const events = data.allContentfulRecruitingTimeline.nodes
-    return(
+  const data = useStaticQuery(query)
+  const events = data.allContentfulRecruitingTimeline.nodes
+  return (
     <Layout>
       <HelmetWrapper
         title="Club Staff"
@@ -257,20 +255,24 @@ const Staff = () => {
           </h4>
           <Header type={"blue-header"}>Fall Recruiting</Header>
           <p>
-            We've got a great lineup of events ready to welcome you to
-            Berkeley. Come to an infosession to find out what we're all about,
-            then decide which{" "}
-            <OnPageLink to="teams" smooth={true} offset={-50}>project team</OnPageLink> you want to
-            help out with at Project Expo. We believe that everyone can find a
-            place to contribute in PiE, regardless of year or major, so don't
-            hesitate to come out! You'll also be able to find us tabling at{" "}
+            We've got a great lineup of events ready to welcome you to Berkeley.
+            Come to an infosession to find out what we're all about, then decide
+            which{" "}
+            <OnPageLink to="teams" smooth={true} offset={-50}>
+              project team
+            </OnPageLink>{" "}
+            you want to help out with at Project Expo. We believe that everyone
+            can find a place to contribute in PiE, regardless of year or major,
+            so don't hesitate to come out! You'll also be able to find us
+            tabling at{" "}
             <a
               href="https://lead.berkeley.edu/calapalooza/"
               target="_blank"
               rel="noreferrer"
             >
               Calapalooza
-            </a>.
+            </a>
+            .
           </p>
           <p>
             If you're interested in joining, fill out our interest form{" "}
@@ -281,7 +283,8 @@ const Staff = () => {
             >
               here
             </a>
-            ! We'll send information at a later time about welcome events in the fall and how to join.
+            ! We'll send information at a later time about welcome events in the
+            fall and how to join.
           </p>
         </HeaderContainer>
       </CustomizedContainer>
@@ -296,15 +299,15 @@ const Staff = () => {
         </Container>
         <TimelineOne timelineFor={events} />
       </CustomizedContainer>
-            <Element name="teams">
-            <Projects />
-            </Element>
-        <CustomizedContainer color={theme.colors.white}>
+      <Element name="teams">
+        <Projects />
+      </Element>
+      <CustomizedContainer color={theme.colors.white}>
         <Container fluid>
           <Header type={"blue-header"}>Our Worksessions</Header>
           <p>
-            Missed the recruiting season? You can still join! Start by attending our worksessions 
-            and filling out the new member forms below.
+            Missed the recruiting season? You can still join! Start by attending
+            our worksessions and filling out the new member forms below.
           </p>
         </Container>
         <Container fluid>
@@ -318,25 +321,19 @@ const Staff = () => {
             <tbody>
               <tr>
                 <td>Wednesday 7 - 9 PM </td>
-                <td>
-                  101 O'Brien (for announcements) and then 101 O'Brien
-                </td>
+                <td>101 O'Brien (for announcements) and then 101 O'Brien</td>
               </tr>
               <tr>
                 <td>Saturday 1 - 3 PM </td>
-                <td>
-                  {" "}
-                  101 O'Brien
-                </td>
+                <td> 101 O'Brien</td>
               </tr>
             </tbody>
           </Table>
         </Container>
       </CustomizedContainer>
       <Forms />
-
     </Layout>
-    )
+  )
 }
 
 const HeroWrapper = styled.div`

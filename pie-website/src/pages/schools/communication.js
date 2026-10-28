@@ -35,14 +35,19 @@ const Communication = () => {
             REACH OUT TO STAFF
           </h4>
           <Header type={"blue"}>Discord</Header>
-          <p style={{ maxWidth: "700px"}}>
-            If you have questions about events, debugging, hardware, or anything else relating
-            to the PiE competition, we're here to help! The best way to reach out to PiE staff is
-            through our student discord, where high school teams can directly communicate with the
-            competition organizers. Don't need help right now? We encourage all high schoolers
-            to join the discord to receive important announcements about our events.
+          <p style={{ maxWidth: "700px" }}>
+            If you have questions about events, debugging, hardware, or anything
+            else relating to the PiE competition, we're here to help! The best
+            way to reach out to PiE staff is through our student discord, where
+            high school teams can directly communicate with the competition
+            organizers. Don't need help right now? We encourage all high
+            schoolers to join the discord to receive important announcements
+            about our events.
           </p>
-          <AlternativeButton type="hipster" link="https://discord.com/invite/hYREQD2N5r">
+          <AlternativeButton
+            type="hipster"
+            link="https://discord.com/invite/hYREQD2N5r"
+          >
             Join the Discord
           </AlternativeButton>
         </Container>
@@ -50,31 +55,42 @@ const Communication = () => {
 
       <CustomizedContainer color={theme.colors.grey100} align-items="center">
         <Container fluid>
-          
           <Header type={"blue"}>Schedule a Worksession With Our Staff!</Header>
-            <h3>Book an Appointment</h3>
-            <p>
-              Find and {" "}
-              <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSf__E2o0QDCux2njhfFJY9onZxhPnAFv4Kv2hG8j5wxu6C55g/viewform?usp=header">
-                Schedule a Time
-              </a>{" "}
-              for Office Hours with Members of PiE.
-            </p>
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf__E2o0QDCux2njhfFJY9onZxhPnAFv4Kv2hG8j5wxu6C55g/viewform?embedded=true" width="720" height="1500" frameborder="0" marginheight="0" marginwidth="0" title="Schedule a Worksession">Loading…</iframe> 
+          <h3>Book an Appointment</h3>
+          <p>
+            Find and{" "}
+            <a
+              target="_blank"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSf__E2o0QDCux2njhfFJY9onZxhPnAFv4Kv2hG8j5wxu6C55g/viewform?usp=header"
+            >
+              Schedule a Time
+            </a>{" "}
+            for Office Hours with Members of PiE.
+          </p>
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSf__E2o0QDCux2njhfFJY9onZxhPnAFv4Kv2hG8j5wxu6C55g/viewform?embedded=true"
+            width="720"
+            height="1500"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+            title="Schedule a Worksession"
+          >
+            Loading…
+          </iframe>
         </Container>
-        
       </CustomizedContainer>
     </Layout>
   )
 }
 
 const bookingFrame = styled.div`
-  .iframe-wrapper{
+  .iframe-wrapper {
     height: 60vw;
     width: 100%;
     overflow: hidden;
   }
-  .iframe-wrapper iframe{
+  .iframe-wrapper iframe {
     height: 150%;
     width: 150%;
     transform: (0.65);

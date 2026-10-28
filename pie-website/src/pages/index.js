@@ -23,12 +23,7 @@ import pic from "../assets/images/homepage-banners/explaining.jpg"
 import MailchimpFormContainer from "../components/Mailchimp"
 import { Link } from "gatsby"
 
-
-
-
 export default function Home(props) {
-
-
   return (
     <Layout>
       <HelmetWrapper title="Home" />
@@ -42,7 +37,6 @@ export default function Home(props) {
         </div>
       </HeroWrapper>
 
-   
       <CustomizedContainer>
         <Container fluid>
           <h4 style={{ marginBottom: "1.5em", color: theme.colors.grey400 }}>
@@ -88,9 +82,7 @@ export default function Home(props) {
           <Header type={"gold-header"}>Students</Header>
           <p>
             Are you in high school?{" "}
-            <strong>
-              Compete in our 8-week Spring robotics competition!
-            </strong>{" "}
+            <strong>Compete in our 8-week Spring robotics competition!</strong>{" "}
             For only $100, your team will receive a robotics kit and 2-3 mentors
             for support. We also host a Fall reboot of our past Spring
             competition, as well as workshops such as PiE On The Road.
@@ -101,7 +93,7 @@ export default function Home(props) {
           </AlternativeButton>
         </Students>
       </CustomizedContainer>
- 
+
       <CustomizedContainer>
         <JoinUsHeader fluid>
           <h4 style={{ marginBottom: "1.5em", color: theme.colors.grey400 }}>
@@ -110,8 +102,7 @@ export default function Home(props) {
           <Header type={"blue-header"}>Be a part in our competition</Header>
           <p style={{ marginTop: "1.5rem" }}>
             Excited to help? You could be the next to design the back-end of our
-            robots, mentor our students, judge our competitions, and
-            lots more!
+            robots, mentor our students, judge our competitions, and lots more!
           </p>
         </JoinUsHeader>
         <JoinUs fluid>
